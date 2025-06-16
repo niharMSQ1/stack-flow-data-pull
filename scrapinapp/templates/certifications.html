@@ -31,10 +31,11 @@
         <div id="cert-{{ certification.id }}" class="certification-content {% if not forloop.first %}hidden{% endif %}">
             <h2 class="text-2xl font-bold mb-4">{{ certification.name }}</h2>
             
+            <!-- Clause Select Dropdown -->
             <div class="bg-white rounded-lg shadow p-4 mb-6">
                 <h3 class="text-lg font-semibold mb-3">Select Clause</h3>
                 <select class="w-full p-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
-                        onchange="if(this.value) window.location.href=this.value">
+                        onchange="openClauseInNewTab(this)">
                     <option value="">Select a Clause</option>
                     {% for clause in certification.clauses.all %}
                     <option value="{% url 'clause_detail' clause.id %}">
@@ -46,11 +47,12 @@
                 </select>
             </div>
 
+            <!-- Recent Clauses -->
             <div class="bg-white rounded-lg shadow p-4">
                 <h3 class="text-lg font-semibold mb-3">Recent Clauses</h3>
                 <div class="space-y-2">
                     {% for clause in certification.clauses.all|slice:":5" %}
-                    <a href="{% url 'clause_detail' clause.id %}"
+                    <a href="{% url 'clause_detail' clause.id %}" target="_blank"
                        class="block p-3 border rounded-lg hover:bg-gray-50 transition-colors">
                         <span class="font-medium">{{ clause.display_identifier }}</span>
                         <span class="text-gray-600"> - {{ clause.title|truncatewords:8 }}</span>
@@ -65,21 +67,30 @@
     </div>
 </div>
 
+<!-- Scripts -->
 <script>
 function showCertification(certId) {
-    // Hide all certification contents
+    // Hide all certification content blocks
     document.querySelectorAll('.certification-content').forEach(el => {
         el.classList.add('hidden');
     });
-    
-    // Show selected certification
+
+    // Show selected certification block
     document.getElementById(certId).classList.remove('hidden');
-    
-    // Update active state in sidebar
+
+    // Update active button styling
     document.querySelectorAll('nav button').forEach(btn => {
         btn.classList.remove('bg-gray-200', 'font-medium');
     });
     event.currentTarget.classList.add('bg-gray-200', 'font-medium');
+}
+
+function openClauseInNewTab(selectEl) {
+    const url = selectEl.value;
+    if (url) {
+        window.open(url, '_blank');
+        selectEl.selectedIndex = 0; // Optional: reset selection after opening
+    }
 }
 </script>
 
