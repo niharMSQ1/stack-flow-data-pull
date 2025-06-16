@@ -1,0 +1,235 @@
+{
+  "soc2": {
+    "complianceStandardGroupName": "infosec_compliance",
+    "controls": [
+      {
+        "id": "480843ea-47c6-48bf-9057-0c75353afe85",
+        "displayIdentifier": "CC 6",
+        "referenceId": "CC6",
+        "title": "Logical & Physical Access Controls"
+      }
+    ]
+  },
+  "hipaa": {
+    "complianceStandardGroupName": "infosec_compliance",
+    "controls": [
+      {
+        "id": "a5eac161-a0b5-4502-8a29-175e6b17e0be",
+        "displayIdentifier": null,
+        "referenceId": "authentication-and-access-control",
+        "title": "Authentication and Access Control"
+      }
+    ]
+  },
+  "iso27001": {
+    "complianceStandardGroupName": "infosec_compliance",
+    "controls": [
+      {
+        "id": "b4282cfc-83d8-4229-a082-4c6f7a060e34",
+        "displayIdentifier": "Clause 7",
+        "referenceId": "7",
+        "title": "Support"
+      },
+      {
+        "id": "4171ccff-ff81-403f-be5b-3eb440e07f5a",
+        "displayIdentifier": "Clause 7.5",
+        "referenceId": "7.5",
+        "title": "Documented Information"
+      },
+      {
+        "id": "1299f203-cf13-4a97-99a9-ec79dd26331a",
+        "displayIdentifier": "Annex A.7",
+        "referenceId": "A.7",
+        "title": "Human Resource Security"
+      },
+      {
+        "id": "6baf60e3-f583-4ed8-bc41-67bf00bdfc34",
+        "displayIdentifier": "Annex A.9",
+        "referenceId": "A.9",
+        "title": "Access Control"
+      },
+      {
+        "id": "0c76d857-74ca-4f68-848a-b8caa2d0d8e6",
+        "displayIdentifier": "Annex A.10",
+        "referenceId": "A.10",
+        "title": "Cryptography"
+      },
+      {
+        "id": "4e1c788d-bfbb-47c1-a037-5f0340b16935",
+        "displayIdentifier": "Annex A.13",
+        "referenceId": "A.13",
+        "title": "Communications Security"
+      }
+    ]
+  },
+  "cmmc_l1": {
+    "complianceStandardGroupName": "infosec_compliance",
+    "controls": [
+      {
+        "id": "1e6c04f7-ffd2-4663-aa72-84264bebc697",
+        "displayIdentifier": "Access Control (AC)",
+        "referenceId": "Access Control (AC)",
+        "title": "Limit information system access to authorized users, processes acting on behalf of authorized users, or devices (including other information systems)."
+      },
+      {
+        "id": "093ce636-0a29-46b6-b6db-91642631b2e6",
+        "displayIdentifier": "ID &Identification (IA)",
+        "referenceId": "ID &Identification (IA)",
+        "title": "Authenticate (or verify) the identities of those users, processes, or devices, as a prerequisite to allowing access to organizational information systems."
+      },
+      {
+        "id": "e0d9519f-64d3-4b10-a925-1abad72c3a67",
+        "displayIdentifier": "Physical Protection (PE)",
+        "referenceId": "Physical Protection (PE)",
+        "title": "Limit physical access to organizational information systems, equipment, and the respective operating environments to authorized individuals."
+      }
+    ]
+  },
+  "iso9001": {
+    "complianceStandardGroupName": "quality",
+    "controls": [
+      {
+        "id": "46d6905b-ce32-49eb-a8d5-33dd418a8a1f",
+        "displayIdentifier": "Clause 8",
+        "referenceId": "8",
+        "title": "Operation"
+      }
+    ]
+  },
+  "nist_sp_800_171": {
+    "complianceStandardGroupName": "infosec_compliance",
+    "controls": [
+      {
+        "id": "0ee9ea32-edcb-4630-ba3c-f36618c7ce20",
+        "displayIdentifier": "AC",
+        "referenceId": "AC",
+        "title": "Asset Control"
+      },
+      {
+        "id": "26a5d60b-a02d-4a09-b065-2e8ad4b58b85",
+        "displayIdentifier": "IA",
+        "referenceId": "IA",
+        "title": "Identification and Authentication"
+      },
+      {
+        "id": "8b3d72e9-57f7-4880-ab34-148a1edc2ecf",
+        "displayIdentifier": "PS",
+        "referenceId": "PS",
+        "title": "Personal Security"
+      }
+    ]
+  },
+  "nist_csf": {
+    "complianceStandardGroupName": "infosec_compliance",
+    "controls": [
+      {
+        "id": "1b077ed6-66bc-42fa-afd8-b19b3c10b837",
+        "displayIdentifier": "DE.CM",
+        "referenceId": "DE.CM",
+        "title": "Security Continuous Monitoring"
+      },
+      {
+        "id": "f89835b3-aed9-431b-9759-b4bea41419f4",
+        "displayIdentifier": "PR.AC",
+        "referenceId": "PR.AC",
+        "title": "Access Control"
+      },
+      {
+        "id": "d6ae33a3-17c6-4bf8-9224-bc4b0b3d4b7b",
+        "displayIdentifier": "PR.PT",
+        "referenceId": "PR.PT",
+        "title": "Protective Technology"
+      }
+    ]
+  },
+  "cmmc_l2": {
+    "complianceStandardGroupName": "infosec_compliance",
+    "controls": [
+      {
+        "id": "c18b351e-cec5-434d-bdbb-85929226ba15",
+        "displayIdentifier": "AC.L2",
+        "referenceId": "AC",
+        "title": "Access Control"
+      },
+      {
+        "id": "86ec26ec-dea3-438a-800d-1730f3211be5",
+        "displayIdentifier": "IA.L2",
+        "referenceId": "IA",
+        "title": "Identification and Authentication"
+      },
+      {
+        "id": "8a63652b-c796-4424-8618-b61910789c04",
+        "displayIdentifier": "PS.L2",
+        "referenceId": "PS",
+        "title": "Personal Security"
+      }
+    ]
+  },
+  "iso27701_processor": {
+    "complianceStandardGroupName": "privacy",
+    "controls": [
+      {
+        "id": "17029b9f-ab03-4b41-a19a-6ff22ba4a5a4",
+        "displayIdentifier": "Clause 6 ",
+        "referenceId": "6",
+        "title": "PIMS specific guidance"
+      }
+    ]
+  },
+  "iso27701_controller": {
+    "complianceStandardGroupName": "privacy",
+    "controls": [
+      {
+        "id": "76bb14e3-1c4c-435c-a637-8931679ffa1c",
+        "displayIdentifier": "Clause 6",
+        "referenceId": "6",
+        "title": "PIMS specific guidance"
+      }
+    ]
+  },
+  "iso27701": {
+    "complianceStandardGroupName": "privacy",
+    "controls": [
+      {
+        "id": "cf03d6ad-3c17-4022-9791-345274ab687e",
+        "displayIdentifier": "Clause 6 ",
+        "referenceId": "6",
+        "title": "PIMS specific guidance"
+      }
+    ]
+  },
+  "iso27001_2022": {
+    "complianceStandardGroupName": "infosec_compliance",
+    "controls": [
+      {
+        "id": "8760e861-8188-4a33-8e8d-ea57bf9f5f94",
+        "displayIdentifier": "Clause 7",
+        "referenceId": "7",
+        "title": "Support"
+      },
+      {
+        "id": "039997e8-b6fb-4d16-b4c2-54b9fe026522",
+        "displayIdentifier": "Annex A.5",
+        "referenceId": "A.5",
+        "title": "Organizational Controls"
+      },
+      {
+        "id": "c7b84365-569f-41be-b61e-84906170c1de",
+        "displayIdentifier": "Annex A.8",
+        "referenceId": "A.8",
+        "title": "Technological Controls"
+      }
+    ]
+  },
+  "gdpr": {
+    "complianceStandardGroupName": "privacy",
+    "controls": [
+      {
+        "id": "ee48c8dc-f095-472f-ae8e-1ef90293a0c5",
+        "displayIdentifier": "Chapter 32",
+        "referenceId": "Ch32",
+        "title": "Security of processing"
+      }
+    ]
+  }
+}

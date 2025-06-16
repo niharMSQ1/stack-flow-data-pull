@@ -1,0 +1,1319 @@
+[
+  {
+    "id": "97bebb30-d292-4647-ad43-6d3a8695be6f",
+    "referenceId": "5",
+    "displayIdentifier": "Clause 5",
+    "title": "Context of the Organization",
+    "description": null,
+    "subsections": [
+      {
+        "id": "a1c7946f-85c0-4d18-b1e1-df990252d8cb",
+        "referenceId": "5.1",
+        "name": "General",
+        "description": "The requirements of ISO/IEC 27001:2013 mentioning \"information security\" shall be extended to the protection of privacy as potentially affected by the processing of PII.",
+        "programControlMapping": [
+          {
+            "id": "67fa0eaa-8f8f-4f1c-8dbc-1d24c272d56b",
+            "shortName": "BIZOPS-30",
+            "customShortName": null,
+            "name": "Information Security Management System",
+            "description": "The company designs, implements, and maintains an ISMS consisting of a coherent set of policies, procedures, and processes to manage risk to its information assets."
+          }
+        ]
+      },
+      {
+        "id": "4b64e6ad-1021-42fa-8d73-221eddde10cb",
+        "referenceId": "5.2",
+        "name": "Context of the Organization",
+        "description": "The organization shall determine its role as a PII controller (including as a joint PII controller) and/or a PII processor and include among its interested parties those parties having interests or responsibilities associated with the processing of PII, including the PII principals. The scope of the PIMS should include the processing of PII",
+        "programControlMapping": [
+          {
+            "id": "a4560074-4b03-4940-9ae6-bf5600f62575",
+            "shortName": "BIZOPS-11",
+            "customShortName": null,
+            "name": "Risk Register",
+            "description": "The company maintains a Cumulative Risk Register storing control deficiencies identified as part of ongoing system reviews, and reviews the register as part of the company's regular Risk Assessment process."
+          },
+          {
+            "id": "f9ce9d81-131e-4199-b1de-009253c735b7",
+            "shortName": "BIZOPS-1",
+            "customShortName": null,
+            "name": "Risk Management",
+            "description": "The company maintains a risk management program to identify, prioritize, and mitigate risk to acceptable levels."
+          }
+        ]
+      },
+      {
+        "id": "6cf956d6-264e-4866-a873-d2b92c3217a4",
+        "referenceId": "5.3",
+        "name": "Leadership",
+        "description": "The requirements stated in ISO/IEC 27001:2013, 5.1 along with the interpretation specified in 5.1, apply",
+        "programControlMapping": [
+          {
+            "id": "f6d9100b-b27a-4160-986b-d6dc8c7b7584",
+            "shortName": "PRIV-1",
+            "customShortName": null,
+            "name": "Privacy Governance Program",
+            "description": "A privacy governance program is in place to ensure the implementation of the organization's privacy controls."
+          }
+        ]
+      },
+      {
+        "id": "f8a9660a-306f-48c4-994e-481e0d1c826c",
+        "referenceId": "5.5",
+        "name": "Support",
+        "description": "The requirements stated in ISO/IEC 27001:2013, 7.1 along with the interpretation specified in 5.1, apply",
+        "programControlMapping": [
+          {
+            "id": "f6d9100b-b27a-4160-986b-d6dc8c7b7584",
+            "shortName": "PRIV-1",
+            "customShortName": null,
+            "name": "Privacy Governance Program",
+            "description": "A privacy governance program is in place to ensure the implementation of the organization's privacy controls."
+          }
+        ]
+      },
+      {
+        "id": "ec565f9c-9cbe-4ba5-a901-49b7d29acd53",
+        "referenceId": "5.6",
+        "name": "Operation",
+        "description": "The requirements stated in ISO/IEC 27001:2013, 8.1 along with the interpretation specified in 5.1, apply.",
+        "programControlMapping": [
+          {
+            "id": "f6d9100b-b27a-4160-986b-d6dc8c7b7584",
+            "shortName": "PRIV-1",
+            "customShortName": null,
+            "name": "Privacy Governance Program",
+            "description": "A privacy governance program is in place to ensure the implementation of the organization's privacy controls."
+          }
+        ]
+      },
+      {
+        "id": "b20dcadb-62a6-43fb-8d54-57db262c4bf6",
+        "referenceId": "5.7",
+        "name": "Performance Evaluation",
+        "description": "The requirements stated in ISO/IEC 27001:2013, 8.1 along with the interpretation specified in 5.1, apply.",
+        "programControlMapping": [
+          {
+            "id": "f6d9100b-b27a-4160-986b-d6dc8c7b7584",
+            "shortName": "PRIV-1",
+            "customShortName": null,
+            "name": "Privacy Governance Program",
+            "description": "A privacy governance program is in place to ensure the implementation of the organization's privacy controls."
+          }
+        ]
+      },
+      {
+        "id": "510e2e11-474d-4241-a93f-3a6bd523d615",
+        "referenceId": "5.8",
+        "name": "Non conformity & Continual improvement",
+        "description": "The requirements stated in ISO/IEC 27001:2013, 8.1 along with the interpretation specified in 5.1, apply.",
+        "programControlMapping": [
+          {
+            "id": "f6d9100b-b27a-4160-986b-d6dc8c7b7584",
+            "shortName": "PRIV-1",
+            "customShortName": null,
+            "name": "Privacy Governance Program",
+            "description": "A privacy governance program is in place to ensure the implementation of the organization's privacy controls."
+          }
+        ]
+      },
+      {
+        "id": "32438b31-1412-4bef-8d90-eabe06fbdc81",
+        "referenceId": "5.2.1",
+        "name": "Understanding of the organization and its context",
+        "description": "The organization shall determine its role as a PII controller (including as a joint PII controller) and/or a PII processor and include among its interested parties those parties having interests or responsibilities associated with the processing of PII, including the PII principals. The scope of the PIMS should include the processing of PII",
+        "programControlMapping": [
+          {
+            "id": "ce66a391-e6cc-4206-9e13-57f94f40c945",
+            "shortName": "BIZOPS-57",
+            "customShortName": null,
+            "name": "PIMS Context of the Organization",
+            "description": "Management has identified external and internal privacy issues that are relevant to its business purpose and that affect its ability to achieve the compliance of its information security management system."
+          },
+          {
+            "id": "acc44052-28a7-40e9-bc74-6c6ee5fd0d4d",
+            "shortName": "PRIV-29",
+            "customShortName": null,
+            "name": "Privacy Scope Assessment",
+            "description": "Assessments are conducted and documented to determine the scope of the organization and its corresponding activities in regards to the processing of PII as a controller, joint-controller, or processor."
+          }
+        ]
+      },
+      {
+        "id": "4584316f-e500-47a9-8378-cf7c79d25250",
+        "referenceId": "5.2.2",
+        "name": "Understanding the needs and expectations of interested parties",
+        "description": "The organization shall determine its role as a PII controller (including as a joint PII controller) and/or a PII processor and include among its interested parties those parties having interests or responsibilities associated with the processing of PII, including the PII principals. The scope of the PIMS should include the processing of PII",
+        "programControlMapping": [
+          {
+            "id": "e371ae0f-749d-4a66-9386-3b55af7dd586",
+            "shortName": "BIZOPS-58",
+            "customShortName": null,
+            "name": "Interested Parties - Privacy",
+            "description": "Management has identified its interested parties and documented their interests or responsibilities associated with the processing of PII, including the PII data subjects."
+          }
+        ]
+      },
+      {
+        "id": "ae7f05ec-daf9-4859-b128-adec0cd15500",
+        "referenceId": "5.2.3",
+        "name": "Determining the scope of the information security management system",
+        "description": "The organization shall determine its role as a PII controller (including as a joint PII controller) and/or a PII processor and include among its interested parties those parties having interests or responsibilities associated with the processing of PII, including the PII principals. The scope of the PIMS should include the processing of PII",
+        "programControlMapping": [
+          {
+            "id": "acc44052-28a7-40e9-bc74-6c6ee5fd0d4d",
+            "shortName": "PRIV-29",
+            "customShortName": null,
+            "name": "Privacy Scope Assessment",
+            "description": "Assessments are conducted and documented to determine the scope of the organization and its corresponding activities in regards to the processing of PII as a controller, joint-controller, or processor."
+          }
+        ]
+      },
+      {
+        "id": "1c2aea44-1c32-4f5c-a328-9bf57250d024",
+        "referenceId": "5.4.1.2",
+        "name": "Information security risk assessment",
+        "description": "The organization shall apply the information security risk assessment process to identify risks associated with the loss of confidentiality, integrity and availability, within the scope of the PIMS.",
+        "programControlMapping": [
+          {
+            "id": "a4560074-4b03-4940-9ae6-bf5600f62575",
+            "shortName": "BIZOPS-11",
+            "customShortName": null,
+            "name": "Risk Register",
+            "description": "The company maintains a Cumulative Risk Register storing control deficiencies identified as part of ongoing system reviews, and reviews the register as part of the company's regular Risk Assessment process."
+          },
+          {
+            "id": "139ab98b-490f-4be8-82f4-aa1a58e823bb",
+            "shortName": "BIZOPS-59",
+            "customShortName": null,
+            "name": "Privacy Risk Assessment",
+            "description": "Management has conducted a privacy risk assessment process to identify risks related to the processing of PII, within the scope of the PIMS."
+          }
+        ]
+      },
+      {
+        "id": "6bca63dd-e6ac-42da-9b12-2cbf04294c2e",
+        "referenceId": "5.4.1.3",
+        "name": "Information security risk treatment",
+        "description": "The organization shall apply the information security risk assessment process to treat identified risks associated with the loss of confidentiality, integrity and availability, within the scope of the PIMS.",
+        "programControlMapping": [
+          {
+            "id": "b255d9fa-3318-4cb3-a974-becf81ab7e13",
+            "shortName": "BIZOPS-60",
+            "customShortName": null,
+            "name": "PIMS Statement of Applicability",
+            "description": "The company maintains a PIMS Statement of Applicability (SOA) document, which summarizes the organization's position on each ISO 27701 Annex A and B Control."
+          }
+        ]
+      }
+    ],
+    "programPolicyMapping": [
+      {
+        "id": "ac26f012-81af-4b20-a4be-aa59089aac30",
+        "shortName": "POL-17",
+        "title": "Risk Management Policy",
+        "description": "Establish a framework for managing risk at the company and incorporating risk assessments throughout the company's operations."
+      },
+      {
+        "id": "38ee85a1-2e3f-438f-975b-bb10354e3cc7",
+        "shortName": "POL-22",
+        "title": "Information Security Management System Policy",
+        "description": "Establish an Information Security Management System (ISMS) at the company. The ISMS requires the design, implementation, and maintenance of a coherent set of policies, processes, and systems to manage risks to the company's information assets."
+      }
+    ],
+    "_metadata": {
+      "createdDate": "2023-01-10T18:30:16.714Z",
+      "createdBy": {
+        "id": "0ef2f025-46df-47d0-8bcd-11f62aa10612",
+        "name": "System User",
+        "email": "system@trustcloud.ai",
+        "pictureUrl": "data:image/png;base64,UklGRr4FAABXRUJQVlA4TLIFAAAvSoASEIcFIZIkxVbOzGPmJ+d9/1qYcW9tOIgkSZGqe+GZycD718b8PwM5kiRFUmTjMr1WiJV69WM+6CxHkSSpVj68Phdfw5fwbX8ncMfdxzQBTGsPECBAgAAnOMABdjCDA5zgBDtYwQIWMIMZTGACIxjBAAYwgAA9yCCDBBJIIEiPAGAmGlCAEiHgBO+e6sFKuoAiAQJpDygDUCpDSSqAlaMlQCASECkpzUncW7rr1VeECTOBhKSMEFJCoNAdCJRQUAaPSYRUhAQEVKRlVkUJjN5NteE8Vc7K+RiXUpGkEsXq/6fFsOhdbxZ1xrsKoYUNMay7KaHFEthGpTSlpJylsnI2dlUqQpKSPvw1/9x9xg8/aYnv+OEv94OXPnqZT7PlLFvMkuUiWS2xWWK9xmZj2+2fw+HpcDi5G+oJ0pB+7We72/XYq9vswGTQ7DN3nBYkeoZRKUYuJqWZlGbiplyMXZWzIln1lXVZCksg+7az89ZHHL18/7x8frz9/sRoeL/Y2/vX93gP1LZtW9s2urwFnG3hqBDayuOtzMzslbn1VmZmciKzBk6Za23RKzuT9x8tvXotf9q3iP5PgPb/ZG9XW7SZ6mi0o6evfga7owRv0SfVgx6l+oe/Ll158/79+xdXz+yeQvXnvWHTG4DJR17+I+T/vnkIoHlCmHobgF9e2kKlfXMuEB0Iy6QWYNcHof7tGqAzHH2fwJwPoravZkDTQAh04JqouX0UIhNq1gozPoowvp4Ceo1aYZ0twmn9CHpNWmGnLcJq7wS9BjrstEV47Z3Qp6wXdtoizPYcIoOKJkVYZotwWz/RpKgFLBH2N9CpZDzcEOE/CwMKJjWwR9ShPZeogk4o1oN4A72BJkW4KFRa1+PxePy2VQOxg2igHhhVYMXxjRfVvYHeIA2cE8GtZRAbNozhGHDby7p9OX76tiUjdtAaoB/eBbOXsjpteqZicFkI8WYH3r9aEs9hklw7a0Xwy5A1ffMJuGwdBmIJIxED3vjZoMs1cD2YvQTDlB2CZVDImNWp1VD0EadpkRqEYrB3kJMyD8KitOmbX802v+dEpHQQwe9w0JTPrV6VNSUz8J+PBf0y7RxTcIpEADOZNaULPPYRoMtEuS5XvBxnx2KMIEFT4BenU+ZTbstYcbxrlAHb5zJRGShKvFsCseF0cvhgjXJQ9LmtzFrE6pSpOpcaLlQnjHQuA7bPc2aqsbezOmuqzScPElT4FkHiK5lnkDGV5o3VAIVhwzCMxEGPZZeLCjSZbQyZSpOrgaG0KWngueP6qLpRSKvIFYChnCmbX82B8oP1AIef32KmkiKY3tlMtUdyNRRypnT+IPzrOM7Yo3lUL5eJ8DxAOrEa71gimYDVaVM+G4Onjnfl/DxokIlyXSodI3DSlM4NAU8c2b18JtNG3MuCTAI4mMyapmnmMwc9oGCkM6Zp5jLGQWCr60jPo0emB7zEDoCDGdM7PwQLKo82E3DhvZIjPQZ9Mv1Q9LDjgGH6ZmKwr+w4Tvnuhf0+W06OlJyAd0GTns71quIOgIOpfFW6ADx0JMuu67qOyhO0yLWyQ4jROPDoBNWFAsAm1wlhCXrkJsC1OLDXdRz3BN57R5xQjsAkOW0GwIYRx7Pk3r9/v1J2QrqRFi3gF/DbiFOXLkwIMinCeac+j9OgBe6Ecl1UQA826WuO10NpI1M1hX/C3Tp4BL0qtPnMGwtdBf7QlA7MYG8pZOV5zJqkRhsHJ8JV2svP/Zrq7+F8mEp7QdfUfwfnw1PaCyu0WrbC8VJIynvhd622rbB3LBTuPFip1bod5t0NwX1A12o/LgLHx2rkboTZ/VoYB6PA+XIN3OPAt5O0kPZEgPOuopHjwDe9WngndUaAjY/cIKXK+XnANF0L96SuBqqPP7rvelbun99LdZOu1eHEtgaCN7UPaPU6qHdEG32aop3jv9T+lwQ="
+      },
+      "lastModifiedDate": "2023-01-10T18:30:16.714Z",
+      "lastModifiedBy": {
+        "id": "0ef2f025-46df-47d0-8bcd-11f62aa10612",
+        "name": "System User",
+        "email": "system@trustcloud.ai",
+        "pictureUrl": "data:image/png;base64,UklGRr4FAABXRUJQVlA4TLIFAAAvSoASEIcFIZIkxVbOzGPmJ+d9/1qYcW9tOIgkSZGqe+GZycD718b8PwM5kiRFUmTjMr1WiJV69WM+6CxHkSSpVj68Phdfw5fwbX8ncMfdxzQBTGsPECBAgAAnOMABdjCDA5zgBDtYwQIWMIMZTGACIxjBAAYwgAA9yCCDBBJIIEiPAGAmGlCAEiHgBO+e6sFKuoAiAQJpDygDUCpDSSqAlaMlQCASECkpzUncW7rr1VeECTOBhKSMEFJCoNAdCJRQUAaPSYRUhAQEVKRlVkUJjN5NteE8Vc7K+RiXUpGkEsXq/6fFsOhdbxZ1xrsKoYUNMay7KaHFEthGpTSlpJylsnI2dlUqQpKSPvw1/9x9xg8/aYnv+OEv94OXPnqZT7PlLFvMkuUiWS2xWWK9xmZj2+2fw+HpcDi5G+oJ0pB+7We72/XYq9vswGTQ7DN3nBYkeoZRKUYuJqWZlGbiplyMXZWzIln1lXVZCksg+7az89ZHHL18/7x8frz9/sRoeL/Y2/vX93gP1LZtW9s2urwFnG3hqBDayuOtzMzslbn1VmZmciKzBk6Za23RKzuT9x8tvXotf9q3iP5PgPb/ZG9XW7SZ6mi0o6evfga7owRv0SfVgx6l+oe/Ll158/79+xdXz+yeQvXnvWHTG4DJR17+I+T/vnkIoHlCmHobgF9e2kKlfXMuEB0Iy6QWYNcHof7tGqAzHH2fwJwPoravZkDTQAh04JqouX0UIhNq1gozPoowvp4Ceo1aYZ0twmn9CHpNWmGnLcJq7wS9BjrstEV47Z3Qp6wXdtoizPYcIoOKJkVYZotwWz/RpKgFLBH2N9CpZDzcEOE/CwMKJjWwR9ShPZeogk4o1oN4A72BJkW4KFRa1+PxePy2VQOxg2igHhhVYMXxjRfVvYHeIA2cE8GtZRAbNozhGHDby7p9OX76tiUjdtAaoB/eBbOXsjpteqZicFkI8WYH3r9aEs9hklw7a0Xwy5A1ffMJuGwdBmIJIxED3vjZoMs1cD2YvQTDlB2CZVDImNWp1VD0EadpkRqEYrB3kJMyD8KitOmbX802v+dEpHQQwe9w0JTPrV6VNSUz8J+PBf0y7RxTcIpEADOZNaULPPYRoMtEuS5XvBxnx2KMIEFT4BenU+ZTbstYcbxrlAHb5zJRGShKvFsCseF0cvhgjXJQ9LmtzFrE6pSpOpcaLlQnjHQuA7bPc2aqsbezOmuqzScPElT4FkHiK5lnkDGV5o3VAIVhwzCMxEGPZZeLCjSZbQyZSpOrgaG0KWngueP6qLpRSKvIFYChnCmbX82B8oP1AIef32KmkiKY3tlMtUdyNRRypnT+IPzrOM7Yo3lUL5eJ8DxAOrEa71gimYDVaVM+G4Onjnfl/DxokIlyXSodI3DSlM4NAU8c2b18JtNG3MuCTAI4mMyapmnmMwc9oGCkM6Zp5jLGQWCr60jPo0emB7zEDoCDGdM7PwQLKo82E3DhvZIjPQZ9Mv1Q9LDjgGH6ZmKwr+w4Tvnuhf0+W06OlJyAd0GTns71quIOgIOpfFW6ADx0JMuu67qOyhO0yLWyQ4jROPDoBNWFAsAm1wlhCXrkJsC1OLDXdRz3BN57R5xQjsAkOW0GwIYRx7Pk3r9/v1J2QrqRFi3gF/DbiFOXLkwIMinCeac+j9OgBe6Ecl1UQA826WuO10NpI1M1hX/C3Tp4BL0qtPnMGwtdBf7QlA7MYG8pZOV5zJqkRhsHJ8JV2svP/Zrq7+F8mEp7QdfUfwfnw1PaCyu0WrbC8VJIynvhd622rbB3LBTuPFip1bod5t0NwX1A12o/LgLHx2rkboTZ/VoYB6PA+XIN3OPAt5O0kPZEgPOuopHjwDe9WngndUaAjY/cIKXK+XnANF0L96SuBqqPP7rvelbun99LdZOu1eHEtgaCN7UPaPU6qHdEG32aop3jv9T+lwQ="
+      }
+    }
+  },
+  {
+    "id": "17029b9f-ab03-4b41-a19a-6ff22ba4a5a4",
+    "referenceId": "6",
+    "displayIdentifier": "Clause 6 ",
+    "title": "PIMS specific guidance",
+    "description": null,
+    "subsections": [
+      {
+        "id": "1813662b-6f22-4823-b5c9-7dd3ab9074f8",
+        "referenceId": "6.1",
+        "name": "General",
+        "description": "The guidelines in ISO/IEC 27002:2013 mentioning \"information security\" should be extended to the protection of privacy as potentially affected by the processing of PII.",
+        "programControlMapping": [
+          {
+            "id": "67fa0eaa-8f8f-4f1c-8dbc-1d24c272d56b",
+            "shortName": "BIZOPS-30",
+            "customShortName": null,
+            "name": "Information Security Management System",
+            "description": "The company designs, implements, and maintains an ISMS consisting of a coherent set of policies, procedures, and processes to manage risk to its information assets."
+          }
+        ]
+      },
+      {
+        "id": "bbc7aa23-8c30-47bb-a1a7-ed046cc8871f",
+        "referenceId": "6.10.2.1",
+        "name": "Information transfer policies and procedures",
+        "description": "The organization should consider procedures for ensuring that rules related to the processing of PII are enforced throughout and outside of the system, where applicable. The organization should ensure that individuals operating under its control with access to PII are subject to a confidentiality obligation",
+        "programControlMapping": [
+          {
+            "id": "5e25b868-b344-485f-bd93-ac7666c9cfad",
+            "shortName": "DATA-25",
+            "customShortName": null,
+            "name": "Data Lifecycle Management",
+            "description": "The organization maintains data mapping that categorizes and assigns ownership to data, assets, and endpoints, in accordance with applicable statutory, regulatory and contractual requirements."
+          }
+        ]
+      },
+      {
+        "id": "d709d5b4-25d9-4219-9c87-70fb2f5fa141",
+        "referenceId": "6.10.2.4",
+        "name": "Confidentiality or non-disclosure agreements",
+        "description": "The organization should ensure that individuals operating under its control with access to PII are subject to a confidentiality obligation. The confidentiality agreement, whether part of a contract or separate, should specify the length of time the obligations should be adhered to.  When the organization is a PII processor, a confidentiality agreement, in whatever form, between the organization, its employees and its agents should ensure that employees and agents comply with the policy and procedures concerning data handling and protection.",
+        "programControlMapping": [
+          {
+            "id": "462f3950-fbf3-4b25-baee-9210f4bf5104",
+            "shortName": "HR-15",
+            "customShortName": null,
+            "name": "Confidentiality agreement",
+            "description": "All employees and full time contractors must sign a confidentiality agreement with the company prior to gaining access to any sensitive information."
+          }
+        ]
+      },
+      {
+        "id": "234fa077-9991-48f0-b8ca-a08c13665573",
+        "referenceId": "6.11.1.2",
+        "name": "Securing application services on public networks",
+        "description": "The organization should ensure that PII that is transmitted over untrusted data transmission networks is encrypted for transmission. Policies for system development and design should include guidance for the organization’s processing of PII needs, based on obligations to PII principals and/or any applicable legislation and/or regulation and the types of processing performed by the organization. Systems and/or components related to the processing of PII should be designed following the principles of privacy by design and privacy by default. PII should not be used for testing purposes; false or synthetic PII should be used.",
+        "programControlMapping": [
+          {
+            "id": "40a0acab-763d-4188-a0d5-7801bdf23cdc",
+            "shortName": "APPS-1",
+            "customShortName": null,
+            "name": "Cryptography",
+            "description": "The company uses widely-adopted implementations of industry standard algorithms and appropriate key lengths for all cryptography-related operations."
+          },
+          {
+            "id": "9fb61055-3c69-41ee-93cb-60b2ac392e60",
+            "shortName": "INFRA-1",
+            "customShortName": null,
+            "name": "TLS certificates and endpoints",
+            "description": "TLS usage is evaluated on a quarterly basis using tools such as ssllabs and any grades lower than A are promptly corrected."
+          },
+          {
+            "id": "1517e194-dbc9-447e-a4e2-03e5a63499d6",
+            "shortName": "APPS-2",
+            "customShortName": null,
+            "name": "Encryption Documentation",
+            "description": "The company maintains documented guidance on the selection and configuration of appropriate cryptographic methods."
+          }
+        ]
+      },
+      {
+        "id": "eff96bb0-d694-46fd-a67b-5ac2467c42ea",
+        "referenceId": "6.11.2.1",
+        "name": "Secure development policy",
+        "description": "Policies for system development and design should include guidance for the organization’s processing of PII needs, based on obligations to PII principals and/or any applicable legislation and/or regulation and the types of processing performed by the organization. Clauses 7 and 8 provide control considerations for processing of PII, which can be useful in developing policies for privacy in systems design.  Policies that contribute to privacy by design and privacy by default should consider the following aspects:  a) guidance on PII protection and the implementation of the privacy principles (see ISO/IEC 29100) in the software development lifecycle;  b) privacy and PII protection requirements in the design phase, which can be based on the output from a privacy risk assessment and/or a privacy impact assessment (see 7.2.5);  c) PII protection checkpoints within project milestones;  d) required privacy and PII protection knowledge;  e) by default minimize processing of PII.",
+        "programControlMapping": [
+          {
+            "id": "d345a8fc-e3e5-490c-b486-db577c077c55",
+            "shortName": "APPS-14",
+            "customShortName": null,
+            "name": "Privacy Impact Review",
+            "description": "A privacy assessment that includes a system design and architecture review is performed as part of the SDLC process to gauge the privacy impact."
+          }
+        ]
+      },
+      {
+        "id": "a5400a6d-5904-4ede-9d3f-56e3c7678ce5",
+        "referenceId": "6.11.2.5",
+        "name": "Secure systems engineering principles",
+        "description": "Systems and/or components related to the processing of PII should be designed following the principles of privacy by design and privacy by default, and to anticipate and facilitate the implementation of relevant controls (as described in Clauses 7 and 8, for PII controllers and PII processors, respectively), in particular such that the collection and processing of PII in those systems is limited to what is necessary for the identified purposes of the processing of PII (see 7.2).  For example, an organization that processes PII should ensure that, based on the relevant jurisdiction, it disposes of PII after a specified period. The system that processes that PII should be designed in a way to facilitate this deletion requirement.",
+        "programControlMapping": [
+          {
+            "id": "a9a0de49-a6f7-463d-9ef0-3d16847e43dd",
+            "shortName": "APPS-15",
+            "customShortName": null,
+            "name": "Privacy by Design and Default Policy",
+            "description": "The change management policy includes the privacy engineering principles associated with privacy by design and default."
+          }
+        ]
+      },
+      {
+        "id": "ef547833-ea32-47ef-9318-cbf80e4443f2",
+        "referenceId": "6.11.2.7",
+        "name": "Outsourced development",
+        "description": "The same principles (see 6.11.2.5) of privacy by design and privacy by default should be applied, if applicable, to outsourced information systems.",
+        "programControlMapping": [
+          {
+            "id": "a9a0de49-a6f7-463d-9ef0-3d16847e43dd",
+            "shortName": "APPS-15",
+            "customShortName": null,
+            "name": "Privacy by Design and Default Policy",
+            "description": "The change management policy includes the privacy engineering principles associated with privacy by design and default."
+          }
+        ]
+      },
+      {
+        "id": "daa85636-003a-4887-b57b-8083e51056d7",
+        "referenceId": "6.11.3.1",
+        "name": "Protection of test data",
+        "description": "PII should not be used for testing purposes; false or synthetic PII should be used. Where the use of PII for testing purposes cannot be avoided, technical and organizational measures equivalent to those used in the production environment should be implemented to minimize the risks. Where such equivalent measures are not feasible, a risk-assessment should be undertaken and used to inform the selection of appropriate mitigating controls.",
+        "programControlMapping": [
+          {
+            "id": "4747407c-92ed-44c6-bb41-3b86b7db269d",
+            "shortName": "DATA-10",
+            "customShortName": null,
+            "name": "Non-production data",
+            "description": "Production customer data is never copied to non-production environments without proper sanitization and anonymization."
+          }
+        ]
+      },
+      {
+        "id": "89b34679-a57d-46fc-be1b-a96085b32520",
+        "referenceId": "6.12.1.2",
+        "name": "Addressing security within supplier agreements",
+        "description": "The organization should specify in agreements with suppliers whether PII is processed and the minimum technical and organizational measures that the supplier needs to meet in order for the organization to meet its information security and PII protection obligations.   Implementation guidance for PII processors:  The organization should specify in contracts with any suppliers that PII is only processed on its instructions.  ",
+        "programControlMapping": [
+          {
+            "id": "97bf6b55-1fc4-4b04-b966-80871ea066d5",
+            "shortName": "PRIV-25",
+            "customShortName": null,
+            "name": "Data Protection Agreements",
+            "description": "The organization has a signed data protection agreement with each contracted subprocessor."
+          }
+        ]
+      },
+      {
+        "id": "7c108e9d-e530-42c3-896c-26be076a8eed",
+        "referenceId": "6.13.1.1",
+        "name": "Information security incident management: responsibilities and procedures",
+        "description": "The organization should establish responsibilities and procedures for the identification and recording of breaches of PII. An incident that involves PII should trigger a review by the organization, as part of its information security incident management process, to determine if a breach involving PII that requires a response has taken place ",
+        "programControlMapping": [
+          {
+            "id": "40fe9254-2294-4fc0-8d13-a354626d646f",
+            "shortName": "BIZOPS-7",
+            "customShortName": null,
+            "name": "Security Incident Management Program",
+            "description": "The Incident Management Program outlines the requirements and process for declaring and responding to incidents, including the roles and responsibilities, and the internal and external communication necessary to take the issue to resolution."
+          }
+        ]
+      },
+      {
+        "id": "3ad24f4a-fdc0-4834-af19-3c5f6e55ef5c",
+        "referenceId": "6.13.1.5",
+        "name": "Response to information security incidents",
+        "description": "Implementation guidance for PII controllers  An incident that involves PII should trigger a review by the organization, as part of its information security incident management process, to determine if a breach involving PII that requires a response has taken place. In the event that a breach involving PII has occurred, the record should also include a description of the PII compromised, if known; and if notifications were performed, the steps taken to notify PII principals, regulatory agencies or customers.   Implementation guidance for PII processors  Provisions covering the notification of a breach involving PII should form part of the contract between the organization and the customer. The contract should specify how the organization will provide the information necessary for the customer to fulfil their obligation to notify relevant authorities. This notification obligation does not extend to a breach caused by the customer or PII principal or within system components for which they are responsible. The contract should also define expected and externally mandated limits for notification response times.  ",
+        "programControlMapping": [
+          {
+            "id": "40fe9254-2294-4fc0-8d13-a354626d646f",
+            "shortName": "BIZOPS-7",
+            "customShortName": null,
+            "name": "Security Incident Management Program",
+            "description": "The Incident Management Program outlines the requirements and process for declaring and responding to incidents, including the roles and responsibilities, and the internal and external communication necessary to take the issue to resolution."
+          },
+          {
+            "id": "86ff0792-c399-438a-96e7-896b7ebca713",
+            "shortName": "BIZOPS-32",
+            "customShortName": null,
+            "name": "Breach Notification",
+            "description": "A breach notification process is in place to communicate data breaches to impacted parties."
+          }
+        ]
+      },
+      {
+        "id": "0854c2be-d22e-4803-981c-5dbfbbf28b31",
+        "referenceId": "6.14",
+        "name": "Information security aspects of business continuity management",
+        "description": "The control, implementation guidance and other information stated in ISO/IEC 27002:2013, 17.2.1 applies.",
+        "programControlMapping": [
+          {
+            "id": "67fa0eaa-8f8f-4f1c-8dbc-1d24c272d56b",
+            "shortName": "BIZOPS-30",
+            "customShortName": null,
+            "name": "Information Security Management System",
+            "description": "The company designs, implements, and maintains an ISMS consisting of a coherent set of policies, procedures, and processes to manage risk to its information assets."
+          }
+        ]
+      },
+      {
+        "id": "8ffff323-d852-4835-bdeb-9f679acc9190",
+        "referenceId": "6.15.1.1",
+        "name": "Identification of applicable legislation and contractual requirements",
+        "description": "The organization should identify any potential legal sanctions (which can result from some obligations being missed) related to the processing of PII, including substantial fines directly from the local supervisory authority. the organization should make available to customers, prior to entering into, and for the duration of, a contract, independent evidence that information security is implemented and operated in accordance with the organization’s policies and procedures",
+        "programControlMapping": [
+          {
+            "id": "48ebfef6-da33-4558-b42f-9b7f7d5d2ee2",
+            "shortName": "BIZOPS-29",
+            "customShortName": null,
+            "name": "Applicable Legal Authorities",
+            "description": "The company maintains a list of applicable statutory and regulatory authorities, as well as the contacts necessary to keep up to date with these and future legal requirements."
+          }
+        ]
+      },
+      {
+        "id": "89d87315-0384-4d08-b66a-af43c70681bf",
+        "referenceId": "6.15.1.3",
+        "name": "Protection of records",
+        "description": "Review of current and historical policies and procedures can be required (e.g. in the cases of customer dispute resolution and investigation by a supervisory authority).  The organization should retain copies of its privacy policies and associated procedures for a period as specified in its retention schedule (see 7.4.7). This includes retention of previous versions of these documents when they are updated.",
+        "programControlMapping": [
+          {
+            "id": "f282625b-ad4e-4f8a-b357-a17068f0c2aa",
+            "shortName": "BIZOPS-3",
+            "customShortName": null,
+            "name": "Policy Management",
+            "description": "The company develops and maintains formal policies that govern information security within the company. The policies are formally reviewed and approved at least once a year, and are communicated to all employees."
+          }
+        ]
+      },
+      {
+        "id": "dd35bf26-160b-4ef2-b50c-bf2c809b3fb8",
+        "referenceId": "6.15.2.1",
+        "name": "Independent review of information security",
+        "description": "Where an organization is acting as a PII processor, and where individual customer audits are impractical or can increase risks to security, the organization should make available to customers, prior to entering into, and for the duration of, a contract, independent evidence that information security is implemented and operated in accordance with the organization's policies and procedures. A relevant independent audit, as selected by the organization, should normally be an acceptable method for fulfilling the customer's interest in reviewing the organization's processing operations, if it covers the needs of anticipated users and if results are provided in a sufficient transparent manner.",
+        "programControlMapping": [
+          {
+            "id": "496ec408-e0ab-4fe1-a55d-ceddd0abf7ad",
+            "shortName": "BIZOPS-26",
+            "customShortName": null,
+            "name": "External Assessments",
+            "description": "The company commissions external third-party assessments to validate its compliance controls. Assessment results are documented and reviewed by company leadership"
+          }
+        ]
+      },
+      {
+        "id": "0a73ed45-7b6f-4fa0-a0e0-ed266d938420",
+        "referenceId": "6.15.2.3",
+        "name": "Technical compliance review",
+        "description": "As part of technical reviews of compliance with security policies and standards, the organization should include methods of reviewing those tools and components related to processing PII.",
+        "programControlMapping": [
+          {
+            "id": "2f75c033-4cea-4d90-9329-8a33b2fe1a68",
+            "shortName": "INFRA-2",
+            "customShortName": null,
+            "name": "Pen testing",
+            "description": "Third-party vendors are used to perform penetration tests against the production system on an annual basis. Identified Critical and High issues are promptly resolved and the rest are prioritized as appropriate."
+          }
+        ]
+      },
+      {
+        "id": "5619bb8d-208c-4d60-b153-2c884f6b9c02",
+        "referenceId": "6.2.1.1",
+        "name": "Policies for information security",
+        "description": "The organization should produce a statement concerning support for and commitment to achieving compliance with applicable PII protection legislation and/or regulation and with the contractual terms agreed between the organization and its partners, its subcontractors and its applicable third parties (customers, suppliers etc.), which should clearly allocate responsibilities between them.  ",
+        "programControlMapping": [
+          {
+            "id": "b1e854cc-4fa4-4599-9851-9dc9fb0790ce",
+            "shortName": "PRIV-30",
+            "customShortName": null,
+            "name": "Data Protection Policy",
+            "description": "The company has established a data protection policy that defines the requirements for achieving compliance with applicable PII protection laws, regulations, and contractual agreements."
+          }
+        ]
+      },
+      {
+        "id": "96aa1f6c-4a46-4014-a41f-4b3e661d33ce",
+        "referenceId": "6.3.1.1",
+        "name": "Information security roles and responsibilities",
+        "description": "The organization should designate a point of contact for use by the customer regarding the processing of PII. The organization should ensure that the use of mobile devices does not lead to a compromise of PII.",
+        "programControlMapping": [
+          {
+            "id": "31eaa54f-c299-4daa-9617-e17d7f0aa6eb",
+            "shortName": "PRIV-2",
+            "customShortName": null,
+            "name": "Data Protection / Privacy Officer",
+            "description": "A dedicated Privacy Officer and/or a Data Protection Officer (DPO) has been designated to lead the organization's privacy program and to protect personal data."
+          }
+        ]
+      },
+      {
+        "id": "1f2785d6-f39f-4286-adb4-e04ef97ea86e",
+        "referenceId": "6.3.2.1",
+        "name": "Mobile device policy",
+        "description": "The organization should designate a point of contact for use by the customer regarding the processing of PII. The organization should ensure that the use of mobile devices does not lead to a compromise of PII.",
+        "programControlMapping": [
+          {
+            "id": "b4c7e011-962c-4c92-937d-1ac887ddcd00",
+            "shortName": "IT-17",
+            "customShortName": null,
+            "name": "Mobile Device Management",
+            "description": "A device management tool is configured to manage and encrypt employee mobile devices."
+          }
+        ]
+      },
+      {
+        "id": "9d267170-3b53-406e-9e33-e6398b8502a1",
+        "referenceId": "6.4.2.2",
+        "name": "Information security awareness, education and training",
+        "description": "Measures should be put in place, including awareness of incident reporting, to ensure that relevant staff are aware of the possible consequences to the organization (e.g. legal consequences, loss of businessand brand or reputational damage), to the staff member (e.g. disciplinary consequences) and to the PII principal (e.g. physical, material and emotional consequences) of breaching privacy or security rules and procedures, especially those addressing the handling of PII.",
+        "programControlMapping": [
+          {
+            "id": "e18bf407-3a3f-454f-8f55-8a54b0cb9818",
+            "shortName": "PRIV-14",
+            "customShortName": null,
+            "name": "Privacy Training",
+            "description": "The company provides privacy training to employees responsible for handling personal data."
+          }
+        ]
+      },
+      {
+        "id": "41f0761b-13d7-462c-816f-11bd0e633f59",
+        "referenceId": "6.5.2.1",
+        "name": "Classification of information",
+        "description": "The organization's information classification system should explicitly consider PII as part of the scheme it implements. The organization should document any use of removable media and/or devices for the storage of PII. The organization should subject physical media containing PII before leaving its premises to an authorization procedure and ensure the PII is not accessible to anyone other than authorized personnel.",
+        "programControlMapping": [
+          {
+            "id": "d1008f20-577d-482b-a060-9904eb2afef3",
+            "shortName": "PRIV-31",
+            "customShortName": null,
+            "name": "PII Data Classification",
+            "description": "The company has established and documented policies and procedures for classifying, retaining, and disposing of PII."
+          }
+        ]
+      },
+      {
+        "id": "5976f8ac-135c-48cc-915b-ea31bc4e246c",
+        "referenceId": "6.5.2.2",
+        "name": "Labeling of information",
+        "description": "The organization should ensure that people under its control are made aware of the definition of PII and how to recognize information that is PII.",
+        "programControlMapping": [
+          {
+            "id": "d1008f20-577d-482b-a060-9904eb2afef3",
+            "shortName": "PRIV-31",
+            "customShortName": null,
+            "name": "PII Data Classification",
+            "description": "The company has established and documented policies and procedures for classifying, retaining, and disposing of PII."
+          }
+        ]
+      },
+      {
+        "id": "9fb56f5f-5814-4b63-9861-1a8864f7d893",
+        "referenceId": "6.5.3.1",
+        "name": "Management of removeable media",
+        "description": "The organization should document any use of removable media and/or devices for the storage of PII. Wherever feasible, the organization should use removable physical media and/or devices that permit encryption when storing PII. Unencrypted media should only be used where unavoidable, and in instances where unencrypted media and/or devices are used, the organization should implement procedures and compensating controls (e.g. tamper-evident packaging) to mitigate risks to the PII.   Removable media which is taken outside the physical confines of the organization is prone to loss, damage and inappropriate access. Encrypting removable media adds a level of protection for PII which reduces security and privacy risks should the removable media be compromised.",
+        "programControlMapping": [
+          {
+            "id": "9cea84de-333a-4414-b120-4388a8be04b0",
+            "shortName": "PRIV-24",
+            "customShortName": null,
+            "name": "Geolocation of Data Storage and Processing",
+            "description": "The company controls the geographic location of processing and storage of personal data, based on business requirements and statutory, regulatory and contractual obligations."
+          },
+          {
+            "id": "096fb0df-9db4-460d-82e3-12a52148b1b9",
+            "shortName": "PS-4",
+            "customShortName": null,
+            "name": "Removable media",
+            "description": "Storing sensitive customer data on removable media is prohibited."
+          }
+        ]
+      },
+      {
+        "id": "e111b64f-0c0b-4311-bd09-84c889deb3d2",
+        "referenceId": "6.5.3.2",
+        "name": "Disposal of meida",
+        "description": "Where removable media on which PII is stored is disposed of, secure disposal procedures should be included in the documented information and implemented to ensure that previously stored PII will not be accessible.",
+        "programControlMapping": [
+          {
+            "id": "f23f9e52-9a31-4ff2-914e-589f5e5c9e4a",
+            "shortName": "DATA-17",
+            "customShortName": null,
+            "name": "Data Disposal",
+            "description": "Customer data is securely disposed of after its retention period passes, and any retained data is sanitized and anonymized."
+          }
+        ]
+      },
+      {
+        "id": "effc38b1-1d78-457f-a0b7-5d30929776df",
+        "referenceId": "6.5.3.3",
+        "name": "Physical media transfer",
+        "description": "If physical media is used for information transfer, a system should be put in place to record incoming and outgoing physical media containing PII, including the type of physical media, the authorized sender/ recipients, the date and time, and the number of physical media. Where possible, additional measures such as encryption should be implemented to ensure that the data can only be accessed at the point of destination and not in transit.  The organization should subject physical media containing PII before leaving its premises to an authorization procedure and ensure the PII is not accessible to anyone other than authorized personnel.  NOTE One possible measure to ensure PII on physical media leaving the organization’s premises is not generally accessible is to encrypt the PII concerned and restrict decryption capabilities to authorized personnel.  ",
+        "programControlMapping": [
+          {
+            "id": "9cea84de-333a-4414-b120-4388a8be04b0",
+            "shortName": "PRIV-24",
+            "customShortName": null,
+            "name": "Geolocation of Data Storage and Processing",
+            "description": "The company controls the geographic location of processing and storage of personal data, based on business requirements and statutory, regulatory and contractual obligations."
+          }
+        ]
+      },
+      {
+        "id": "a2d76ec4-54b6-48ed-8730-c5ed22ed3133",
+        "referenceId": "6.6.2.1",
+        "name": "User registration and de-registration",
+        "description": "Procedures for registration and de-registration of users who administer or operate systems and services that process PII should address the situation where user access control for those users is compromised, such as the corruption or compromise of passwords or other user registration data (e.g. as a result of inadvertent disclosure). The organization should maintain an accurate, up-to-date record of the user profiles created for users who have been authorized access to the information system and the PII contained therein and provide the capability for secure log-on procedures for any user accounts under the customer's control.",
+        "programControlMapping": [
+          {
+            "id": "74f0407a-584b-4c0f-b0a5-f961c178697a",
+            "shortName": "AUTH-6",
+            "customShortName": null,
+            "name": "Role-based access control",
+            "description": "Defined permission roles are utilized to assign and segregate access privileges to data and systems."
+          }
+        ]
+      },
+      {
+        "id": "167f7bb3-f1b9-4126-a837-eb9358273f08",
+        "referenceId": "6.6.2.2",
+        "name": "User access provisioning",
+        "description": "The organization should maintain an accurate, up-to-date record of the user profiles created for users who have been authorized access to the information system and the PII contained therein. This profile comprises the set of data about that user, including user ID, necessary to implement the identified technical controls providing authorized access.  Implementing individual user access IDs enables appropriately configured systems to identify who accessed PII and what additions, deletions or changes they made. As well as protecting the organization, users are also protected as they can identify what they have processed and what they have not processed.  In the case where the organization is providing PII processing as a service, the customer can be responsible for some or all aspects of access management. Where appropriate, the organization should provide the customer the means to perform access management, such as by providing administrative rights to manage or terminate access. Such cases should be included in the documented information.  ",
+        "programControlMapping": [
+          {
+            "id": "825c5d5e-7ca2-4b16-aab7-34739649ede4",
+            "shortName": "PRIV-32",
+            "customShortName": null,
+            "name": "Record of PII User Access",
+            "description": "Management maintains an accurate,  up-to-date record of the users who have authorized access to the information system and the PII contained therein."
+          }
+        ]
+      },
+      {
+        "id": "bad8a7b2-ff57-4a8d-9a89-58e031515fbf",
+        "referenceId": "6.6.4.2",
+        "name": "Secure log-on procedures",
+        "description": "Where required by the customer, the organization should provide the capability for secure log-on procedures for any user accounts under the customer's control.",
+        "programControlMapping": [
+          {
+            "id": "f20200f7-8132-4f9e-bb0b-e0c3b8df5082",
+            "shortName": "AUTH-1",
+            "customShortName": null,
+            "name": "Single sign-on (SSO)",
+            "description": "The company leverages SSO authentication for sensitive systems, wherever available."
+          }
+        ]
+      },
+      {
+        "id": "43d5d5ae-ebf2-4f96-9078-086c77c6ddbf",
+        "referenceId": "6.7.1.1",
+        "name": "Policy on the use of cryptographic controls",
+        "description": "The organization should provide information to the customer regarding the circumstances in which it uses cryptography to protect the PII it processes. The organization should also provide information to the customer about any capabilities it provides that can assist the customer in applying their own cryptographic protection.",
+        "programControlMapping": [
+          {
+            "id": "1517e194-dbc9-447e-a4e2-03e5a63499d6",
+            "shortName": "APPS-2",
+            "customShortName": null,
+            "name": "Encryption Documentation",
+            "description": "The company maintains documented guidance on the selection and configuration of appropriate cryptographic methods."
+          },
+          {
+            "id": "40a0acab-763d-4188-a0d5-7801bdf23cdc",
+            "shortName": "APPS-1",
+            "customShortName": null,
+            "name": "Cryptography",
+            "description": "The company uses widely-adopted implementations of industry standard algorithms and appropriate key lengths for all cryptography-related operations."
+          }
+        ]
+      },
+      {
+        "id": "ba572295-aa4e-46f5-a0e6-e1e62c5cc45d",
+        "referenceId": "6.8.2.7",
+        "name": "Secure disposal or re-use of equipment",
+        "description": "The organization should ensure that, whenever storage space is re-assigned, any PII previously residing on that storage space is not accessible. ",
+        "programControlMapping": [
+          {
+            "id": "6e5dbf6a-2757-4a89-a085-7df725842483",
+            "shortName": "IT-16",
+            "customShortName": null,
+            "name": "Asset Disposal",
+            "description": "A process is in place to track and properly dispose of IT assets that have reached their end of life."
+          },
+          {
+            "id": "f23f9e52-9a31-4ff2-914e-589f5e5c9e4a",
+            "shortName": "DATA-17",
+            "customShortName": null,
+            "name": "Data Disposal",
+            "description": "Customer data is securely disposed of after its retention period passes, and any retained data is sanitized and anonymized."
+          }
+        ]
+      },
+      {
+        "id": "38075806-149b-4889-824a-b95373437f55",
+        "referenceId": "6.9.3.1",
+        "name": "Information backup",
+        "description": "The organization should have a policy which addresses the requirements for backup, recovery and restoration of PII (which can be part of an overall information backup policy) and any further requirements (e.g. contractual and/or legal requirements) for the erasure of PII contained in information held for backup requirements. A process should be put in place to review event logs using continuous, automated monitoring and alerting processes, or else manually where such review should be performed with a specified, documented periodicity, to identify irregularities and propose remediation efforts.",
+        "programControlMapping": [
+          {
+            "id": "95e6069a-c838-4933-b49d-fd40a5f26c20",
+            "shortName": "PDP-2",
+            "customShortName": null,
+            "name": "Restore Testing",
+            "description": "Backup restore tests are performed at least quarterly and ensure that the restored system works end-to-end."
+          },
+          {
+            "id": "59ef9abe-1e34-4121-a973-6449911a1edd",
+            "shortName": "PDP-1",
+            "customShortName": null,
+            "name": "Backup Plan",
+            "description": "Customer data is automatically backed up according to a backup configuration scheduled described in the Backup Procedure."
+          }
+        ]
+      },
+      {
+        "id": "8e8b3635-8867-4f17-9e02-3cdd6a5d519e",
+        "referenceId": "6.9.4.1",
+        "name": "Event logging",
+        "description": "A process should be put in place to review event logs using continuous, automated monitoring and alerting processes, or else manually where such review should be performed with a specified, documented periodicity, to identify irregularities and propose remediation efforts.  Where possible, event logs should record access to PII, including by whom, when, which PII principal's PII was accessed, and what (if any) changes were made (additions, modifications or deletions) as a result of the event.  Where multiple service providers are involved in providing services, there can be varied or shared roles in implementing this guidance. These roles should be clearly defined and included in the documented information, and agreement on any log access between providers should be addressed.   Implementation guidance for PII processors:  The organization should define criteria regarding if, when and how log information can be made available to or usable by the customer. These criteria should be made available to the customer.  Where the organization permits its customers to access log records controlled by the organization, the organization should implement appropriate controls to ensure that the customer can only access records that relate to that customer’s activities, cannot access any log records which relate to the activities of other customers, and cannot amend the logs in any way.",
+        "programControlMapping": [
+          {
+            "id": "80d9eba1-49e9-4978-b10d-d65f634557f9",
+            "shortName": "LOG-2",
+            "customShortName": null,
+            "name": "Logging of Administrative actions",
+            "description": "Logs from privileged administrative actions on sensitive systems are stored in a separate location with a very restricted access control."
+          },
+          {
+            "id": "01e7ddf8-cf5f-4782-83b4-ed6642262776",
+            "shortName": "LOG-1",
+            "customShortName": null,
+            "name": "Audit Logging",
+            "description": "All sensitive systems generate audit logs to capture actions taken by users."
+          },
+          {
+            "id": "359f9006-58b5-49ba-9d53-e0a165b68677",
+            "shortName": "PRIV-7",
+            "customShortName": null,
+            "name": "Data Access Requests",
+            "description": "Individuals can request access and modification of their personal data by submitting a disclosure request or a Data Subject Access Request (DSAR)."
+          }
+        ]
+      },
+      {
+        "id": "95af5c23-b969-4195-a4c0-d703a5ea5eaf",
+        "referenceId": "6.9.4.2",
+        "name": "Protection of log information",
+        "description": "Log information recorded for, for example, security monitoring and operational diagnostics, can contain PII. Measures such as controlling access (see ISO/IEC 27002:2013, 9.2.3) should be put in place to ensure that logged information is only used as intended.  A procedure, preferably automatic, should be put in place to ensure that logged information is either deleted or de-identified as specified in the retention schedule (see 7.4.7).",
+        "programControlMapping": [
+          {
+            "id": "c00845da-2485-45b7-8bcc-96efceefb3e2",
+            "shortName": "DATA-4",
+            "customShortName": null,
+            "name": "Data store encryption",
+            "description": "Data stores are configured to enable encryption at rest."
+          }
+        ]
+      }
+    ],
+    "programPolicyMapping": [
+      {
+        "id": "5d701290-a1d4-449a-bdf8-e12d71595128",
+        "shortName": "POL-2",
+        "title": "Access Control Policy",
+        "description": "Establish the principles and guidelines for controlling access to company systems."
+      },
+      {
+        "id": "6b12bea6-1462-4ee9-afe0-92274311c415",
+        "shortName": "POL-3",
+        "title": "Authentication and Password Policy",
+        "description": "Describe requirements with regards to account authentication, including how passwords should be generated, used, and protected."
+      },
+      {
+        "id": "6d6e51d7-ed97-4816-829e-3ba9e092c726",
+        "shortName": "POL-4",
+        "title": "Backup Policy",
+        "description": "Describe controls that are necessary to mitigate the accidental loss of data by maintaining backups."
+      },
+      {
+        "id": "b1d6db5f-bc68-4fe7-9c9f-2391d906980f",
+        "shortName": "POL-7",
+        "title": "Security Incident Management Policy",
+        "description": "Establish requirements and plans for reporting and responding to security incidents impacting corporate or customer systems."
+      },
+      {
+        "id": "25aa4c4d-20ae-4002-bb95-66972688f246",
+        "shortName": "POL-6",
+        "title": "Change Management Policy",
+        "description": "Provide guidance on the process of managing change across company critical systems and products."
+      },
+      {
+        "id": "339a35ce-ea6d-487e-afd2-c071bf107207",
+        "shortName": "POL-8",
+        "title": "Vulnerability Management Policy",
+        "description": "Establish vulnerability management controls and provide guidelines for their implementation."
+      },
+      {
+        "id": "2d8d1f89-baee-4283-ac99-10fd4d68d68a",
+        "shortName": "POL-1",
+        "title": "Encryption Policy",
+        "description": "Establish practices for protecting your company data in the event of unauthorized access through the use of encryption."
+      },
+      {
+        "id": "89642d44-ef7f-49e4-9048-384e42fd74a2",
+        "shortName": "POL-12",
+        "title": "Data Retention and Disposal Policy",
+        "description": "Establish requirements surrounding the retention and eventual disposal of data, in order to ensure confidentiality of sensitive company and customer information."
+      },
+      {
+        "id": "1bcac73e-7396-4688-8cb7-d4144acc4aae",
+        "shortName": "POL-14",
+        "title": "Human Resources Policy",
+        "description": "Establish the requirements for a comprehensive human resources process wherein the company attracts, develops, and retains competent and high-performing individuals capable of achieving the company's business and security objectives."
+      },
+      {
+        "id": "baa49ed3-39e5-40e4-8109-a58f422281b3",
+        "shortName": "POL-15",
+        "title": "Information Security Policy",
+        "description": "Establish an Information Security Program which protects the confidentiality, integrity, and availability of the company's data and assets."
+      },
+      {
+        "id": "7976f287-55d6-4cb1-9992-560f6e1ed484",
+        "shortName": "POL-9",
+        "title": "Audit Logging Policy",
+        "description": "Outline how systems generate log events for audit purposes, and how these logs are stored and processed to help detect security issues."
+      },
+      {
+        "id": "a40bd20e-1dcc-48c5-b386-46b5a40abc88",
+        "shortName": "POL-18",
+        "title": "Asset Management Policy",
+        "description": "Outline guidelines and practices to protect IT assets used to access sensitive customer or company data, and ensure any such access maintains the security and confidentiality of the data."
+      },
+      {
+        "id": "397d466e-f26f-4c68-9272-908dc623ba5d",
+        "shortName": "POL-11",
+        "title": "Physical Security Policy",
+        "description": "Establish the requirements and process for controlling access to company facilities and requirements for data centers hosting company system components."
+      },
+      {
+        "id": "7c93374e-d67f-4c0f-aab6-799421b6174b",
+        "shortName": "POL-10",
+        "title": "Data Classification Policy",
+        "description": "Define a data classification framework that can be used to determine the sensitivity of data and systems."
+      },
+      {
+        "id": "38ee85a1-2e3f-438f-975b-bb10354e3cc7",
+        "shortName": "POL-22",
+        "title": "Information Security Management System Policy",
+        "description": "Establish an Information Security Management System (ISMS) at the company. The ISMS requires the design, implementation, and maintenance of a coherent set of policies, processes, and systems to manage risks to the company's information assets."
+      },
+      {
+        "id": "de4ae847-303a-4cd8-adf3-bbeace67a0b4",
+        "shortName": "POL-100",
+        "title": "Remote Access Policy",
+        "description": "The purpose of this policy is to establish security controls and requirements to ensure that remote access to TrustCloud systems and data is performed securely, mitigating risks to sensitive customer and company information."
+      },
+      {
+        "id": "7b51f174-73e7-465a-a3db-742d2f81bf6b",
+        "shortName": "POL-101",
+        "title": "Employee Confidential Information and Inventions Assignment Agreement",
+        "description": "Employee Confidential Information and Inventions Assignment Agreement must be signed by new employees upon hire."
+      },
+      {
+        "id": "431d7b15-a0fd-464a-87ca-cf53055d1527",
+        "shortName": "POL-102",
+        "title": "Mutual Non-Disclosure Agreement",
+        "description": "Mutual Non-Disclosure Agreement Template"
+      }
+    ],
+    "_metadata": {
+      "createdDate": "2023-01-10T18:30:16.714Z",
+      "createdBy": {
+        "id": "0ef2f025-46df-47d0-8bcd-11f62aa10612",
+        "name": "System User",
+        "email": "system@trustcloud.ai",
+        "pictureUrl": "data:image/png;base64,UklGRr4FAABXRUJQVlA4TLIFAAAvSoASEIcFIZIkxVbOzGPmJ+d9/1qYcW9tOIgkSZGqe+GZycD718b8PwM5kiRFUmTjMr1WiJV69WM+6CxHkSSpVj68Phdfw5fwbX8ncMfdxzQBTGsPECBAgAAnOMABdjCDA5zgBDtYwQIWMIMZTGACIxjBAAYwgAA9yCCDBBJIIEiPAGAmGlCAEiHgBO+e6sFKuoAiAQJpDygDUCpDSSqAlaMlQCASECkpzUncW7rr1VeECTOBhKSMEFJCoNAdCJRQUAaPSYRUhAQEVKRlVkUJjN5NteE8Vc7K+RiXUpGkEsXq/6fFsOhdbxZ1xrsKoYUNMay7KaHFEthGpTSlpJylsnI2dlUqQpKSPvw1/9x9xg8/aYnv+OEv94OXPnqZT7PlLFvMkuUiWS2xWWK9xmZj2+2fw+HpcDi5G+oJ0pB+7We72/XYq9vswGTQ7DN3nBYkeoZRKUYuJqWZlGbiplyMXZWzIln1lXVZCksg+7az89ZHHL18/7x8frz9/sRoeL/Y2/vX93gP1LZtW9s2urwFnG3hqBDayuOtzMzslbn1VmZmciKzBk6Za23RKzuT9x8tvXotf9q3iP5PgPb/ZG9XW7SZ6mi0o6evfga7owRv0SfVgx6l+oe/Ll158/79+xdXz+yeQvXnvWHTG4DJR17+I+T/vnkIoHlCmHobgF9e2kKlfXMuEB0Iy6QWYNcHof7tGqAzHH2fwJwPoravZkDTQAh04JqouX0UIhNq1gozPoowvp4Ceo1aYZ0twmn9CHpNWmGnLcJq7wS9BjrstEV47Z3Qp6wXdtoizPYcIoOKJkVYZotwWz/RpKgFLBH2N9CpZDzcEOE/CwMKJjWwR9ShPZeogk4o1oN4A72BJkW4KFRa1+PxePy2VQOxg2igHhhVYMXxjRfVvYHeIA2cE8GtZRAbNozhGHDby7p9OX76tiUjdtAaoB/eBbOXsjpteqZicFkI8WYH3r9aEs9hklw7a0Xwy5A1ffMJuGwdBmIJIxED3vjZoMs1cD2YvQTDlB2CZVDImNWp1VD0EadpkRqEYrB3kJMyD8KitOmbX802v+dEpHQQwe9w0JTPrV6VNSUz8J+PBf0y7RxTcIpEADOZNaULPPYRoMtEuS5XvBxnx2KMIEFT4BenU+ZTbstYcbxrlAHb5zJRGShKvFsCseF0cvhgjXJQ9LmtzFrE6pSpOpcaLlQnjHQuA7bPc2aqsbezOmuqzScPElT4FkHiK5lnkDGV5o3VAIVhwzCMxEGPZZeLCjSZbQyZSpOrgaG0KWngueP6qLpRSKvIFYChnCmbX82B8oP1AIef32KmkiKY3tlMtUdyNRRypnT+IPzrOM7Yo3lUL5eJ8DxAOrEa71gimYDVaVM+G4Onjnfl/DxokIlyXSodI3DSlM4NAU8c2b18JtNG3MuCTAI4mMyapmnmMwc9oGCkM6Zp5jLGQWCr60jPo0emB7zEDoCDGdM7PwQLKo82E3DhvZIjPQZ9Mv1Q9LDjgGH6ZmKwr+w4Tvnuhf0+W06OlJyAd0GTns71quIOgIOpfFW6ADx0JMuu67qOyhO0yLWyQ4jROPDoBNWFAsAm1wlhCXrkJsC1OLDXdRz3BN57R5xQjsAkOW0GwIYRx7Pk3r9/v1J2QrqRFi3gF/DbiFOXLkwIMinCeac+j9OgBe6Ecl1UQA826WuO10NpI1M1hX/C3Tp4BL0qtPnMGwtdBf7QlA7MYG8pZOV5zJqkRhsHJ8JV2svP/Zrq7+F8mEp7QdfUfwfnw1PaCyu0WrbC8VJIynvhd622rbB3LBTuPFip1bod5t0NwX1A12o/LgLHx2rkboTZ/VoYB6PA+XIN3OPAt5O0kPZEgPOuopHjwDe9WngndUaAjY/cIKXK+XnANF0L96SuBqqPP7rvelbun99LdZOu1eHEtgaCN7UPaPU6qHdEG32aop3jv9T+lwQ="
+      },
+      "lastModifiedDate": "2023-01-10T18:30:16.714Z",
+      "lastModifiedBy": {
+        "id": "0ef2f025-46df-47d0-8bcd-11f62aa10612",
+        "name": "System User",
+        "email": "system@trustcloud.ai",
+        "pictureUrl": "data:image/png;base64,UklGRr4FAABXRUJQVlA4TLIFAAAvSoASEIcFIZIkxVbOzGPmJ+d9/1qYcW9tOIgkSZGqe+GZycD718b8PwM5kiRFUmTjMr1WiJV69WM+6CxHkSSpVj68Phdfw5fwbX8ncMfdxzQBTGsPECBAgAAnOMABdjCDA5zgBDtYwQIWMIMZTGACIxjBAAYwgAA9yCCDBBJIIEiPAGAmGlCAEiHgBO+e6sFKuoAiAQJpDygDUCpDSSqAlaMlQCASECkpzUncW7rr1VeECTOBhKSMEFJCoNAdCJRQUAaPSYRUhAQEVKRlVkUJjN5NteE8Vc7K+RiXUpGkEsXq/6fFsOhdbxZ1xrsKoYUNMay7KaHFEthGpTSlpJylsnI2dlUqQpKSPvw1/9x9xg8/aYnv+OEv94OXPnqZT7PlLFvMkuUiWS2xWWK9xmZj2+2fw+HpcDi5G+oJ0pB+7We72/XYq9vswGTQ7DN3nBYkeoZRKUYuJqWZlGbiplyMXZWzIln1lXVZCksg+7az89ZHHL18/7x8frz9/sRoeL/Y2/vX93gP1LZtW9s2urwFnG3hqBDayuOtzMzslbn1VmZmciKzBk6Za23RKzuT9x8tvXotf9q3iP5PgPb/ZG9XW7SZ6mi0o6evfga7owRv0SfVgx6l+oe/Ll158/79+xdXz+yeQvXnvWHTG4DJR17+I+T/vnkIoHlCmHobgF9e2kKlfXMuEB0Iy6QWYNcHof7tGqAzHH2fwJwPoravZkDTQAh04JqouX0UIhNq1gozPoowvp4Ceo1aYZ0twmn9CHpNWmGnLcJq7wS9BjrstEV47Z3Qp6wXdtoizPYcIoOKJkVYZotwWz/RpKgFLBH2N9CpZDzcEOE/CwMKJjWwR9ShPZeogk4o1oN4A72BJkW4KFRa1+PxePy2VQOxg2igHhhVYMXxjRfVvYHeIA2cE8GtZRAbNozhGHDby7p9OX76tiUjdtAaoB/eBbOXsjpteqZicFkI8WYH3r9aEs9hklw7a0Xwy5A1ffMJuGwdBmIJIxED3vjZoMs1cD2YvQTDlB2CZVDImNWp1VD0EadpkRqEYrB3kJMyD8KitOmbX802v+dEpHQQwe9w0JTPrV6VNSUz8J+PBf0y7RxTcIpEADOZNaULPPYRoMtEuS5XvBxnx2KMIEFT4BenU+ZTbstYcbxrlAHb5zJRGShKvFsCseF0cvhgjXJQ9LmtzFrE6pSpOpcaLlQnjHQuA7bPc2aqsbezOmuqzScPElT4FkHiK5lnkDGV5o3VAIVhwzCMxEGPZZeLCjSZbQyZSpOrgaG0KWngueP6qLpRSKvIFYChnCmbX82B8oP1AIef32KmkiKY3tlMtUdyNRRypnT+IPzrOM7Yo3lUL5eJ8DxAOrEa71gimYDVaVM+G4Onjnfl/DxokIlyXSodI3DSlM4NAU8c2b18JtNG3MuCTAI4mMyapmnmMwc9oGCkM6Zp5jLGQWCr60jPo0emB7zEDoCDGdM7PwQLKo82E3DhvZIjPQZ9Mv1Q9LDjgGH6ZmKwr+w4Tvnuhf0+W06OlJyAd0GTns71quIOgIOpfFW6ADx0JMuu67qOyhO0yLWyQ4jROPDoBNWFAsAm1wlhCXrkJsC1OLDXdRz3BN57R5xQjsAkOW0GwIYRx7Pk3r9/v1J2QrqRFi3gF/DbiFOXLkwIMinCeac+j9OgBe6Ecl1UQA826WuO10NpI1M1hX/C3Tp4BL0qtPnMGwtdBf7QlA7MYG8pZOV5zJqkRhsHJ8JV2svP/Zrq7+F8mEp7QdfUfwfnw1PaCyu0WrbC8VJIynvhd622rbB3LBTuPFip1bod5t0NwX1A12o/LgLHx2rkboTZ/VoYB6PA+XIN3OPAt5O0kPZEgPOuopHjwDe9WngndUaAjY/cIKXK+XnANF0L96SuBqqPP7rvelbun99LdZOu1eHEtgaCN7UPaPU6qHdEG32aop3jv9T+lwQ="
+      }
+    }
+  },
+  {
+    "id": "a78c9614-09a5-4d82-85ac-0ac3cc2db83b",
+    "referenceId": "8",
+    "displayIdentifier": "Clause 8 ",
+    "title": "Conditions for collection and processing",
+    "description": null,
+    "subsections": [
+      {
+        "id": "fc304462-3c7d-48de-b851-389af6693469",
+        "referenceId": "8.1",
+        "name": "General",
+        "description": "The guidance in Clause 6 and the additions of this clause create the PIMS-specific guidance for PII processors. The implementation guidance documented in this clause relate to the controls listed in Annex B.",
+        "programControlMapping": [
+          {
+            "id": "67fa0eaa-8f8f-4f1c-8dbc-1d24c272d56b",
+            "shortName": "BIZOPS-30",
+            "customShortName": null,
+            "name": "Information Security Management System",
+            "description": "The company designs, implements, and maintains an ISMS consisting of a coherent set of policies, procedures, and processes to manage risk to its information assets."
+          }
+        ]
+      },
+      {
+        "id": "917ca786-e557-450b-a41d-0e8f57e4dd0d",
+        "referenceId": "6.8.2.9",
+        "name": "Clear desk and clear screen policy",
+        "description": "The organization should restrict the creation of hardcopy material including PII to the minimum needed to fulfil the identified processing purpose.",
+        "programControlMapping": [
+          {
+            "id": "ece27e3a-12ef-4e96-8fbe-02661cef7dfd",
+            "shortName": "PS-11",
+            "customShortName": null,
+            "name": "Clear desk policy - PII",
+            "description": "A policy is in place to restrict the creation of hardcopy material including PII to the minimum needed to fufill business purposes."
+          }
+        ]
+      },
+      {
+        "id": "1ee5e9b0-3711-47fe-80d5-ebfeb4068a2c",
+        "referenceId": "8.5.5",
+        "name": "PII sharing, transfer, and disclosure: Legally binding PII disclosures",
+        "description": "The organization should reject any requests for PII disclosures that are not legally binding, consult the corresponding customer before making any PII disclosures and accepting any contractually agreed requests for PII disclosures that are authorized by the corresponding customer.",
+        "programControlMapping": [
+          {
+            "id": "b1e854cc-4fa4-4599-9851-9dc9fb0790ce",
+            "shortName": "PRIV-30",
+            "customShortName": null,
+            "name": "Data Protection Policy",
+            "description": "The company has established a data protection policy that defines the requirements for achieving compliance with applicable PII protection laws, regulations, and contractual agreements."
+          }
+        ]
+      },
+      {
+        "id": "e66f79d2-a9eb-4d28-9bf9-5113727508a8",
+        "referenceId": "8.2.1",
+        "name": "Conditions for collection and processing: Customer agreement",
+        "description": "The organization should ensure, where relevant, that the contract to process PII addresses the organization’s role in providing assistance with the customer’s obligations (taking into account the nature of processing and the information available to the organization).",
+        "programControlMapping": [
+          {
+            "id": "82d9b106-cb9b-4534-bc92-61ea35c4ff01",
+            "shortName": "CUST-17",
+            "customShortName": null,
+            "name": "Master Services Agreement",
+            "description": "The company's Master Services Agreement with its customers communicates the responsibilities of both parties relative to internal controls impacting Security, Availability, Processing Integrity and Confidentiality."
+          }
+        ]
+      },
+      {
+        "id": "0fb46bc9-d855-4124-a3e4-29d3ceed4a43",
+        "referenceId": "8.2.2",
+        "name": "Conditions for collection and processing: Organization’s purposes",
+        "description": "The organization should ensure that PII processed on behalf of a customer are only processed for the purposes expressed in the documented instructions of the customer.",
+        "programControlMapping": [
+          {
+            "id": "b1e854cc-4fa4-4599-9851-9dc9fb0790ce",
+            "shortName": "PRIV-30",
+            "customShortName": null,
+            "name": "Data Protection Policy",
+            "description": "The company has established a data protection policy that defines the requirements for achieving compliance with applicable PII protection laws, regulations, and contractual agreements."
+          }
+        ]
+      },
+      {
+        "id": "86cdb4d1-9c12-446a-ad9a-859b32ba503a",
+        "referenceId": "8.2.3",
+        "name": "Conditions for collection and processing: Marketing and advertising use",
+        "description": "The organization should not use PII processed under a contract for the purposes of marketing and advertising without establishing that prior consent was obtained from the appropriate PII principal. The organization should not make providing such consent a condition for receiving the service.",
+        "programControlMapping": [
+          {
+            "id": "b1e854cc-4fa4-4599-9851-9dc9fb0790ce",
+            "shortName": "PRIV-30",
+            "customShortName": null,
+            "name": "Data Protection Policy",
+            "description": "The company has established a data protection policy that defines the requirements for achieving compliance with applicable PII protection laws, regulations, and contractual agreements."
+          }
+        ]
+      },
+      {
+        "id": "ea1bc96d-00cc-4a6c-9a70-aad65cfa6766",
+        "referenceId": "8.2.4",
+        "name": "Conditions for collection and processing: Infringing instructions",
+        "description": "The organization should inform the customer if, in its opinion, a processing instruction infringes applicable legislation and/or regulation.",
+        "programControlMapping": [
+          {
+            "id": "b1e854cc-4fa4-4599-9851-9dc9fb0790ce",
+            "shortName": "PRIV-30",
+            "customShortName": null,
+            "name": "Data Protection Policy",
+            "description": "The company has established a data protection policy that defines the requirements for achieving compliance with applicable PII protection laws, regulations, and contractual agreements."
+          }
+        ]
+      },
+      {
+        "id": "e4ede57d-2e58-4d17-bd99-085c8bf519cb",
+        "referenceId": "8.2.5",
+        "name": "Conditions for collection and processing: Customer obligations",
+        "description": "The organization should provide the customer with the appropriate information such that the customer can demonstrate compliance with their obligations.",
+        "programControlMapping": [
+          {
+            "id": "496ec408-e0ab-4fe1-a55d-ceddd0abf7ad",
+            "shortName": "BIZOPS-26",
+            "customShortName": null,
+            "name": "External Assessments",
+            "description": "The company commissions external third-party assessments to validate its compliance controls. Assessment results are documented and reviewed by company leadership"
+          }
+        ]
+      },
+      {
+        "id": "e14fc179-80ab-4d2b-a6eb-d7144ef66435",
+        "referenceId": "8.2.6",
+        "name": "Conditions for collection and processing: Records related to processing PII",
+        "description": "The organization should determine and maintain the necessary records in support of demonstrating compliance with its obligations (as specified in the applicable contract) for the processing of PII carried out on behalf of a customer.",
+        "programControlMapping": [
+          {
+            "id": "bc4a669e-56dc-4251-a9cf-efd011c68132",
+            "shortName": "PRIV-27",
+            "customShortName": null,
+            "name": "Record of Processing Activities",
+            "description": "The company maintains records of processing activities, including the actors involved, the categories of data processed, the purpose of the processing, the retention period, and the relevant technical and organizational data protection controls implemented."
+          }
+        ]
+      },
+      {
+        "id": "670ebaec-081e-438e-af03-a4f87f96528c",
+        "referenceId": "8.3.1",
+        "name": "Obligations to PII principals",
+        "description": "To ensure that PII principals are provided with the appropriate information about the processing of their PII, and to meet any other applicable obligations to PII principals related to the processing of their PII.",
+        "programControlMapping": [
+          {
+            "id": "b1e900c9-93b4-4a77-81be-db22abacdcf9",
+            "shortName": "PRIV-28",
+            "customShortName": null,
+            "name": "Data Subject Access Request Procedures",
+            "description": "Data subject access procedures are in place to help facilitate data subject request either directly or on behalf of the controller."
+          }
+        ]
+      },
+      {
+        "id": "1d8a401c-3fba-4d68-b8bc-48f682487df3",
+        "referenceId": "8.4.1",
+        "name": "Privacy by design and privacy by default: Temporary files",
+        "description": "The organization should ensure that temporary files created as a result of the processing of PII are disposed of (e.g. erased or destroyed) following documented procedures within a specified, documented period.   The organization should perform periodic checks that unused temporary files are deleted within the identified time period.",
+        "programControlMapping": [
+          {
+            "id": "5e25b868-b344-485f-bd93-ac7666c9cfad",
+            "shortName": "DATA-25",
+            "customShortName": null,
+            "name": "Data Lifecycle Management",
+            "description": "The organization maintains data mapping that categorizes and assigns ownership to data, assets, and endpoints, in accordance with applicable statutory, regulatory and contractual requirements."
+          },
+          {
+            "id": "f23f9e52-9a31-4ff2-914e-589f5e5c9e4a",
+            "shortName": "DATA-17",
+            "customShortName": null,
+            "name": "Data Disposal",
+            "description": "Customer data is securely disposed of after its retention period passes, and any retained data is sanitized and anonymized."
+          }
+        ]
+      },
+      {
+        "id": "a5a88e03-1b5d-47b5-a53b-2d93cecc047c",
+        "referenceId": "8.4.2",
+        "name": "Privacy by design and privacy by default: Return, transfer or disposal of PII",
+        "description": "The organization should provide the ability to return, transfer and/or disposal of PII in a secure manner. It should also make its policy available to the customer.",
+        "programControlMapping": [
+          {
+            "id": "d53810d3-97a0-4657-abe2-9c3368eb676e",
+            "shortName": "DATA-16",
+            "customShortName": null,
+            "name": "Data Retention",
+            "description": "Retention periods for customer data are specified in the company's Data Retention Procedure and adhere to compliance, regulatory, contractual, and organizational requirements."
+          },
+          {
+            "id": "f23f9e52-9a31-4ff2-914e-589f5e5c9e4a",
+            "shortName": "DATA-17",
+            "customShortName": null,
+            "name": "Data Disposal",
+            "description": "Customer data is securely disposed of after its retention period passes, and any retained data is sanitized and anonymized."
+          }
+        ]
+      },
+      {
+        "id": "1e79cd2a-648c-49e0-ae2f-bebbce9ec6f1",
+        "referenceId": "8.4.3",
+        "name": "Privacy by design and privacy by default: PII transmission controls",
+        "description": "The organization should subject PII transmitted over a data-transmission network to appropriate controls designed to ensure that the data reaches its intended destination.",
+        "programControlMapping": [
+          {
+            "id": "1517e194-dbc9-447e-a4e2-03e5a63499d6",
+            "shortName": "APPS-2",
+            "customShortName": null,
+            "name": "Encryption Documentation",
+            "description": "The company maintains documented guidance on the selection and configuration of appropriate cryptographic methods."
+          },
+          {
+            "id": "9fb61055-3c69-41ee-93cb-60b2ac392e60",
+            "shortName": "INFRA-1",
+            "customShortName": null,
+            "name": "TLS certificates and endpoints",
+            "description": "TLS usage is evaluated on a quarterly basis using tools such as ssllabs and any grades lower than A are promptly corrected."
+          },
+          {
+            "id": "40a0acab-763d-4188-a0d5-7801bdf23cdc",
+            "shortName": "APPS-1",
+            "customShortName": null,
+            "name": "Cryptography",
+            "description": "The company uses widely-adopted implementations of industry standard algorithms and appropriate key lengths for all cryptography-related operations."
+          }
+        ]
+      },
+      {
+        "id": "87f73bf1-e758-4705-837c-7a67f1f7aadf",
+        "referenceId": "8.5.1",
+        "name": "PII sharing, transfer, and disclosure: Basis for PII transfer between jurisdictions",
+        "description": "The organization should inform the customer in a timely manner of the basis for PII transfers between jurisdictions and of any intended changes in this regard, so that the customer has the ability to object to such changes or to terminate the contract.",
+        "programControlMapping": [
+          {
+            "id": "82d9b106-cb9b-4534-bc92-61ea35c4ff01",
+            "shortName": "CUST-17",
+            "customShortName": null,
+            "name": "Master Services Agreement",
+            "description": "The company's Master Services Agreement with its customers communicates the responsibilities of both parties relative to internal controls impacting Security, Availability, Processing Integrity and Confidentiality."
+          }
+        ]
+      },
+      {
+        "id": "bcf43a2d-aa91-46f2-85e5-84d20ef0eb07",
+        "referenceId": "8.5.2",
+        "name": "PII sharing, transfer, and disclosure: Countries and international organizations to which PII can be transferred",
+        "description": "The organization should specify and document the countries and international organizations to which PII can possibly be transferred.",
+        "programControlMapping": [
+          {
+            "id": "bc4a669e-56dc-4251-a9cf-efd011c68132",
+            "shortName": "PRIV-27",
+            "customShortName": null,
+            "name": "Record of Processing Activities",
+            "description": "The company maintains records of processing activities, including the actors involved, the categories of data processed, the purpose of the processing, the retention period, and the relevant technical and organizational data protection controls implemented."
+          },
+          {
+            "id": "48ebfef6-da33-4558-b42f-9b7f7d5d2ee2",
+            "shortName": "BIZOPS-29",
+            "customShortName": null,
+            "name": "Applicable Legal Authorities",
+            "description": "The company maintains a list of applicable statutory and regulatory authorities, as well as the contacts necessary to keep up to date with these and future legal requirements."
+          }
+        ]
+      },
+      {
+        "id": "01044846-b3c6-46c9-8cea-e48ed9dfb9b1",
+        "referenceId": "8.5.3",
+        "name": "PII sharing, transfer, and disclosure: Records of PII disclosure to third parties",
+        "description": "The organization should record disclosures of PII to third parties, including what PII has been disclosed, to whom and when.",
+        "programControlMapping": [
+          {
+            "id": "300fedad-832f-446a-9dfd-a486da8ae0f1",
+            "shortName": "PRIV-17",
+            "customShortName": null,
+            "name": "Third-Party Data Sharing",
+            "description": "Disclosures of personal data to third-party organizations are limited to the purposes identified in the privacy policy."
+          }
+        ]
+      },
+      {
+        "id": "294a0697-8e40-4327-9402-89b3bac24c85",
+        "referenceId": "8.5.4",
+        "name": "PII sharing, transfer, and disclosure: Notification of PII disclosure requests",
+        "description": "The organization should notify the customer of any legally binding requests for disclosure of PII.",
+        "programControlMapping": [
+          {
+            "id": "82d9b106-cb9b-4534-bc92-61ea35c4ff01",
+            "shortName": "CUST-17",
+            "customShortName": null,
+            "name": "Master Services Agreement",
+            "description": "The company's Master Services Agreement with its customers communicates the responsibilities of both parties relative to internal controls impacting Security, Availability, Processing Integrity and Confidentiality."
+          }
+        ]
+      },
+      {
+        "id": "eda0004b-9c43-4e95-b408-639a6f122f22",
+        "referenceId": "8.5.6",
+        "name": "PII sharing, transfer, and disclosure: Disclosure of subcontractors used to process PII",
+        "description": "The organization should disclose any use of subcontractors to process PII to the customer before use.",
+        "programControlMapping": [
+          {
+            "id": "7631fee6-2ae9-49c5-b725-847a541e2741",
+            "shortName": "PRIV-26",
+            "customShortName": null,
+            "name": "Subprocessors Inventory",
+            "description": "A complete inventory of subprocessors is maintained and published publicly."
+          }
+        ]
+      },
+      {
+        "id": "eae622c7-2843-4606-994a-a4a5ab61834e",
+        "referenceId": "8.5.7",
+        "name": "PII sharing, transfer, and disclosure: Change of subcontractor to process PII",
+        "description": "The organization should, in the case of having general written authorization, inform the customer of any intended changes concerning the addition or replacement of subcontractors to process PII, thereby giving the customer the opportunity to object to such changes.",
+        "programControlMapping": [
+          {
+            "id": "7631fee6-2ae9-49c5-b725-847a541e2741",
+            "shortName": "PRIV-26",
+            "customShortName": null,
+            "name": "Subprocessors Inventory",
+            "description": "A complete inventory of subprocessors is maintained and published publicly."
+          },
+          {
+            "id": "82d9b106-cb9b-4534-bc92-61ea35c4ff01",
+            "shortName": "CUST-17",
+            "customShortName": null,
+            "name": "Master Services Agreement",
+            "description": "The company's Master Services Agreement with its customers communicates the responsibilities of both parties relative to internal controls impacting Security, Availability, Processing Integrity and Confidentiality."
+          }
+        ]
+      }
+    ],
+    "programPolicyMapping": [
+      {
+        "id": "339a35ce-ea6d-487e-afd2-c071bf107207",
+        "shortName": "POL-8",
+        "title": "Vulnerability Management Policy",
+        "description": "Establish vulnerability management controls and provide guidelines for their implementation."
+      },
+      {
+        "id": "2d8d1f89-baee-4283-ac99-10fd4d68d68a",
+        "shortName": "POL-1",
+        "title": "Encryption Policy",
+        "description": "Establish practices for protecting your company data in the event of unauthorized access through the use of encryption."
+      },
+      {
+        "id": "89642d44-ef7f-49e4-9048-384e42fd74a2",
+        "shortName": "POL-12",
+        "title": "Data Retention and Disposal Policy",
+        "description": "Establish requirements surrounding the retention and eventual disposal of data, in order to ensure confidentiality of sensitive company and customer information."
+      },
+      {
+        "id": "13249171-174a-47d7-a234-28758c1a7bcf",
+        "shortName": "POL-16",
+        "title": "Vendor Management Policy",
+        "description": "Establish the scope and objectives for the selection, acquisition, and management of products and services from third-party vendors, in order to maintain the security of the company's information assets that are accessible by those vendors"
+      },
+      {
+        "id": "38ee85a1-2e3f-438f-975b-bb10354e3cc7",
+        "shortName": "POL-22",
+        "title": "Information Security Management System Policy",
+        "description": "Establish an Information Security Management System (ISMS) at the company. The ISMS requires the design, implementation, and maintenance of a coherent set of policies, processes, and systems to manage risks to the company's information assets."
+      }
+    ],
+    "_metadata": {
+      "createdDate": "2023-01-10T18:30:16.714Z",
+      "createdBy": {
+        "id": "0ef2f025-46df-47d0-8bcd-11f62aa10612",
+        "name": "System User",
+        "email": "system@trustcloud.ai",
+        "pictureUrl": "data:image/png;base64,UklGRr4FAABXRUJQVlA4TLIFAAAvSoASEIcFIZIkxVbOzGPmJ+d9/1qYcW9tOIgkSZGqe+GZycD718b8PwM5kiRFUmTjMr1WiJV69WM+6CxHkSSpVj68Phdfw5fwbX8ncMfdxzQBTGsPECBAgAAnOMABdjCDA5zgBDtYwQIWMIMZTGACIxjBAAYwgAA9yCCDBBJIIEiPAGAmGlCAEiHgBO+e6sFKuoAiAQJpDygDUCpDSSqAlaMlQCASECkpzUncW7rr1VeECTOBhKSMEFJCoNAdCJRQUAaPSYRUhAQEVKRlVkUJjN5NteE8Vc7K+RiXUpGkEsXq/6fFsOhdbxZ1xrsKoYUNMay7KaHFEthGpTSlpJylsnI2dlUqQpKSPvw1/9x9xg8/aYnv+OEv94OXPnqZT7PlLFvMkuUiWS2xWWK9xmZj2+2fw+HpcDi5G+oJ0pB+7We72/XYq9vswGTQ7DN3nBYkeoZRKUYuJqWZlGbiplyMXZWzIln1lXVZCksg+7az89ZHHL18/7x8frz9/sRoeL/Y2/vX93gP1LZtW9s2urwFnG3hqBDayuOtzMzslbn1VmZmciKzBk6Za23RKzuT9x8tvXotf9q3iP5PgPb/ZG9XW7SZ6mi0o6evfga7owRv0SfVgx6l+oe/Ll158/79+xdXz+yeQvXnvWHTG4DJR17+I+T/vnkIoHlCmHobgF9e2kKlfXMuEB0Iy6QWYNcHof7tGqAzHH2fwJwPoravZkDTQAh04JqouX0UIhNq1gozPoowvp4Ceo1aYZ0twmn9CHpNWmGnLcJq7wS9BjrstEV47Z3Qp6wXdtoizPYcIoOKJkVYZotwWz/RpKgFLBH2N9CpZDzcEOE/CwMKJjWwR9ShPZeogk4o1oN4A72BJkW4KFRa1+PxePy2VQOxg2igHhhVYMXxjRfVvYHeIA2cE8GtZRAbNozhGHDby7p9OX76tiUjdtAaoB/eBbOXsjpteqZicFkI8WYH3r9aEs9hklw7a0Xwy5A1ffMJuGwdBmIJIxED3vjZoMs1cD2YvQTDlB2CZVDImNWp1VD0EadpkRqEYrB3kJMyD8KitOmbX802v+dEpHQQwe9w0JTPrV6VNSUz8J+PBf0y7RxTcIpEADOZNaULPPYRoMtEuS5XvBxnx2KMIEFT4BenU+ZTbstYcbxrlAHb5zJRGShKvFsCseF0cvhgjXJQ9LmtzFrE6pSpOpcaLlQnjHQuA7bPc2aqsbezOmuqzScPElT4FkHiK5lnkDGV5o3VAIVhwzCMxEGPZZeLCjSZbQyZSpOrgaG0KWngueP6qLpRSKvIFYChnCmbX82B8oP1AIef32KmkiKY3tlMtUdyNRRypnT+IPzrOM7Yo3lUL5eJ8DxAOrEa71gimYDVaVM+G4Onjnfl/DxokIlyXSodI3DSlM4NAU8c2b18JtNG3MuCTAI4mMyapmnmMwc9oGCkM6Zp5jLGQWCr60jPo0emB7zEDoCDGdM7PwQLKo82E3DhvZIjPQZ9Mv1Q9LDjgGH6ZmKwr+w4Tvnuhf0+W06OlJyAd0GTns71quIOgIOpfFW6ADx0JMuu67qOyhO0yLWyQ4jROPDoBNWFAsAm1wlhCXrkJsC1OLDXdRz3BN57R5xQjsAkOW0GwIYRx7Pk3r9/v1J2QrqRFi3gF/DbiFOXLkwIMinCeac+j9OgBe6Ecl1UQA826WuO10NpI1M1hX/C3Tp4BL0qtPnMGwtdBf7QlA7MYG8pZOV5zJqkRhsHJ8JV2svP/Zrq7+F8mEp7QdfUfwfnw1PaCyu0WrbC8VJIynvhd622rbB3LBTuPFip1bod5t0NwX1A12o/LgLHx2rkboTZ/VoYB6PA+XIN3OPAt5O0kPZEgPOuopHjwDe9WngndUaAjY/cIKXK+XnANF0L96SuBqqPP7rvelbun99LdZOu1eHEtgaCN7UPaPU6qHdEG32aop3jv9T+lwQ="
+      },
+      "lastModifiedDate": "2023-01-10T18:30:16.714Z",
+      "lastModifiedBy": {
+        "id": "0ef2f025-46df-47d0-8bcd-11f62aa10612",
+        "name": "System User",
+        "email": "system@trustcloud.ai",
+        "pictureUrl": "data:image/png;base64,UklGRr4FAABXRUJQVlA4TLIFAAAvSoASEIcFIZIkxVbOzGPmJ+d9/1qYcW9tOIgkSZGqe+GZycD718b8PwM5kiRFUmTjMr1WiJV69WM+6CxHkSSpVj68Phdfw5fwbX8ncMfdxzQBTGsPECBAgAAnOMABdjCDA5zgBDtYwQIWMIMZTGACIxjBAAYwgAA9yCCDBBJIIEiPAGAmGlCAEiHgBO+e6sFKuoAiAQJpDygDUCpDSSqAlaMlQCASECkpzUncW7rr1VeECTOBhKSMEFJCoNAdCJRQUAaPSYRUhAQEVKRlVkUJjN5NteE8Vc7K+RiXUpGkEsXq/6fFsOhdbxZ1xrsKoYUNMay7KaHFEthGpTSlpJylsnI2dlUqQpKSPvw1/9x9xg8/aYnv+OEv94OXPnqZT7PlLFvMkuUiWS2xWWK9xmZj2+2fw+HpcDi5G+oJ0pB+7We72/XYq9vswGTQ7DN3nBYkeoZRKUYuJqWZlGbiplyMXZWzIln1lXVZCksg+7az89ZHHL18/7x8frz9/sRoeL/Y2/vX93gP1LZtW9s2urwFnG3hqBDayuOtzMzslbn1VmZmciKzBk6Za23RKzuT9x8tvXotf9q3iP5PgPb/ZG9XW7SZ6mi0o6evfga7owRv0SfVgx6l+oe/Ll158/79+xdXz+yeQvXnvWHTG4DJR17+I+T/vnkIoHlCmHobgF9e2kKlfXMuEB0Iy6QWYNcHof7tGqAzHH2fwJwPoravZkDTQAh04JqouX0UIhNq1gozPoowvp4Ceo1aYZ0twmn9CHpNWmGnLcJq7wS9BjrstEV47Z3Qp6wXdtoizPYcIoOKJkVYZotwWz/RpKgFLBH2N9CpZDzcEOE/CwMKJjWwR9ShPZeogk4o1oN4A72BJkW4KFRa1+PxePy2VQOxg2igHhhVYMXxjRfVvYHeIA2cE8GtZRAbNozhGHDby7p9OX76tiUjdtAaoB/eBbOXsjpteqZicFkI8WYH3r9aEs9hklw7a0Xwy5A1ffMJuGwdBmIJIxED3vjZoMs1cD2YvQTDlB2CZVDImNWp1VD0EadpkRqEYrB3kJMyD8KitOmbX802v+dEpHQQwe9w0JTPrV6VNSUz8J+PBf0y7RxTcIpEADOZNaULPPYRoMtEuS5XvBxnx2KMIEFT4BenU+ZTbstYcbxrlAHb5zJRGShKvFsCseF0cvhgjXJQ9LmtzFrE6pSpOpcaLlQnjHQuA7bPc2aqsbezOmuqzScPElT4FkHiK5lnkDGV5o3VAIVhwzCMxEGPZZeLCjSZbQyZSpOrgaG0KWngueP6qLpRSKvIFYChnCmbX82B8oP1AIef32KmkiKY3tlMtUdyNRRypnT+IPzrOM7Yo3lUL5eJ8DxAOrEa71gimYDVaVM+G4Onjnfl/DxokIlyXSodI3DSlM4NAU8c2b18JtNG3MuCTAI4mMyapmnmMwc9oGCkM6Zp5jLGQWCr60jPo0emB7zEDoCDGdM7PwQLKo82E3DhvZIjPQZ9Mv1Q9LDjgGH6ZmKwr+w4Tvnuhf0+W06OlJyAd0GTns71quIOgIOpfFW6ADx0JMuu67qOyhO0yLWyQ4jROPDoBNWFAsAm1wlhCXrkJsC1OLDXdRz3BN57R5xQjsAkOW0GwIYRx7Pk3r9/v1J2QrqRFi3gF/DbiFOXLkwIMinCeac+j9OgBe6Ecl1UQA826WuO10NpI1M1hX/C3Tp4BL0qtPnMGwtdBf7QlA7MYG8pZOV5zJqkRhsHJ8JV2svP/Zrq7+F8mEp7QdfUfwfnw1PaCyu0WrbC8VJIynvhd622rbB3LBTuPFip1bod5t0NwX1A12o/LgLHx2rkboTZ/VoYB6PA+XIN3OPAt5O0kPZEgPOuopHjwDe9WngndUaAjY/cIKXK+XnANF0L96SuBqqPP7rvelbun99LdZOu1eHEtgaCN7UPaPU6qHdEG32aop3jv9T+lwQ="
+      }
+    }
+  }
+]

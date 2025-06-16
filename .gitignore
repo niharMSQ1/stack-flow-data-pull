@@ -1,0 +1,92 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pdb
+*.egg-info/
+*.egg
+*.log
+*.pot
+*.mo
+
+# Byte-compiled files
+*.pyc
+*.pyo
+*.pyd
+*.py.class
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv/
+
+# Django specific
+*.sqlite3
+db.sqlite3
+media/
+staticfiles/       # collected static files (via collectstatic)
+local_settings.py  # local overrides (optional)
+*.secret           # secret keys
+/secrets.json
+
+# VS Code & editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Operating System
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Migrations (optional if you recreate them often)
+**/migrations/*.pyc
+**/migrations/*.pyo
+**/migrations/__pycache__/
+**/migrations/*.log
+# Optional: ignore initial migration files if auto-generated
+# **/migrations/0001_initial.py
+
+# Coverage reports
+htmlcov/
+.coverage
+coverage.xml
+.cache
+
+# Test results
+nosetests.xml
+test-results.xml
+junit.xml
+
+# Pytest
+.pytest_cache/
+
+# Pip
+pip-log.txt
+pip-delete-this-directory.txt
+
+# MyPy
+.mypy_cache/
+
+# Build
+build/
+dist/
+*.egg-info/
+
+# Node/npm (if using Tailwind, Webpack, etc.)
+node_modules/
+*.lock
+package-lock.json
+yarn.lock
+
+# dotenv
+.env
+.env.*
+
+# Playwright or Puppeteer (if used)
+playwright-report/

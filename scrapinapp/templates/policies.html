@@ -1,0 +1,176 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mx-auto p-4">
+    <h1 class="text-2xl font-bold mb-6">Policies Management</h1>
+
+    <!-- Filter -->
+    <div class="mb-6 bg-white p-4 rounded-lg shadow">
+        <label for="security-group-filter" class="block text-sm font-medium text-gray-700 mb-2">
+            Filter by Security Group:
+        </label>
+        <select id="security-group-filter" class="w-full md:w-1/3 p-2 border rounded-md focus:ring-2 focus:ring-blue-500" onchange="filterPolicies()">
+            <option value="">All Security Groups</option>
+            {% for group in security_groups %}
+            <option value="{{ group }}">{{ group }}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <!-- Table -->
+    <div class="overflow-x-auto bg-white rounded-lg shadow">
+        <table class="min-w-full divide-y divide-gray-200">
+            <thead class="bg-gray-50">
+                <tr>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Policy Title</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Policy ID</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Reference</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Clauses</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Controls</th>
+                </tr>
+            </thead>
+            <tbody class="bg-white divide-y divide-gray-200">
+                {% for group, policies_by_title in grouped_policies.items %}
+                {% for title, policies in policies_by_title.items %}
+                {% for policy in policies %}
+                <tr class="security-group hover:bg-gray-50" data-group="{{ group|default:'None' }}">
+                    <td class="px-6 py-4 whitespace-nowrap">
+                        <div class="text-sm font-medium text-gray-900">{{ title|default:"No Title" }}</div>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                        <div class="text-sm text-gray-900 font-mono">{{ policy.policy_id }}</div>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                        <div class="text-sm text-gray-500">{{ policy.policy_reference }}</div>
+                    </td>
+                    <td class="px-6 py-4">
+                        <div class="flex flex-wrap gap-1">
+                            {% for clause in policy.clauses.all %}
+                            <span class="px-2 py-1 text-xs rounded-full cursor-pointer clause-tooltip"
+                                data-id="{{ clause.id }}"
+                                {% cycle 'style=background-color:#FEF3C7;color:#92400E' 'style=background-color:#E0E7FF;color:#3730A3' 'style=background-color:#FCE7F3;color:#9D174D' as tagcolors %}>
+                                {{ clause.display_identifier }}
+                            </span>
+                            {% empty %}
+                            <span class="text-gray-400 text-xs">-</span>
+                            {% endfor %}
+                        </div>
+                    </td>
+                    <td class="px-6 py-4">
+                        <div class="flex flex-wrap gap-1">
+                            {% for control in policy.controls.all %}
+                            <span class="px-2 py-1 text-xs rounded-full cursor-pointer control-tooltip"
+                                data-id="{{ control.id }}"
+                                {% cycle 'style=background-color:#FECACA;color:#991B1B' 'style=background-color:#CCFBF1;color:#134E4A' 'style=background-color:#FED7AA;color:#9A3412' as controlcolors %}>
+                                {{ control.short_name }}
+                            </span>
+                            {% empty %}
+                            <span class="text-gray-400 text-xs">-</span>
+                            {% endfor %}
+                        </div>
+                    </td>
+                </tr>
+                {% endfor %}
+                {% endfor %}
+                {% empty %}
+                <tr>
+                    <td colspan="6" class="px-6 py-4 text-center text-gray-500">No policies found</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Tooltip Container -->
+<div id="tooltip-popup" class="hidden absolute bg-white border border-gray-300 shadow-lg rounded-lg p-3 text-sm z-50 max-w-xs">
+    <div id="tooltip-loader" class="text-gray-400 italic">Loading...</div>
+    <div id="tooltip-content" class="hidden"></div>
+</div>
+
+<!-- JS: Filtering + Tooltip -->
+<script>
+function filterPolicies() {
+    const filter = document.getElementById('security-group-filter').value;
+    const rows = document.querySelectorAll('.security-group');
+    rows.forEach(row => {
+        if (!filter || row.dataset.group === filter) {
+            row.style.display = '';
+        } else {
+            row.style.display = 'none';
+        }
+    });
+}
+
+// Tooltip logic
+const tooltip = document.getElementById('tooltip-popup');
+const loader = document.getElementById('tooltip-loader');
+const content = document.getElementById('tooltip-content');
+
+function showTooltip(evt, url) {
+    tooltip.classList.remove('hidden');
+    tooltip.style.top = (evt.pageY + 12) + 'px';
+    tooltip.style.left = (evt.pageX + 12) + 'px';
+    loader.classList.remove('hidden');
+    content.classList.add('hidden');
+    loader.innerText = "Loading...";
+
+    fetch(url)
+        .then(res => {
+            if (!res.ok) throw new Error("Failed to fetch data");
+            return res.json();
+        })
+        .then(data => {
+            loader.classList.add('hidden');
+            content.classList.remove('hidden');
+            content.innerHTML = Object.entries(data).map(([key, value]) =>
+                `<div><strong>${key.replace('_', ' ')}:</strong> ${value}</div>`
+            ).join('');
+        })
+        .catch(() => {
+            loader.innerText = "Error loading data";
+        });
+}
+
+function hideTooltip() {
+    tooltip.classList.add('hidden');
+    content.innerHTML = '';
+}
+
+// Clause tooltip handlers
+document.querySelectorAll('.clause-tooltip').forEach(elem => {
+    elem.addEventListener('mouseenter', evt => {
+        const id = elem.getAttribute('data-id');
+        showTooltip(evt, `/api/clause/${id}/`);
+    });
+    elem.addEventListener('mouseleave', hideTooltip);
+    elem.addEventListener('click', () => {
+        const id = elem.getAttribute('data-id');
+        window.open(`/api/clause/${id}/`, '_blank');
+    });
+});
+
+// Control tooltip handlers
+document.querySelectorAll('.control-tooltip').forEach(elem => {
+    elem.addEventListener('mouseenter', evt => {
+        const id = elem.getAttribute('data-id');
+        showTooltip(evt, `/api/control/${id}/`);
+    });
+    elem.addEventListener('mouseleave', hideTooltip);
+    elem.addEventListener('click', () => {
+        const id = elem.getAttribute('data-id');
+        window.open(`/api/control/${id}/`, '_blank');
+    });
+});
+</script>
+
+<!-- Optional: Position fix for scrolling -->
+<style>
+#tooltip-popup {
+    pointer-events: none;
+    position: absolute;
+    transition: opacity 0.2s ease;
+    background-color: #fff;
+}
+</style>
+{% endblock %}

@@ -1,0 +1,2213 @@
+[
+  {
+    "id": "7a6ead24-9b7f-4e88-96aa-096426da1396",
+    "referenceId": "GOVERN-1",
+    "displayIdentifier": "GOVERN-1",
+    "title": "AI Risk Management",
+    "description": null,
+    "subsections": [
+      {
+        "id": "8f83354e-6010-4a46-b148-31e7dabf50e8",
+        "referenceId": "GOVERN-1.1",
+        "name": "",
+        "description": "Legal and regulatory requirements involving AI are understood, managed, and documented.",
+        "programControlMapping": [
+          {
+            "id": "c5d2adb4-0789-4ede-b431-e6ba953291f8",
+            "shortName": "AI-1",
+            "customShortName": null,
+            "name": "AI Governance Policy",
+            "description": "The company maintains a documented AI Governance Policy governing the use of AI within the organization."
+          },
+          {
+            "id": "1261dc73-3f56-4ad8-afbd-618288c21099",
+            "shortName": "AI-9",
+            "customShortName": null,
+            "name": "AI Legal and Regulatory Requirements",
+            "description": "Legal and regulatory requirements for the usage of AI are documented and adhered to"
+          }
+        ]
+      },
+      {
+        "id": "7cae8422-c50a-47e5-917b-8db1a88b6633",
+        "referenceId": "GOVERN-1.2",
+        "name": "",
+        "description": "The characteristics of trustworthy AI are integrated into organizational policies, processes, procedures, and practices.",
+        "programControlMapping": [
+          {
+            "id": "0884d05a-87e0-43b3-ade5-8ebbae21038c",
+            "shortName": "AI-6",
+            "customShortName": null,
+            "name": "AI Inclusion in Organizational Policies",
+            "description": "Company policies are routinely reviewed to ensure that the characteristics of trustworthy AI are integrated into those policies."
+          }
+        ]
+      },
+      {
+        "id": "20c61a5f-4feb-4b1a-ab51-162c7d2b2134",
+        "referenceId": "GOVERN-1.3",
+        "name": "",
+        "description": "Processes, procedures, and practices are in place to determine the needed level of risk management activities based on the organization’s risk tolerance.",
+        "programControlMapping": [
+          {
+            "id": "f282625b-ad4e-4f8a-b357-a17068f0c2aa",
+            "shortName": "BIZOPS-3",
+            "customShortName": null,
+            "name": "Policy Management",
+            "description": "The company develops and maintains formal policies that govern information security within the company. The policies are formally reviewed and approved at least once a year, and are communicated to all employees."
+          },
+          {
+            "id": "9c02e023-de4a-4e3f-a731-b6c429e89d19",
+            "shortName": "BIZOPS-14",
+            "customShortName": null,
+            "name": "Control selection",
+            "description": "The company designs and implements controls to mitigate risks identified during the risk assessment process."
+          },
+          {
+            "id": "f9ce9d81-131e-4199-b1de-009253c735b7",
+            "shortName": "BIZOPS-1",
+            "customShortName": null,
+            "name": "Risk Management",
+            "description": "The company maintains a risk management program to identify, prioritize, and mitigate risk to acceptable levels."
+          }
+        ]
+      },
+      {
+        "id": "b667f78a-14b3-4392-ae7f-94a5513eedf7",
+        "referenceId": "GOVERN-1.4",
+        "name": "",
+        "description": "The risk management process and its outcomes are established through transparent policies, procedures, and other controls based on organizational risk priorities.",
+        "programControlMapping": [
+          {
+            "id": "9c02e023-de4a-4e3f-a731-b6c429e89d19",
+            "shortName": "BIZOPS-14",
+            "customShortName": null,
+            "name": "Control selection",
+            "description": "The company designs and implements controls to mitigate risks identified during the risk assessment process."
+          },
+          {
+            "id": "f9ce9d81-131e-4199-b1de-009253c735b7",
+            "shortName": "BIZOPS-1",
+            "customShortName": null,
+            "name": "Risk Management",
+            "description": "The company maintains a risk management program to identify, prioritize, and mitigate risk to acceptable levels."
+          },
+          {
+            "id": "f282625b-ad4e-4f8a-b357-a17068f0c2aa",
+            "shortName": "BIZOPS-3",
+            "customShortName": null,
+            "name": "Policy Management",
+            "description": "The company develops and maintains formal policies that govern information security within the company. The policies are formally reviewed and approved at least once a year, and are communicated to all employees."
+          }
+        ]
+      },
+      {
+        "id": "611db6b3-2eae-4be4-af39-73b2ad8c3a80",
+        "referenceId": "GOVERN-1.5",
+        "name": "",
+        "description": "Ongoing monitoring and periodic review of the risk management process and its outcomes are planned and organizational roles and responsibilities clearly defined, including determining the frequency of periodic review.",
+        "programControlMapping": [
+          {
+            "id": "a4560074-4b03-4940-9ae6-bf5600f62575",
+            "shortName": "BIZOPS-11",
+            "customShortName": null,
+            "name": "Risk Register",
+            "description": "The company maintains a Cumulative Risk Register storing control deficiencies identified as part of ongoing system reviews, and reviews the register as part of the company's regular Risk Assessment process."
+          },
+          {
+            "id": "e9369657-2f5c-4d17-8aa6-c0cb4c28caa6",
+            "shortName": "BIZOPS-10",
+            "customShortName": null,
+            "name": "Risk Assessment",
+            "description": "Following the Risk Management Policy, the company uses qualified internal staff and resources to perform at least one risk assessment per year, and maintains a cumulative Risk Register."
+          },
+          {
+            "id": "f9ce9d81-131e-4199-b1de-009253c735b7",
+            "shortName": "BIZOPS-1",
+            "customShortName": null,
+            "name": "Risk Management",
+            "description": "The company maintains a risk management program to identify, prioritize, and mitigate risk to acceptable levels."
+          }
+        ]
+      },
+      {
+        "id": "0c722f80-c356-49a3-ac0a-b907c380a602",
+        "referenceId": "GOVERN-1.6",
+        "name": "",
+        "description": "Mechanisms are in place to inventory AI systems and are resourced according to organizational risk priorities.",
+        "programControlMapping": [
+          {
+            "id": "f8ec8c7a-f337-400a-bff4-720b99d674c7",
+            "shortName": "AI-57",
+            "customShortName": null,
+            "name": "AI Concern Reporting Process",
+            "description": "The organization defines a process to report concerns about the organization’s role with respect to an AI system throughout its life cycle."
+          },
+          {
+            "id": "6e15ad58-312a-4c19-818d-bd37622b259c",
+            "shortName": "AI-53",
+            "customShortName": null,
+            "name": "AI system inventory",
+            "description": "The company maintains an inventory of AI systems that includes the system scope, owner, its business use, and knowledge limits, and specific AI methodologies used to implement the AI system."
+          },
+          {
+            "id": "87135d73-c84e-4fa4-a9ad-b33b305a49bd",
+            "shortName": "AI-21",
+            "customShortName": null,
+            "name": "AI Resources documentation",
+            "description": "Documentation is maintained for resources required for the lifecycle of AI systems, which includes information on required data, tooling, system, computing, and human resources."
+          }
+        ]
+      },
+      {
+        "id": "43932708-9554-4369-8914-b6c63330fc07",
+        "referenceId": "GOVERN-1.7",
+        "name": "",
+        "description": "Processes and procedures are in place for decommissioning and phasing out AI systems safely and in a manner that does not increase risks or decrease the organization’s trustworthiness.",
+        "programControlMapping": [
+          {
+            "id": "3cc56816-35f0-4899-862a-ccadac6de33a",
+            "shortName": "AI-13",
+            "customShortName": null,
+            "name": "AI Risk Management",
+            "description": "As part of its Risk Assessment process, the company considers risks associated with its use of AI, and the impact of the company's AI to users, groups, systems, and society."
+          },
+          {
+            "id": "a090eacc-2123-4c18-b83f-cbf0756d3b74",
+            "shortName": "AI-55",
+            "customShortName": null,
+            "name": "AI employee training",
+            "description": "The company conducts regular training for its employees and relevant partners on AI use and associated risk management."
+          },
+          {
+            "id": "93f3be01-d4ea-498d-a4e8-3725d9bc811d",
+            "shortName": "AI-25",
+            "customShortName": null,
+            "name": "AI system lifecycle",
+            "description": "The company has integrated its AI system lifecycle into its standard Agile, Quality, and CICD processes, with special consideration for the unique properties of AI systems balanced against organizational risks."
+          }
+        ]
+      }
+    ],
+    "programPolicyMapping": [
+      {
+        "id": "baa49ed3-39e5-40e4-8109-a58f422281b3",
+        "shortName": "POL-15",
+        "title": "Information Security Policy",
+        "description": "Establish an Information Security Program which protects the confidentiality, integrity, and availability of the company's data and assets."
+      },
+      {
+        "id": "ac26f012-81af-4b20-a4be-aa59089aac30",
+        "shortName": "POL-17",
+        "title": "Risk Management Policy",
+        "description": "Establish a framework for managing risk at the company and incorporating risk assessments throughout the company's operations."
+      },
+      {
+        "id": "fc570ed5-7221-4de7-88e8-06e10fe83cf9",
+        "shortName": "POL-62",
+        "title": "AI Responsible Use Policy",
+        "description": "This policy outlines the responsible and ethical use of AI tools and systems."
+      },
+      {
+        "id": "c9dd05b4-1977-402e-8454-66df039b25a7",
+        "shortName": "POL-63",
+        "title": "AI Governance Policy",
+        "description": "Establish the objectives, practices, and governance around the use of Artificial Intelligence."
+      },
+      {
+        "id": "6a9928c0-2270-4e62-894b-bc451c6abf9f",
+        "shortName": "POL-64",
+        "title": "AI Risk Management Policy",
+        "description": "A framework for managing AI risk at the company."
+      }
+    ],
+    "_metadata": {
+      "createdDate": "2024-05-13T13:04:56.966Z",
+      "createdBy": {
+        "id": "0ef2f025-46df-47d0-8bcd-11f62aa10612",
+        "name": "System User",
+        "email": "system@trustcloud.ai",
+        "pictureUrl": "data:image/png;base64,UklGRr4FAABXRUJQVlA4TLIFAAAvSoASEIcFIZIkxVbOzGPmJ+d9/1qYcW9tOIgkSZGqe+GZycD718b8PwM5kiRFUmTjMr1WiJV69WM+6CxHkSSpVj68Phdfw5fwbX8ncMfdxzQBTGsPECBAgAAnOMABdjCDA5zgBDtYwQIWMIMZTGACIxjBAAYwgAA9yCCDBBJIIEiPAGAmGlCAEiHgBO+e6sFKuoAiAQJpDygDUCpDSSqAlaMlQCASECkpzUncW7rr1VeECTOBhKSMEFJCoNAdCJRQUAaPSYRUhAQEVKRlVkUJjN5NteE8Vc7K+RiXUpGkEsXq/6fFsOhdbxZ1xrsKoYUNMay7KaHFEthGpTSlpJylsnI2dlUqQpKSPvw1/9x9xg8/aYnv+OEv94OXPnqZT7PlLFvMkuUiWS2xWWK9xmZj2+2fw+HpcDi5G+oJ0pB+7We72/XYq9vswGTQ7DN3nBYkeoZRKUYuJqWZlGbiplyMXZWzIln1lXVZCksg+7az89ZHHL18/7x8frz9/sRoeL/Y2/vX93gP1LZtW9s2urwFnG3hqBDayuOtzMzslbn1VmZmciKzBk6Za23RKzuT9x8tvXotf9q3iP5PgPb/ZG9XW7SZ6mi0o6evfga7owRv0SfVgx6l+oe/Ll158/79+xdXz+yeQvXnvWHTG4DJR17+I+T/vnkIoHlCmHobgF9e2kKlfXMuEB0Iy6QWYNcHof7tGqAzHH2fwJwPoravZkDTQAh04JqouX0UIhNq1gozPoowvp4Ceo1aYZ0twmn9CHpNWmGnLcJq7wS9BjrstEV47Z3Qp6wXdtoizPYcIoOKJkVYZotwWz/RpKgFLBH2N9CpZDzcEOE/CwMKJjWwR9ShPZeogk4o1oN4A72BJkW4KFRa1+PxePy2VQOxg2igHhhVYMXxjRfVvYHeIA2cE8GtZRAbNozhGHDby7p9OX76tiUjdtAaoB/eBbOXsjpteqZicFkI8WYH3r9aEs9hklw7a0Xwy5A1ffMJuGwdBmIJIxED3vjZoMs1cD2YvQTDlB2CZVDImNWp1VD0EadpkRqEYrB3kJMyD8KitOmbX802v+dEpHQQwe9w0JTPrV6VNSUz8J+PBf0y7RxTcIpEADOZNaULPPYRoMtEuS5XvBxnx2KMIEFT4BenU+ZTbstYcbxrlAHb5zJRGShKvFsCseF0cvhgjXJQ9LmtzFrE6pSpOpcaLlQnjHQuA7bPc2aqsbezOmuqzScPElT4FkHiK5lnkDGV5o3VAIVhwzCMxEGPZZeLCjSZbQyZSpOrgaG0KWngueP6qLpRSKvIFYChnCmbX82B8oP1AIef32KmkiKY3tlMtUdyNRRypnT+IPzrOM7Yo3lUL5eJ8DxAOrEa71gimYDVaVM+G4Onjnfl/DxokIlyXSodI3DSlM4NAU8c2b18JtNG3MuCTAI4mMyapmnmMwc9oGCkM6Zp5jLGQWCr60jPo0emB7zEDoCDGdM7PwQLKo82E3DhvZIjPQZ9Mv1Q9LDjgGH6ZmKwr+w4Tvnuhf0+W06OlJyAd0GTns71quIOgIOpfFW6ADx0JMuu67qOyhO0yLWyQ4jROPDoBNWFAsAm1wlhCXrkJsC1OLDXdRz3BN57R5xQjsAkOW0GwIYRx7Pk3r9/v1J2QrqRFi3gF/DbiFOXLkwIMinCeac+j9OgBe6Ecl1UQA826WuO10NpI1M1hX/C3Tp4BL0qtPnMGwtdBf7QlA7MYG8pZOV5zJqkRhsHJ8JV2svP/Zrq7+F8mEp7QdfUfwfnw1PaCyu0WrbC8VJIynvhd622rbB3LBTuPFip1bod5t0NwX1A12o/LgLHx2rkboTZ/VoYB6PA+XIN3OPAt5O0kPZEgPOuopHjwDe9WngndUaAjY/cIKXK+XnANF0L96SuBqqPP7rvelbun99LdZOu1eHEtgaCN7UPaPU6qHdEG32aop3jv9T+lwQ="
+      },
+      "lastModifiedDate": "2024-05-13T13:04:56.966Z",
+      "lastModifiedBy": {
+        "id": "0ef2f025-46df-47d0-8bcd-11f62aa10612",
+        "name": "System User",
+        "email": "system@trustcloud.ai",
+        "pictureUrl": "data:image/png;base64,UklGRr4FAABXRUJQVlA4TLIFAAAvSoASEIcFIZIkxVbOzGPmJ+d9/1qYcW9tOIgkSZGqe+GZycD718b8PwM5kiRFUmTjMr1WiJV69WM+6CxHkSSpVj68Phdfw5fwbX8ncMfdxzQBTGsPECBAgAAnOMABdjCDA5zgBDtYwQIWMIMZTGACIxjBAAYwgAA9yCCDBBJIIEiPAGAmGlCAEiHgBO+e6sFKuoAiAQJpDygDUCpDSSqAlaMlQCASECkpzUncW7rr1VeECTOBhKSMEFJCoNAdCJRQUAaPSYRUhAQEVKRlVkUJjN5NteE8Vc7K+RiXUpGkEsXq/6fFsOhdbxZ1xrsKoYUNMay7KaHFEthGpTSlpJylsnI2dlUqQpKSPvw1/9x9xg8/aYnv+OEv94OXPnqZT7PlLFvMkuUiWS2xWWK9xmZj2+2fw+HpcDi5G+oJ0pB+7We72/XYq9vswGTQ7DN3nBYkeoZRKUYuJqWZlGbiplyMXZWzIln1lXVZCksg+7az89ZHHL18/7x8frz9/sRoeL/Y2/vX93gP1LZtW9s2urwFnG3hqBDayuOtzMzslbn1VmZmciKzBk6Za23RKzuT9x8tvXotf9q3iP5PgPb/ZG9XW7SZ6mi0o6evfga7owRv0SfVgx6l+oe/Ll158/79+xdXz+yeQvXnvWHTG4DJR17+I+T/vnkIoHlCmHobgF9e2kKlfXMuEB0Iy6QWYNcHof7tGqAzHH2fwJwPoravZkDTQAh04JqouX0UIhNq1gozPoowvp4Ceo1aYZ0twmn9CHpNWmGnLcJq7wS9BjrstEV47Z3Qp6wXdtoizPYcIoOKJkVYZotwWz/RpKgFLBH2N9CpZDzcEOE/CwMKJjWwR9ShPZeogk4o1oN4A72BJkW4KFRa1+PxePy2VQOxg2igHhhVYMXxjRfVvYHeIA2cE8GtZRAbNozhGHDby7p9OX76tiUjdtAaoB/eBbOXsjpteqZicFkI8WYH3r9aEs9hklw7a0Xwy5A1ffMJuGwdBmIJIxED3vjZoMs1cD2YvQTDlB2CZVDImNWp1VD0EadpkRqEYrB3kJMyD8KitOmbX802v+dEpHQQwe9w0JTPrV6VNSUz8J+PBf0y7RxTcIpEADOZNaULPPYRoMtEuS5XvBxnx2KMIEFT4BenU+ZTbstYcbxrlAHb5zJRGShKvFsCseF0cvhgjXJQ9LmtzFrE6pSpOpcaLlQnjHQuA7bPc2aqsbezOmuqzScPElT4FkHiK5lnkDGV5o3VAIVhwzCMxEGPZZeLCjSZbQyZSpOrgaG0KWngueP6qLpRSKvIFYChnCmbX82B8oP1AIef32KmkiKY3tlMtUdyNRRypnT+IPzrOM7Yo3lUL5eJ8DxAOrEa71gimYDVaVM+G4Onjnfl/DxokIlyXSodI3DSlM4NAU8c2b18JtNG3MuCTAI4mMyapmnmMwc9oGCkM6Zp5jLGQWCr60jPo0emB7zEDoCDGdM7PwQLKo82E3DhvZIjPQZ9Mv1Q9LDjgGH6ZmKwr+w4Tvnuhf0+W06OlJyAd0GTns71quIOgIOpfFW6ADx0JMuu67qOyhO0yLWyQ4jROPDoBNWFAsAm1wlhCXrkJsC1OLDXdRz3BN57R5xQjsAkOW0GwIYRx7Pk3r9/v1J2QrqRFi3gF/DbiFOXLkwIMinCeac+j9OgBe6Ecl1UQA826WuO10NpI1M1hX/C3Tp4BL0qtPnMGwtdBf7QlA7MYG8pZOV5zJqkRhsHJ8JV2svP/Zrq7+F8mEp7QdfUfwfnw1PaCyu0WrbC8VJIynvhd622rbB3LBTuPFip1bod5t0NwX1A12o/LgLHx2rkboTZ/VoYB6PA+XIN3OPAt5O0kPZEgPOuopHjwDe9WngndUaAjY/cIKXK+XnANF0L96SuBqqPP7rvelbun99LdZOu1eHEtgaCN7UPaPU6qHdEG32aop3jv9T+lwQ="
+      }
+    }
+  },
+  {
+    "id": "7c2b5c10-e350-4672-b33e-af810b1db0c2",
+    "referenceId": "GOVERN-2",
+    "displayIdentifier": "GOVERN-2",
+    "title": "AI Risk Management Integrity",
+    "description": null,
+    "subsections": [
+      {
+        "id": "57675fdf-6855-48a4-8bb0-dc518a2fed4e",
+        "referenceId": "GOVERN-2.1",
+        "name": "",
+        "description": "Roles and responsibilities and lines of communication related to mapping, measuring, and managing AI risks are documented and are clear to individuals and teams throughout the organization.",
+        "programControlMapping": [
+          {
+            "id": "ca09bd6d-c76b-4550-acf8-1bed4a4361de",
+            "shortName": "AI-18",
+            "customShortName": null,
+            "name": "AI risk management roles",
+            "description": "Roles and responsibilities related to the management of AI Risks are documented, and risk management decision making is informed by a team diverse in demographics, disciplines, experience, expertise, and backgrounds."
+          }
+        ]
+      },
+      {
+        "id": "8927475f-9345-47ea-ad12-08d9b23e8ba0",
+        "referenceId": "GOVERN-2.2",
+        "name": "",
+        "description": "The organization’s personnel and partners receive AI risk management training to enable them to perform their duties and responsibilities consistent with related policies, procedures, and agreements.",
+        "programControlMapping": [
+          {
+            "id": "a090eacc-2123-4c18-b83f-cbf0756d3b74",
+            "shortName": "AI-55",
+            "customShortName": null,
+            "name": "AI employee training",
+            "description": "The company conducts regular training for its employees and relevant partners on AI use and associated risk management."
+          }
+        ]
+      },
+      {
+        "id": "36dbbb93-a252-4bdd-82a9-9de7b5b5501b",
+        "referenceId": "GOVERN-2.3",
+        "name": "",
+        "description": "Executive leadership of the organization takes responsibility for decisions about risks associated with AI system development and deployment.",
+        "programControlMapping": [
+          {
+            "id": "3cc56816-35f0-4899-862a-ccadac6de33a",
+            "shortName": "AI-13",
+            "customShortName": null,
+            "name": "AI Risk Management",
+            "description": "As part of its Risk Assessment process, the company considers risks associated with its use of AI, and the impact of the company's AI to users, groups, systems, and society."
+          }
+        ]
+      }
+    ],
+    "programPolicyMapping": [
+      {
+        "id": "c9dd05b4-1977-402e-8454-66df039b25a7",
+        "shortName": "POL-63",
+        "title": "AI Governance Policy",
+        "description": "Establish the objectives, practices, and governance around the use of Artificial Intelligence."
+      },
+      {
+        "id": "6a9928c0-2270-4e62-894b-bc451c6abf9f",
+        "shortName": "POL-64",
+        "title": "AI Risk Management Policy",
+        "description": "A framework for managing AI risk at the company."
+      }
+    ],
+    "_metadata": {
+      "createdDate": "2024-05-13T13:04:56.966Z",
+      "createdBy": {
+        "id": "0ef2f025-46df-47d0-8bcd-11f62aa10612",
+        "name": "System User",
+        "email": "system@trustcloud.ai",
+        "pictureUrl": "data:image/png;base64,UklGRr4FAABXRUJQVlA4TLIFAAAvSoASEIcFIZIkxVbOzGPmJ+d9/1qYcW9tOIgkSZGqe+GZycD718b8PwM5kiRFUmTjMr1WiJV69WM+6CxHkSSpVj68Phdfw5fwbX8ncMfdxzQBTGsPECBAgAAnOMABdjCDA5zgBDtYwQIWMIMZTGACIxjBAAYwgAA9yCCDBBJIIEiPAGAmGlCAEiHgBO+e6sFKuoAiAQJpDygDUCpDSSqAlaMlQCASECkpzUncW7rr1VeECTOBhKSMEFJCoNAdCJRQUAaPSYRUhAQEVKRlVkUJjN5NteE8Vc7K+RiXUpGkEsXq/6fFsOhdbxZ1xrsKoYUNMay7KaHFEthGpTSlpJylsnI2dlUqQpKSPvw1/9x9xg8/aYnv+OEv94OXPnqZT7PlLFvMkuUiWS2xWWK9xmZj2+2fw+HpcDi5G+oJ0pB+7We72/XYq9vswGTQ7DN3nBYkeoZRKUYuJqWZlGbiplyMXZWzIln1lXVZCksg+7az89ZHHL18/7x8frz9/sRoeL/Y2/vX93gP1LZtW9s2urwFnG3hqBDayuOtzMzslbn1VmZmciKzBk6Za23RKzuT9x8tvXotf9q3iP5PgPb/ZG9XW7SZ6mi0o6evfga7owRv0SfVgx6l+oe/Ll158/79+xdXz+yeQvXnvWHTG4DJR17+I+T/vnkIoHlCmHobgF9e2kKlfXMuEB0Iy6QWYNcHof7tGqAzHH2fwJwPoravZkDTQAh04JqouX0UIhNq1gozPoowvp4Ceo1aYZ0twmn9CHpNWmGnLcJq7wS9BjrstEV47Z3Qp6wXdtoizPYcIoOKJkVYZotwWz/RpKgFLBH2N9CpZDzcEOE/CwMKJjWwR9ShPZeogk4o1oN4A72BJkW4KFRa1+PxePy2VQOxg2igHhhVYMXxjRfVvYHeIA2cE8GtZRAbNozhGHDby7p9OX76tiUjdtAaoB/eBbOXsjpteqZicFkI8WYH3r9aEs9hklw7a0Xwy5A1ffMJuGwdBmIJIxED3vjZoMs1cD2YvQTDlB2CZVDImNWp1VD0EadpkRqEYrB3kJMyD8KitOmbX802v+dEpHQQwe9w0JTPrV6VNSUz8J+PBf0y7RxTcIpEADOZNaULPPYRoMtEuS5XvBxnx2KMIEFT4BenU+ZTbstYcbxrlAHb5zJRGShKvFsCseF0cvhgjXJQ9LmtzFrE6pSpOpcaLlQnjHQuA7bPc2aqsbezOmuqzScPElT4FkHiK5lnkDGV5o3VAIVhwzCMxEGPZZeLCjSZbQyZSpOrgaG0KWngueP6qLpRSKvIFYChnCmbX82B8oP1AIef32KmkiKY3tlMtUdyNRRypnT+IPzrOM7Yo3lUL5eJ8DxAOrEa71gimYDVaVM+G4Onjnfl/DxokIlyXSodI3DSlM4NAU8c2b18JtNG3MuCTAI4mMyapmnmMwc9oGCkM6Zp5jLGQWCr60jPo0emB7zEDoCDGdM7PwQLKo82E3DhvZIjPQZ9Mv1Q9LDjgGH6ZmKwr+w4Tvnuhf0+W06OlJyAd0GTns71quIOgIOpfFW6ADx0JMuu67qOyhO0yLWyQ4jROPDoBNWFAsAm1wlhCXrkJsC1OLDXdRz3BN57R5xQjsAkOW0GwIYRx7Pk3r9/v1J2QrqRFi3gF/DbiFOXLkwIMinCeac+j9OgBe6Ecl1UQA826WuO10NpI1M1hX/C3Tp4BL0qtPnMGwtdBf7QlA7MYG8pZOV5zJqkRhsHJ8JV2svP/Zrq7+F8mEp7QdfUfwfnw1PaCyu0WrbC8VJIynvhd622rbB3LBTuPFip1bod5t0NwX1A12o/LgLHx2rkboTZ/VoYB6PA+XIN3OPAt5O0kPZEgPOuopHjwDe9WngndUaAjY/cIKXK+XnANF0L96SuBqqPP7rvelbun99LdZOu1eHEtgaCN7UPaPU6qHdEG32aop3jv9T+lwQ="
+      },
+      "lastModifiedDate": "2024-05-13T13:04:56.966Z",
+      "lastModifiedBy": {
+        "id": "0ef2f025-46df-47d0-8bcd-11f62aa10612",
+        "name": "System User",
+        "email": "system@trustcloud.ai",
+        "pictureUrl": "data:image/png;base64,UklGRr4FAABXRUJQVlA4TLIFAAAvSoASEIcFIZIkxVbOzGPmJ+d9/1qYcW9tOIgkSZGqe+GZycD718b8PwM5kiRFUmTjMr1WiJV69WM+6CxHkSSpVj68Phdfw5fwbX8ncMfdxzQBTGsPECBAgAAnOMABdjCDA5zgBDtYwQIWMIMZTGACIxjBAAYwgAA9yCCDBBJIIEiPAGAmGlCAEiHgBO+e6sFKuoAiAQJpDygDUCpDSSqAlaMlQCASECkpzUncW7rr1VeECTOBhKSMEFJCoNAdCJRQUAaPSYRUhAQEVKRlVkUJjN5NteE8Vc7K+RiXUpGkEsXq/6fFsOhdbxZ1xrsKoYUNMay7KaHFEthGpTSlpJylsnI2dlUqQpKSPvw1/9x9xg8/aYnv+OEv94OXPnqZT7PlLFvMkuUiWS2xWWK9xmZj2+2fw+HpcDi5G+oJ0pB+7We72/XYq9vswGTQ7DN3nBYkeoZRKUYuJqWZlGbiplyMXZWzIln1lXVZCksg+7az89ZHHL18/7x8frz9/sRoeL/Y2/vX93gP1LZtW9s2urwFnG3hqBDayuOtzMzslbn1VmZmciKzBk6Za23RKzuT9x8tvXotf9q3iP5PgPb/ZG9XW7SZ6mi0o6evfga7owRv0SfVgx6l+oe/Ll158/79+xdXz+yeQvXnvWHTG4DJR17+I+T/vnkIoHlCmHobgF9e2kKlfXMuEB0Iy6QWYNcHof7tGqAzHH2fwJwPoravZkDTQAh04JqouX0UIhNq1gozPoowvp4Ceo1aYZ0twmn9CHpNWmGnLcJq7wS9BjrstEV47Z3Qp6wXdtoizPYcIoOKJkVYZotwWz/RpKgFLBH2N9CpZDzcEOE/CwMKJjWwR9ShPZeogk4o1oN4A72BJkW4KFRa1+PxePy2VQOxg2igHhhVYMXxjRfVvYHeIA2cE8GtZRAbNozhGHDby7p9OX76tiUjdtAaoB/eBbOXsjpteqZicFkI8WYH3r9aEs9hklw7a0Xwy5A1ffMJuGwdBmIJIxED3vjZoMs1cD2YvQTDlB2CZVDImNWp1VD0EadpkRqEYrB3kJMyD8KitOmbX802v+dEpHQQwe9w0JTPrV6VNSUz8J+PBf0y7RxTcIpEADOZNaULPPYRoMtEuS5XvBxnx2KMIEFT4BenU+ZTbstYcbxrlAHb5zJRGShKvFsCseF0cvhgjXJQ9LmtzFrE6pSpOpcaLlQnjHQuA7bPc2aqsbezOmuqzScPElT4FkHiK5lnkDGV5o3VAIVhwzCMxEGPZZeLCjSZbQyZSpOrgaG0KWngueP6qLpRSKvIFYChnCmbX82B8oP1AIef32KmkiKY3tlMtUdyNRRypnT+IPzrOM7Yo3lUL5eJ8DxAOrEa71gimYDVaVM+G4Onjnfl/DxokIlyXSodI3DSlM4NAU8c2b18JtNG3MuCTAI4mMyapmnmMwc9oGCkM6Zp5jLGQWCr60jPo0emB7zEDoCDGdM7PwQLKo82E3DhvZIjPQZ9Mv1Q9LDjgGH6ZmKwr+w4Tvnuhf0+W06OlJyAd0GTns71quIOgIOpfFW6ADx0JMuu67qOyhO0yLWyQ4jROPDoBNWFAsAm1wlhCXrkJsC1OLDXdRz3BN57R5xQjsAkOW0GwIYRx7Pk3r9/v1J2QrqRFi3gF/DbiFOXLkwIMinCeac+j9OgBe6Ecl1UQA826WuO10NpI1M1hX/C3Tp4BL0qtPnMGwtdBf7QlA7MYG8pZOV5zJqkRhsHJ8JV2svP/Zrq7+F8mEp7QdfUfwfnw1PaCyu0WrbC8VJIynvhd622rbB3LBTuPFip1bod5t0NwX1A12o/LgLHx2rkboTZ/VoYB6PA+XIN3OPAt5O0kPZEgPOuopHjwDe9WngndUaAjY/cIKXK+XnANF0L96SuBqqPP7rvelbun99LdZOu1eHEtgaCN7UPaPU6qHdEG32aop3jv9T+lwQ="
+      }
+    }
+  },
+  {
+    "id": "e8c9fd8e-680c-4075-9b49-48c4ab254581",
+    "referenceId": "GOVERN-3",
+    "displayIdentifier": "GOVERN-3",
+    "title": "Inclusive AI Governance",
+    "description": null,
+    "subsections": [
+      {
+        "id": "7f6a1c68-51a5-41fe-877d-366fca8b9eee",
+        "referenceId": "GOVERN-3.1",
+        "name": "",
+        "description": "Decision-making related to mapping, measuring, and managing AI risks throughout the lifecycle is informed by a diverse team (e.g., diversity of demographics, disciplines, experience, expertise, and backgrounds).",
+        "programControlMapping": [
+          {
+            "id": "ca09bd6d-c76b-4550-acf8-1bed4a4361de",
+            "shortName": "AI-18",
+            "customShortName": null,
+            "name": "AI risk management roles",
+            "description": "Roles and responsibilities related to the management of AI Risks are documented, and risk management decision making is informed by a team diverse in demographics, disciplines, experience, expertise, and backgrounds."
+          }
+        ]
+      },
+      {
+        "id": "c3ddbfeb-ebc6-4b87-b154-51cfee6d7076",
+        "referenceId": "GOVERN-3.2",
+        "name": "",
+        "description": "Policies and procedures are in place to define and differentiate roles and responsibilities for human-AI configurations and oversight of AI systems.",
+        "programControlMapping": [
+          {
+            "id": "87135d73-c84e-4fa4-a9ad-b33b305a49bd",
+            "shortName": "AI-21",
+            "customShortName": null,
+            "name": "AI Resources documentation",
+            "description": "Documentation is maintained for resources required for the lifecycle of AI systems, which includes information on required data, tooling, system, computing, and human resources."
+          }
+        ]
+      }
+    ],
+    "programPolicyMapping": [
+      {
+        "id": "c9dd05b4-1977-402e-8454-66df039b25a7",
+        "shortName": "POL-63",
+        "title": "AI Governance Policy",
+        "description": "Establish the objectives, practices, and governance around the use of Artificial Intelligence."
+      },
+      {
+        "id": "6a9928c0-2270-4e62-894b-bc451c6abf9f",
+        "shortName": "POL-64",
+        "title": "AI Risk Management Policy",
+        "description": "A framework for managing AI risk at the company."
+      }
+    ],
+    "_metadata": {
+      "createdDate": "2024-05-13T13:04:56.966Z",
+      "createdBy": {
+        "id": "0ef2f025-46df-47d0-8bcd-11f62aa10612",
+        "name": "System User",
+        "email": "system@trustcloud.ai",
+        "pictureUrl": "data:image/png;base64,UklGRr4FAABXRUJQVlA4TLIFAAAvSoASEIcFIZIkxVbOzGPmJ+d9/1qYcW9tOIgkSZGqe+GZycD718b8PwM5kiRFUmTjMr1WiJV69WM+6CxHkSSpVj68Phdfw5fwbX8ncMfdxzQBTGsPECBAgAAnOMABdjCDA5zgBDtYwQIWMIMZTGACIxjBAAYwgAA9yCCDBBJIIEiPAGAmGlCAEiHgBO+e6sFKuoAiAQJpDygDUCpDSSqAlaMlQCASECkpzUncW7rr1VeECTOBhKSMEFJCoNAdCJRQUAaPSYRUhAQEVKRlVkUJjN5NteE8Vc7K+RiXUpGkEsXq/6fFsOhdbxZ1xrsKoYUNMay7KaHFEthGpTSlpJylsnI2dlUqQpKSPvw1/9x9xg8/aYnv+OEv94OXPnqZT7PlLFvMkuUiWS2xWWK9xmZj2+2fw+HpcDi5G+oJ0pB+7We72/XYq9vswGTQ7DN3nBYkeoZRKUYuJqWZlGbiplyMXZWzIln1lXVZCksg+7az89ZHHL18/7x8frz9/sRoeL/Y2/vX93gP1LZtW9s2urwFnG3hqBDayuOtzMzslbn1VmZmciKzBk6Za23RKzuT9x8tvXotf9q3iP5PgPb/ZG9XW7SZ6mi0o6evfga7owRv0SfVgx6l+oe/Ll158/79+xdXz+yeQvXnvWHTG4DJR17+I+T/vnkIoHlCmHobgF9e2kKlfXMuEB0Iy6QWYNcHof7tGqAzHH2fwJwPoravZkDTQAh04JqouX0UIhNq1gozPoowvp4Ceo1aYZ0twmn9CHpNWmGnLcJq7wS9BjrstEV47Z3Qp6wXdtoizPYcIoOKJkVYZotwWz/RpKgFLBH2N9CpZDzcEOE/CwMKJjWwR9ShPZeogk4o1oN4A72BJkW4KFRa1+PxePy2VQOxg2igHhhVYMXxjRfVvYHeIA2cE8GtZRAbNozhGHDby7p9OX76tiUjdtAaoB/eBbOXsjpteqZicFkI8WYH3r9aEs9hklw7a0Xwy5A1ffMJuGwdBmIJIxED3vjZoMs1cD2YvQTDlB2CZVDImNWp1VD0EadpkRqEYrB3kJMyD8KitOmbX802v+dEpHQQwe9w0JTPrV6VNSUz8J+PBf0y7RxTcIpEADOZNaULPPYRoMtEuS5XvBxnx2KMIEFT4BenU+ZTbstYcbxrlAHb5zJRGShKvFsCseF0cvhgjXJQ9LmtzFrE6pSpOpcaLlQnjHQuA7bPc2aqsbezOmuqzScPElT4FkHiK5lnkDGV5o3VAIVhwzCMxEGPZZeLCjSZbQyZSpOrgaG0KWngueP6qLpRSKvIFYChnCmbX82B8oP1AIef32KmkiKY3tlMtUdyNRRypnT+IPzrOM7Yo3lUL5eJ8DxAOrEa71gimYDVaVM+G4Onjnfl/DxokIlyXSodI3DSlM4NAU8c2b18JtNG3MuCTAI4mMyapmnmMwc9oGCkM6Zp5jLGQWCr60jPo0emB7zEDoCDGdM7PwQLKo82E3DhvZIjPQZ9Mv1Q9LDjgGH6ZmKwr+w4Tvnuhf0+W06OlJyAd0GTns71quIOgIOpfFW6ADx0JMuu67qOyhO0yLWyQ4jROPDoBNWFAsAm1wlhCXrkJsC1OLDXdRz3BN57R5xQjsAkOW0GwIYRx7Pk3r9/v1J2QrqRFi3gF/DbiFOXLkwIMinCeac+j9OgBe6Ecl1UQA826WuO10NpI1M1hX/C3Tp4BL0qtPnMGwtdBf7QlA7MYG8pZOV5zJqkRhsHJ8JV2svP/Zrq7+F8mEp7QdfUfwfnw1PaCyu0WrbC8VJIynvhd622rbB3LBTuPFip1bod5t0NwX1A12o/LgLHx2rkboTZ/VoYB6PA+XIN3OPAt5O0kPZEgPOuopHjwDe9WngndUaAjY/cIKXK+XnANF0L96SuBqqPP7rvelbun99LdZOu1eHEtgaCN7UPaPU6qHdEG32aop3jv9T+lwQ="
+      },
+      "lastModifiedDate": "2024-05-13T13:04:56.966Z",
+      "lastModifiedBy": {
+        "id": "0ef2f025-46df-47d0-8bcd-11f62aa10612",
+        "name": "System User",
+        "email": "system@trustcloud.ai",
+        "pictureUrl": "data:image/png;base64,UklGRr4FAABXRUJQVlA4TLIFAAAvSoASEIcFIZIkxVbOzGPmJ+d9/1qYcW9tOIgkSZGqe+GZycD718b8PwM5kiRFUmTjMr1WiJV69WM+6CxHkSSpVj68Phdfw5fwbX8ncMfdxzQBTGsPECBAgAAnOMABdjCDA5zgBDtYwQIWMIMZTGACIxjBAAYwgAA9yCCDBBJIIEiPAGAmGlCAEiHgBO+e6sFKuoAiAQJpDygDUCpDSSqAlaMlQCASECkpzUncW7rr1VeECTOBhKSMEFJCoNAdCJRQUAaPSYRUhAQEVKRlVkUJjN5NteE8Vc7K+RiXUpGkEsXq/6fFsOhdbxZ1xrsKoYUNMay7KaHFEthGpTSlpJylsnI2dlUqQpKSPvw1/9x9xg8/aYnv+OEv94OXPnqZT7PlLFvMkuUiWS2xWWK9xmZj2+2fw+HpcDi5G+oJ0pB+7We72/XYq9vswGTQ7DN3nBYkeoZRKUYuJqWZlGbiplyMXZWzIln1lXVZCksg+7az89ZHHL18/7x8frz9/sRoeL/Y2/vX93gP1LZtW9s2urwFnG3hqBDayuOtzMzslbn1VmZmciKzBk6Za23RKzuT9x8tvXotf9q3iP5PgPb/ZG9XW7SZ6mi0o6evfga7owRv0SfVgx6l+oe/Ll158/79+xdXz+yeQvXnvWHTG4DJR17+I+T/vnkIoHlCmHobgF9e2kKlfXMuEB0Iy6QWYNcHof7tGqAzHH2fwJwPoravZkDTQAh04JqouX0UIhNq1gozPoowvp4Ceo1aYZ0twmn9CHpNWmGnLcJq7wS9BjrstEV47Z3Qp6wXdtoizPYcIoOKJkVYZotwWz/RpKgFLBH2N9CpZDzcEOE/CwMKJjWwR9ShPZeogk4o1oN4A72BJkW4KFRa1+PxePy2VQOxg2igHhhVYMXxjRfVvYHeIA2cE8GtZRAbNozhGHDby7p9OX76tiUjdtAaoB/eBbOXsjpteqZicFkI8WYH3r9aEs9hklw7a0Xwy5A1ffMJuGwdBmIJIxED3vjZoMs1cD2YvQTDlB2CZVDImNWp1VD0EadpkRqEYrB3kJMyD8KitOmbX802v+dEpHQQwe9w0JTPrV6VNSUz8J+PBf0y7RxTcIpEADOZNaULPPYRoMtEuS5XvBxnx2KMIEFT4BenU+ZTbstYcbxrlAHb5zJRGShKvFsCseF0cvhgjXJQ9LmtzFrE6pSpOpcaLlQnjHQuA7bPc2aqsbezOmuqzScPElT4FkHiK5lnkDGV5o3VAIVhwzCMxEGPZZeLCjSZbQyZSpOrgaG0KWngueP6qLpRSKvIFYChnCmbX82B8oP1AIef32KmkiKY3tlMtUdyNRRypnT+IPzrOM7Yo3lUL5eJ8DxAOrEa71gimYDVaVM+G4Onjnfl/DxokIlyXSodI3DSlM4NAU8c2b18JtNG3MuCTAI4mMyapmnmMwc9oGCkM6Zp5jLGQWCr60jPo0emB7zEDoCDGdM7PwQLKo82E3DhvZIjPQZ9Mv1Q9LDjgGH6ZmKwr+w4Tvnuhf0+W06OlJyAd0GTns71quIOgIOpfFW6ADx0JMuu67qOyhO0yLWyQ4jROPDoBNWFAsAm1wlhCXrkJsC1OLDXdRz3BN57R5xQjsAkOW0GwIYRx7Pk3r9/v1J2QrqRFi3gF/DbiFOXLkwIMinCeac+j9OgBe6Ecl1UQA826WuO10NpI1M1hX/C3Tp4BL0qtPnMGwtdBf7QlA7MYG8pZOV5zJqkRhsHJ8JV2svP/Zrq7+F8mEp7QdfUfwfnw1PaCyu0WrbC8VJIynvhd622rbB3LBTuPFip1bod5t0NwX1A12o/LgLHx2rkboTZ/VoYB6PA+XIN3OPAt5O0kPZEgPOuopHjwDe9WngndUaAjY/cIKXK+XnANF0L96SuBqqPP7rvelbun99LdZOu1eHEtgaCN7UPaPU6qHdEG32aop3jv9T+lwQ="
+      }
+    }
+  },
+  {
+    "id": "fa01b105-8ca5-43b7-b567-ab0230c133f2",
+    "referenceId": "GOVERN-4",
+    "displayIdentifier": "GOVERN-4",
+    "title": "AI Risk Culture",
+    "description": null,
+    "subsections": [
+      {
+        "id": "cf46f128-b798-4729-b1b9-96c0aa691db8",
+        "referenceId": "GOVERN-4.1",
+        "name": "",
+        "description": "Organizational policies and practices are in place to foster a critical thinking and safety-first mindset in the design, development, deployment, and uses of AI systems to minimize potential negative impacts.",
+        "programControlMapping": [
+          {
+            "id": "a5fb6d38-0cd9-4e9c-a621-63ee024e4cc2",
+            "shortName": "AI-27",
+            "customShortName": null,
+            "name": "AI SDLC culture",
+            "description": "The company fosters a critical thinking and safety-first mindset in its AI SDLC procedures, in order to mitigate against potential negative impacts."
+          }
+        ]
+      },
+      {
+        "id": "9067677a-a0bf-4897-8ba3-2685d7925f62",
+        "referenceId": "GOVERN-4.2",
+        "name": "",
+        "description": "Organizational teams document the risks and potential impacts of the AI technology they design, develop, deploy, evaluate, and use, and they communicate about the impacts more broadly.",
+        "programControlMapping": [
+          {
+            "id": "f9ce9d81-131e-4199-b1de-009253c735b7",
+            "shortName": "BIZOPS-1",
+            "customShortName": null,
+            "name": "Risk Management",
+            "description": "The company maintains a risk management program to identify, prioritize, and mitigate risk to acceptable levels."
+          },
+          {
+            "id": "3cc56816-35f0-4899-862a-ccadac6de33a",
+            "shortName": "AI-13",
+            "customShortName": null,
+            "name": "AI Risk Management",
+            "description": "As part of its Risk Assessment process, the company considers risks associated with its use of AI, and the impact of the company's AI to users, groups, systems, and society."
+          }
+        ]
+      },
+      {
+        "id": "192f3edb-b40e-489c-9bb1-8bc2c9e4f65d",
+        "referenceId": "GOVERN-4.3",
+        "name": "",
+        "description": "Organizational practices are in place to enable AI testing, identification of incidents, and information sharing.",
+        "programControlMapping": [
+          {
+            "id": "d84ad622-8855-42e7-919b-d4e6dd9340a5",
+            "shortName": "CUST-20",
+            "customShortName": null,
+            "name": "Support channel",
+            "description": "External users are provided with a support channel for reporting systems failures, incidents, concerns, and other complaints to appropriate personnel."
+          },
+          {
+            "id": "3856f9c6-628a-4dd1-9021-e6cb4e4df3e0",
+            "shortName": "AI-50",
+            "customShortName": null,
+            "name": "Incident Management communication",
+            "description": "The company has identified authorized personnel to manage communication with internal and external stakeholders in the event of an AI system incident."
+          },
+          {
+            "id": "b62c7c7a-2585-404d-bd23-d97e30f88e92",
+            "shortName": "AI-51",
+            "customShortName": null,
+            "name": "AI incident management program",
+            "description": "The AI Incident Management Program outlines the requirements and process for declaring and responding to AI-related incidents, including the roles and responsibilities, and the internal and external communication necessary to take the issue to resolution."
+          }
+        ]
+      }
+    ],
+    "programPolicyMapping": [
+      {
+        "id": "ac26f012-81af-4b20-a4be-aa59089aac30",
+        "shortName": "POL-17",
+        "title": "Risk Management Policy",
+        "description": "Establish a framework for managing risk at the company and incorporating risk assessments throughout the company's operations."
+      },
+      {
+        "id": "c9dd05b4-1977-402e-8454-66df039b25a7",
+        "shortName": "POL-63",
+        "title": "AI Governance Policy",
+        "description": "Establish the objectives, practices, and governance around the use of Artificial Intelligence."
+      },
+      {
+        "id": "6a9928c0-2270-4e62-894b-bc451c6abf9f",
+        "shortName": "POL-64",
+        "title": "AI Risk Management Policy",
+        "description": "A framework for managing AI risk at the company."
+      }
+    ],
+    "_metadata": {
+      "createdDate": "2024-05-13T13:04:56.966Z",
+      "createdBy": {
+        "id": "0ef2f025-46df-47d0-8bcd-11f62aa10612",
+        "name": "System User",
+        "email": "system@trustcloud.ai",
+        "pictureUrl": "data:image/png;base64,UklGRr4FAABXRUJQVlA4TLIFAAAvSoASEIcFIZIkxVbOzGPmJ+d9/1qYcW9tOIgkSZGqe+GZycD718b8PwM5kiRFUmTjMr1WiJV69WM+6CxHkSSpVj68Phdfw5fwbX8ncMfdxzQBTGsPECBAgAAnOMABdjCDA5zgBDtYwQIWMIMZTGACIxjBAAYwgAA9yCCDBBJIIEiPAGAmGlCAEiHgBO+e6sFKuoAiAQJpDygDUCpDSSqAlaMlQCASECkpzUncW7rr1VeECTOBhKSMEFJCoNAdCJRQUAaPSYRUhAQEVKRlVkUJjN5NteE8Vc7K+RiXUpGkEsXq/6fFsOhdbxZ1xrsKoYUNMay7KaHFEthGpTSlpJylsnI2dlUqQpKSPvw1/9x9xg8/aYnv+OEv94OXPnqZT7PlLFvMkuUiWS2xWWK9xmZj2+2fw+HpcDi5G+oJ0pB+7We72/XYq9vswGTQ7DN3nBYkeoZRKUYuJqWZlGbiplyMXZWzIln1lXVZCksg+7az89ZHHL18/7x8frz9/sRoeL/Y2/vX93gP1LZtW9s2urwFnG3hqBDayuOtzMzslbn1VmZmciKzBk6Za23RKzuT9x8tvXotf9q3iP5PgPb/ZG9XW7SZ6mi0o6evfga7owRv0SfVgx6l+oe/Ll158/79+xdXz+yeQvXnvWHTG4DJR17+I+T/vnkIoHlCmHobgF9e2kKlfXMuEB0Iy6QWYNcHof7tGqAzHH2fwJwPoravZkDTQAh04JqouX0UIhNq1gozPoowvp4Ceo1aYZ0twmn9CHpNWmGnLcJq7wS9BjrstEV47Z3Qp6wXdtoizPYcIoOKJkVYZotwWz/RpKgFLBH2N9CpZDzcEOE/CwMKJjWwR9ShPZeogk4o1oN4A72BJkW4KFRa1+PxePy2VQOxg2igHhhVYMXxjRfVvYHeIA2cE8GtZRAbNozhGHDby7p9OX76tiUjdtAaoB/eBbOXsjpteqZicFkI8WYH3r9aEs9hklw7a0Xwy5A1ffMJuGwdBmIJIxED3vjZoMs1cD2YvQTDlB2CZVDImNWp1VD0EadpkRqEYrB3kJMyD8KitOmbX802v+dEpHQQwe9w0JTPrV6VNSUz8J+PBf0y7RxTcIpEADOZNaULPPYRoMtEuS5XvBxnx2KMIEFT4BenU+ZTbstYcbxrlAHb5zJRGShKvFsCseF0cvhgjXJQ9LmtzFrE6pSpOpcaLlQnjHQuA7bPc2aqsbezOmuqzScPElT4FkHiK5lnkDGV5o3VAIVhwzCMxEGPZZeLCjSZbQyZSpOrgaG0KWngueP6qLpRSKvIFYChnCmbX82B8oP1AIef32KmkiKY3tlMtUdyNRRypnT+IPzrOM7Yo3lUL5eJ8DxAOrEa71gimYDVaVM+G4Onjnfl/DxokIlyXSodI3DSlM4NAU8c2b18JtNG3MuCTAI4mMyapmnmMwc9oGCkM6Zp5jLGQWCr60jPo0emB7zEDoCDGdM7PwQLKo82E3DhvZIjPQZ9Mv1Q9LDjgGH6ZmKwr+w4Tvnuhf0+W06OlJyAd0GTns71quIOgIOpfFW6ADx0JMuu67qOyhO0yLWyQ4jROPDoBNWFAsAm1wlhCXrkJsC1OLDXdRz3BN57R5xQjsAkOW0GwIYRx7Pk3r9/v1J2QrqRFi3gF/DbiFOXLkwIMinCeac+j9OgBe6Ecl1UQA826WuO10NpI1M1hX/C3Tp4BL0qtPnMGwtdBf7QlA7MYG8pZOV5zJqkRhsHJ8JV2svP/Zrq7+F8mEp7QdfUfwfnw1PaCyu0WrbC8VJIynvhd622rbB3LBTuPFip1bod5t0NwX1A12o/LgLHx2rkboTZ/VoYB6PA+XIN3OPAt5O0kPZEgPOuopHjwDe9WngndUaAjY/cIKXK+XnANF0L96SuBqqPP7rvelbun99LdZOu1eHEtgaCN7UPaPU6qHdEG32aop3jv9T+lwQ="
+      },
+      "lastModifiedDate": "2024-05-13T13:04:56.966Z",
+      "lastModifiedBy": {
+        "id": "0ef2f025-46df-47d0-8bcd-11f62aa10612",
+        "name": "System User",
+        "email": "system@trustcloud.ai",
+        "pictureUrl": "data:image/png;base64,UklGRr4FAABXRUJQVlA4TLIFAAAvSoASEIcFIZIkxVbOzGPmJ+d9/1qYcW9tOIgkSZGqe+GZycD718b8PwM5kiRFUmTjMr1WiJV69WM+6CxHkSSpVj68Phdfw5fwbX8ncMfdxzQBTGsPECBAgAAnOMABdjCDA5zgBDtYwQIWMIMZTGACIxjBAAYwgAA9yCCDBBJIIEiPAGAmGlCAEiHgBO+e6sFKuoAiAQJpDygDUCpDSSqAlaMlQCASECkpzUncW7rr1VeECTOBhKSMEFJCoNAdCJRQUAaPSYRUhAQEVKRlVkUJjN5NteE8Vc7K+RiXUpGkEsXq/6fFsOhdbxZ1xrsKoYUNMay7KaHFEthGpTSlpJylsnI2dlUqQpKSPvw1/9x9xg8/aYnv+OEv94OXPnqZT7PlLFvMkuUiWS2xWWK9xmZj2+2fw+HpcDi5G+oJ0pB+7We72/XYq9vswGTQ7DN3nBYkeoZRKUYuJqWZlGbiplyMXZWzIln1lXVZCksg+7az89ZHHL18/7x8frz9/sRoeL/Y2/vX93gP1LZtW9s2urwFnG3hqBDayuOtzMzslbn1VmZmciKzBk6Za23RKzuT9x8tvXotf9q3iP5PgPb/ZG9XW7SZ6mi0o6evfga7owRv0SfVgx6l+oe/Ll158/79+xdXz+yeQvXnvWHTG4DJR17+I+T/vnkIoHlCmHobgF9e2kKlfXMuEB0Iy6QWYNcHof7tGqAzHH2fwJwPoravZkDTQAh04JqouX0UIhNq1gozPoowvp4Ceo1aYZ0twmn9CHpNWmGnLcJq7wS9BjrstEV47Z3Qp6wXdtoizPYcIoOKJkVYZotwWz/RpKgFLBH2N9CpZDzcEOE/CwMKJjWwR9ShPZeogk4o1oN4A72BJkW4KFRa1+PxePy2VQOxg2igHhhVYMXxjRfVvYHeIA2cE8GtZRAbNozhGHDby7p9OX76tiUjdtAaoB/eBbOXsjpteqZicFkI8WYH3r9aEs9hklw7a0Xwy5A1ffMJuGwdBmIJIxED3vjZoMs1cD2YvQTDlB2CZVDImNWp1VD0EadpkRqEYrB3kJMyD8KitOmbX802v+dEpHQQwe9w0JTPrV6VNSUz8J+PBf0y7RxTcIpEADOZNaULPPYRoMtEuS5XvBxnx2KMIEFT4BenU+ZTbstYcbxrlAHb5zJRGShKvFsCseF0cvhgjXJQ9LmtzFrE6pSpOpcaLlQnjHQuA7bPc2aqsbezOmuqzScPElT4FkHiK5lnkDGV5o3VAIVhwzCMxEGPZZeLCjSZbQyZSpOrgaG0KWngueP6qLpRSKvIFYChnCmbX82B8oP1AIef32KmkiKY3tlMtUdyNRRypnT+IPzrOM7Yo3lUL5eJ8DxAOrEa71gimYDVaVM+G4Onjnfl/DxokIlyXSodI3DSlM4NAU8c2b18JtNG3MuCTAI4mMyapmnmMwc9oGCkM6Zp5jLGQWCr60jPo0emB7zEDoCDGdM7PwQLKo82E3DhvZIjPQZ9Mv1Q9LDjgGH6ZmKwr+w4Tvnuhf0+W06OlJyAd0GTns71quIOgIOpfFW6ADx0JMuu67qOyhO0yLWyQ4jROPDoBNWFAsAm1wlhCXrkJsC1OLDXdRz3BN57R5xQjsAkOW0GwIYRx7Pk3r9/v1J2QrqRFi3gF/DbiFOXLkwIMinCeac+j9OgBe6Ecl1UQA826WuO10NpI1M1hX/C3Tp4BL0qtPnMGwtdBf7QlA7MYG8pZOV5zJqkRhsHJ8JV2svP/Zrq7+F8mEp7QdfUfwfnw1PaCyu0WrbC8VJIynvhd622rbB3LBTuPFip1bod5t0NwX1A12o/LgLHx2rkboTZ/VoYB6PA+XIN3OPAt5O0kPZEgPOuopHjwDe9WngndUaAjY/cIKXK+XnANF0L96SuBqqPP7rvelbun99LdZOu1eHEtgaCN7UPaPU6qHdEG32aop3jv9T+lwQ="
+      }
+    }
+  },
+  {
+    "id": "198e8083-cc69-4a50-ace2-52a8a7e9d52e",
+    "referenceId": "GOVERN-5",
+    "displayIdentifier": "GOVERN-5",
+    "title": "AI Stakeholder Engagement",
+    "description": null,
+    "subsections": [
+      {
+        "id": "cff20f96-b956-44f9-b637-036f79f7190d",
+        "referenceId": "GOVERN-5.1",
+        "name": "",
+        "description": "Organizational policies and practices are in place to collect, consider, prioritize, and integrate feedback from those external to the team that developed or deployed the AI system regarding the potential individual and societal impacts related to AI risks.",
+        "programControlMapping": [
+          {
+            "id": "d84ad622-8855-42e7-919b-d4e6dd9340a5",
+            "shortName": "CUST-20",
+            "customShortName": null,
+            "name": "Support channel",
+            "description": "External users are provided with a support channel for reporting systems failures, incidents, concerns, and other complaints to appropriate personnel."
+          },
+          {
+            "id": "f6c54e2f-d5ab-4e99-906a-c6386e6c41f2",
+            "shortName": "PDP-17",
+            "customShortName": null,
+            "name": "Internal Support Channel",
+            "description": "Employees have access to an internal support channel that can be used to report incidents, concerns, and complaints."
+          }
+        ]
+      },
+      {
+        "id": "1c2b4935-0271-42ca-9a93-dc1ec8b15e84",
+        "referenceId": "GOVERN-5.2",
+        "name": "",
+        "description": "Mechanisms are established to enable the team that developed or deployed AI systems to regularly incorporate adjudicated feedback from relevant AI actors into system design and implementation.",
+        "programControlMapping": [
+          {
+            "id": "78acdfad-f9dc-4100-9ae3-b2bcb619fe8e",
+            "shortName": "BIZOPS-40",
+            "customShortName": null,
+            "name": "Customer Feedback Program",
+            "description": "A customer feedback program is in place to collect and monitor customer satisfaction and complaints."
+          }
+        ]
+      }
+    ],
+    "programPolicyMapping": [],
+    "_metadata": {
+      "createdDate": "2024-05-13T13:04:56.966Z",
+      "createdBy": {
+        "id": "0ef2f025-46df-47d0-8bcd-11f62aa10612",
+        "name": "System User",
+        "email": "system@trustcloud.ai",
+        "pictureUrl": "data:image/png;base64,UklGRr4FAABXRUJQVlA4TLIFAAAvSoASEIcFIZIkxVbOzGPmJ+d9/1qYcW9tOIgkSZGqe+GZycD718b8PwM5kiRFUmTjMr1WiJV69WM+6CxHkSSpVj68Phdfw5fwbX8ncMfdxzQBTGsPECBAgAAnOMABdjCDA5zgBDtYwQIWMIMZTGACIxjBAAYwgAA9yCCDBBJIIEiPAGAmGlCAEiHgBO+e6sFKuoAiAQJpDygDUCpDSSqAlaMlQCASECkpzUncW7rr1VeECTOBhKSMEFJCoNAdCJRQUAaPSYRUhAQEVKRlVkUJjN5NteE8Vc7K+RiXUpGkEsXq/6fFsOhdbxZ1xrsKoYUNMay7KaHFEthGpTSlpJylsnI2dlUqQpKSPvw1/9x9xg8/aYnv+OEv94OXPnqZT7PlLFvMkuUiWS2xWWK9xmZj2+2fw+HpcDi5G+oJ0pB+7We72/XYq9vswGTQ7DN3nBYkeoZRKUYuJqWZlGbiplyMXZWzIln1lXVZCksg+7az89ZHHL18/7x8frz9/sRoeL/Y2/vX93gP1LZtW9s2urwFnG3hqBDayuOtzMzslbn1VmZmciKzBk6Za23RKzuT9x8tvXotf9q3iP5PgPb/ZG9XW7SZ6mi0o6evfga7owRv0SfVgx6l+oe/Ll158/79+xdXz+yeQvXnvWHTG4DJR17+I+T/vnkIoHlCmHobgF9e2kKlfXMuEB0Iy6QWYNcHof7tGqAzHH2fwJwPoravZkDTQAh04JqouX0UIhNq1gozPoowvp4Ceo1aYZ0twmn9CHpNWmGnLcJq7wS9BjrstEV47Z3Qp6wXdtoizPYcIoOKJkVYZotwWz/RpKgFLBH2N9CpZDzcEOE/CwMKJjWwR9ShPZeogk4o1oN4A72BJkW4KFRa1+PxePy2VQOxg2igHhhVYMXxjRfVvYHeIA2cE8GtZRAbNozhGHDby7p9OX76tiUjdtAaoB/eBbOXsjpteqZicFkI8WYH3r9aEs9hklw7a0Xwy5A1ffMJuGwdBmIJIxED3vjZoMs1cD2YvQTDlB2CZVDImNWp1VD0EadpkRqEYrB3kJMyD8KitOmbX802v+dEpHQQwe9w0JTPrV6VNSUz8J+PBf0y7RxTcIpEADOZNaULPPYRoMtEuS5XvBxnx2KMIEFT4BenU+ZTbstYcbxrlAHb5zJRGShKvFsCseF0cvhgjXJQ9LmtzFrE6pSpOpcaLlQnjHQuA7bPc2aqsbezOmuqzScPElT4FkHiK5lnkDGV5o3VAIVhwzCMxEGPZZeLCjSZbQyZSpOrgaG0KWngueP6qLpRSKvIFYChnCmbX82B8oP1AIef32KmkiKY3tlMtUdyNRRypnT+IPzrOM7Yo3lUL5eJ8DxAOrEa71gimYDVaVM+G4Onjnfl/DxokIlyXSodI3DSlM4NAU8c2b18JtNG3MuCTAI4mMyapmnmMwc9oGCkM6Zp5jLGQWCr60jPo0emB7zEDoCDGdM7PwQLKo82E3DhvZIjPQZ9Mv1Q9LDjgGH6ZmKwr+w4Tvnuhf0+W06OlJyAd0GTns71quIOgIOpfFW6ADx0JMuu67qOyhO0yLWyQ4jROPDoBNWFAsAm1wlhCXrkJsC1OLDXdRz3BN57R5xQjsAkOW0GwIYRx7Pk3r9/v1J2QrqRFi3gF/DbiFOXLkwIMinCeac+j9OgBe6Ecl1UQA826WuO10NpI1M1hX/C3Tp4BL0qtPnMGwtdBf7QlA7MYG8pZOV5zJqkRhsHJ8JV2svP/Zrq7+F8mEp7QdfUfwfnw1PaCyu0WrbC8VJIynvhd622rbB3LBTuPFip1bod5t0NwX1A12o/LgLHx2rkboTZ/VoYB6PA+XIN3OPAt5O0kPZEgPOuopHjwDe9WngndUaAjY/cIKXK+XnANF0L96SuBqqPP7rvelbun99LdZOu1eHEtgaCN7UPaPU6qHdEG32aop3jv9T+lwQ="
+      },
+      "lastModifiedDate": "2024-05-13T13:04:56.966Z",
+      "lastModifiedBy": {
+        "id": "0ef2f025-46df-47d0-8bcd-11f62aa10612",
+        "name": "System User",
+        "email": "system@trustcloud.ai",
+        "pictureUrl": "data:image/png;base64,UklGRr4FAABXRUJQVlA4TLIFAAAvSoASEIcFIZIkxVbOzGPmJ+d9/1qYcW9tOIgkSZGqe+GZycD718b8PwM5kiRFUmTjMr1WiJV69WM+6CxHkSSpVj68Phdfw5fwbX8ncMfdxzQBTGsPECBAgAAnOMABdjCDA5zgBDtYwQIWMIMZTGACIxjBAAYwgAA9yCCDBBJIIEiPAGAmGlCAEiHgBO+e6sFKuoAiAQJpDygDUCpDSSqAlaMlQCASECkpzUncW7rr1VeECTOBhKSMEFJCoNAdCJRQUAaPSYRUhAQEVKRlVkUJjN5NteE8Vc7K+RiXUpGkEsXq/6fFsOhdbxZ1xrsKoYUNMay7KaHFEthGpTSlpJylsnI2dlUqQpKSPvw1/9x9xg8/aYnv+OEv94OXPnqZT7PlLFvMkuUiWS2xWWK9xmZj2+2fw+HpcDi5G+oJ0pB+7We72/XYq9vswGTQ7DN3nBYkeoZRKUYuJqWZlGbiplyMXZWzIln1lXVZCksg+7az89ZHHL18/7x8frz9/sRoeL/Y2/vX93gP1LZtW9s2urwFnG3hqBDayuOtzMzslbn1VmZmciKzBk6Za23RKzuT9x8tvXotf9q3iP5PgPb/ZG9XW7SZ6mi0o6evfga7owRv0SfVgx6l+oe/Ll158/79+xdXz+yeQvXnvWHTG4DJR17+I+T/vnkIoHlCmHobgF9e2kKlfXMuEB0Iy6QWYNcHof7tGqAzHH2fwJwPoravZkDTQAh04JqouX0UIhNq1gozPoowvp4Ceo1aYZ0twmn9CHpNWmGnLcJq7wS9BjrstEV47Z3Qp6wXdtoizPYcIoOKJkVYZotwWz/RpKgFLBH2N9CpZDzcEOE/CwMKJjWwR9ShPZeogk4o1oN4A72BJkW4KFRa1+PxePy2VQOxg2igHhhVYMXxjRfVvYHeIA2cE8GtZRAbNozhGHDby7p9OX76tiUjdtAaoB/eBbOXsjpteqZicFkI8WYH3r9aEs9hklw7a0Xwy5A1ffMJuGwdBmIJIxED3vjZoMs1cD2YvQTDlB2CZVDImNWp1VD0EadpkRqEYrB3kJMyD8KitOmbX802v+dEpHQQwe9w0JTPrV6VNSUz8J+PBf0y7RxTcIpEADOZNaULPPYRoMtEuS5XvBxnx2KMIEFT4BenU+ZTbstYcbxrlAHb5zJRGShKvFsCseF0cvhgjXJQ9LmtzFrE6pSpOpcaLlQnjHQuA7bPc2aqsbezOmuqzScPElT4FkHiK5lnkDGV5o3VAIVhwzCMxEGPZZeLCjSZbQyZSpOrgaG0KWngueP6qLpRSKvIFYChnCmbX82B8oP1AIef32KmkiKY3tlMtUdyNRRypnT+IPzrOM7Yo3lUL5eJ8DxAOrEa71gimYDVaVM+G4Onjnfl/DxokIlyXSodI3DSlM4NAU8c2b18JtNG3MuCTAI4mMyapmnmMwc9oGCkM6Zp5jLGQWCr60jPo0emB7zEDoCDGdM7PwQLKo82E3DhvZIjPQZ9Mv1Q9LDjgGH6ZmKwr+w4Tvnuhf0+W06OlJyAd0GTns71quIOgIOpfFW6ADx0JMuu67qOyhO0yLWyQ4jROPDoBNWFAsAm1wlhCXrkJsC1OLDXdRz3BN57R5xQjsAkOW0GwIYRx7Pk3r9/v1J2QrqRFi3gF/DbiFOXLkwIMinCeac+j9OgBe6Ecl1UQA826WuO10NpI1M1hX/C3Tp4BL0qtPnMGwtdBf7QlA7MYG8pZOV5zJqkRhsHJ8JV2svP/Zrq7+F8mEp7QdfUfwfnw1PaCyu0WrbC8VJIynvhd622rbB3LBTuPFip1bod5t0NwX1A12o/LgLHx2rkboTZ/VoYB6PA+XIN3OPAt5O0kPZEgPOuopHjwDe9WngndUaAjY/cIKXK+XnANF0L96SuBqqPP7rvelbun99LdZOu1eHEtgaCN7UPaPU6qHdEG32aop3jv9T+lwQ="
+      }
+    }
+  },
+  {
+    "id": "9b879f3c-ad98-4ac2-b255-a1d042cae5d0",
+    "referenceId": "GOVERN-6",
+    "displayIdentifier": "GOVERN-6",
+    "title": "AI Supply Chain Assurance",
+    "description": null,
+    "subsections": [
+      {
+        "id": "cef8904e-d7a3-49b7-b148-183012cb50e5",
+        "referenceId": "GOVERN-6.1",
+        "name": "",
+        "description": "Policies and procedures are in place that address AI risks associated with third-party entities, including risks of infringement of a third-party’s intellectual property or other rights.",
+        "programControlMapping": [
+          {
+            "id": "14e667de-f6fe-45a8-830d-44766a6c58a7",
+            "shortName": "AI-52",
+            "customShortName": null,
+            "name": "AI vendor review",
+            "description": "Regular reviews are conducted to ensure that third-party services utilized by the AI system are aligned with the company AI Governance Policy."
+          },
+          {
+            "id": "e8b629b1-e424-432e-a269-a2258d2009f2",
+            "shortName": "AI-49",
+            "customShortName": null,
+            "name": "Customer needs",
+            "description": "The AI Governance Policy takes into account customer's expectations and needs in regards to the responsible use of AI systems."
+          }
+        ]
+      },
+      {
+        "id": "ef553776-37a0-480c-91db-34b0ee8bd282",
+        "referenceId": "GOVERN-6.2",
+        "name": "",
+        "description": "Contingency processes are in place to handle failures or incidents in third-party data or AI systems deemed to be high-risk.",
+        "programControlMapping": [
+          {
+            "id": "d84ad622-8855-42e7-919b-d4e6dd9340a5",
+            "shortName": "CUST-20",
+            "customShortName": null,
+            "name": "Support channel",
+            "description": "External users are provided with a support channel for reporting systems failures, incidents, concerns, and other complaints to appropriate personnel."
+          },
+          {
+            "id": "b62c7c7a-2585-404d-bd23-d97e30f88e92",
+            "shortName": "AI-51",
+            "customShortName": null,
+            "name": "AI incident management program",
+            "description": "The AI Incident Management Program outlines the requirements and process for declaring and responding to AI-related incidents, including the roles and responsibilities, and the internal and external communication necessary to take the issue to resolution."
+          },
+          {
+            "id": "3856f9c6-628a-4dd1-9021-e6cb4e4df3e0",
+            "shortName": "AI-50",
+            "customShortName": null,
+            "name": "Incident Management communication",
+            "description": "The company has identified authorized personnel to manage communication with internal and external stakeholders in the event of an AI system incident."
+          }
+        ]
+      }
+    ],
+    "programPolicyMapping": [
+      {
+        "id": "c9dd05b4-1977-402e-8454-66df039b25a7",
+        "shortName": "POL-63",
+        "title": "AI Governance Policy",
+        "description": "Establish the objectives, practices, and governance around the use of Artificial Intelligence."
+      }
+    ],
+    "_metadata": {
+      "createdDate": "2024-05-13T13:04:56.966Z",
+      "createdBy": {
+        "id": "0ef2f025-46df-47d0-8bcd-11f62aa10612",
+        "name": "System User",
+        "email": "system@trustcloud.ai",
+        "pictureUrl": "data:image/png;base64,UklGRr4FAABXRUJQVlA4TLIFAAAvSoASEIcFIZIkxVbOzGPmJ+d9/1qYcW9tOIgkSZGqe+GZycD718b8PwM5kiRFUmTjMr1WiJV69WM+6CxHkSSpVj68Phdfw5fwbX8ncMfdxzQBTGsPECBAgAAnOMABdjCDA5zgBDtYwQIWMIMZTGACIxjBAAYwgAA9yCCDBBJIIEiPAGAmGlCAEiHgBO+e6sFKuoAiAQJpDygDUCpDSSqAlaMlQCASECkpzUncW7rr1VeECTOBhKSMEFJCoNAdCJRQUAaPSYRUhAQEVKRlVkUJjN5NteE8Vc7K+RiXUpGkEsXq/6fFsOhdbxZ1xrsKoYUNMay7KaHFEthGpTSlpJylsnI2dlUqQpKSPvw1/9x9xg8/aYnv+OEv94OXPnqZT7PlLFvMkuUiWS2xWWK9xmZj2+2fw+HpcDi5G+oJ0pB+7We72/XYq9vswGTQ7DN3nBYkeoZRKUYuJqWZlGbiplyMXZWzIln1lXVZCksg+7az89ZHHL18/7x8frz9/sRoeL/Y2/vX93gP1LZtW9s2urwFnG3hqBDayuOtzMzslbn1VmZmciKzBk6Za23RKzuT9x8tvXotf9q3iP5PgPb/ZG9XW7SZ6mi0o6evfga7owRv0SfVgx6l+oe/Ll158/79+xdXz+yeQvXnvWHTG4DJR17+I+T/vnkIoHlCmHobgF9e2kKlfXMuEB0Iy6QWYNcHof7tGqAzHH2fwJwPoravZkDTQAh04JqouX0UIhNq1gozPoowvp4Ceo1aYZ0twmn9CHpNWmGnLcJq7wS9BjrstEV47Z3Qp6wXdtoizPYcIoOKJkVYZotwWz/RpKgFLBH2N9CpZDzcEOE/CwMKJjWwR9ShPZeogk4o1oN4A72BJkW4KFRa1+PxePy2VQOxg2igHhhVYMXxjRfVvYHeIA2cE8GtZRAbNozhGHDby7p9OX76tiUjdtAaoB/eBbOXsjpteqZicFkI8WYH3r9aEs9hklw7a0Xwy5A1ffMJuGwdBmIJIxED3vjZoMs1cD2YvQTDlB2CZVDImNWp1VD0EadpkRqEYrB3kJMyD8KitOmbX802v+dEpHQQwe9w0JTPrV6VNSUz8J+PBf0y7RxTcIpEADOZNaULPPYRoMtEuS5XvBxnx2KMIEFT4BenU+ZTbstYcbxrlAHb5zJRGShKvFsCseF0cvhgjXJQ9LmtzFrE6pSpOpcaLlQnjHQuA7bPc2aqsbezOmuqzScPElT4FkHiK5lnkDGV5o3VAIVhwzCMxEGPZZeLCjSZbQyZSpOrgaG0KWngueP6qLpRSKvIFYChnCmbX82B8oP1AIef32KmkiKY3tlMtUdyNRRypnT+IPzrOM7Yo3lUL5eJ8DxAOrEa71gimYDVaVM+G4Onjnfl/DxokIlyXSodI3DSlM4NAU8c2b18JtNG3MuCTAI4mMyapmnmMwc9oGCkM6Zp5jLGQWCr60jPo0emB7zEDoCDGdM7PwQLKo82E3DhvZIjPQZ9Mv1Q9LDjgGH6ZmKwr+w4Tvnuhf0+W06OlJyAd0GTns71quIOgIOpfFW6ADx0JMuu67qOyhO0yLWyQ4jROPDoBNWFAsAm1wlhCXrkJsC1OLDXdRz3BN57R5xQjsAkOW0GwIYRx7Pk3r9/v1J2QrqRFi3gF/DbiFOXLkwIMinCeac+j9OgBe6Ecl1UQA826WuO10NpI1M1hX/C3Tp4BL0qtPnMGwtdBf7QlA7MYG8pZOV5zJqkRhsHJ8JV2svP/Zrq7+F8mEp7QdfUfwfnw1PaCyu0WrbC8VJIynvhd622rbB3LBTuPFip1bod5t0NwX1A12o/LgLHx2rkboTZ/VoYB6PA+XIN3OPAt5O0kPZEgPOuopHjwDe9WngndUaAjY/cIKXK+XnANF0L96SuBqqPP7rvelbun99LdZOu1eHEtgaCN7UPaPU6qHdEG32aop3jv9T+lwQ="
+      },
+      "lastModifiedDate": "2024-05-13T13:04:56.966Z",
+      "lastModifiedBy": {
+        "id": "0ef2f025-46df-47d0-8bcd-11f62aa10612",
+        "name": "System User",
+        "email": "system@trustcloud.ai",
+        "pictureUrl": "data:image/png;base64,UklGRr4FAABXRUJQVlA4TLIFAAAvSoASEIcFIZIkxVbOzGPmJ+d9/1qYcW9tOIgkSZGqe+GZycD718b8PwM5kiRFUmTjMr1WiJV69WM+6CxHkSSpVj68Phdfw5fwbX8ncMfdxzQBTGsPECBAgAAnOMABdjCDA5zgBDtYwQIWMIMZTGACIxjBAAYwgAA9yCCDBBJIIEiPAGAmGlCAEiHgBO+e6sFKuoAiAQJpDygDUCpDSSqAlaMlQCASECkpzUncW7rr1VeECTOBhKSMEFJCoNAdCJRQUAaPSYRUhAQEVKRlVkUJjN5NteE8Vc7K+RiXUpGkEsXq/6fFsOhdbxZ1xrsKoYUNMay7KaHFEthGpTSlpJylsnI2dlUqQpKSPvw1/9x9xg8/aYnv+OEv94OXPnqZT7PlLFvMkuUiWS2xWWK9xmZj2+2fw+HpcDi5G+oJ0pB+7We72/XYq9vswGTQ7DN3nBYkeoZRKUYuJqWZlGbiplyMXZWzIln1lXVZCksg+7az89ZHHL18/7x8frz9/sRoeL/Y2/vX93gP1LZtW9s2urwFnG3hqBDayuOtzMzslbn1VmZmciKzBk6Za23RKzuT9x8tvXotf9q3iP5PgPb/ZG9XW7SZ6mi0o6evfga7owRv0SfVgx6l+oe/Ll158/79+xdXz+yeQvXnvWHTG4DJR17+I+T/vnkIoHlCmHobgF9e2kKlfXMuEB0Iy6QWYNcHof7tGqAzHH2fwJwPoravZkDTQAh04JqouX0UIhNq1gozPoowvp4Ceo1aYZ0twmn9CHpNWmGnLcJq7wS9BjrstEV47Z3Qp6wXdtoizPYcIoOKJkVYZotwWz/RpKgFLBH2N9CpZDzcEOE/CwMKJjWwR9ShPZeogk4o1oN4A72BJkW4KFRa1+PxePy2VQOxg2igHhhVYMXxjRfVvYHeIA2cE8GtZRAbNozhGHDby7p9OX76tiUjdtAaoB/eBbOXsjpteqZicFkI8WYH3r9aEs9hklw7a0Xwy5A1ffMJuGwdBmIJIxED3vjZoMs1cD2YvQTDlB2CZVDImNWp1VD0EadpkRqEYrB3kJMyD8KitOmbX802v+dEpHQQwe9w0JTPrV6VNSUz8J+PBf0y7RxTcIpEADOZNaULPPYRoMtEuS5XvBxnx2KMIEFT4BenU+ZTbstYcbxrlAHb5zJRGShKvFsCseF0cvhgjXJQ9LmtzFrE6pSpOpcaLlQnjHQuA7bPc2aqsbezOmuqzScPElT4FkHiK5lnkDGV5o3VAIVhwzCMxEGPZZeLCjSZbQyZSpOrgaG0KWngueP6qLpRSKvIFYChnCmbX82B8oP1AIef32KmkiKY3tlMtUdyNRRypnT+IPzrOM7Yo3lUL5eJ8DxAOrEa71gimYDVaVM+G4Onjnfl/DxokIlyXSodI3DSlM4NAU8c2b18JtNG3MuCTAI4mMyapmnmMwc9oGCkM6Zp5jLGQWCr60jPo0emB7zEDoCDGdM7PwQLKo82E3DhvZIjPQZ9Mv1Q9LDjgGH6ZmKwr+w4Tvnuhf0+W06OlJyAd0GTns71quIOgIOpfFW6ADx0JMuu67qOyhO0yLWyQ4jROPDoBNWFAsAm1wlhCXrkJsC1OLDXdRz3BN57R5xQjsAkOW0GwIYRx7Pk3r9/v1J2QrqRFi3gF/DbiFOXLkwIMinCeac+j9OgBe6Ecl1UQA826WuO10NpI1M1hX/C3Tp4BL0qtPnMGwtdBf7QlA7MYG8pZOV5zJqkRhsHJ8JV2svP/Zrq7+F8mEp7QdfUfwfnw1PaCyu0WrbC8VJIynvhd622rbB3LBTuPFip1bod5t0NwX1A12o/LgLHx2rkboTZ/VoYB6PA+XIN3OPAt5O0kPZEgPOuopHjwDe9WngndUaAjY/cIKXK+XnANF0L96SuBqqPP7rvelbun99LdZOu1eHEtgaCN7UPaPU6qHdEG32aop3jv9T+lwQ="
+      }
+    }
+  },
+  {
+    "id": "3f5d351f-236f-4374-9423-567867ed6a45",
+    "referenceId": "MANAGE-1",
+    "displayIdentifier": "MANAGE-1",
+    "title": "AI Risk Response",
+    "description": null,
+    "subsections": [
+      {
+        "id": "86bfa1a2-32c7-407b-a73e-2474dcaf3863",
+        "referenceId": "MANAGE-1.1",
+        "name": "",
+        "description": "A determination is made as to whether the AI system achieves its intended purposes and stated objectives and whether its development or deployment should proceed.",
+        "programControlMapping": [
+          {
+            "id": "d067d357-e6c0-4160-a1fb-df8d46a71145",
+            "shortName": "PDP-8",
+            "customShortName": null,
+            "name": "Change Management Approvals",
+            "description": "All application and infrastructure changes are reviewed by a separate technical resource and approved by authorized personnel before being delivered to the production environment."
+          },
+          {
+            "id": "4b149b2d-2b2b-419c-8844-066301a74e80",
+            "shortName": "PDP-7",
+            "customShortName": null,
+            "name": "Change Management Workflow",
+            "description": "The Change Management documentation outlines the internal workflow for propagating application and infrastructure code changes to the production environment, including tracking, testing, reviewing and approving."
+          },
+          {
+            "id": "db70db69-14ff-48ff-82d9-62dec76db2a1",
+            "shortName": "AI-7",
+            "customShortName": null,
+            "name": "AI Business Value Assessment",
+            "description": "The business value and use of various AI systems is documented, and regular assessments are conducted to reevaluates the value that AI systems are providing to the business."
+          },
+          {
+            "id": "94d5c3f8-3719-44e7-a01d-07b97f06f770",
+            "shortName": "HR-22",
+            "customShortName": null,
+            "name": "Organizational Strategy",
+            "description": "The company leadership develops and documents an organizational strategy to align internal performance goals and responsibilities with the company's business objectives."
+          }
+        ]
+      },
+      {
+        "id": "98a2a15e-1963-4c0a-a76e-6f47eea65a68",
+        "referenceId": "MANAGE-1.2",
+        "name": "",
+        "description": "Treatment of documented AI risks is prioritized based on impact, likelihood, and available resources or methods.",
+        "programControlMapping": [
+          {
+            "id": "e9369657-2f5c-4d17-8aa6-c0cb4c28caa6",
+            "shortName": "BIZOPS-10",
+            "customShortName": null,
+            "name": "Risk Assessment",
+            "description": "Following the Risk Management Policy, the company uses qualified internal staff and resources to perform at least one risk assessment per year, and maintains a cumulative Risk Register."
+          }
+        ]
+      },
+      {
+        "id": "74abc416-7e15-40a6-a721-cc0e4e2e9288",
+        "referenceId": "MANAGE-1.3",
+        "name": "",
+        "description": "Responses to the AI risks deemed high priority, as identified by the MAP function, are developed, planned, and documented. Risk response options can include mitigating, transferring, avoiding, or accepting.",
+        "programControlMapping": [
+          {
+            "id": "76b30b92-5199-4f6c-83e4-52df99b858a3",
+            "shortName": "PDP-15",
+            "customShortName": null,
+            "name": "Agile Process",
+            "description": "The company's software development process includes frequent team meetings which facilitate the communication and evaluation of objectives between team members. These touch points include planning meetings, regular standups, and retrospective meetings."
+          },
+          {
+            "id": "f9ce9d81-131e-4199-b1de-009253c735b7",
+            "shortName": "BIZOPS-1",
+            "customShortName": null,
+            "name": "Risk Management",
+            "description": "The company maintains a risk management program to identify, prioritize, and mitigate risk to acceptable levels."
+          },
+          {
+            "id": "a4560074-4b03-4940-9ae6-bf5600f62575",
+            "shortName": "BIZOPS-11",
+            "customShortName": null,
+            "name": "Risk Register",
+            "description": "The company maintains a Cumulative Risk Register storing control deficiencies identified as part of ongoing system reviews, and reviews the register as part of the company's regular Risk Assessment process."
+          }
+        ]
+      },
+      {
+        "id": "efec9c1a-dcb5-427d-99bb-e0490d61487b",
+        "referenceId": "MANAGE-1.4",
+        "name": "",
+        "description": "Negative residual risks (defined as the sum of all unmitigated risks) to both downstream acquirers of AI systems and end users are documented.",
+        "programControlMapping": [
+          {
+            "id": "f9ce9d81-131e-4199-b1de-009253c735b7",
+            "shortName": "BIZOPS-1",
+            "customShortName": null,
+            "name": "Risk Management",
+            "description": "The company maintains a risk management program to identify, prioritize, and mitigate risk to acceptable levels."
+          },
+          {
+            "id": "a4560074-4b03-4940-9ae6-bf5600f62575",
+            "shortName": "BIZOPS-11",
+            "customShortName": null,
+            "name": "Risk Register",
+            "description": "The company maintains a Cumulative Risk Register storing control deficiencies identified as part of ongoing system reviews, and reviews the register as part of the company's regular Risk Assessment process."
+          }
+        ]
+      }
+    ],
+    "programPolicyMapping": [
+      {
+        "id": "25aa4c4d-20ae-4002-bb95-66972688f246",
+        "shortName": "POL-6",
+        "title": "Change Management Policy",
+        "description": "Provide guidance on the process of managing change across company critical systems and products."
+      },
+      {
+        "id": "ac26f012-81af-4b20-a4be-aa59089aac30",
+        "shortName": "POL-17",
+        "title": "Risk Management Policy",
+        "description": "Establish a framework for managing risk at the company and incorporating risk assessments throughout the company's operations."
+      },
+      {
+        "id": "c9dd05b4-1977-402e-8454-66df039b25a7",
+        "shortName": "POL-63",
+        "title": "AI Governance Policy",
+        "description": "Establish the objectives, practices, and governance around the use of Artificial Intelligence."
+      }
+    ],
+    "_metadata": {
+      "createdDate": "2024-05-13T13:04:56.966Z",
+      "createdBy": {
+        "id": "0ef2f025-46df-47d0-8bcd-11f62aa10612",
+        "name": "System User",
+        "email": "system@trustcloud.ai",
+        "pictureUrl": "data:image/png;base64,UklGRr4FAABXRUJQVlA4TLIFAAAvSoASEIcFIZIkxVbOzGPmJ+d9/1qYcW9tOIgkSZGqe+GZycD718b8PwM5kiRFUmTjMr1WiJV69WM+6CxHkSSpVj68Phdfw5fwbX8ncMfdxzQBTGsPECBAgAAnOMABdjCDA5zgBDtYwQIWMIMZTGACIxjBAAYwgAA9yCCDBBJIIEiPAGAmGlCAEiHgBO+e6sFKuoAiAQJpDygDUCpDSSqAlaMlQCASECkpzUncW7rr1VeECTOBhKSMEFJCoNAdCJRQUAaPSYRUhAQEVKRlVkUJjN5NteE8Vc7K+RiXUpGkEsXq/6fFsOhdbxZ1xrsKoYUNMay7KaHFEthGpTSlpJylsnI2dlUqQpKSPvw1/9x9xg8/aYnv+OEv94OXPnqZT7PlLFvMkuUiWS2xWWK9xmZj2+2fw+HpcDi5G+oJ0pB+7We72/XYq9vswGTQ7DN3nBYkeoZRKUYuJqWZlGbiplyMXZWzIln1lXVZCksg+7az89ZHHL18/7x8frz9/sRoeL/Y2/vX93gP1LZtW9s2urwFnG3hqBDayuOtzMzslbn1VmZmciKzBk6Za23RKzuT9x8tvXotf9q3iP5PgPb/ZG9XW7SZ6mi0o6evfga7owRv0SfVgx6l+oe/Ll158/79+xdXz+yeQvXnvWHTG4DJR17+I+T/vnkIoHlCmHobgF9e2kKlfXMuEB0Iy6QWYNcHof7tGqAzHH2fwJwPoravZkDTQAh04JqouX0UIhNq1gozPoowvp4Ceo1aYZ0twmn9CHpNWmGnLcJq7wS9BjrstEV47Z3Qp6wXdtoizPYcIoOKJkVYZotwWz/RpKgFLBH2N9CpZDzcEOE/CwMKJjWwR9ShPZeogk4o1oN4A72BJkW4KFRa1+PxePy2VQOxg2igHhhVYMXxjRfVvYHeIA2cE8GtZRAbNozhGHDby7p9OX76tiUjdtAaoB/eBbOXsjpteqZicFkI8WYH3r9aEs9hklw7a0Xwy5A1ffMJuGwdBmIJIxED3vjZoMs1cD2YvQTDlB2CZVDImNWp1VD0EadpkRqEYrB3kJMyD8KitOmbX802v+dEpHQQwe9w0JTPrV6VNSUz8J+PBf0y7RxTcIpEADOZNaULPPYRoMtEuS5XvBxnx2KMIEFT4BenU+ZTbstYcbxrlAHb5zJRGShKvFsCseF0cvhgjXJQ9LmtzFrE6pSpOpcaLlQnjHQuA7bPc2aqsbezOmuqzScPElT4FkHiK5lnkDGV5o3VAIVhwzCMxEGPZZeLCjSZbQyZSpOrgaG0KWngueP6qLpRSKvIFYChnCmbX82B8oP1AIef32KmkiKY3tlMtUdyNRRypnT+IPzrOM7Yo3lUL5eJ8DxAOrEa71gimYDVaVM+G4Onjnfl/DxokIlyXSodI3DSlM4NAU8c2b18JtNG3MuCTAI4mMyapmnmMwc9oGCkM6Zp5jLGQWCr60jPo0emB7zEDoCDGdM7PwQLKo82E3DhvZIjPQZ9Mv1Q9LDjgGH6ZmKwr+w4Tvnuhf0+W06OlJyAd0GTns71quIOgIOpfFW6ADx0JMuu67qOyhO0yLWyQ4jROPDoBNWFAsAm1wlhCXrkJsC1OLDXdRz3BN57R5xQjsAkOW0GwIYRx7Pk3r9/v1J2QrqRFi3gF/DbiFOXLkwIMinCeac+j9OgBe6Ecl1UQA826WuO10NpI1M1hX/C3Tp4BL0qtPnMGwtdBf7QlA7MYG8pZOV5zJqkRhsHJ8JV2svP/Zrq7+F8mEp7QdfUfwfnw1PaCyu0WrbC8VJIynvhd622rbB3LBTuPFip1bod5t0NwX1A12o/LgLHx2rkboTZ/VoYB6PA+XIN3OPAt5O0kPZEgPOuopHjwDe9WngndUaAjY/cIKXK+XnANF0L96SuBqqPP7rvelbun99LdZOu1eHEtgaCN7UPaPU6qHdEG32aop3jv9T+lwQ="
+      },
+      "lastModifiedDate": "2024-05-13T13:04:56.966Z",
+      "lastModifiedBy": {
+        "id": "0ef2f025-46df-47d0-8bcd-11f62aa10612",
+        "name": "System User",
+        "email": "system@trustcloud.ai",
+        "pictureUrl": "data:image/png;base64,UklGRr4FAABXRUJQVlA4TLIFAAAvSoASEIcFIZIkxVbOzGPmJ+d9/1qYcW9tOIgkSZGqe+GZycD718b8PwM5kiRFUmTjMr1WiJV69WM+6CxHkSSpVj68Phdfw5fwbX8ncMfdxzQBTGsPECBAgAAnOMABdjCDA5zgBDtYwQIWMIMZTGACIxjBAAYwgAA9yCCDBBJIIEiPAGAmGlCAEiHgBO+e6sFKuoAiAQJpDygDUCpDSSqAlaMlQCASECkpzUncW7rr1VeECTOBhKSMEFJCoNAdCJRQUAaPSYRUhAQEVKRlVkUJjN5NteE8Vc7K+RiXUpGkEsXq/6fFsOhdbxZ1xrsKoYUNMay7KaHFEthGpTSlpJylsnI2dlUqQpKSPvw1/9x9xg8/aYnv+OEv94OXPnqZT7PlLFvMkuUiWS2xWWK9xmZj2+2fw+HpcDi5G+oJ0pB+7We72/XYq9vswGTQ7DN3nBYkeoZRKUYuJqWZlGbiplyMXZWzIln1lXVZCksg+7az89ZHHL18/7x8frz9/sRoeL/Y2/vX93gP1LZtW9s2urwFnG3hqBDayuOtzMzslbn1VmZmciKzBk6Za23RKzuT9x8tvXotf9q3iP5PgPb/ZG9XW7SZ6mi0o6evfga7owRv0SfVgx6l+oe/Ll158/79+xdXz+yeQvXnvWHTG4DJR17+I+T/vnkIoHlCmHobgF9e2kKlfXMuEB0Iy6QWYNcHof7tGqAzHH2fwJwPoravZkDTQAh04JqouX0UIhNq1gozPoowvp4Ceo1aYZ0twmn9CHpNWmGnLcJq7wS9BjrstEV47Z3Qp6wXdtoizPYcIoOKJkVYZotwWz/RpKgFLBH2N9CpZDzcEOE/CwMKJjWwR9ShPZeogk4o1oN4A72BJkW4KFRa1+PxePy2VQOxg2igHhhVYMXxjRfVvYHeIA2cE8GtZRAbNozhGHDby7p9OX76tiUjdtAaoB/eBbOXsjpteqZicFkI8WYH3r9aEs9hklw7a0Xwy5A1ffMJuGwdBmIJIxED3vjZoMs1cD2YvQTDlB2CZVDImNWp1VD0EadpkRqEYrB3kJMyD8KitOmbX802v+dEpHQQwe9w0JTPrV6VNSUz8J+PBf0y7RxTcIpEADOZNaULPPYRoMtEuS5XvBxnx2KMIEFT4BenU+ZTbstYcbxrlAHb5zJRGShKvFsCseF0cvhgjXJQ9LmtzFrE6pSpOpcaLlQnjHQuA7bPc2aqsbezOmuqzScPElT4FkHiK5lnkDGV5o3VAIVhwzCMxEGPZZeLCjSZbQyZSpOrgaG0KWngueP6qLpRSKvIFYChnCmbX82B8oP1AIef32KmkiKY3tlMtUdyNRRypnT+IPzrOM7Yo3lUL5eJ8DxAOrEa71gimYDVaVM+G4Onjnfl/DxokIlyXSodI3DSlM4NAU8c2b18JtNG3MuCTAI4mMyapmnmMwc9oGCkM6Zp5jLGQWCr60jPo0emB7zEDoCDGdM7PwQLKo82E3DhvZIjPQZ9Mv1Q9LDjgGH6ZmKwr+w4Tvnuhf0+W06OlJyAd0GTns71quIOgIOpfFW6ADx0JMuu67qOyhO0yLWyQ4jROPDoBNWFAsAm1wlhCXrkJsC1OLDXdRz3BN57R5xQjsAkOW0GwIYRx7Pk3r9/v1J2QrqRFi3gF/DbiFOXLkwIMinCeac+j9OgBe6Ecl1UQA826WuO10NpI1M1hX/C3Tp4BL0qtPnMGwtdBf7QlA7MYG8pZOV5zJqkRhsHJ8JV2svP/Zrq7+F8mEp7QdfUfwfnw1PaCyu0WrbC8VJIynvhd622rbB3LBTuPFip1bod5t0NwX1A12o/LgLHx2rkboTZ/VoYB6PA+XIN3OPAt5O0kPZEgPOuopHjwDe9WngndUaAjY/cIKXK+XnANF0L96SuBqqPP7rvelbun99LdZOu1eHEtgaCN7UPaPU6qHdEG32aop3jv9T+lwQ="
+      }
+    }
+  },
+  {
+    "id": "c05614ec-fc3b-4300-9220-14b6f45b908e",
+    "referenceId": "MANAGE-2",
+    "displayIdentifier": "MANAGE-2",
+    "title": "AI Impact Optimization",
+    "description": null,
+    "subsections": [
+      {
+        "id": "122a50d2-b6a4-4881-ae54-e9576173532d",
+        "referenceId": "MANAGE-2.1",
+        "name": "",
+        "description": "Resources required to manage AI risks are taken into account – along with viable non-AI alternative systems, approaches, or methods – to reduce the magnitude or likelihood of potential impacts.",
+        "programControlMapping": [
+          {
+            "id": "87135d73-c84e-4fa4-a9ad-b33b305a49bd",
+            "shortName": "AI-21",
+            "customShortName": null,
+            "name": "AI Resources documentation",
+            "description": "Documentation is maintained for resources required for the lifecycle of AI systems, which includes information on required data, tooling, system, computing, and human resources."
+          }
+        ]
+      },
+      {
+        "id": "4e0f51d2-50c6-488c-89f9-da73a4e92f3c",
+        "referenceId": "MANAGE-2.2",
+        "name": "",
+        "description": "Mechanisms are in place and applied to sustain the value of deployed AI systems.",
+        "programControlMapping": [
+          {
+            "id": "db70db69-14ff-48ff-82d9-62dec76db2a1",
+            "shortName": "AI-7",
+            "customShortName": null,
+            "name": "AI Business Value Assessment",
+            "description": "The business value and use of various AI systems is documented, and regular assessments are conducted to reevaluates the value that AI systems are providing to the business."
+          }
+        ]
+      },
+      {
+        "id": "c69ca846-2ea2-42bd-ac50-df55ccaf8596",
+        "referenceId": "MANAGE-2.3",
+        "name": "",
+        "description": "Procedures are followed to respond to and recover from a previously unknown risk when it is identified.",
+        "programControlMapping": [
+          {
+            "id": "b62c7c7a-2585-404d-bd23-d97e30f88e92",
+            "shortName": "AI-51",
+            "customShortName": null,
+            "name": "AI incident management program",
+            "description": "The AI Incident Management Program outlines the requirements and process for declaring and responding to AI-related incidents, including the roles and responsibilities, and the internal and external communication necessary to take the issue to resolution."
+          }
+        ]
+      },
+      {
+        "id": "67b1e325-7eb0-4728-ada7-be28dbb82cfe",
+        "referenceId": "MANAGE-2.4",
+        "name": "",
+        "description": "Mechanisms are in place and applied, and responsibilities are assigned and understood, to supersede, disengage, or deactivate AI systems that demonstrate performance or outcomes inconsistent with intended use",
+        "programControlMapping": [
+          {
+            "id": "a70b8168-249b-4a3a-a81a-6f1ca0d116e4",
+            "shortName": "AI-5",
+            "customShortName": null,
+            "name": "AI System Override",
+            "description": "The AI Governance Policy includes provisions for the implementation of mechanisms to supersede or deactivate AI systems when performance is inconsistent with intended use."
+          }
+        ]
+      }
+    ],
+    "programPolicyMapping": [
+      {
+        "id": "c9dd05b4-1977-402e-8454-66df039b25a7",
+        "shortName": "POL-63",
+        "title": "AI Governance Policy",
+        "description": "Establish the objectives, practices, and governance around the use of Artificial Intelligence."
+      }
+    ],
+    "_metadata": {
+      "createdDate": "2024-05-13T13:04:56.966Z",
+      "createdBy": {
+        "id": "0ef2f025-46df-47d0-8bcd-11f62aa10612",
+        "name": "System User",
+        "email": "system@trustcloud.ai",
+        "pictureUrl": "data:image/png;base64,UklGRr4FAABXRUJQVlA4TLIFAAAvSoASEIcFIZIkxVbOzGPmJ+d9/1qYcW9tOIgkSZGqe+GZycD718b8PwM5kiRFUmTjMr1WiJV69WM+6CxHkSSpVj68Phdfw5fwbX8ncMfdxzQBTGsPECBAgAAnOMABdjCDA5zgBDtYwQIWMIMZTGACIxjBAAYwgAA9yCCDBBJIIEiPAGAmGlCAEiHgBO+e6sFKuoAiAQJpDygDUCpDSSqAlaMlQCASECkpzUncW7rr1VeECTOBhKSMEFJCoNAdCJRQUAaPSYRUhAQEVKRlVkUJjN5NteE8Vc7K+RiXUpGkEsXq/6fFsOhdbxZ1xrsKoYUNMay7KaHFEthGpTSlpJylsnI2dlUqQpKSPvw1/9x9xg8/aYnv+OEv94OXPnqZT7PlLFvMkuUiWS2xWWK9xmZj2+2fw+HpcDi5G+oJ0pB+7We72/XYq9vswGTQ7DN3nBYkeoZRKUYuJqWZlGbiplyMXZWzIln1lXVZCksg+7az89ZHHL18/7x8frz9/sRoeL/Y2/vX93gP1LZtW9s2urwFnG3hqBDayuOtzMzslbn1VmZmciKzBk6Za23RKzuT9x8tvXotf9q3iP5PgPb/ZG9XW7SZ6mi0o6evfga7owRv0SfVgx6l+oe/Ll158/79+xdXz+yeQvXnvWHTG4DJR17+I+T/vnkIoHlCmHobgF9e2kKlfXMuEB0Iy6QWYNcHof7tGqAzHH2fwJwPoravZkDTQAh04JqouX0UIhNq1gozPoowvp4Ceo1aYZ0twmn9CHpNWmGnLcJq7wS9BjrstEV47Z3Qp6wXdtoizPYcIoOKJkVYZotwWz/RpKgFLBH2N9CpZDzcEOE/CwMKJjWwR9ShPZeogk4o1oN4A72BJkW4KFRa1+PxePy2VQOxg2igHhhVYMXxjRfVvYHeIA2cE8GtZRAbNozhGHDby7p9OX76tiUjdtAaoB/eBbOXsjpteqZicFkI8WYH3r9aEs9hklw7a0Xwy5A1ffMJuGwdBmIJIxED3vjZoMs1cD2YvQTDlB2CZVDImNWp1VD0EadpkRqEYrB3kJMyD8KitOmbX802v+dEpHQQwe9w0JTPrV6VNSUz8J+PBf0y7RxTcIpEADOZNaULPPYRoMtEuS5XvBxnx2KMIEFT4BenU+ZTbstYcbxrlAHb5zJRGShKvFsCseF0cvhgjXJQ9LmtzFrE6pSpOpcaLlQnjHQuA7bPc2aqsbezOmuqzScPElT4FkHiK5lnkDGV5o3VAIVhwzCMxEGPZZeLCjSZbQyZSpOrgaG0KWngueP6qLpRSKvIFYChnCmbX82B8oP1AIef32KmkiKY3tlMtUdyNRRypnT+IPzrOM7Yo3lUL5eJ8DxAOrEa71gimYDVaVM+G4Onjnfl/DxokIlyXSodI3DSlM4NAU8c2b18JtNG3MuCTAI4mMyapmnmMwc9oGCkM6Zp5jLGQWCr60jPo0emB7zEDoCDGdM7PwQLKo82E3DhvZIjPQZ9Mv1Q9LDjgGH6ZmKwr+w4Tvnuhf0+W06OlJyAd0GTns71quIOgIOpfFW6ADx0JMuu67qOyhO0yLWyQ4jROPDoBNWFAsAm1wlhCXrkJsC1OLDXdRz3BN57R5xQjsAkOW0GwIYRx7Pk3r9/v1J2QrqRFi3gF/DbiFOXLkwIMinCeac+j9OgBe6Ecl1UQA826WuO10NpI1M1hX/C3Tp4BL0qtPnMGwtdBf7QlA7MYG8pZOV5zJqkRhsHJ8JV2svP/Zrq7+F8mEp7QdfUfwfnw1PaCyu0WrbC8VJIynvhd622rbB3LBTuPFip1bod5t0NwX1A12o/LgLHx2rkboTZ/VoYB6PA+XIN3OPAt5O0kPZEgPOuopHjwDe9WngndUaAjY/cIKXK+XnANF0L96SuBqqPP7rvelbun99LdZOu1eHEtgaCN7UPaPU6qHdEG32aop3jv9T+lwQ="
+      },
+      "lastModifiedDate": "2024-05-13T13:04:56.966Z",
+      "lastModifiedBy": {
+        "id": "0ef2f025-46df-47d0-8bcd-11f62aa10612",
+        "name": "System User",
+        "email": "system@trustcloud.ai",
+        "pictureUrl": "data:image/png;base64,UklGRr4FAABXRUJQVlA4TLIFAAAvSoASEIcFIZIkxVbOzGPmJ+d9/1qYcW9tOIgkSZGqe+GZycD718b8PwM5kiRFUmTjMr1WiJV69WM+6CxHkSSpVj68Phdfw5fwbX8ncMfdxzQBTGsPECBAgAAnOMABdjCDA5zgBDtYwQIWMIMZTGACIxjBAAYwgAA9yCCDBBJIIEiPAGAmGlCAEiHgBO+e6sFKuoAiAQJpDygDUCpDSSqAlaMlQCASECkpzUncW7rr1VeECTOBhKSMEFJCoNAdCJRQUAaPSYRUhAQEVKRlVkUJjN5NteE8Vc7K+RiXUpGkEsXq/6fFsOhdbxZ1xrsKoYUNMay7KaHFEthGpTSlpJylsnI2dlUqQpKSPvw1/9x9xg8/aYnv+OEv94OXPnqZT7PlLFvMkuUiWS2xWWK9xmZj2+2fw+HpcDi5G+oJ0pB+7We72/XYq9vswGTQ7DN3nBYkeoZRKUYuJqWZlGbiplyMXZWzIln1lXVZCksg+7az89ZHHL18/7x8frz9/sRoeL/Y2/vX93gP1LZtW9s2urwFnG3hqBDayuOtzMzslbn1VmZmciKzBk6Za23RKzuT9x8tvXotf9q3iP5PgPb/ZG9XW7SZ6mi0o6evfga7owRv0SfVgx6l+oe/Ll158/79+xdXz+yeQvXnvWHTG4DJR17+I+T/vnkIoHlCmHobgF9e2kKlfXMuEB0Iy6QWYNcHof7tGqAzHH2fwJwPoravZkDTQAh04JqouX0UIhNq1gozPoowvp4Ceo1aYZ0twmn9CHpNWmGnLcJq7wS9BjrstEV47Z3Qp6wXdtoizPYcIoOKJkVYZotwWz/RpKgFLBH2N9CpZDzcEOE/CwMKJjWwR9ShPZeogk4o1oN4A72BJkW4KFRa1+PxePy2VQOxg2igHhhVYMXxjRfVvYHeIA2cE8GtZRAbNozhGHDby7p9OX76tiUjdtAaoB/eBbOXsjpteqZicFkI8WYH3r9aEs9hklw7a0Xwy5A1ffMJuGwdBmIJIxED3vjZoMs1cD2YvQTDlB2CZVDImNWp1VD0EadpkRqEYrB3kJMyD8KitOmbX802v+dEpHQQwe9w0JTPrV6VNSUz8J+PBf0y7RxTcIpEADOZNaULPPYRoMtEuS5XvBxnx2KMIEFT4BenU+ZTbstYcbxrlAHb5zJRGShKvFsCseF0cvhgjXJQ9LmtzFrE6pSpOpcaLlQnjHQuA7bPc2aqsbezOmuqzScPElT4FkHiK5lnkDGV5o3VAIVhwzCMxEGPZZeLCjSZbQyZSpOrgaG0KWngueP6qLpRSKvIFYChnCmbX82B8oP1AIef32KmkiKY3tlMtUdyNRRypnT+IPzrOM7Yo3lUL5eJ8DxAOrEa71gimYDVaVM+G4Onjnfl/DxokIlyXSodI3DSlM4NAU8c2b18JtNG3MuCTAI4mMyapmnmMwc9oGCkM6Zp5jLGQWCr60jPo0emB7zEDoCDGdM7PwQLKo82E3DhvZIjPQZ9Mv1Q9LDjgGH6ZmKwr+w4Tvnuhf0+W06OlJyAd0GTns71quIOgIOpfFW6ADx0JMuu67qOyhO0yLWyQ4jROPDoBNWFAsAm1wlhCXrkJsC1OLDXdRz3BN57R5xQjsAkOW0GwIYRx7Pk3r9/v1J2QrqRFi3gF/DbiFOXLkwIMinCeac+j9OgBe6Ecl1UQA826WuO10NpI1M1hX/C3Tp4BL0qtPnMGwtdBf7QlA7MYG8pZOV5zJqkRhsHJ8JV2svP/Zrq7+F8mEp7QdfUfwfnw1PaCyu0WrbC8VJIynvhd622rbB3LBTuPFip1bod5t0NwX1A12o/LgLHx2rkboTZ/VoYB6PA+XIN3OPAt5O0kPZEgPOuopHjwDe9WngndUaAjY/cIKXK+XnANF0L96SuBqqPP7rvelbun99LdZOu1eHEtgaCN7UPaPU6qHdEG32aop3jv9T+lwQ="
+      }
+    }
+  },
+  {
+    "id": "15c3150d-4255-4a65-9709-53174042ac7b",
+    "referenceId": "MANAGE-3",
+    "displayIdentifier": "MANAGE-3",
+    "title": "Third Party AI Risk Management",
+    "description": null,
+    "subsections": [
+      {
+        "id": "123251f4-8a37-4896-acf3-7984c352f391",
+        "referenceId": "MANAGE-3.1",
+        "name": "",
+        "description": "AI risks and benefits from third-party resources are regularly monitored, and risk controls are applied and documented.",
+        "programControlMapping": [
+          {
+            "id": "b5af1bd4-3c95-4173-86fd-23d3728b2c9b",
+            "shortName": "AI-11",
+            "customShortName": null,
+            "name": "AI System Assessment",
+            "description": "All AI systems and tools utilized within the company undergo due diligence and a risk assessment."
+          },
+          {
+            "id": "14e667de-f6fe-45a8-830d-44766a6c58a7",
+            "shortName": "AI-52",
+            "customShortName": null,
+            "name": "AI vendor review",
+            "description": "Regular reviews are conducted to ensure that third-party services utilized by the AI system are aligned with the company AI Governance Policy."
+          }
+        ]
+      },
+      {
+        "id": "9fe5959d-9899-40a0-80ca-f55a45094b6a",
+        "referenceId": "MANAGE-3.2",
+        "name": "",
+        "description": "Pre-trained models which are used for development are monitored as part of AI system regular monitoring and maintenance.",
+        "programControlMapping": [
+          {
+            "id": "26ba67a7-4188-47e7-bec1-444f9afa5056",
+            "shortName": "AI-47",
+            "customShortName": null,
+            "name": "AI model monitoring",
+            "description": "Pre-trained models which are used within the AI system are monitored as part of regular system monitoring."
+          }
+        ]
+      }
+    ],
+    "programPolicyMapping": [
+      {
+        "id": "fc570ed5-7221-4de7-88e8-06e10fe83cf9",
+        "shortName": "POL-62",
+        "title": "AI Responsible Use Policy",
+        "description": "This policy outlines the responsible and ethical use of AI tools and systems."
+      }
+    ],
+    "_metadata": {
+      "createdDate": "2024-05-13T13:04:56.966Z",
+      "createdBy": {
+        "id": "0ef2f025-46df-47d0-8bcd-11f62aa10612",
+        "name": "System User",
+        "email": "system@trustcloud.ai",
+        "pictureUrl": "data:image/png;base64,UklGRr4FAABXRUJQVlA4TLIFAAAvSoASEIcFIZIkxVbOzGPmJ+d9/1qYcW9tOIgkSZGqe+GZycD718b8PwM5kiRFUmTjMr1WiJV69WM+6CxHkSSpVj68Phdfw5fwbX8ncMfdxzQBTGsPECBAgAAnOMABdjCDA5zgBDtYwQIWMIMZTGACIxjBAAYwgAA9yCCDBBJIIEiPAGAmGlCAEiHgBO+e6sFKuoAiAQJpDygDUCpDSSqAlaMlQCASECkpzUncW7rr1VeECTOBhKSMEFJCoNAdCJRQUAaPSYRUhAQEVKRlVkUJjN5NteE8Vc7K+RiXUpGkEsXq/6fFsOhdbxZ1xrsKoYUNMay7KaHFEthGpTSlpJylsnI2dlUqQpKSPvw1/9x9xg8/aYnv+OEv94OXPnqZT7PlLFvMkuUiWS2xWWK9xmZj2+2fw+HpcDi5G+oJ0pB+7We72/XYq9vswGTQ7DN3nBYkeoZRKUYuJqWZlGbiplyMXZWzIln1lXVZCksg+7az89ZHHL18/7x8frz9/sRoeL/Y2/vX93gP1LZtW9s2urwFnG3hqBDayuOtzMzslbn1VmZmciKzBk6Za23RKzuT9x8tvXotf9q3iP5PgPb/ZG9XW7SZ6mi0o6evfga7owRv0SfVgx6l+oe/Ll158/79+xdXz+yeQvXnvWHTG4DJR17+I+T/vnkIoHlCmHobgF9e2kKlfXMuEB0Iy6QWYNcHof7tGqAzHH2fwJwPoravZkDTQAh04JqouX0UIhNq1gozPoowvp4Ceo1aYZ0twmn9CHpNWmGnLcJq7wS9BjrstEV47Z3Qp6wXdtoizPYcIoOKJkVYZotwWz/RpKgFLBH2N9CpZDzcEOE/CwMKJjWwR9ShPZeogk4o1oN4A72BJkW4KFRa1+PxePy2VQOxg2igHhhVYMXxjRfVvYHeIA2cE8GtZRAbNozhGHDby7p9OX76tiUjdtAaoB/eBbOXsjpteqZicFkI8WYH3r9aEs9hklw7a0Xwy5A1ffMJuGwdBmIJIxED3vjZoMs1cD2YvQTDlB2CZVDImNWp1VD0EadpkRqEYrB3kJMyD8KitOmbX802v+dEpHQQwe9w0JTPrV6VNSUz8J+PBf0y7RxTcIpEADOZNaULPPYRoMtEuS5XvBxnx2KMIEFT4BenU+ZTbstYcbxrlAHb5zJRGShKvFsCseF0cvhgjXJQ9LmtzFrE6pSpOpcaLlQnjHQuA7bPc2aqsbezOmuqzScPElT4FkHiK5lnkDGV5o3VAIVhwzCMxEGPZZeLCjSZbQyZSpOrgaG0KWngueP6qLpRSKvIFYChnCmbX82B8oP1AIef32KmkiKY3tlMtUdyNRRypnT+IPzrOM7Yo3lUL5eJ8DxAOrEa71gimYDVaVM+G4Onjnfl/DxokIlyXSodI3DSlM4NAU8c2b18JtNG3MuCTAI4mMyapmnmMwc9oGCkM6Zp5jLGQWCr60jPo0emB7zEDoCDGdM7PwQLKo82E3DhvZIjPQZ9Mv1Q9LDjgGH6ZmKwr+w4Tvnuhf0+W06OlJyAd0GTns71quIOgIOpfFW6ADx0JMuu67qOyhO0yLWyQ4jROPDoBNWFAsAm1wlhCXrkJsC1OLDXdRz3BN57R5xQjsAkOW0GwIYRx7Pk3r9/v1J2QrqRFi3gF/DbiFOXLkwIMinCeac+j9OgBe6Ecl1UQA826WuO10NpI1M1hX/C3Tp4BL0qtPnMGwtdBf7QlA7MYG8pZOV5zJqkRhsHJ8JV2svP/Zrq7+F8mEp7QdfUfwfnw1PaCyu0WrbC8VJIynvhd622rbB3LBTuPFip1bod5t0NwX1A12o/LgLHx2rkboTZ/VoYB6PA+XIN3OPAt5O0kPZEgPOuopHjwDe9WngndUaAjY/cIKXK+XnANF0L96SuBqqPP7rvelbun99LdZOu1eHEtgaCN7UPaPU6qHdEG32aop3jv9T+lwQ="
+      },
+      "lastModifiedDate": "2024-05-13T13:04:56.966Z",
+      "lastModifiedBy": {
+        "id": "0ef2f025-46df-47d0-8bcd-11f62aa10612",
+        "name": "System User",
+        "email": "system@trustcloud.ai",
+        "pictureUrl": "data:image/png;base64,UklGRr4FAABXRUJQVlA4TLIFAAAvSoASEIcFIZIkxVbOzGPmJ+d9/1qYcW9tOIgkSZGqe+GZycD718b8PwM5kiRFUmTjMr1WiJV69WM+6CxHkSSpVj68Phdfw5fwbX8ncMfdxzQBTGsPECBAgAAnOMABdjCDA5zgBDtYwQIWMIMZTGACIxjBAAYwgAA9yCCDBBJIIEiPAGAmGlCAEiHgBO+e6sFKuoAiAQJpDygDUCpDSSqAlaMlQCASECkpzUncW7rr1VeECTOBhKSMEFJCoNAdCJRQUAaPSYRUhAQEVKRlVkUJjN5NteE8Vc7K+RiXUpGkEsXq/6fFsOhdbxZ1xrsKoYUNMay7KaHFEthGpTSlpJylsnI2dlUqQpKSPvw1/9x9xg8/aYnv+OEv94OXPnqZT7PlLFvMkuUiWS2xWWK9xmZj2+2fw+HpcDi5G+oJ0pB+7We72/XYq9vswGTQ7DN3nBYkeoZRKUYuJqWZlGbiplyMXZWzIln1lXVZCksg+7az89ZHHL18/7x8frz9/sRoeL/Y2/vX93gP1LZtW9s2urwFnG3hqBDayuOtzMzslbn1VmZmciKzBk6Za23RKzuT9x8tvXotf9q3iP5PgPb/ZG9XW7SZ6mi0o6evfga7owRv0SfVgx6l+oe/Ll158/79+xdXz+yeQvXnvWHTG4DJR17+I+T/vnkIoHlCmHobgF9e2kKlfXMuEB0Iy6QWYNcHof7tGqAzHH2fwJwPoravZkDTQAh04JqouX0UIhNq1gozPoowvp4Ceo1aYZ0twmn9CHpNWmGnLcJq7wS9BjrstEV47Z3Qp6wXdtoizPYcIoOKJkVYZotwWz/RpKgFLBH2N9CpZDzcEOE/CwMKJjWwR9ShPZeogk4o1oN4A72BJkW4KFRa1+PxePy2VQOxg2igHhhVYMXxjRfVvYHeIA2cE8GtZRAbNozhGHDby7p9OX76tiUjdtAaoB/eBbOXsjpteqZicFkI8WYH3r9aEs9hklw7a0Xwy5A1ffMJuGwdBmIJIxED3vjZoMs1cD2YvQTDlB2CZVDImNWp1VD0EadpkRqEYrB3kJMyD8KitOmbX802v+dEpHQQwe9w0JTPrV6VNSUz8J+PBf0y7RxTcIpEADOZNaULPPYRoMtEuS5XvBxnx2KMIEFT4BenU+ZTbstYcbxrlAHb5zJRGShKvFsCseF0cvhgjXJQ9LmtzFrE6pSpOpcaLlQnjHQuA7bPc2aqsbezOmuqzScPElT4FkHiK5lnkDGV5o3VAIVhwzCMxEGPZZeLCjSZbQyZSpOrgaG0KWngueP6qLpRSKvIFYChnCmbX82B8oP1AIef32KmkiKY3tlMtUdyNRRypnT+IPzrOM7Yo3lUL5eJ8DxAOrEa71gimYDVaVM+G4Onjnfl/DxokIlyXSodI3DSlM4NAU8c2b18JtNG3MuCTAI4mMyapmnmMwc9oGCkM6Zp5jLGQWCr60jPo0emB7zEDoCDGdM7PwQLKo82E3DhvZIjPQZ9Mv1Q9LDjgGH6ZmKwr+w4Tvnuhf0+W06OlJyAd0GTns71quIOgIOpfFW6ADx0JMuu67qOyhO0yLWyQ4jROPDoBNWFAsAm1wlhCXrkJsC1OLDXdRz3BN57R5xQjsAkOW0GwIYRx7Pk3r9/v1J2QrqRFi3gF/DbiFOXLkwIMinCeac+j9OgBe6Ecl1UQA826WuO10NpI1M1hX/C3Tp4BL0qtPnMGwtdBf7QlA7MYG8pZOV5zJqkRhsHJ8JV2svP/Zrq7+F8mEp7QdfUfwfnw1PaCyu0WrbC8VJIynvhd622rbB3LBTuPFip1bod5t0NwX1A12o/LgLHx2rkboTZ/VoYB6PA+XIN3OPAt5O0kPZEgPOuopHjwDe9WngndUaAjY/cIKXK+XnANF0L96SuBqqPP7rvelbun99LdZOu1eHEtgaCN7UPaPU6qHdEG32aop3jv9T+lwQ="
+      }
+    }
+  },
+  {
+    "id": "2e48a218-2872-4961-9b20-e615ad60d492",
+    "referenceId": "MANAGE-4",
+    "displayIdentifier": "MANAGE-4",
+    "title": "AI Risk Treatments",
+    "description": null,
+    "subsections": [
+      {
+        "id": "7a5258a1-39bd-4347-89d8-1693371a881c",
+        "referenceId": "MANAGE-4.1",
+        "name": "",
+        "description": "Post-deployment AI system monitoring plans are implemented, including mechanisms for capturing and evaluating input from users and other relevant AI actors, appeal and override, decommissioning, incident response, recovery, and change management.",
+        "programControlMapping": [
+          {
+            "id": "a70b8168-249b-4a3a-a81a-6f1ca0d116e4",
+            "shortName": "AI-5",
+            "customShortName": null,
+            "name": "AI System Override",
+            "description": "The AI Governance Policy includes provisions for the implementation of mechanisms to supersede or deactivate AI systems when performance is inconsistent with intended use."
+          },
+          {
+            "id": "d84ad622-8855-42e7-919b-d4e6dd9340a5",
+            "shortName": "CUST-20",
+            "customShortName": null,
+            "name": "Support channel",
+            "description": "External users are provided with a support channel for reporting systems failures, incidents, concerns, and other complaints to appropriate personnel."
+          },
+          {
+            "id": "b62c7c7a-2585-404d-bd23-d97e30f88e92",
+            "shortName": "AI-51",
+            "customShortName": null,
+            "name": "AI incident management program",
+            "description": "The AI Incident Management Program outlines the requirements and process for declaring and responding to AI-related incidents, including the roles and responsibilities, and the internal and external communication necessary to take the issue to resolution."
+          },
+          {
+            "id": "78acdfad-f9dc-4100-9ae3-b2bcb619fe8e",
+            "shortName": "BIZOPS-40",
+            "customShortName": null,
+            "name": "Customer Feedback Program",
+            "description": "A customer feedback program is in place to collect and monitor customer satisfaction and complaints."
+          },
+          {
+            "id": "580f3690-aa27-4d30-917c-5b83e00b556a",
+            "shortName": "AI-44",
+            "customShortName": null,
+            "name": "AI systems logging and monitoring",
+            "description": "The company uses logging and monitoring tools to track the usage of AI systems and identify potential issues."
+          },
+          {
+            "id": "4b149b2d-2b2b-419c-8844-066301a74e80",
+            "shortName": "PDP-7",
+            "customShortName": null,
+            "name": "Change Management Workflow",
+            "description": "The Change Management documentation outlines the internal workflow for propagating application and infrastructure code changes to the production environment, including tracking, testing, reviewing and approving."
+          }
+        ]
+      },
+      {
+        "id": "099e99b8-cfe4-4b48-86d9-9b5b8a5b1184",
+        "referenceId": "MANAGE-4.2",
+        "name": "",
+        "description": "Measurable activities for continual improvements are integrated into AI system updates and include regular engagement with interested parties, including relevant AI actors.",
+        "programControlMapping": [
+          {
+            "id": "2eca311a-bef2-441c-a761-44e977adf60e",
+            "shortName": "AI-46",
+            "customShortName": null,
+            "name": "Measuring AI system performance",
+            "description": "AI system performance and reliability criteria are measured qualitatively or quantitatively as part of the ongoing system usage in production, and performance improvements are identified and implemented according to the company's product development lifecycle."
+          },
+          {
+            "id": "78acdfad-f9dc-4100-9ae3-b2bcb619fe8e",
+            "shortName": "BIZOPS-40",
+            "customShortName": null,
+            "name": "Customer Feedback Program",
+            "description": "A customer feedback program is in place to collect and monitor customer satisfaction and complaints."
+          }
+        ]
+      },
+      {
+        "id": "feda1dd6-71a5-44ea-837c-d32354c0eca1",
+        "referenceId": "MANAGE-4.3",
+        "name": "",
+        "description": "Incidents and errors are communicated to relevant AI actors, including affected communities. Processes for tracking, responding to, and recovering from incidents and errors are followed and documented.",
+        "programControlMapping": [
+          {
+            "id": "b62c7c7a-2585-404d-bd23-d97e30f88e92",
+            "shortName": "AI-51",
+            "customShortName": null,
+            "name": "AI incident management program",
+            "description": "The AI Incident Management Program outlines the requirements and process for declaring and responding to AI-related incidents, including the roles and responsibilities, and the internal and external communication necessary to take the issue to resolution."
+          },
+          {
+            "id": "3856f9c6-628a-4dd1-9021-e6cb4e4df3e0",
+            "shortName": "AI-50",
+            "customShortName": null,
+            "name": "Incident Management communication",
+            "description": "The company has identified authorized personnel to manage communication with internal and external stakeholders in the event of an AI system incident."
+          }
+        ]
+      }
+    ],
+    "programPolicyMapping": [
+      {
+        "id": "25aa4c4d-20ae-4002-bb95-66972688f246",
+        "shortName": "POL-6",
+        "title": "Change Management Policy",
+        "description": "Provide guidance on the process of managing change across company critical systems and products."
+      },
+      {
+        "id": "c9dd05b4-1977-402e-8454-66df039b25a7",
+        "shortName": "POL-63",
+        "title": "AI Governance Policy",
+        "description": "Establish the objectives, practices, and governance around the use of Artificial Intelligence."
+      }
+    ],
+    "_metadata": {
+      "createdDate": "2024-05-13T13:04:56.966Z",
+      "createdBy": {
+        "id": "0ef2f025-46df-47d0-8bcd-11f62aa10612",
+        "name": "System User",
+        "email": "system@trustcloud.ai",
+        "pictureUrl": "data:image/png;base64,UklGRr4FAABXRUJQVlA4TLIFAAAvSoASEIcFIZIkxVbOzGPmJ+d9/1qYcW9tOIgkSZGqe+GZycD718b8PwM5kiRFUmTjMr1WiJV69WM+6CxHkSSpVj68Phdfw5fwbX8ncMfdxzQBTGsPECBAgAAnOMABdjCDA5zgBDtYwQIWMIMZTGACIxjBAAYwgAA9yCCDBBJIIEiPAGAmGlCAEiHgBO+e6sFKuoAiAQJpDygDUCpDSSqAlaMlQCASECkpzUncW7rr1VeECTOBhKSMEFJCoNAdCJRQUAaPSYRUhAQEVKRlVkUJjN5NteE8Vc7K+RiXUpGkEsXq/6fFsOhdbxZ1xrsKoYUNMay7KaHFEthGpTSlpJylsnI2dlUqQpKSPvw1/9x9xg8/aYnv+OEv94OXPnqZT7PlLFvMkuUiWS2xWWK9xmZj2+2fw+HpcDi5G+oJ0pB+7We72/XYq9vswGTQ7DN3nBYkeoZRKUYuJqWZlGbiplyMXZWzIln1lXVZCksg+7az89ZHHL18/7x8frz9/sRoeL/Y2/vX93gP1LZtW9s2urwFnG3hqBDayuOtzMzslbn1VmZmciKzBk6Za23RKzuT9x8tvXotf9q3iP5PgPb/ZG9XW7SZ6mi0o6evfga7owRv0SfVgx6l+oe/Ll158/79+xdXz+yeQvXnvWHTG4DJR17+I+T/vnkIoHlCmHobgF9e2kKlfXMuEB0Iy6QWYNcHof7tGqAzHH2fwJwPoravZkDTQAh04JqouX0UIhNq1gozPoowvp4Ceo1aYZ0twmn9CHpNWmGnLcJq7wS9BjrstEV47Z3Qp6wXdtoizPYcIoOKJkVYZotwWz/RpKgFLBH2N9CpZDzcEOE/CwMKJjWwR9ShPZeogk4o1oN4A72BJkW4KFRa1+PxePy2VQOxg2igHhhVYMXxjRfVvYHeIA2cE8GtZRAbNozhGHDby7p9OX76tiUjdtAaoB/eBbOXsjpteqZicFkI8WYH3r9aEs9hklw7a0Xwy5A1ffMJuGwdBmIJIxED3vjZoMs1cD2YvQTDlB2CZVDImNWp1VD0EadpkRqEYrB3kJMyD8KitOmbX802v+dEpHQQwe9w0JTPrV6VNSUz8J+PBf0y7RxTcIpEADOZNaULPPYRoMtEuS5XvBxnx2KMIEFT4BenU+ZTbstYcbxrlAHb5zJRGShKvFsCseF0cvhgjXJQ9LmtzFrE6pSpOpcaLlQnjHQuA7bPc2aqsbezOmuqzScPElT4FkHiK5lnkDGV5o3VAIVhwzCMxEGPZZeLCjSZbQyZSpOrgaG0KWngueP6qLpRSKvIFYChnCmbX82B8oP1AIef32KmkiKY3tlMtUdyNRRypnT+IPzrOM7Yo3lUL5eJ8DxAOrEa71gimYDVaVM+G4Onjnfl/DxokIlyXSodI3DSlM4NAU8c2b18JtNG3MuCTAI4mMyapmnmMwc9oGCkM6Zp5jLGQWCr60jPo0emB7zEDoCDGdM7PwQLKo82E3DhvZIjPQZ9Mv1Q9LDjgGH6ZmKwr+w4Tvnuhf0+W06OlJyAd0GTns71quIOgIOpfFW6ADx0JMuu67qOyhO0yLWyQ4jROPDoBNWFAsAm1wlhCXrkJsC1OLDXdRz3BN57R5xQjsAkOW0GwIYRx7Pk3r9/v1J2QrqRFi3gF/DbiFOXLkwIMinCeac+j9OgBe6Ecl1UQA826WuO10NpI1M1hX/C3Tp4BL0qtPnMGwtdBf7QlA7MYG8pZOV5zJqkRhsHJ8JV2svP/Zrq7+F8mEp7QdfUfwfnw1PaCyu0WrbC8VJIynvhd622rbB3LBTuPFip1bod5t0NwX1A12o/LgLHx2rkboTZ/VoYB6PA+XIN3OPAt5O0kPZEgPOuopHjwDe9WngndUaAjY/cIKXK+XnANF0L96SuBqqPP7rvelbun99LdZOu1eHEtgaCN7UPaPU6qHdEG32aop3jv9T+lwQ="
+      },
+      "lastModifiedDate": "2024-05-13T13:04:56.966Z",
+      "lastModifiedBy": {
+        "id": "0ef2f025-46df-47d0-8bcd-11f62aa10612",
+        "name": "System User",
+        "email": "system@trustcloud.ai",
+        "pictureUrl": "data:image/png;base64,UklGRr4FAABXRUJQVlA4TLIFAAAvSoASEIcFIZIkxVbOzGPmJ+d9/1qYcW9tOIgkSZGqe+GZycD718b8PwM5kiRFUmTjMr1WiJV69WM+6CxHkSSpVj68Phdfw5fwbX8ncMfdxzQBTGsPECBAgAAnOMABdjCDA5zgBDtYwQIWMIMZTGACIxjBAAYwgAA9yCCDBBJIIEiPAGAmGlCAEiHgBO+e6sFKuoAiAQJpDygDUCpDSSqAlaMlQCASECkpzUncW7rr1VeECTOBhKSMEFJCoNAdCJRQUAaPSYRUhAQEVKRlVkUJjN5NteE8Vc7K+RiXUpGkEsXq/6fFsOhdbxZ1xrsKoYUNMay7KaHFEthGpTSlpJylsnI2dlUqQpKSPvw1/9x9xg8/aYnv+OEv94OXPnqZT7PlLFvMkuUiWS2xWWK9xmZj2+2fw+HpcDi5G+oJ0pB+7We72/XYq9vswGTQ7DN3nBYkeoZRKUYuJqWZlGbiplyMXZWzIln1lXVZCksg+7az89ZHHL18/7x8frz9/sRoeL/Y2/vX93gP1LZtW9s2urwFnG3hqBDayuOtzMzslbn1VmZmciKzBk6Za23RKzuT9x8tvXotf9q3iP5PgPb/ZG9XW7SZ6mi0o6evfga7owRv0SfVgx6l+oe/Ll158/79+xdXz+yeQvXnvWHTG4DJR17+I+T/vnkIoHlCmHobgF9e2kKlfXMuEB0Iy6QWYNcHof7tGqAzHH2fwJwPoravZkDTQAh04JqouX0UIhNq1gozPoowvp4Ceo1aYZ0twmn9CHpNWmGnLcJq7wS9BjrstEV47Z3Qp6wXdtoizPYcIoOKJkVYZotwWz/RpKgFLBH2N9CpZDzcEOE/CwMKJjWwR9ShPZeogk4o1oN4A72BJkW4KFRa1+PxePy2VQOxg2igHhhVYMXxjRfVvYHeIA2cE8GtZRAbNozhGHDby7p9OX76tiUjdtAaoB/eBbOXsjpteqZicFkI8WYH3r9aEs9hklw7a0Xwy5A1ffMJuGwdBmIJIxED3vjZoMs1cD2YvQTDlB2CZVDImNWp1VD0EadpkRqEYrB3kJMyD8KitOmbX802v+dEpHQQwe9w0JTPrV6VNSUz8J+PBf0y7RxTcIpEADOZNaULPPYRoMtEuS5XvBxnx2KMIEFT4BenU+ZTbstYcbxrlAHb5zJRGShKvFsCseF0cvhgjXJQ9LmtzFrE6pSpOpcaLlQnjHQuA7bPc2aqsbezOmuqzScPElT4FkHiK5lnkDGV5o3VAIVhwzCMxEGPZZeLCjSZbQyZSpOrgaG0KWngueP6qLpRSKvIFYChnCmbX82B8oP1AIef32KmkiKY3tlMtUdyNRRypnT+IPzrOM7Yo3lUL5eJ8DxAOrEa71gimYDVaVM+G4Onjnfl/DxokIlyXSodI3DSlM4NAU8c2b18JtNG3MuCTAI4mMyapmnmMwc9oGCkM6Zp5jLGQWCr60jPo0emB7zEDoCDGdM7PwQLKo82E3DhvZIjPQZ9Mv1Q9LDjgGH6ZmKwr+w4Tvnuhf0+W06OlJyAd0GTns71quIOgIOpfFW6ADx0JMuu67qOyhO0yLWyQ4jROPDoBNWFAsAm1wlhCXrkJsC1OLDXdRz3BN57R5xQjsAkOW0GwIYRx7Pk3r9/v1J2QrqRFi3gF/DbiFOXLkwIMinCeac+j9OgBe6Ecl1UQA826WuO10NpI1M1hX/C3Tp4BL0qtPnMGwtdBf7QlA7MYG8pZOV5zJqkRhsHJ8JV2svP/Zrq7+F8mEp7QdfUfwfnw1PaCyu0WrbC8VJIynvhd622rbB3LBTuPFip1bod5t0NwX1A12o/LgLHx2rkboTZ/VoYB6PA+XIN3OPAt5O0kPZEgPOuopHjwDe9WngndUaAjY/cIKXK+XnANF0L96SuBqqPP7rvelbun99LdZOu1eHEtgaCN7UPaPU6qHdEG32aop3jv9T+lwQ="
+      }
+    }
+  },
+  {
+    "id": "6cd96538-3fb4-407b-a297-c7e081c05718",
+    "referenceId": "MAP-1",
+    "displayIdentifier": "MAP-1",
+    "title": "AI Context",
+    "description": null,
+    "subsections": [
+      {
+        "id": "ef581563-850f-47b9-ac18-332590f9af32",
+        "referenceId": "MAP-1.1",
+        "name": "",
+        "description": "Intended purposes, potentially beneficial uses, contextspecific laws, norms and expectations, and prospective settings in which the AI system will be deployed are understood and documented. Considerations include: the specific set or types of users along with their expectations; potential positive and negative impacts of system uses to individuals, communities, organizations, society, and the planet; assumptions and related limitations about AI system purposes, uses, and risks across the development or product AI lifecycle; and related TEVV and system metrics.",
+        "programControlMapping": [
+          {
+            "id": "3cc56816-35f0-4899-862a-ccadac6de33a",
+            "shortName": "AI-13",
+            "customShortName": null,
+            "name": "AI Risk Management",
+            "description": "As part of its Risk Assessment process, the company considers risks associated with its use of AI, and the impact of the company's AI to users, groups, systems, and society."
+          },
+          {
+            "id": "c9c9458f-fa18-4ce0-9e63-f2c36a9a3024",
+            "shortName": "AI-24",
+            "customShortName": null,
+            "name": "Responsible Development of AI Systems",
+            "description": "The company has identified objectives and processes to ensure the responsible development of AI systems, and integrated those processes into the SDLC life cycle."
+          }
+        ]
+      },
+      {
+        "id": "d76bdb29-4f3c-4ef7-89e2-4ce8b883621f",
+        "referenceId": "MAP-1.2",
+        "name": "",
+        "description": "Interdisciplinary AI actors, competencies, skills, and capacities for establishing context reflect demographic diversity and broad domain and user experience expertise, and their participation is documented. Opportunities for interdisciplinary collaboration are prioritized.",
+        "programControlMapping": [
+          {
+            "id": "115ed4d9-4347-4d59-869d-993a466061c1",
+            "shortName": "AI-22",
+            "customShortName": null,
+            "name": "Interdisciplinary approach to AI",
+            "description": "An interdisciplinary approach is established for resources required for the lifecycle of AI systems, reflecting demographic diversity, diverse competencies and skills."
+          }
+        ]
+      },
+      {
+        "id": "89f82f46-5ef7-49a2-8fa3-d124b4474b64",
+        "referenceId": "MAP-1.3",
+        "name": "",
+        "description": "The organization’s mission and relevant goals for AI technology are understood and documented.",
+        "programControlMapping": [
+          {
+            "id": "0fb52395-cd0e-4021-b9f5-40b0604c46a8",
+            "shortName": "AI-3",
+            "customShortName": null,
+            "name": "AI Mission and Goals",
+            "description": "The company's mission and goals for the use of AI are documented in the company's AI Governance Policy."
+          }
+        ]
+      },
+      {
+        "id": "2f90fc8d-9fa1-496d-b049-95f145c71481",
+        "referenceId": "MAP-1.4",
+        "name": "",
+        "description": "The business value or context of business use has been clearly defined or – in the case of assessing existing AI systems – re-evaluated.",
+        "programControlMapping": [
+          {
+            "id": "db70db69-14ff-48ff-82d9-62dec76db2a1",
+            "shortName": "AI-7",
+            "customShortName": null,
+            "name": "AI Business Value Assessment",
+            "description": "The business value and use of various AI systems is documented, and regular assessments are conducted to reevaluates the value that AI systems are providing to the business."
+          }
+        ]
+      },
+      {
+        "id": "dd484309-c23a-46c3-80ac-d4bc7f9ad225",
+        "referenceId": "MAP-1.5",
+        "name": "",
+        "description": "Organizational risk tolerances are determined and documented.",
+        "programControlMapping": [
+          {
+            "id": "a4560074-4b03-4940-9ae6-bf5600f62575",
+            "shortName": "BIZOPS-11",
+            "customShortName": null,
+            "name": "Risk Register",
+            "description": "The company maintains a Cumulative Risk Register storing control deficiencies identified as part of ongoing system reviews, and reviews the register as part of the company's regular Risk Assessment process."
+          }
+        ]
+      },
+      {
+        "id": "6b37d3f3-6e21-40b7-b2c6-d22120f3098d",
+        "referenceId": "MAP-1.6",
+        "name": "",
+        "description": "System requirements (e.g., “the system shall respect the privacy of its users”) are elicited from and understood by relevant AI actors. Design decisions take socio-technical implications into account to address AI risks.",
+        "programControlMapping": [
+          {
+            "id": "c9c9458f-fa18-4ce0-9e63-f2c36a9a3024",
+            "shortName": "AI-24",
+            "customShortName": null,
+            "name": "Responsible Development of AI Systems",
+            "description": "The company has identified objectives and processes to ensure the responsible development of AI systems, and integrated those processes into the SDLC life cycle."
+          },
+          {
+            "id": "3cc56816-35f0-4899-862a-ccadac6de33a",
+            "shortName": "AI-13",
+            "customShortName": null,
+            "name": "AI Risk Management",
+            "description": "As part of its Risk Assessment process, the company considers risks associated with its use of AI, and the impact of the company's AI to users, groups, systems, and society."
+          }
+        ]
+      }
+    ],
+    "programPolicyMapping": [
+      {
+        "id": "ac26f012-81af-4b20-a4be-aa59089aac30",
+        "shortName": "POL-17",
+        "title": "Risk Management Policy",
+        "description": "Establish a framework for managing risk at the company and incorporating risk assessments throughout the company's operations."
+      },
+      {
+        "id": "c9dd05b4-1977-402e-8454-66df039b25a7",
+        "shortName": "POL-63",
+        "title": "AI Governance Policy",
+        "description": "Establish the objectives, practices, and governance around the use of Artificial Intelligence."
+      },
+      {
+        "id": "6a9928c0-2270-4e62-894b-bc451c6abf9f",
+        "shortName": "POL-64",
+        "title": "AI Risk Management Policy",
+        "description": "A framework for managing AI risk at the company."
+      }
+    ],
+    "_metadata": {
+      "createdDate": "2024-05-13T13:04:56.966Z",
+      "createdBy": {
+        "id": "0ef2f025-46df-47d0-8bcd-11f62aa10612",
+        "name": "System User",
+        "email": "system@trustcloud.ai",
+        "pictureUrl": "data:image/png;base64,UklGRr4FAABXRUJQVlA4TLIFAAAvSoASEIcFIZIkxVbOzGPmJ+d9/1qYcW9tOIgkSZGqe+GZycD718b8PwM5kiRFUmTjMr1WiJV69WM+6CxHkSSpVj68Phdfw5fwbX8ncMfdxzQBTGsPECBAgAAnOMABdjCDA5zgBDtYwQIWMIMZTGACIxjBAAYwgAA9yCCDBBJIIEiPAGAmGlCAEiHgBO+e6sFKuoAiAQJpDygDUCpDSSqAlaMlQCASECkpzUncW7rr1VeECTOBhKSMEFJCoNAdCJRQUAaPSYRUhAQEVKRlVkUJjN5NteE8Vc7K+RiXUpGkEsXq/6fFsOhdbxZ1xrsKoYUNMay7KaHFEthGpTSlpJylsnI2dlUqQpKSPvw1/9x9xg8/aYnv+OEv94OXPnqZT7PlLFvMkuUiWS2xWWK9xmZj2+2fw+HpcDi5G+oJ0pB+7We72/XYq9vswGTQ7DN3nBYkeoZRKUYuJqWZlGbiplyMXZWzIln1lXVZCksg+7az89ZHHL18/7x8frz9/sRoeL/Y2/vX93gP1LZtW9s2urwFnG3hqBDayuOtzMzslbn1VmZmciKzBk6Za23RKzuT9x8tvXotf9q3iP5PgPb/ZG9XW7SZ6mi0o6evfga7owRv0SfVgx6l+oe/Ll158/79+xdXz+yeQvXnvWHTG4DJR17+I+T/vnkIoHlCmHobgF9e2kKlfXMuEB0Iy6QWYNcHof7tGqAzHH2fwJwPoravZkDTQAh04JqouX0UIhNq1gozPoowvp4Ceo1aYZ0twmn9CHpNWmGnLcJq7wS9BjrstEV47Z3Qp6wXdtoizPYcIoOKJkVYZotwWz/RpKgFLBH2N9CpZDzcEOE/CwMKJjWwR9ShPZeogk4o1oN4A72BJkW4KFRa1+PxePy2VQOxg2igHhhVYMXxjRfVvYHeIA2cE8GtZRAbNozhGHDby7p9OX76tiUjdtAaoB/eBbOXsjpteqZicFkI8WYH3r9aEs9hklw7a0Xwy5A1ffMJuGwdBmIJIxED3vjZoMs1cD2YvQTDlB2CZVDImNWp1VD0EadpkRqEYrB3kJMyD8KitOmbX802v+dEpHQQwe9w0JTPrV6VNSUz8J+PBf0y7RxTcIpEADOZNaULPPYRoMtEuS5XvBxnx2KMIEFT4BenU+ZTbstYcbxrlAHb5zJRGShKvFsCseF0cvhgjXJQ9LmtzFrE6pSpOpcaLlQnjHQuA7bPc2aqsbezOmuqzScPElT4FkHiK5lnkDGV5o3VAIVhwzCMxEGPZZeLCjSZbQyZSpOrgaG0KWngueP6qLpRSKvIFYChnCmbX82B8oP1AIef32KmkiKY3tlMtUdyNRRypnT+IPzrOM7Yo3lUL5eJ8DxAOrEa71gimYDVaVM+G4Onjnfl/DxokIlyXSodI3DSlM4NAU8c2b18JtNG3MuCTAI4mMyapmnmMwc9oGCkM6Zp5jLGQWCr60jPo0emB7zEDoCDGdM7PwQLKo82E3DhvZIjPQZ9Mv1Q9LDjgGH6ZmKwr+w4Tvnuhf0+W06OlJyAd0GTns71quIOgIOpfFW6ADx0JMuu67qOyhO0yLWyQ4jROPDoBNWFAsAm1wlhCXrkJsC1OLDXdRz3BN57R5xQjsAkOW0GwIYRx7Pk3r9/v1J2QrqRFi3gF/DbiFOXLkwIMinCeac+j9OgBe6Ecl1UQA826WuO10NpI1M1hX/C3Tp4BL0qtPnMGwtdBf7QlA7MYG8pZOV5zJqkRhsHJ8JV2svP/Zrq7+F8mEp7QdfUfwfnw1PaCyu0WrbC8VJIynvhd622rbB3LBTuPFip1bod5t0NwX1A12o/LgLHx2rkboTZ/VoYB6PA+XIN3OPAt5O0kPZEgPOuopHjwDe9WngndUaAjY/cIKXK+XnANF0L96SuBqqPP7rvelbun99LdZOu1eHEtgaCN7UPaPU6qHdEG32aop3jv9T+lwQ="
+      },
+      "lastModifiedDate": "2024-05-13T13:04:56.966Z",
+      "lastModifiedBy": {
+        "id": "0ef2f025-46df-47d0-8bcd-11f62aa10612",
+        "name": "System User",
+        "email": "system@trustcloud.ai",
+        "pictureUrl": "data:image/png;base64,UklGRr4FAABXRUJQVlA4TLIFAAAvSoASEIcFIZIkxVbOzGPmJ+d9/1qYcW9tOIgkSZGqe+GZycD718b8PwM5kiRFUmTjMr1WiJV69WM+6CxHkSSpVj68Phdfw5fwbX8ncMfdxzQBTGsPECBAgAAnOMABdjCDA5zgBDtYwQIWMIMZTGACIxjBAAYwgAA9yCCDBBJIIEiPAGAmGlCAEiHgBO+e6sFKuoAiAQJpDygDUCpDSSqAlaMlQCASECkpzUncW7rr1VeECTOBhKSMEFJCoNAdCJRQUAaPSYRUhAQEVKRlVkUJjN5NteE8Vc7K+RiXUpGkEsXq/6fFsOhdbxZ1xrsKoYUNMay7KaHFEthGpTSlpJylsnI2dlUqQpKSPvw1/9x9xg8/aYnv+OEv94OXPnqZT7PlLFvMkuUiWS2xWWK9xmZj2+2fw+HpcDi5G+oJ0pB+7We72/XYq9vswGTQ7DN3nBYkeoZRKUYuJqWZlGbiplyMXZWzIln1lXVZCksg+7az89ZHHL18/7x8frz9/sRoeL/Y2/vX93gP1LZtW9s2urwFnG3hqBDayuOtzMzslbn1VmZmciKzBk6Za23RKzuT9x8tvXotf9q3iP5PgPb/ZG9XW7SZ6mi0o6evfga7owRv0SfVgx6l+oe/Ll158/79+xdXz+yeQvXnvWHTG4DJR17+I+T/vnkIoHlCmHobgF9e2kKlfXMuEB0Iy6QWYNcHof7tGqAzHH2fwJwPoravZkDTQAh04JqouX0UIhNq1gozPoowvp4Ceo1aYZ0twmn9CHpNWmGnLcJq7wS9BjrstEV47Z3Qp6wXdtoizPYcIoOKJkVYZotwWz/RpKgFLBH2N9CpZDzcEOE/CwMKJjWwR9ShPZeogk4o1oN4A72BJkW4KFRa1+PxePy2VQOxg2igHhhVYMXxjRfVvYHeIA2cE8GtZRAbNozhGHDby7p9OX76tiUjdtAaoB/eBbOXsjpteqZicFkI8WYH3r9aEs9hklw7a0Xwy5A1ffMJuGwdBmIJIxED3vjZoMs1cD2YvQTDlB2CZVDImNWp1VD0EadpkRqEYrB3kJMyD8KitOmbX802v+dEpHQQwe9w0JTPrV6VNSUz8J+PBf0y7RxTcIpEADOZNaULPPYRoMtEuS5XvBxnx2KMIEFT4BenU+ZTbstYcbxrlAHb5zJRGShKvFsCseF0cvhgjXJQ9LmtzFrE6pSpOpcaLlQnjHQuA7bPc2aqsbezOmuqzScPElT4FkHiK5lnkDGV5o3VAIVhwzCMxEGPZZeLCjSZbQyZSpOrgaG0KWngueP6qLpRSKvIFYChnCmbX82B8oP1AIef32KmkiKY3tlMtUdyNRRypnT+IPzrOM7Yo3lUL5eJ8DxAOrEa71gimYDVaVM+G4Onjnfl/DxokIlyXSodI3DSlM4NAU8c2b18JtNG3MuCTAI4mMyapmnmMwc9oGCkM6Zp5jLGQWCr60jPo0emB7zEDoCDGdM7PwQLKo82E3DhvZIjPQZ9Mv1Q9LDjgGH6ZmKwr+w4Tvnuhf0+W06OlJyAd0GTns71quIOgIOpfFW6ADx0JMuu67qOyhO0yLWyQ4jROPDoBNWFAsAm1wlhCXrkJsC1OLDXdRz3BN57R5xQjsAkOW0GwIYRx7Pk3r9/v1J2QrqRFi3gF/DbiFOXLkwIMinCeac+j9OgBe6Ecl1UQA826WuO10NpI1M1hX/C3Tp4BL0qtPnMGwtdBf7QlA7MYG8pZOV5zJqkRhsHJ8JV2svP/Zrq7+F8mEp7QdfUfwfnw1PaCyu0WrbC8VJIynvhd622rbB3LBTuPFip1bod5t0NwX1A12o/LgLHx2rkboTZ/VoYB6PA+XIN3OPAt5O0kPZEgPOuopHjwDe9WngndUaAjY/cIKXK+XnANF0L96SuBqqPP7rvelbun99LdZOu1eHEtgaCN7UPaPU6qHdEG32aop3jv9T+lwQ="
+      }
+    }
+  },
+  {
+    "id": "ef2ff329-858b-4c41-a120-b2c563ca940c",
+    "referenceId": "MAP-2",
+    "displayIdentifier": "MAP-2",
+    "title": "AI System Categorization",
+    "description": null,
+    "subsections": [
+      {
+        "id": "425e607e-30c3-47bf-83f6-f1cb8a7fdbfa",
+        "referenceId": "MAP-2.1",
+        "name": "",
+        "description": "The specific tasks and methods used to implement the tasks that the AI system will support are defined (e.g., classifiers, generative models, recommenders).",
+        "programControlMapping": [
+          {
+            "id": "6e15ad58-312a-4c19-818d-bd37622b259c",
+            "shortName": "AI-53",
+            "customShortName": null,
+            "name": "AI system inventory",
+            "description": "The company maintains an inventory of AI systems that includes the system scope, owner, its business use, and knowledge limits, and specific AI methodologies used to implement the AI system."
+          },
+          {
+            "id": "f8ec8c7a-f337-400a-bff4-720b99d674c7",
+            "shortName": "AI-57",
+            "customShortName": null,
+            "name": "AI Concern Reporting Process",
+            "description": "The organization defines a process to report concerns about the organization’s role with respect to an AI system throughout its life cycle."
+          }
+        ]
+      },
+      {
+        "id": "4ae841b7-b255-41d3-b5bb-8d31ba54f815",
+        "referenceId": "MAP-2.2",
+        "name": "",
+        "description": "Information about the AI system’s knowledge limits and how system output may be utilized and overseen by humans is documented. Documentation provides sufficient information to assist relevant AI actors when making decisions and taking subsequent actions.",
+        "programControlMapping": [
+          {
+            "id": "0bbe4343-2cf2-4e55-b8b2-c3f3bf179998",
+            "shortName": "AI-36",
+            "customShortName": null,
+            "name": "AI data quality",
+            "description": "The company maintains standards for data quality in AI systems, and has defined procedures for assessing that the data used in AI systems meet those standards."
+          },
+          {
+            "id": "2d2bb7fd-27e6-4f13-b28d-a37e473d9bcc",
+            "shortName": "AI-31",
+            "customShortName": null,
+            "name": "Human review of AI system outputs",
+            "description": "The quality process includes human review of AI system outputs, along with procedures for taking action in the case of a system output failure."
+          }
+        ]
+      },
+      {
+        "id": "43df18d4-bcfa-401b-9d6c-8a6ffee17aa8",
+        "referenceId": "MAP-2.3",
+        "name": "",
+        "description": "Scientific integrity and TEVV considerations are identified and documented, including those related to experimental design, data collection and selection (e.g., availability, representativeness, suitability), system trustworthiness, and construct validation.",
+        "programControlMapping": [
+          {
+            "id": "0bbe4343-2cf2-4e55-b8b2-c3f3bf179998",
+            "shortName": "AI-36",
+            "customShortName": null,
+            "name": "AI data quality",
+            "description": "The company maintains standards for data quality in AI systems, and has defined procedures for assessing that the data used in AI systems meet those standards."
+          }
+        ]
+      }
+    ],
+    "programPolicyMapping": [
+      {
+        "id": "c9dd05b4-1977-402e-8454-66df039b25a7",
+        "shortName": "POL-63",
+        "title": "AI Governance Policy",
+        "description": "Establish the objectives, practices, and governance around the use of Artificial Intelligence."
+      }
+    ],
+    "_metadata": {
+      "createdDate": "2024-05-13T13:04:56.966Z",
+      "createdBy": {
+        "id": "0ef2f025-46df-47d0-8bcd-11f62aa10612",
+        "name": "System User",
+        "email": "system@trustcloud.ai",
+        "pictureUrl": "data:image/png;base64,UklGRr4FAABXRUJQVlA4TLIFAAAvSoASEIcFIZIkxVbOzGPmJ+d9/1qYcW9tOIgkSZGqe+GZycD718b8PwM5kiRFUmTjMr1WiJV69WM+6CxHkSSpVj68Phdfw5fwbX8ncMfdxzQBTGsPECBAgAAnOMABdjCDA5zgBDtYwQIWMIMZTGACIxjBAAYwgAA9yCCDBBJIIEiPAGAmGlCAEiHgBO+e6sFKuoAiAQJpDygDUCpDSSqAlaMlQCASECkpzUncW7rr1VeECTOBhKSMEFJCoNAdCJRQUAaPSYRUhAQEVKRlVkUJjN5NteE8Vc7K+RiXUpGkEsXq/6fFsOhdbxZ1xrsKoYUNMay7KaHFEthGpTSlpJylsnI2dlUqQpKSPvw1/9x9xg8/aYnv+OEv94OXPnqZT7PlLFvMkuUiWS2xWWK9xmZj2+2fw+HpcDi5G+oJ0pB+7We72/XYq9vswGTQ7DN3nBYkeoZRKUYuJqWZlGbiplyMXZWzIln1lXVZCksg+7az89ZHHL18/7x8frz9/sRoeL/Y2/vX93gP1LZtW9s2urwFnG3hqBDayuOtzMzslbn1VmZmciKzBk6Za23RKzuT9x8tvXotf9q3iP5PgPb/ZG9XW7SZ6mi0o6evfga7owRv0SfVgx6l+oe/Ll158/79+xdXz+yeQvXnvWHTG4DJR17+I+T/vnkIoHlCmHobgF9e2kKlfXMuEB0Iy6QWYNcHof7tGqAzHH2fwJwPoravZkDTQAh04JqouX0UIhNq1gozPoowvp4Ceo1aYZ0twmn9CHpNWmGnLcJq7wS9BjrstEV47Z3Qp6wXdtoizPYcIoOKJkVYZotwWz/RpKgFLBH2N9CpZDzcEOE/CwMKJjWwR9ShPZeogk4o1oN4A72BJkW4KFRa1+PxePy2VQOxg2igHhhVYMXxjRfVvYHeIA2cE8GtZRAbNozhGHDby7p9OX76tiUjdtAaoB/eBbOXsjpteqZicFkI8WYH3r9aEs9hklw7a0Xwy5A1ffMJuGwdBmIJIxED3vjZoMs1cD2YvQTDlB2CZVDImNWp1VD0EadpkRqEYrB3kJMyD8KitOmbX802v+dEpHQQwe9w0JTPrV6VNSUz8J+PBf0y7RxTcIpEADOZNaULPPYRoMtEuS5XvBxnx2KMIEFT4BenU+ZTbstYcbxrlAHb5zJRGShKvFsCseF0cvhgjXJQ9LmtzFrE6pSpOpcaLlQnjHQuA7bPc2aqsbezOmuqzScPElT4FkHiK5lnkDGV5o3VAIVhwzCMxEGPZZeLCjSZbQyZSpOrgaG0KWngueP6qLpRSKvIFYChnCmbX82B8oP1AIef32KmkiKY3tlMtUdyNRRypnT+IPzrOM7Yo3lUL5eJ8DxAOrEa71gimYDVaVM+G4Onjnfl/DxokIlyXSodI3DSlM4NAU8c2b18JtNG3MuCTAI4mMyapmnmMwc9oGCkM6Zp5jLGQWCr60jPo0emB7zEDoCDGdM7PwQLKo82E3DhvZIjPQZ9Mv1Q9LDjgGH6ZmKwr+w4Tvnuhf0+W06OlJyAd0GTns71quIOgIOpfFW6ADx0JMuu67qOyhO0yLWyQ4jROPDoBNWFAsAm1wlhCXrkJsC1OLDXdRz3BN57R5xQjsAkOW0GwIYRx7Pk3r9/v1J2QrqRFi3gF/DbiFOXLkwIMinCeac+j9OgBe6Ecl1UQA826WuO10NpI1M1hX/C3Tp4BL0qtPnMGwtdBf7QlA7MYG8pZOV5zJqkRhsHJ8JV2svP/Zrq7+F8mEp7QdfUfwfnw1PaCyu0WrbC8VJIynvhd622rbB3LBTuPFip1bod5t0NwX1A12o/LgLHx2rkboTZ/VoYB6PA+XIN3OPAt5O0kPZEgPOuopHjwDe9WngndUaAjY/cIKXK+XnANF0L96SuBqqPP7rvelbun99LdZOu1eHEtgaCN7UPaPU6qHdEG32aop3jv9T+lwQ="
+      },
+      "lastModifiedDate": "2024-05-13T13:04:56.966Z",
+      "lastModifiedBy": {
+        "id": "0ef2f025-46df-47d0-8bcd-11f62aa10612",
+        "name": "System User",
+        "email": "system@trustcloud.ai",
+        "pictureUrl": "data:image/png;base64,UklGRr4FAABXRUJQVlA4TLIFAAAvSoASEIcFIZIkxVbOzGPmJ+d9/1qYcW9tOIgkSZGqe+GZycD718b8PwM5kiRFUmTjMr1WiJV69WM+6CxHkSSpVj68Phdfw5fwbX8ncMfdxzQBTGsPECBAgAAnOMABdjCDA5zgBDtYwQIWMIMZTGACIxjBAAYwgAA9yCCDBBJIIEiPAGAmGlCAEiHgBO+e6sFKuoAiAQJpDygDUCpDSSqAlaMlQCASECkpzUncW7rr1VeECTOBhKSMEFJCoNAdCJRQUAaPSYRUhAQEVKRlVkUJjN5NteE8Vc7K+RiXUpGkEsXq/6fFsOhdbxZ1xrsKoYUNMay7KaHFEthGpTSlpJylsnI2dlUqQpKSPvw1/9x9xg8/aYnv+OEv94OXPnqZT7PlLFvMkuUiWS2xWWK9xmZj2+2fw+HpcDi5G+oJ0pB+7We72/XYq9vswGTQ7DN3nBYkeoZRKUYuJqWZlGbiplyMXZWzIln1lXVZCksg+7az89ZHHL18/7x8frz9/sRoeL/Y2/vX93gP1LZtW9s2urwFnG3hqBDayuOtzMzslbn1VmZmciKzBk6Za23RKzuT9x8tvXotf9q3iP5PgPb/ZG9XW7SZ6mi0o6evfga7owRv0SfVgx6l+oe/Ll158/79+xdXz+yeQvXnvWHTG4DJR17+I+T/vnkIoHlCmHobgF9e2kKlfXMuEB0Iy6QWYNcHof7tGqAzHH2fwJwPoravZkDTQAh04JqouX0UIhNq1gozPoowvp4Ceo1aYZ0twmn9CHpNWmGnLcJq7wS9BjrstEV47Z3Qp6wXdtoizPYcIoOKJkVYZotwWz/RpKgFLBH2N9CpZDzcEOE/CwMKJjWwR9ShPZeogk4o1oN4A72BJkW4KFRa1+PxePy2VQOxg2igHhhVYMXxjRfVvYHeIA2cE8GtZRAbNozhGHDby7p9OX76tiUjdtAaoB/eBbOXsjpteqZicFkI8WYH3r9aEs9hklw7a0Xwy5A1ffMJuGwdBmIJIxED3vjZoMs1cD2YvQTDlB2CZVDImNWp1VD0EadpkRqEYrB3kJMyD8KitOmbX802v+dEpHQQwe9w0JTPrV6VNSUz8J+PBf0y7RxTcIpEADOZNaULPPYRoMtEuS5XvBxnx2KMIEFT4BenU+ZTbstYcbxrlAHb5zJRGShKvFsCseF0cvhgjXJQ9LmtzFrE6pSpOpcaLlQnjHQuA7bPc2aqsbezOmuqzScPElT4FkHiK5lnkDGV5o3VAIVhwzCMxEGPZZeLCjSZbQyZSpOrgaG0KWngueP6qLpRSKvIFYChnCmbX82B8oP1AIef32KmkiKY3tlMtUdyNRRypnT+IPzrOM7Yo3lUL5eJ8DxAOrEa71gimYDVaVM+G4Onjnfl/DxokIlyXSodI3DSlM4NAU8c2b18JtNG3MuCTAI4mMyapmnmMwc9oGCkM6Zp5jLGQWCr60jPo0emB7zEDoCDGdM7PwQLKo82E3DhvZIjPQZ9Mv1Q9LDjgGH6ZmKwr+w4Tvnuhf0+W06OlJyAd0GTns71quIOgIOpfFW6ADx0JMuu67qOyhO0yLWyQ4jROPDoBNWFAsAm1wlhCXrkJsC1OLDXdRz3BN57R5xQjsAkOW0GwIYRx7Pk3r9/v1J2QrqRFi3gF/DbiFOXLkwIMinCeac+j9OgBe6Ecl1UQA826WuO10NpI1M1hX/C3Tp4BL0qtPnMGwtdBf7QlA7MYG8pZOV5zJqkRhsHJ8JV2svP/Zrq7+F8mEp7QdfUfwfnw1PaCyu0WrbC8VJIynvhd622rbB3LBTuPFip1bod5t0NwX1A12o/LgLHx2rkboTZ/VoYB6PA+XIN3OPAt5O0kPZEgPOuopHjwDe9WngndUaAjY/cIKXK+XnANF0L96SuBqqPP7rvelbun99LdZOu1eHEtgaCN7UPaPU6qHdEG32aop3jv9T+lwQ="
+      }
+    }
+  },
+  {
+    "id": "4dfe44aa-b1a6-4632-82ec-4823eaa04656",
+    "referenceId": "MAP-3",
+    "displayIdentifier": "MAP-3",
+    "title": "AI System Evaluation",
+    "description": null,
+    "subsections": [
+      {
+        "id": "e12943d8-3a69-4b51-b503-352956975b26",
+        "referenceId": "MAP-3.1",
+        "name": "",
+        "description": "Potential benefits of intended AI system functionality and performance are examined and documented.",
+        "programControlMapping": [
+          {
+            "id": "c5d2adb4-0789-4ede-b431-e6ba953291f8",
+            "shortName": "AI-1",
+            "customShortName": null,
+            "name": "AI Governance Policy",
+            "description": "The company maintains a documented AI Governance Policy governing the use of AI within the organization."
+          },
+          {
+            "id": "e8b629b1-e424-432e-a269-a2258d2009f2",
+            "shortName": "AI-49",
+            "customShortName": null,
+            "name": "Customer needs",
+            "description": "The AI Governance Policy takes into account customer's expectations and needs in regards to the responsible use of AI systems."
+          },
+          {
+            "id": "ac1f1094-3efd-443c-8427-ccb0cdbcc9ec",
+            "shortName": "AI-4",
+            "customShortName": null,
+            "name": "Development of AI Systems",
+            "description": "The requirements for the development of systems utilizing Artificial intelligence are documented in the company's AI Governance Policy."
+          }
+        ]
+      },
+      {
+        "id": "331c28c3-6d89-4275-8111-471e9659f7cc",
+        "referenceId": "MAP-3.2",
+        "name": "",
+        "description": "Potential costs, including non-monetary costs, which result from expected or realized AI errors or system functionality and trustworthiness – as connected to organizational risk tolerance – are examined and documented.",
+        "programControlMapping": [
+          {
+            "id": "a4560074-4b03-4940-9ae6-bf5600f62575",
+            "shortName": "BIZOPS-11",
+            "customShortName": null,
+            "name": "Risk Register",
+            "description": "The company maintains a Cumulative Risk Register storing control deficiencies identified as part of ongoing system reviews, and reviews the register as part of the company's regular Risk Assessment process."
+          },
+          {
+            "id": "f9ce9d81-131e-4199-b1de-009253c735b7",
+            "shortName": "BIZOPS-1",
+            "customShortName": null,
+            "name": "Risk Management",
+            "description": "The company maintains a risk management program to identify, prioritize, and mitigate risk to acceptable levels."
+          }
+        ]
+      },
+      {
+        "id": "25228d3a-19bb-4c7c-9864-24612ee9ed36",
+        "referenceId": "MAP-3.3",
+        "name": "",
+        "description": "Targeted application scope is specified and documented based on the system’s capability, established context, and AI system categorization.",
+        "programControlMapping": [
+          {
+            "id": "f8ec8c7a-f337-400a-bff4-720b99d674c7",
+            "shortName": "AI-57",
+            "customShortName": null,
+            "name": "AI Concern Reporting Process",
+            "description": "The organization defines a process to report concerns about the organization’s role with respect to an AI system throughout its life cycle."
+          },
+          {
+            "id": "6e15ad58-312a-4c19-818d-bd37622b259c",
+            "shortName": "AI-53",
+            "customShortName": null,
+            "name": "AI system inventory",
+            "description": "The company maintains an inventory of AI systems that includes the system scope, owner, its business use, and knowledge limits, and specific AI methodologies used to implement the AI system."
+          }
+        ]
+      },
+      {
+        "id": "704157f0-27e6-47c8-b99f-3b9ea5f7d970",
+        "referenceId": "MAP-3.4",
+        "name": "",
+        "description": "Processes for operator and practitioner proficiency with AI system performance and trustworthiness – and relevant technical standards and certifications – are defined, assessed, and documented.",
+        "programControlMapping": [
+          {
+            "id": "cfa3f55e-13fc-4c83-bf14-92777204a9c3",
+            "shortName": "AI-56",
+            "customShortName": null,
+            "name": "AI system operator training",
+            "description": "The company conducts training for operators of AI systems to ensure AI system performance and trustworthiness."
+          }
+        ]
+      },
+      {
+        "id": "640391ba-937f-4fbf-a4b6-749cd48c41d8",
+        "referenceId": "MAP-3.5",
+        "name": "",
+        "description": "Processes for human oversight are defined, assessed, and documented in accordance with organizational policies from the GOVERN function.",
+        "programControlMapping": [
+          {
+            "id": "c26ef315-1a19-44c4-956f-d9065d999db1",
+            "shortName": "AI-28",
+            "customShortName": null,
+            "name": "AI system human oversight",
+            "description": "Process for human oversight of AI systems are defined."
+          }
+        ]
+      }
+    ],
+    "programPolicyMapping": [
+      {
+        "id": "ac26f012-81af-4b20-a4be-aa59089aac30",
+        "shortName": "POL-17",
+        "title": "Risk Management Policy",
+        "description": "Establish a framework for managing risk at the company and incorporating risk assessments throughout the company's operations."
+      },
+      {
+        "id": "c9dd05b4-1977-402e-8454-66df039b25a7",
+        "shortName": "POL-63",
+        "title": "AI Governance Policy",
+        "description": "Establish the objectives, practices, and governance around the use of Artificial Intelligence."
+      }
+    ],
+    "_metadata": {
+      "createdDate": "2024-05-13T13:04:56.966Z",
+      "createdBy": {
+        "id": "0ef2f025-46df-47d0-8bcd-11f62aa10612",
+        "name": "System User",
+        "email": "system@trustcloud.ai",
+        "pictureUrl": "data:image/png;base64,UklGRr4FAABXRUJQVlA4TLIFAAAvSoASEIcFIZIkxVbOzGPmJ+d9/1qYcW9tOIgkSZGqe+GZycD718b8PwM5kiRFUmTjMr1WiJV69WM+6CxHkSSpVj68Phdfw5fwbX8ncMfdxzQBTGsPECBAgAAnOMABdjCDA5zgBDtYwQIWMIMZTGACIxjBAAYwgAA9yCCDBBJIIEiPAGAmGlCAEiHgBO+e6sFKuoAiAQJpDygDUCpDSSqAlaMlQCASECkpzUncW7rr1VeECTOBhKSMEFJCoNAdCJRQUAaPSYRUhAQEVKRlVkUJjN5NteE8Vc7K+RiXUpGkEsXq/6fFsOhdbxZ1xrsKoYUNMay7KaHFEthGpTSlpJylsnI2dlUqQpKSPvw1/9x9xg8/aYnv+OEv94OXPnqZT7PlLFvMkuUiWS2xWWK9xmZj2+2fw+HpcDi5G+oJ0pB+7We72/XYq9vswGTQ7DN3nBYkeoZRKUYuJqWZlGbiplyMXZWzIln1lXVZCksg+7az89ZHHL18/7x8frz9/sRoeL/Y2/vX93gP1LZtW9s2urwFnG3hqBDayuOtzMzslbn1VmZmciKzBk6Za23RKzuT9x8tvXotf9q3iP5PgPb/ZG9XW7SZ6mi0o6evfga7owRv0SfVgx6l+oe/Ll158/79+xdXz+yeQvXnvWHTG4DJR17+I+T/vnkIoHlCmHobgF9e2kKlfXMuEB0Iy6QWYNcHof7tGqAzHH2fwJwPoravZkDTQAh04JqouX0UIhNq1gozPoowvp4Ceo1aYZ0twmn9CHpNWmGnLcJq7wS9BjrstEV47Z3Qp6wXdtoizPYcIoOKJkVYZotwWz/RpKgFLBH2N9CpZDzcEOE/CwMKJjWwR9ShPZeogk4o1oN4A72BJkW4KFRa1+PxePy2VQOxg2igHhhVYMXxjRfVvYHeIA2cE8GtZRAbNozhGHDby7p9OX76tiUjdtAaoB/eBbOXsjpteqZicFkI8WYH3r9aEs9hklw7a0Xwy5A1ffMJuGwdBmIJIxED3vjZoMs1cD2YvQTDlB2CZVDImNWp1VD0EadpkRqEYrB3kJMyD8KitOmbX802v+dEpHQQwe9w0JTPrV6VNSUz8J+PBf0y7RxTcIpEADOZNaULPPYRoMtEuS5XvBxnx2KMIEFT4BenU+ZTbstYcbxrlAHb5zJRGShKvFsCseF0cvhgjXJQ9LmtzFrE6pSpOpcaLlQnjHQuA7bPc2aqsbezOmuqzScPElT4FkHiK5lnkDGV5o3VAIVhwzCMxEGPZZeLCjSZbQyZSpOrgaG0KWngueP6qLpRSKvIFYChnCmbX82B8oP1AIef32KmkiKY3tlMtUdyNRRypnT+IPzrOM7Yo3lUL5eJ8DxAOrEa71gimYDVaVM+G4Onjnfl/DxokIlyXSodI3DSlM4NAU8c2b18JtNG3MuCTAI4mMyapmnmMwc9oGCkM6Zp5jLGQWCr60jPo0emB7zEDoCDGdM7PwQLKo82E3DhvZIjPQZ9Mv1Q9LDjgGH6ZmKwr+w4Tvnuhf0+W06OlJyAd0GTns71quIOgIOpfFW6ADx0JMuu67qOyhO0yLWyQ4jROPDoBNWFAsAm1wlhCXrkJsC1OLDXdRz3BN57R5xQjsAkOW0GwIYRx7Pk3r9/v1J2QrqRFi3gF/DbiFOXLkwIMinCeac+j9OgBe6Ecl1UQA826WuO10NpI1M1hX/C3Tp4BL0qtPnMGwtdBf7QlA7MYG8pZOV5zJqkRhsHJ8JV2svP/Zrq7+F8mEp7QdfUfwfnw1PaCyu0WrbC8VJIynvhd622rbB3LBTuPFip1bod5t0NwX1A12o/LgLHx2rkboTZ/VoYB6PA+XIN3OPAt5O0kPZEgPOuopHjwDe9WngndUaAjY/cIKXK+XnANF0L96SuBqqPP7rvelbun99LdZOu1eHEtgaCN7UPaPU6qHdEG32aop3jv9T+lwQ="
+      },
+      "lastModifiedDate": "2024-05-13T13:04:56.966Z",
+      "lastModifiedBy": {
+        "id": "0ef2f025-46df-47d0-8bcd-11f62aa10612",
+        "name": "System User",
+        "email": "system@trustcloud.ai",
+        "pictureUrl": "data:image/png;base64,UklGRr4FAABXRUJQVlA4TLIFAAAvSoASEIcFIZIkxVbOzGPmJ+d9/1qYcW9tOIgkSZGqe+GZycD718b8PwM5kiRFUmTjMr1WiJV69WM+6CxHkSSpVj68Phdfw5fwbX8ncMfdxzQBTGsPECBAgAAnOMABdjCDA5zgBDtYwQIWMIMZTGACIxjBAAYwgAA9yCCDBBJIIEiPAGAmGlCAEiHgBO+e6sFKuoAiAQJpDygDUCpDSSqAlaMlQCASECkpzUncW7rr1VeECTOBhKSMEFJCoNAdCJRQUAaPSYRUhAQEVKRlVkUJjN5NteE8Vc7K+RiXUpGkEsXq/6fFsOhdbxZ1xrsKoYUNMay7KaHFEthGpTSlpJylsnI2dlUqQpKSPvw1/9x9xg8/aYnv+OEv94OXPnqZT7PlLFvMkuUiWS2xWWK9xmZj2+2fw+HpcDi5G+oJ0pB+7We72/XYq9vswGTQ7DN3nBYkeoZRKUYuJqWZlGbiplyMXZWzIln1lXVZCksg+7az89ZHHL18/7x8frz9/sRoeL/Y2/vX93gP1LZtW9s2urwFnG3hqBDayuOtzMzslbn1VmZmciKzBk6Za23RKzuT9x8tvXotf9q3iP5PgPb/ZG9XW7SZ6mi0o6evfga7owRv0SfVgx6l+oe/Ll158/79+xdXz+yeQvXnvWHTG4DJR17+I+T/vnkIoHlCmHobgF9e2kKlfXMuEB0Iy6QWYNcHof7tGqAzHH2fwJwPoravZkDTQAh04JqouX0UIhNq1gozPoowvp4Ceo1aYZ0twmn9CHpNWmGnLcJq7wS9BjrstEV47Z3Qp6wXdtoizPYcIoOKJkVYZotwWz/RpKgFLBH2N9CpZDzcEOE/CwMKJjWwR9ShPZeogk4o1oN4A72BJkW4KFRa1+PxePy2VQOxg2igHhhVYMXxjRfVvYHeIA2cE8GtZRAbNozhGHDby7p9OX76tiUjdtAaoB/eBbOXsjpteqZicFkI8WYH3r9aEs9hklw7a0Xwy5A1ffMJuGwdBmIJIxED3vjZoMs1cD2YvQTDlB2CZVDImNWp1VD0EadpkRqEYrB3kJMyD8KitOmbX802v+dEpHQQwe9w0JTPrV6VNSUz8J+PBf0y7RxTcIpEADOZNaULPPYRoMtEuS5XvBxnx2KMIEFT4BenU+ZTbstYcbxrlAHb5zJRGShKvFsCseF0cvhgjXJQ9LmtzFrE6pSpOpcaLlQnjHQuA7bPc2aqsbezOmuqzScPElT4FkHiK5lnkDGV5o3VAIVhwzCMxEGPZZeLCjSZbQyZSpOrgaG0KWngueP6qLpRSKvIFYChnCmbX82B8oP1AIef32KmkiKY3tlMtUdyNRRypnT+IPzrOM7Yo3lUL5eJ8DxAOrEa71gimYDVaVM+G4Onjnfl/DxokIlyXSodI3DSlM4NAU8c2b18JtNG3MuCTAI4mMyapmnmMwc9oGCkM6Zp5jLGQWCr60jPo0emB7zEDoCDGdM7PwQLKo82E3DhvZIjPQZ9Mv1Q9LDjgGH6ZmKwr+w4Tvnuhf0+W06OlJyAd0GTns71quIOgIOpfFW6ADx0JMuu67qOyhO0yLWyQ4jROPDoBNWFAsAm1wlhCXrkJsC1OLDXdRz3BN57R5xQjsAkOW0GwIYRx7Pk3r9/v1J2QrqRFi3gF/DbiFOXLkwIMinCeac+j9OgBe6Ecl1UQA826WuO10NpI1M1hX/C3Tp4BL0qtPnMGwtdBf7QlA7MYG8pZOV5zJqkRhsHJ8JV2svP/Zrq7+F8mEp7QdfUfwfnw1PaCyu0WrbC8VJIynvhd622rbB3LBTuPFip1bod5t0NwX1A12o/LgLHx2rkboTZ/VoYB6PA+XIN3OPAt5O0kPZEgPOuopHjwDe9WngndUaAjY/cIKXK+XnANF0L96SuBqqPP7rvelbun99LdZOu1eHEtgaCN7UPaPU6qHdEG32aop3jv9T+lwQ="
+      }
+    }
+  },
+  {
+    "id": "97c8daec-1121-41d8-b9f6-16a6013dbefa",
+    "referenceId": "MAP-4",
+    "displayIdentifier": "MAP-4",
+    "title": "AI Component Risk Mapping",
+    "description": null,
+    "subsections": [
+      {
+        "id": "f9c7c608-7ea0-4902-9cbc-d02312847363",
+        "referenceId": "MAP-4.1",
+        "name": "",
+        "description": "Approaches for mapping AI technology and legal risks of its components – including the use of third-party data or software – are in place, followed, and documented, as are risks of infringement of a third party’s intellectual property or other rights.",
+        "programControlMapping": [
+          {
+            "id": "aaef7724-25dc-4c08-865a-dc579bb1336b",
+            "shortName": "AI-14",
+            "customShortName": null,
+            "name": "AI system legal risk management",
+            "description": "As part of its Risk Assessment process, the company considers legal risks associated with its AI technology, including risks of use of third party data or software and the risk of infringement of a third party's intellectual property or other rights."
+          }
+        ]
+      },
+      {
+        "id": "f9ae9415-46a1-412c-950b-fc5ea16679f0",
+        "referenceId": "MAP-4.2",
+        "name": "",
+        "description": "Internal risk controls for components of the AI system, including third-party AI technologies, are identified and documented.",
+        "programControlMapping": [
+          {
+            "id": "9c02e023-de4a-4e3f-a731-b6c429e89d19",
+            "shortName": "BIZOPS-14",
+            "customShortName": null,
+            "name": "Control selection",
+            "description": "The company designs and implements controls to mitigate risks identified during the risk assessment process."
+          },
+          {
+            "id": "63a78686-8c16-4a64-b036-a7632fe362a7",
+            "shortName": "AI-20",
+            "customShortName": null,
+            "name": "AI adversarial risk assessment",
+            "description": "AI adversarial risks from competitors and attackers are regularly assessed as part of the company risk management process."
+          }
+        ]
+      }
+    ],
+    "programPolicyMapping": [
+      {
+        "id": "6a9928c0-2270-4e62-894b-bc451c6abf9f",
+        "shortName": "POL-64",
+        "title": "AI Risk Management Policy",
+        "description": "A framework for managing AI risk at the company."
+      }
+    ],
+    "_metadata": {
+      "createdDate": "2024-05-13T13:04:56.966Z",
+      "createdBy": {
+        "id": "0ef2f025-46df-47d0-8bcd-11f62aa10612",
+        "name": "System User",
+        "email": "system@trustcloud.ai",
+        "pictureUrl": "data:image/png;base64,UklGRr4FAABXRUJQVlA4TLIFAAAvSoASEIcFIZIkxVbOzGPmJ+d9/1qYcW9tOIgkSZGqe+GZycD718b8PwM5kiRFUmTjMr1WiJV69WM+6CxHkSSpVj68Phdfw5fwbX8ncMfdxzQBTGsPECBAgAAnOMABdjCDA5zgBDtYwQIWMIMZTGACIxjBAAYwgAA9yCCDBBJIIEiPAGAmGlCAEiHgBO+e6sFKuoAiAQJpDygDUCpDSSqAlaMlQCASECkpzUncW7rr1VeECTOBhKSMEFJCoNAdCJRQUAaPSYRUhAQEVKRlVkUJjN5NteE8Vc7K+RiXUpGkEsXq/6fFsOhdbxZ1xrsKoYUNMay7KaHFEthGpTSlpJylsnI2dlUqQpKSPvw1/9x9xg8/aYnv+OEv94OXPnqZT7PlLFvMkuUiWS2xWWK9xmZj2+2fw+HpcDi5G+oJ0pB+7We72/XYq9vswGTQ7DN3nBYkeoZRKUYuJqWZlGbiplyMXZWzIln1lXVZCksg+7az89ZHHL18/7x8frz9/sRoeL/Y2/vX93gP1LZtW9s2urwFnG3hqBDayuOtzMzslbn1VmZmciKzBk6Za23RKzuT9x8tvXotf9q3iP5PgPb/ZG9XW7SZ6mi0o6evfga7owRv0SfVgx6l+oe/Ll158/79+xdXz+yeQvXnvWHTG4DJR17+I+T/vnkIoHlCmHobgF9e2kKlfXMuEB0Iy6QWYNcHof7tGqAzHH2fwJwPoravZkDTQAh04JqouX0UIhNq1gozPoowvp4Ceo1aYZ0twmn9CHpNWmGnLcJq7wS9BjrstEV47Z3Qp6wXdtoizPYcIoOKJkVYZotwWz/RpKgFLBH2N9CpZDzcEOE/CwMKJjWwR9ShPZeogk4o1oN4A72BJkW4KFRa1+PxePy2VQOxg2igHhhVYMXxjRfVvYHeIA2cE8GtZRAbNozhGHDby7p9OX76tiUjdtAaoB/eBbOXsjpteqZicFkI8WYH3r9aEs9hklw7a0Xwy5A1ffMJuGwdBmIJIxED3vjZoMs1cD2YvQTDlB2CZVDImNWp1VD0EadpkRqEYrB3kJMyD8KitOmbX802v+dEpHQQwe9w0JTPrV6VNSUz8J+PBf0y7RxTcIpEADOZNaULPPYRoMtEuS5XvBxnx2KMIEFT4BenU+ZTbstYcbxrlAHb5zJRGShKvFsCseF0cvhgjXJQ9LmtzFrE6pSpOpcaLlQnjHQuA7bPc2aqsbezOmuqzScPElT4FkHiK5lnkDGV5o3VAIVhwzCMxEGPZZeLCjSZbQyZSpOrgaG0KWngueP6qLpRSKvIFYChnCmbX82B8oP1AIef32KmkiKY3tlMtUdyNRRypnT+IPzrOM7Yo3lUL5eJ8DxAOrEa71gimYDVaVM+G4Onjnfl/DxokIlyXSodI3DSlM4NAU8c2b18JtNG3MuCTAI4mMyapmnmMwc9oGCkM6Zp5jLGQWCr60jPo0emB7zEDoCDGdM7PwQLKo82E3DhvZIjPQZ9Mv1Q9LDjgGH6ZmKwr+w4Tvnuhf0+W06OlJyAd0GTns71quIOgIOpfFW6ADx0JMuu67qOyhO0yLWyQ4jROPDoBNWFAsAm1wlhCXrkJsC1OLDXdRz3BN57R5xQjsAkOW0GwIYRx7Pk3r9/v1J2QrqRFi3gF/DbiFOXLkwIMinCeac+j9OgBe6Ecl1UQA826WuO10NpI1M1hX/C3Tp4BL0qtPnMGwtdBf7QlA7MYG8pZOV5zJqkRhsHJ8JV2svP/Zrq7+F8mEp7QdfUfwfnw1PaCyu0WrbC8VJIynvhd622rbB3LBTuPFip1bod5t0NwX1A12o/LgLHx2rkboTZ/VoYB6PA+XIN3OPAt5O0kPZEgPOuopHjwDe9WngndUaAjY/cIKXK+XnANF0L96SuBqqPP7rvelbun99LdZOu1eHEtgaCN7UPaPU6qHdEG32aop3jv9T+lwQ="
+      },
+      "lastModifiedDate": "2024-05-13T13:04:56.966Z",
+      "lastModifiedBy": {
+        "id": "0ef2f025-46df-47d0-8bcd-11f62aa10612",
+        "name": "System User",
+        "email": "system@trustcloud.ai",
+        "pictureUrl": "data:image/png;base64,UklGRr4FAABXRUJQVlA4TLIFAAAvSoASEIcFIZIkxVbOzGPmJ+d9/1qYcW9tOIgkSZGqe+GZycD718b8PwM5kiRFUmTjMr1WiJV69WM+6CxHkSSpVj68Phdfw5fwbX8ncMfdxzQBTGsPECBAgAAnOMABdjCDA5zgBDtYwQIWMIMZTGACIxjBAAYwgAA9yCCDBBJIIEiPAGAmGlCAEiHgBO+e6sFKuoAiAQJpDygDUCpDSSqAlaMlQCASECkpzUncW7rr1VeECTOBhKSMEFJCoNAdCJRQUAaPSYRUhAQEVKRlVkUJjN5NteE8Vc7K+RiXUpGkEsXq/6fFsOhdbxZ1xrsKoYUNMay7KaHFEthGpTSlpJylsnI2dlUqQpKSPvw1/9x9xg8/aYnv+OEv94OXPnqZT7PlLFvMkuUiWS2xWWK9xmZj2+2fw+HpcDi5G+oJ0pB+7We72/XYq9vswGTQ7DN3nBYkeoZRKUYuJqWZlGbiplyMXZWzIln1lXVZCksg+7az89ZHHL18/7x8frz9/sRoeL/Y2/vX93gP1LZtW9s2urwFnG3hqBDayuOtzMzslbn1VmZmciKzBk6Za23RKzuT9x8tvXotf9q3iP5PgPb/ZG9XW7SZ6mi0o6evfga7owRv0SfVgx6l+oe/Ll158/79+xdXz+yeQvXnvWHTG4DJR17+I+T/vnkIoHlCmHobgF9e2kKlfXMuEB0Iy6QWYNcHof7tGqAzHH2fwJwPoravZkDTQAh04JqouX0UIhNq1gozPoowvp4Ceo1aYZ0twmn9CHpNWmGnLcJq7wS9BjrstEV47Z3Qp6wXdtoizPYcIoOKJkVYZotwWz/RpKgFLBH2N9CpZDzcEOE/CwMKJjWwR9ShPZeogk4o1oN4A72BJkW4KFRa1+PxePy2VQOxg2igHhhVYMXxjRfVvYHeIA2cE8GtZRAbNozhGHDby7p9OX76tiUjdtAaoB/eBbOXsjpteqZicFkI8WYH3r9aEs9hklw7a0Xwy5A1ffMJuGwdBmIJIxED3vjZoMs1cD2YvQTDlB2CZVDImNWp1VD0EadpkRqEYrB3kJMyD8KitOmbX802v+dEpHQQwe9w0JTPrV6VNSUz8J+PBf0y7RxTcIpEADOZNaULPPYRoMtEuS5XvBxnx2KMIEFT4BenU+ZTbstYcbxrlAHb5zJRGShKvFsCseF0cvhgjXJQ9LmtzFrE6pSpOpcaLlQnjHQuA7bPc2aqsbezOmuqzScPElT4FkHiK5lnkDGV5o3VAIVhwzCMxEGPZZeLCjSZbQyZSpOrgaG0KWngueP6qLpRSKvIFYChnCmbX82B8oP1AIef32KmkiKY3tlMtUdyNRRypnT+IPzrOM7Yo3lUL5eJ8DxAOrEa71gimYDVaVM+G4Onjnfl/DxokIlyXSodI3DSlM4NAU8c2b18JtNG3MuCTAI4mMyapmnmMwc9oGCkM6Zp5jLGQWCr60jPo0emB7zEDoCDGdM7PwQLKo82E3DhvZIjPQZ9Mv1Q9LDjgGH6ZmKwr+w4Tvnuhf0+W06OlJyAd0GTns71quIOgIOpfFW6ADx0JMuu67qOyhO0yLWyQ4jROPDoBNWFAsAm1wlhCXrkJsC1OLDXdRz3BN57R5xQjsAkOW0GwIYRx7Pk3r9/v1J2QrqRFi3gF/DbiFOXLkwIMinCeac+j9OgBe6Ecl1UQA826WuO10NpI1M1hX/C3Tp4BL0qtPnMGwtdBf7QlA7MYG8pZOV5zJqkRhsHJ8JV2svP/Zrq7+F8mEp7QdfUfwfnw1PaCyu0WrbC8VJIynvhd622rbB3LBTuPFip1bod5t0NwX1A12o/LgLHx2rkboTZ/VoYB6PA+XIN3OPAt5O0kPZEgPOuopHjwDe9WngndUaAjY/cIKXK+XnANF0L96SuBqqPP7rvelbun99LdZOu1eHEtgaCN7UPaPU6qHdEG32aop3jv9T+lwQ="
+      }
+    }
+  },
+  {
+    "id": "8b8188bf-3534-43a1-b239-7f66f2a521f9",
+    "referenceId": "MAP-5",
+    "displayIdentifier": "MAP-5",
+    "title": "AI Impact Assessment",
+    "description": null,
+    "subsections": [
+      {
+        "id": "e5226940-9647-417a-a5cb-eda21e2636d1",
+        "referenceId": "MAP-5.1",
+        "name": "",
+        "description": "Likelihood and magnitude of each identified impact (both potentially beneficial and harmful) based on expected use, past uses of AI systems in similar contexts, public incident reports, feedback from those external to the team that developed or deployed the AI system, or other data are identified and documented.",
+        "programControlMapping": [
+          {
+            "id": "6fdd7d8a-b69d-401d-b86c-e7c764616ddb",
+            "shortName": "AI-12",
+            "customShortName": null,
+            "name": "AI system impact scope",
+            "description": "The impacts of implemented AI systems, both beneficial and harmful, are regularly assessed according to the company's standard risk management practices."
+          }
+        ]
+      },
+      {
+        "id": "6d46569b-0073-4882-b65b-690beda96b9b",
+        "referenceId": "MAP-5.2",
+        "name": "",
+        "description": "Practices and personnel for supporting regular engagement with relevant AI actors and integrating feedback about positive, negative, and unanticipated impacts are in place and documented.",
+        "programControlMapping": [
+          {
+            "id": "78acdfad-f9dc-4100-9ae3-b2bcb619fe8e",
+            "shortName": "BIZOPS-40",
+            "customShortName": null,
+            "name": "Customer Feedback Program",
+            "description": "A customer feedback program is in place to collect and monitor customer satisfaction and complaints."
+          }
+        ]
+      }
+    ],
+    "programPolicyMapping": [
+      {
+        "id": "c9dd05b4-1977-402e-8454-66df039b25a7",
+        "shortName": "POL-63",
+        "title": "AI Governance Policy",
+        "description": "Establish the objectives, practices, and governance around the use of Artificial Intelligence."
+      },
+      {
+        "id": "6a9928c0-2270-4e62-894b-bc451c6abf9f",
+        "shortName": "POL-64",
+        "title": "AI Risk Management Policy",
+        "description": "A framework for managing AI risk at the company."
+      }
+    ],
+    "_metadata": {
+      "createdDate": "2024-05-13T13:04:56.966Z",
+      "createdBy": {
+        "id": "0ef2f025-46df-47d0-8bcd-11f62aa10612",
+        "name": "System User",
+        "email": "system@trustcloud.ai",
+        "pictureUrl": "data:image/png;base64,UklGRr4FAABXRUJQVlA4TLIFAAAvSoASEIcFIZIkxVbOzGPmJ+d9/1qYcW9tOIgkSZGqe+GZycD718b8PwM5kiRFUmTjMr1WiJV69WM+6CxHkSSpVj68Phdfw5fwbX8ncMfdxzQBTGsPECBAgAAnOMABdjCDA5zgBDtYwQIWMIMZTGACIxjBAAYwgAA9yCCDBBJIIEiPAGAmGlCAEiHgBO+e6sFKuoAiAQJpDygDUCpDSSqAlaMlQCASECkpzUncW7rr1VeECTOBhKSMEFJCoNAdCJRQUAaPSYRUhAQEVKRlVkUJjN5NteE8Vc7K+RiXUpGkEsXq/6fFsOhdbxZ1xrsKoYUNMay7KaHFEthGpTSlpJylsnI2dlUqQpKSPvw1/9x9xg8/aYnv+OEv94OXPnqZT7PlLFvMkuUiWS2xWWK9xmZj2+2fw+HpcDi5G+oJ0pB+7We72/XYq9vswGTQ7DN3nBYkeoZRKUYuJqWZlGbiplyMXZWzIln1lXVZCksg+7az89ZHHL18/7x8frz9/sRoeL/Y2/vX93gP1LZtW9s2urwFnG3hqBDayuOtzMzslbn1VmZmciKzBk6Za23RKzuT9x8tvXotf9q3iP5PgPb/ZG9XW7SZ6mi0o6evfga7owRv0SfVgx6l+oe/Ll158/79+xdXz+yeQvXnvWHTG4DJR17+I+T/vnkIoHlCmHobgF9e2kKlfXMuEB0Iy6QWYNcHof7tGqAzHH2fwJwPoravZkDTQAh04JqouX0UIhNq1gozPoowvp4Ceo1aYZ0twmn9CHpNWmGnLcJq7wS9BjrstEV47Z3Qp6wXdtoizPYcIoOKJkVYZotwWz/RpKgFLBH2N9CpZDzcEOE/CwMKJjWwR9ShPZeogk4o1oN4A72BJkW4KFRa1+PxePy2VQOxg2igHhhVYMXxjRfVvYHeIA2cE8GtZRAbNozhGHDby7p9OX76tiUjdtAaoB/eBbOXsjpteqZicFkI8WYH3r9aEs9hklw7a0Xwy5A1ffMJuGwdBmIJIxED3vjZoMs1cD2YvQTDlB2CZVDImNWp1VD0EadpkRqEYrB3kJMyD8KitOmbX802v+dEpHQQwe9w0JTPrV6VNSUz8J+PBf0y7RxTcIpEADOZNaULPPYRoMtEuS5XvBxnx2KMIEFT4BenU+ZTbstYcbxrlAHb5zJRGShKvFsCseF0cvhgjXJQ9LmtzFrE6pSpOpcaLlQnjHQuA7bPc2aqsbezOmuqzScPElT4FkHiK5lnkDGV5o3VAIVhwzCMxEGPZZeLCjSZbQyZSpOrgaG0KWngueP6qLpRSKvIFYChnCmbX82B8oP1AIef32KmkiKY3tlMtUdyNRRypnT+IPzrOM7Yo3lUL5eJ8DxAOrEa71gimYDVaVM+G4Onjnfl/DxokIlyXSodI3DSlM4NAU8c2b18JtNG3MuCTAI4mMyapmnmMwc9oGCkM6Zp5jLGQWCr60jPo0emB7zEDoCDGdM7PwQLKo82E3DhvZIjPQZ9Mv1Q9LDjgGH6ZmKwr+w4Tvnuhf0+W06OlJyAd0GTns71quIOgIOpfFW6ADx0JMuu67qOyhO0yLWyQ4jROPDoBNWFAsAm1wlhCXrkJsC1OLDXdRz3BN57R5xQjsAkOW0GwIYRx7Pk3r9/v1J2QrqRFi3gF/DbiFOXLkwIMinCeac+j9OgBe6Ecl1UQA826WuO10NpI1M1hX/C3Tp4BL0qtPnMGwtdBf7QlA7MYG8pZOV5zJqkRhsHJ8JV2svP/Zrq7+F8mEp7QdfUfwfnw1PaCyu0WrbC8VJIynvhd622rbB3LBTuPFip1bod5t0NwX1A12o/LgLHx2rkboTZ/VoYB6PA+XIN3OPAt5O0kPZEgPOuopHjwDe9WngndUaAjY/cIKXK+XnANF0L96SuBqqPP7rvelbun99LdZOu1eHEtgaCN7UPaPU6qHdEG32aop3jv9T+lwQ="
+      },
+      "lastModifiedDate": "2024-05-13T13:04:56.966Z",
+      "lastModifiedBy": {
+        "id": "0ef2f025-46df-47d0-8bcd-11f62aa10612",
+        "name": "System User",
+        "email": "system@trustcloud.ai",
+        "pictureUrl": "data:image/png;base64,UklGRr4FAABXRUJQVlA4TLIFAAAvSoASEIcFIZIkxVbOzGPmJ+d9/1qYcW9tOIgkSZGqe+GZycD718b8PwM5kiRFUmTjMr1WiJV69WM+6CxHkSSpVj68Phdfw5fwbX8ncMfdxzQBTGsPECBAgAAnOMABdjCDA5zgBDtYwQIWMIMZTGACIxjBAAYwgAA9yCCDBBJIIEiPAGAmGlCAEiHgBO+e6sFKuoAiAQJpDygDUCpDSSqAlaMlQCASECkpzUncW7rr1VeECTOBhKSMEFJCoNAdCJRQUAaPSYRUhAQEVKRlVkUJjN5NteE8Vc7K+RiXUpGkEsXq/6fFsOhdbxZ1xrsKoYUNMay7KaHFEthGpTSlpJylsnI2dlUqQpKSPvw1/9x9xg8/aYnv+OEv94OXPnqZT7PlLFvMkuUiWS2xWWK9xmZj2+2fw+HpcDi5G+oJ0pB+7We72/XYq9vswGTQ7DN3nBYkeoZRKUYuJqWZlGbiplyMXZWzIln1lXVZCksg+7az89ZHHL18/7x8frz9/sRoeL/Y2/vX93gP1LZtW9s2urwFnG3hqBDayuOtzMzslbn1VmZmciKzBk6Za23RKzuT9x8tvXotf9q3iP5PgPb/ZG9XW7SZ6mi0o6evfga7owRv0SfVgx6l+oe/Ll158/79+xdXz+yeQvXnvWHTG4DJR17+I+T/vnkIoHlCmHobgF9e2kKlfXMuEB0Iy6QWYNcHof7tGqAzHH2fwJwPoravZkDTQAh04JqouX0UIhNq1gozPoowvp4Ceo1aYZ0twmn9CHpNWmGnLcJq7wS9BjrstEV47Z3Qp6wXdtoizPYcIoOKJkVYZotwWz/RpKgFLBH2N9CpZDzcEOE/CwMKJjWwR9ShPZeogk4o1oN4A72BJkW4KFRa1+PxePy2VQOxg2igHhhVYMXxjRfVvYHeIA2cE8GtZRAbNozhGHDby7p9OX76tiUjdtAaoB/eBbOXsjpteqZicFkI8WYH3r9aEs9hklw7a0Xwy5A1ffMJuGwdBmIJIxED3vjZoMs1cD2YvQTDlB2CZVDImNWp1VD0EadpkRqEYrB3kJMyD8KitOmbX802v+dEpHQQwe9w0JTPrV6VNSUz8J+PBf0y7RxTcIpEADOZNaULPPYRoMtEuS5XvBxnx2KMIEFT4BenU+ZTbstYcbxrlAHb5zJRGShKvFsCseF0cvhgjXJQ9LmtzFrE6pSpOpcaLlQnjHQuA7bPc2aqsbezOmuqzScPElT4FkHiK5lnkDGV5o3VAIVhwzCMxEGPZZeLCjSZbQyZSpOrgaG0KWngueP6qLpRSKvIFYChnCmbX82B8oP1AIef32KmkiKY3tlMtUdyNRRypnT+IPzrOM7Yo3lUL5eJ8DxAOrEa71gimYDVaVM+G4Onjnfl/DxokIlyXSodI3DSlM4NAU8c2b18JtNG3MuCTAI4mMyapmnmMwc9oGCkM6Zp5jLGQWCr60jPo0emB7zEDoCDGdM7PwQLKo82E3DhvZIjPQZ9Mv1Q9LDjgGH6ZmKwr+w4Tvnuhf0+W06OlJyAd0GTns71quIOgIOpfFW6ADx0JMuu67qOyhO0yLWyQ4jROPDoBNWFAsAm1wlhCXrkJsC1OLDXdRz3BN57R5xQjsAkOW0GwIYRx7Pk3r9/v1J2QrqRFi3gF/DbiFOXLkwIMinCeac+j9OgBe6Ecl1UQA826WuO10NpI1M1hX/C3Tp4BL0qtPnMGwtdBf7QlA7MYG8pZOV5zJqkRhsHJ8JV2svP/Zrq7+F8mEp7QdfUfwfnw1PaCyu0WrbC8VJIynvhd622rbB3LBTuPFip1bod5t0NwX1A12o/LgLHx2rkboTZ/VoYB6PA+XIN3OPAt5O0kPZEgPOuopHjwDe9WngndUaAjY/cIKXK+XnANF0L96SuBqqPP7rvelbun99LdZOu1eHEtgaCN7UPaPU6qHdEG32aop3jv9T+lwQ="
+      }
+    }
+  },
+  {
+    "id": "371778d9-145b-40db-ba85-eda0e2269e74",
+    "referenceId": "MEASURE-1",
+    "displayIdentifier": "MEASURE-1",
+    "title": "AI Measurement",
+    "description": null,
+    "subsections": [
+      {
+        "id": "d75278d2-0069-456c-94e9-e008474c34c7",
+        "referenceId": "MEASURE-1.1",
+        "name": "",
+        "description": "Approaches and metrics for measurement of AI risks enumerated during the MAP function are selected for implementation starting with the most significant AI risks. The risks or trustworthiness characteristics that will not – or cannot – be measured are properly documented.",
+        "programControlMapping": [
+          {
+            "id": "682fd777-aed5-412b-a9f4-864ef1e13aa4",
+            "shortName": "AI-17",
+            "customShortName": null,
+            "name": "AI risk tracking",
+            "description": "AI risks are measured by approaches and metrics defined as part of the company's standard risk assessment process, are planned for implementation and documented in the company's risk register.  Risks that cannot be measured are noted as such in the register, along with potential alternative risk tracking techniques."
+          }
+        ]
+      },
+      {
+        "id": "27189399-9f2c-4606-9534-a20d5ccc8a71",
+        "referenceId": "MEASURE-1.2",
+        "name": "",
+        "description": "Appropriateness of AI metrics and effectiveness of existing controls are regularly assessed and updated, including reports of errors and potential impacts on affected communities.",
+        "programControlMapping": [
+          {
+            "id": "1ae16427-bdc5-4588-a8a1-8c3981682be2",
+            "shortName": "AI-42",
+            "customShortName": null,
+            "name": "AI control review",
+            "description": "AI metrics and controls are regularly reviewed and updated, including reports of errors and potential impacts on affected communities."
+          }
+        ]
+      },
+      {
+        "id": "8e339052-55e1-4cc2-b7da-1f08f0624a23",
+        "referenceId": "MEASURE-1.3",
+        "name": "",
+        "description": "Internal experts who did not serve as front-line developers for the system and/or independent assessors are involved in regular assessments and updates. Domain experts, users, AI actors external to the team that developed or deployed the AI system, and affected communities are consulted in support of assessments as necessary per organizational risk tolerance.",
+        "programControlMapping": [
+          {
+            "id": "ee5bbfa6-9c01-492e-a1a6-b3150256de95",
+            "shortName": "AI-23",
+            "customShortName": null,
+            "name": "AI independent validation",
+            "description": "AI Systems are regularly assessed by internal experts not part of the development team."
+          },
+          {
+            "id": "36a8d970-32c5-4424-9ef6-e582c2b697de",
+            "shortName": "AI-43",
+            "customShortName": null,
+            "name": "AI external assessment",
+            "description": "An external assessment of AI systems, risks, and impacts is conducted annually."
+          }
+        ]
+      }
+    ],
+    "programPolicyMapping": [
+      {
+        "id": "c9dd05b4-1977-402e-8454-66df039b25a7",
+        "shortName": "POL-63",
+        "title": "AI Governance Policy",
+        "description": "Establish the objectives, practices, and governance around the use of Artificial Intelligence."
+      },
+      {
+        "id": "6a9928c0-2270-4e62-894b-bc451c6abf9f",
+        "shortName": "POL-64",
+        "title": "AI Risk Management Policy",
+        "description": "A framework for managing AI risk at the company."
+      }
+    ],
+    "_metadata": {
+      "createdDate": "2024-05-13T13:04:56.966Z",
+      "createdBy": {
+        "id": "0ef2f025-46df-47d0-8bcd-11f62aa10612",
+        "name": "System User",
+        "email": "system@trustcloud.ai",
+        "pictureUrl": "data:image/png;base64,UklGRr4FAABXRUJQVlA4TLIFAAAvSoASEIcFIZIkxVbOzGPmJ+d9/1qYcW9tOIgkSZGqe+GZycD718b8PwM5kiRFUmTjMr1WiJV69WM+6CxHkSSpVj68Phdfw5fwbX8ncMfdxzQBTGsPECBAgAAnOMABdjCDA5zgBDtYwQIWMIMZTGACIxjBAAYwgAA9yCCDBBJIIEiPAGAmGlCAEiHgBO+e6sFKuoAiAQJpDygDUCpDSSqAlaMlQCASECkpzUncW7rr1VeECTOBhKSMEFJCoNAdCJRQUAaPSYRUhAQEVKRlVkUJjN5NteE8Vc7K+RiXUpGkEsXq/6fFsOhdbxZ1xrsKoYUNMay7KaHFEthGpTSlpJylsnI2dlUqQpKSPvw1/9x9xg8/aYnv+OEv94OXPnqZT7PlLFvMkuUiWS2xWWK9xmZj2+2fw+HpcDi5G+oJ0pB+7We72/XYq9vswGTQ7DN3nBYkeoZRKUYuJqWZlGbiplyMXZWzIln1lXVZCksg+7az89ZHHL18/7x8frz9/sRoeL/Y2/vX93gP1LZtW9s2urwFnG3hqBDayuOtzMzslbn1VmZmciKzBk6Za23RKzuT9x8tvXotf9q3iP5PgPb/ZG9XW7SZ6mi0o6evfga7owRv0SfVgx6l+oe/Ll158/79+xdXz+yeQvXnvWHTG4DJR17+I+T/vnkIoHlCmHobgF9e2kKlfXMuEB0Iy6QWYNcHof7tGqAzHH2fwJwPoravZkDTQAh04JqouX0UIhNq1gozPoowvp4Ceo1aYZ0twmn9CHpNWmGnLcJq7wS9BjrstEV47Z3Qp6wXdtoizPYcIoOKJkVYZotwWz/RpKgFLBH2N9CpZDzcEOE/CwMKJjWwR9ShPZeogk4o1oN4A72BJkW4KFRa1+PxePy2VQOxg2igHhhVYMXxjRfVvYHeIA2cE8GtZRAbNozhGHDby7p9OX76tiUjdtAaoB/eBbOXsjpteqZicFkI8WYH3r9aEs9hklw7a0Xwy5A1ffMJuGwdBmIJIxED3vjZoMs1cD2YvQTDlB2CZVDImNWp1VD0EadpkRqEYrB3kJMyD8KitOmbX802v+dEpHQQwe9w0JTPrV6VNSUz8J+PBf0y7RxTcIpEADOZNaULPPYRoMtEuS5XvBxnx2KMIEFT4BenU+ZTbstYcbxrlAHb5zJRGShKvFsCseF0cvhgjXJQ9LmtzFrE6pSpOpcaLlQnjHQuA7bPc2aqsbezOmuqzScPElT4FkHiK5lnkDGV5o3VAIVhwzCMxEGPZZeLCjSZbQyZSpOrgaG0KWngueP6qLpRSKvIFYChnCmbX82B8oP1AIef32KmkiKY3tlMtUdyNRRypnT+IPzrOM7Yo3lUL5eJ8DxAOrEa71gimYDVaVM+G4Onjnfl/DxokIlyXSodI3DSlM4NAU8c2b18JtNG3MuCTAI4mMyapmnmMwc9oGCkM6Zp5jLGQWCr60jPo0emB7zEDoCDGdM7PwQLKo82E3DhvZIjPQZ9Mv1Q9LDjgGH6ZmKwr+w4Tvnuhf0+W06OlJyAd0GTns71quIOgIOpfFW6ADx0JMuu67qOyhO0yLWyQ4jROPDoBNWFAsAm1wlhCXrkJsC1OLDXdRz3BN57R5xQjsAkOW0GwIYRx7Pk3r9/v1J2QrqRFi3gF/DbiFOXLkwIMinCeac+j9OgBe6Ecl1UQA826WuO10NpI1M1hX/C3Tp4BL0qtPnMGwtdBf7QlA7MYG8pZOV5zJqkRhsHJ8JV2svP/Zrq7+F8mEp7QdfUfwfnw1PaCyu0WrbC8VJIynvhd622rbB3LBTuPFip1bod5t0NwX1A12o/LgLHx2rkboTZ/VoYB6PA+XIN3OPAt5O0kPZEgPOuopHjwDe9WngndUaAjY/cIKXK+XnANF0L96SuBqqPP7rvelbun99LdZOu1eHEtgaCN7UPaPU6qHdEG32aop3jv9T+lwQ="
+      },
+      "lastModifiedDate": "2024-05-13T13:04:56.966Z",
+      "lastModifiedBy": {
+        "id": "0ef2f025-46df-47d0-8bcd-11f62aa10612",
+        "name": "System User",
+        "email": "system@trustcloud.ai",
+        "pictureUrl": "data:image/png;base64,UklGRr4FAABXRUJQVlA4TLIFAAAvSoASEIcFIZIkxVbOzGPmJ+d9/1qYcW9tOIgkSZGqe+GZycD718b8PwM5kiRFUmTjMr1WiJV69WM+6CxHkSSpVj68Phdfw5fwbX8ncMfdxzQBTGsPECBAgAAnOMABdjCDA5zgBDtYwQIWMIMZTGACIxjBAAYwgAA9yCCDBBJIIEiPAGAmGlCAEiHgBO+e6sFKuoAiAQJpDygDUCpDSSqAlaMlQCASECkpzUncW7rr1VeECTOBhKSMEFJCoNAdCJRQUAaPSYRUhAQEVKRlVkUJjN5NteE8Vc7K+RiXUpGkEsXq/6fFsOhdbxZ1xrsKoYUNMay7KaHFEthGpTSlpJylsnI2dlUqQpKSPvw1/9x9xg8/aYnv+OEv94OXPnqZT7PlLFvMkuUiWS2xWWK9xmZj2+2fw+HpcDi5G+oJ0pB+7We72/XYq9vswGTQ7DN3nBYkeoZRKUYuJqWZlGbiplyMXZWzIln1lXVZCksg+7az89ZHHL18/7x8frz9/sRoeL/Y2/vX93gP1LZtW9s2urwFnG3hqBDayuOtzMzslbn1VmZmciKzBk6Za23RKzuT9x8tvXotf9q3iP5PgPb/ZG9XW7SZ6mi0o6evfga7owRv0SfVgx6l+oe/Ll158/79+xdXz+yeQvXnvWHTG4DJR17+I+T/vnkIoHlCmHobgF9e2kKlfXMuEB0Iy6QWYNcHof7tGqAzHH2fwJwPoravZkDTQAh04JqouX0UIhNq1gozPoowvp4Ceo1aYZ0twmn9CHpNWmGnLcJq7wS9BjrstEV47Z3Qp6wXdtoizPYcIoOKJkVYZotwWz/RpKgFLBH2N9CpZDzcEOE/CwMKJjWwR9ShPZeogk4o1oN4A72BJkW4KFRa1+PxePy2VQOxg2igHhhVYMXxjRfVvYHeIA2cE8GtZRAbNozhGHDby7p9OX76tiUjdtAaoB/eBbOXsjpteqZicFkI8WYH3r9aEs9hklw7a0Xwy5A1ffMJuGwdBmIJIxED3vjZoMs1cD2YvQTDlB2CZVDImNWp1VD0EadpkRqEYrB3kJMyD8KitOmbX802v+dEpHQQwe9w0JTPrV6VNSUz8J+PBf0y7RxTcIpEADOZNaULPPYRoMtEuS5XvBxnx2KMIEFT4BenU+ZTbstYcbxrlAHb5zJRGShKvFsCseF0cvhgjXJQ9LmtzFrE6pSpOpcaLlQnjHQuA7bPc2aqsbezOmuqzScPElT4FkHiK5lnkDGV5o3VAIVhwzCMxEGPZZeLCjSZbQyZSpOrgaG0KWngueP6qLpRSKvIFYChnCmbX82B8oP1AIef32KmkiKY3tlMtUdyNRRypnT+IPzrOM7Yo3lUL5eJ8DxAOrEa71gimYDVaVM+G4Onjnfl/DxokIlyXSodI3DSlM4NAU8c2b18JtNG3MuCTAI4mMyapmnmMwc9oGCkM6Zp5jLGQWCr60jPo0emB7zEDoCDGdM7PwQLKo82E3DhvZIjPQZ9Mv1Q9LDjgGH6ZmKwr+w4Tvnuhf0+W06OlJyAd0GTns71quIOgIOpfFW6ADx0JMuu67qOyhO0yLWyQ4jROPDoBNWFAsAm1wlhCXrkJsC1OLDXdRz3BN57R5xQjsAkOW0GwIYRx7Pk3r9/v1J2QrqRFi3gF/DbiFOXLkwIMinCeac+j9OgBe6Ecl1UQA826WuO10NpI1M1hX/C3Tp4BL0qtPnMGwtdBf7QlA7MYG8pZOV5zJqkRhsHJ8JV2svP/Zrq7+F8mEp7QdfUfwfnw1PaCyu0WrbC8VJIynvhd622rbB3LBTuPFip1bod5t0NwX1A12o/LgLHx2rkboTZ/VoYB6PA+XIN3OPAt5O0kPZEgPOuopHjwDe9WngndUaAjY/cIKXK+XnANF0L96SuBqqPP7rvelbun99LdZOu1eHEtgaCN7UPaPU6qHdEG32aop3jv9T+lwQ="
+      }
+    }
+  },
+  {
+    "id": "4ca47b79-6af7-4fdc-a348-13c03aeaed90",
+    "referenceId": "MEASURE-2",
+    "displayIdentifier": "MEASURE-2",
+    "title": "AI System Trustworthiness",
+    "description": null,
+    "subsections": [
+      {
+        "id": "7a8c190d-fc88-473b-91d1-817bd98d5621",
+        "referenceId": "MEASURE-2.1",
+        "name": "",
+        "description": "Test sets, metrics, and details about the tools used during TEVV are documented.",
+        "programControlMapping": [
+          {
+            "id": "6e15ad58-312a-4c19-818d-bd37622b259c",
+            "shortName": "AI-53",
+            "customShortName": null,
+            "name": "AI system inventory",
+            "description": "The company maintains an inventory of AI systems that includes the system scope, owner, its business use, and knowledge limits, and specific AI methodologies used to implement the AI system."
+          },
+          {
+            "id": "59e95998-025e-44ca-b765-538bf2f92a74",
+            "shortName": "AI-32",
+            "customShortName": null,
+            "name": "AI test sets",
+            "description": "Test sets are defined for each AI system, which can be made up of both automated and manual tests, and the tests are regularly conducted throughout the AI system development life cycle."
+          },
+          {
+            "id": "2d1c6565-3c81-4f1a-bda6-3d96d038e4df",
+            "shortName": "AI-45",
+            "customShortName": null,
+            "name": "AI system trustworthiness and reliability metrics",
+            "description": "Metrics are defined for the AI system to validate system trustworthiness and reliability, based on inputs from domain experts and relevant AI actors."
+          },
+          {
+            "id": "f8ec8c7a-f337-400a-bff4-720b99d674c7",
+            "shortName": "AI-57",
+            "customShortName": null,
+            "name": "AI Concern Reporting Process",
+            "description": "The organization defines a process to report concerns about the organization’s role with respect to an AI system throughout its life cycle."
+          }
+        ]
+      },
+      {
+        "id": "2879f6e4-ffa7-4f5c-9892-96e1a759e657",
+        "referenceId": "MEASURE-2.10",
+        "name": "",
+        "description": "Privacy risk of the AI system – as identified in the MAP function – is examined and documented.",
+        "programControlMapping": [
+          {
+            "id": "d345a8fc-e3e5-490c-b486-db577c077c55",
+            "shortName": "APPS-14",
+            "customShortName": null,
+            "name": "Privacy Impact Review",
+            "description": "A privacy assessment that includes a system design and architecture review is performed as part of the SDLC process to gauge the privacy impact."
+          }
+        ]
+      },
+      {
+        "id": "c7fc2406-0839-41bc-ab53-38fa650043eb",
+        "referenceId": "MEASURE-2.11",
+        "name": "",
+        "description": "Fairness and bias – as identified in the MAP function – are evaluated and results are documented",
+        "programControlMapping": [
+          {
+            "id": "3f9a58c5-1f7d-4e3e-99d3-6e10a5f013bc",
+            "shortName": "AI-29",
+            "customShortName": null,
+            "name": "AI system fairness and bias review",
+            "description": "Regular evaluations of AI system fairness and potential bias are conducted, and results documented."
+          }
+        ]
+      },
+      {
+        "id": "feead34f-9aef-489a-b00c-920e55e08237",
+        "referenceId": "MEASURE-2.12",
+        "name": "",
+        "description": "Environmental impact and sustainability of AI model training and management activities – as identified in the MAP function – are assessed and documented.",
+        "programControlMapping": [
+          {
+            "id": "ed2779ed-60e9-4782-bd0b-4e1e20c495ef",
+            "shortName": "AI-19",
+            "customShortName": null,
+            "name": "AI system environmental impact",
+            "description": "As part of its risk assessment process, the company considers environmental and sustainability risks associated with AI."
+          }
+        ]
+      },
+      {
+        "id": "b982c209-1057-4f1f-8bce-de4af479768a",
+        "referenceId": "MEASURE-2.13",
+        "name": "",
+        "description": "Effectiveness of the employed TEVV metrics and processes in the MEASURE function are evaluated and documented.",
+        "programControlMapping": [
+          {
+            "id": "1ae16427-bdc5-4588-a8a1-8c3981682be2",
+            "shortName": "AI-42",
+            "customShortName": null,
+            "name": "AI control review",
+            "description": "AI metrics and controls are regularly reviewed and updated, including reports of errors and potential impacts on affected communities."
+          }
+        ]
+      },
+      {
+        "id": "bb708d32-67f1-4122-9ade-2095c8014ce2",
+        "referenceId": "MEASURE-2.2",
+        "name": "",
+        "description": "Evaluations involving human subjects meet applicable requirements (including human subject protection) and are representative of the relevant population.",
+        "programControlMapping": [
+          {
+            "id": "5f9800a4-a1e2-4367-8afa-558c9a3d1ef8",
+            "shortName": "AI-34",
+            "customShortName": null,
+            "name": "Human testing diversity",
+            "description": "Any testing or evaluation involving human subjects ensure that the pool of subjects is representative of the relevant population."
+          },
+          {
+            "id": "dca6cc0b-26ba-4e5c-8452-f03ecfd49210",
+            "shortName": "AI-33",
+            "customShortName": null,
+            "name": "Testing with human subjects",
+            "description": "Any testing or evaluation involving human subjects are designed to protect and respect the privacy of the human subjects, are conducted with full knowledge of the scope of the test by the subject(s), and with their full consent."
+          }
+        ]
+      },
+      {
+        "id": "bab6117e-5660-4ed5-a287-42a09138e512",
+        "referenceId": "MEASURE-2.3",
+        "name": "",
+        "description": "AI system performance or assurance criteria are measured qualitatively or quantitatively and demonstrated for conditions similar to deployment setting(s). Measures are documented.",
+        "programControlMapping": [
+          {
+            "id": "2eca311a-bef2-441c-a761-44e977adf60e",
+            "shortName": "AI-46",
+            "customShortName": null,
+            "name": "Measuring AI system performance",
+            "description": "AI system performance and reliability criteria are measured qualitatively or quantitatively as part of the ongoing system usage in production, and performance improvements are identified and implemented according to the company's product development lifecycle."
+          }
+        ]
+      },
+      {
+        "id": "790344ee-c95b-4ac2-8b56-9736d5b05f56",
+        "referenceId": "MEASURE-2.4",
+        "name": "",
+        "description": "The functionality and behavior of the AI system and its components – as identified in the MAP function – are monitored when in production.",
+        "programControlMapping": [
+          {
+            "id": "580f3690-aa27-4d30-917c-5b83e00b556a",
+            "shortName": "AI-44",
+            "customShortName": null,
+            "name": "AI systems logging and monitoring",
+            "description": "The company uses logging and monitoring tools to track the usage of AI systems and identify potential issues."
+          }
+        ]
+      },
+      {
+        "id": "fb40ab4d-d70e-4935-829b-544fa767a913",
+        "referenceId": "MEASURE-2.5",
+        "name": "",
+        "description": "The AI system to be deployed is demonstrated to be valid and reliable. Limitations of the generalizability beyond the conditions under which the technology was developed are documented.",
+        "programControlMapping": [
+          {
+            "id": "bdaa5e40-09b1-416a-b6e6-9412eb652f2a",
+            "shortName": "AI-30",
+            "customShortName": null,
+            "name": "AI Quality Process",
+            "description": "A quality process is defined to ensure that AI systems are valid and reliable.  Any limitations to the generalizability beyond the conditions under which the technology was developed are documented."
+          }
+        ]
+      },
+      {
+        "id": "694e0776-a6a4-4f91-84f9-08d767b5b3a3",
+        "referenceId": "MEASURE-2.6",
+        "name": "",
+        "description": "The AI system is evaluated regularly for safety risks – as identified in the MAP function. The AI system to be deployed is demonstrated to be safe, its residual negative risk does not exceed the risk tolerance, and it can fail safely, particularly if made to operate beyond its knowledge limits. Safety metrics reflect system reliability and robustness, real-time monitoring, and response times for AI system failures.",
+        "programControlMapping": [
+          {
+            "id": "b3552484-12cb-4612-bb4d-76930274ccd2",
+            "shortName": "AI-15",
+            "customShortName": null,
+            "name": "AI system safety risk management",
+            "description": "As part of its risk assessment process, the company considers AI safety risks, and regularly evaluates AI systems against those risks, particularly in cases where AI systems are made to operate beyond its knowledge limits."
+          }
+        ]
+      },
+      {
+        "id": "87593e1a-05d0-4ddd-a534-b2e28fab6d28",
+        "referenceId": "MEASURE-2.7",
+        "name": "",
+        "description": "AI system security and resilience – as identified in the MAP function – are evaluated and documented.",
+        "programControlMapping": [
+          {
+            "id": "681277cc-6c6d-42c8-8474-07de7bfacd02",
+            "shortName": "AI-26",
+            "customShortName": null,
+            "name": "AI Development Security Assessment",
+            "description": "An AI security assessment is conducted for all AI-related product initiatives, to guard against malicious inputs or queries, safeguard integrations with other systems, and to prevent the generation of harmful and malicious content."
+          },
+          {
+            "id": "db0484e0-8b38-4e44-a7b8-fdd051e88318",
+            "shortName": "BIZOPS-27",
+            "customShortName": null,
+            "name": "Security Team Meetings",
+            "description": "The company's Security Team meets regularly to discuss security-related goals that advance the company's business objectives, and plan for the resolution or mitigation of current security risks and incidents."
+          },
+          {
+            "id": "04b6d659-16ff-447b-a897-b2abd86897e3",
+            "shortName": "AI-39",
+            "customShortName": null,
+            "name": "AI Threat Modeling",
+            "description": "The company security team regularly identifies and models threats and examines processes and security defenses related to the use of AI or AI-assisted attacks."
+          },
+          {
+            "id": "f01fe0df-5b66-48e8-9669-2340422a3f03",
+            "shortName": "AI-41",
+            "customShortName": null,
+            "name": "AI PenTesting",
+            "description": "Penetration testing is conducted against AI systems at least annually."
+          },
+          {
+            "id": "42b2056f-857c-4b9b-a6db-c80557dcedda",
+            "shortName": "PDP-11",
+            "customShortName": null,
+            "name": "SDLC - Security Reviews",
+            "description": "Major product changes and new features undergo specialized security reviews and risk assessment by qualified personnel early in the design phase, and as required throughout implementation."
+          },
+          {
+            "id": "9c1aae38-e647-4e0f-977a-064b6e488f38",
+            "shortName": "AI-40",
+            "customShortName": null,
+            "name": "AI Insider Threat Mitigation",
+            "description": "The company has implemented insider threat mitigation to prevent misuse of AI systems by authorized users."
+          }
+        ]
+      },
+      {
+        "id": "e5cc2d3b-4742-4c6c-bfdd-a920bce7d5e4",
+        "referenceId": "MEASURE-2.8",
+        "name": "",
+        "description": "Risks associated with transparency and accountability – as identified in the MAP function – are examined and documented.",
+        "programControlMapping": [
+          {
+            "id": "26aa4b0e-af06-4400-a9a0-c3926e23d9d7",
+            "shortName": "AI-16",
+            "customShortName": null,
+            "name": "AI system transparency and accountability risk management",
+            "description": "As part of its risk assessment process, the company considers risks associated with AI transparency and accountability."
+          }
+        ]
+      },
+      {
+        "id": "86365ca6-9174-48e9-aed4-199943a81306",
+        "referenceId": "MEASURE-2.9",
+        "name": "",
+        "description": "The AI model is explained, validated, and documented, and AI system output is interpreted within its context – as identified in the MAP function – to inform responsible use and governance.",
+        "programControlMapping": [
+          {
+            "id": "7883e3f0-cb68-482f-a1b1-2c88f5050f42",
+            "shortName": "AI-54",
+            "customShortName": null,
+            "name": "AI model inventory",
+            "description": "AI models used for AI systems are explained, validated, and included in the AI System Inventory, and AI system output is interpreted within its context."
+          }
+        ]
+      }
+    ],
+    "programPolicyMapping": [
+      {
+        "id": "25aa4c4d-20ae-4002-bb95-66972688f246",
+        "shortName": "POL-6",
+        "title": "Change Management Policy",
+        "description": "Provide guidance on the process of managing change across company critical systems and products."
+      },
+      {
+        "id": "ff75d94a-3a62-4121-be9d-f4fd9f7693d0",
+        "shortName": "POL-35",
+        "title": "Software Development Lifecycle Policy",
+        "description": "Software Development Lifecycle Policy"
+      },
+      {
+        "id": "c9dd05b4-1977-402e-8454-66df039b25a7",
+        "shortName": "POL-63",
+        "title": "AI Governance Policy",
+        "description": "Establish the objectives, practices, and governance around the use of Artificial Intelligence."
+      },
+      {
+        "id": "6a9928c0-2270-4e62-894b-bc451c6abf9f",
+        "shortName": "POL-64",
+        "title": "AI Risk Management Policy",
+        "description": "A framework for managing AI risk at the company."
+      }
+    ],
+    "_metadata": {
+      "createdDate": "2024-05-13T13:04:56.966Z",
+      "createdBy": {
+        "id": "0ef2f025-46df-47d0-8bcd-11f62aa10612",
+        "name": "System User",
+        "email": "system@trustcloud.ai",
+        "pictureUrl": "data:image/png;base64,UklGRr4FAABXRUJQVlA4TLIFAAAvSoASEIcFIZIkxVbOzGPmJ+d9/1qYcW9tOIgkSZGqe+GZycD718b8PwM5kiRFUmTjMr1WiJV69WM+6CxHkSSpVj68Phdfw5fwbX8ncMfdxzQBTGsPECBAgAAnOMABdjCDA5zgBDtYwQIWMIMZTGACIxjBAAYwgAA9yCCDBBJIIEiPAGAmGlCAEiHgBO+e6sFKuoAiAQJpDygDUCpDSSqAlaMlQCASECkpzUncW7rr1VeECTOBhKSMEFJCoNAdCJRQUAaPSYRUhAQEVKRlVkUJjN5NteE8Vc7K+RiXUpGkEsXq/6fFsOhdbxZ1xrsKoYUNMay7KaHFEthGpTSlpJylsnI2dlUqQpKSPvw1/9x9xg8/aYnv+OEv94OXPnqZT7PlLFvMkuUiWS2xWWK9xmZj2+2fw+HpcDi5G+oJ0pB+7We72/XYq9vswGTQ7DN3nBYkeoZRKUYuJqWZlGbiplyMXZWzIln1lXVZCksg+7az89ZHHL18/7x8frz9/sRoeL/Y2/vX93gP1LZtW9s2urwFnG3hqBDayuOtzMzslbn1VmZmciKzBk6Za23RKzuT9x8tvXotf9q3iP5PgPb/ZG9XW7SZ6mi0o6evfga7owRv0SfVgx6l+oe/Ll158/79+xdXz+yeQvXnvWHTG4DJR17+I+T/vnkIoHlCmHobgF9e2kKlfXMuEB0Iy6QWYNcHof7tGqAzHH2fwJwPoravZkDTQAh04JqouX0UIhNq1gozPoowvp4Ceo1aYZ0twmn9CHpNWmGnLcJq7wS9BjrstEV47Z3Qp6wXdtoizPYcIoOKJkVYZotwWz/RpKgFLBH2N9CpZDzcEOE/CwMKJjWwR9ShPZeogk4o1oN4A72BJkW4KFRa1+PxePy2VQOxg2igHhhVYMXxjRfVvYHeIA2cE8GtZRAbNozhGHDby7p9OX76tiUjdtAaoB/eBbOXsjpteqZicFkI8WYH3r9aEs9hklw7a0Xwy5A1ffMJuGwdBmIJIxED3vjZoMs1cD2YvQTDlB2CZVDImNWp1VD0EadpkRqEYrB3kJMyD8KitOmbX802v+dEpHQQwe9w0JTPrV6VNSUz8J+PBf0y7RxTcIpEADOZNaULPPYRoMtEuS5XvBxnx2KMIEFT4BenU+ZTbstYcbxrlAHb5zJRGShKvFsCseF0cvhgjXJQ9LmtzFrE6pSpOpcaLlQnjHQuA7bPc2aqsbezOmuqzScPElT4FkHiK5lnkDGV5o3VAIVhwzCMxEGPZZeLCjSZbQyZSpOrgaG0KWngueP6qLpRSKvIFYChnCmbX82B8oP1AIef32KmkiKY3tlMtUdyNRRypnT+IPzrOM7Yo3lUL5eJ8DxAOrEa71gimYDVaVM+G4Onjnfl/DxokIlyXSodI3DSlM4NAU8c2b18JtNG3MuCTAI4mMyapmnmMwc9oGCkM6Zp5jLGQWCr60jPo0emB7zEDoCDGdM7PwQLKo82E3DhvZIjPQZ9Mv1Q9LDjgGH6ZmKwr+w4Tvnuhf0+W06OlJyAd0GTns71quIOgIOpfFW6ADx0JMuu67qOyhO0yLWyQ4jROPDoBNWFAsAm1wlhCXrkJsC1OLDXdRz3BN57R5xQjsAkOW0GwIYRx7Pk3r9/v1J2QrqRFi3gF/DbiFOXLkwIMinCeac+j9OgBe6Ecl1UQA826WuO10NpI1M1hX/C3Tp4BL0qtPnMGwtdBf7QlA7MYG8pZOV5zJqkRhsHJ8JV2svP/Zrq7+F8mEp7QdfUfwfnw1PaCyu0WrbC8VJIynvhd622rbB3LBTuPFip1bod5t0NwX1A12o/LgLHx2rkboTZ/VoYB6PA+XIN3OPAt5O0kPZEgPOuopHjwDe9WngndUaAjY/cIKXK+XnANF0L96SuBqqPP7rvelbun99LdZOu1eHEtgaCN7UPaPU6qHdEG32aop3jv9T+lwQ="
+      },
+      "lastModifiedDate": "2024-05-13T13:04:56.966Z",
+      "lastModifiedBy": {
+        "id": "0ef2f025-46df-47d0-8bcd-11f62aa10612",
+        "name": "System User",
+        "email": "system@trustcloud.ai",
+        "pictureUrl": "data:image/png;base64,UklGRr4FAABXRUJQVlA4TLIFAAAvSoASEIcFIZIkxVbOzGPmJ+d9/1qYcW9tOIgkSZGqe+GZycD718b8PwM5kiRFUmTjMr1WiJV69WM+6CxHkSSpVj68Phdfw5fwbX8ncMfdxzQBTGsPECBAgAAnOMABdjCDA5zgBDtYwQIWMIMZTGACIxjBAAYwgAA9yCCDBBJIIEiPAGAmGlCAEiHgBO+e6sFKuoAiAQJpDygDUCpDSSqAlaMlQCASECkpzUncW7rr1VeECTOBhKSMEFJCoNAdCJRQUAaPSYRUhAQEVKRlVkUJjN5NteE8Vc7K+RiXUpGkEsXq/6fFsOhdbxZ1xrsKoYUNMay7KaHFEthGpTSlpJylsnI2dlUqQpKSPvw1/9x9xg8/aYnv+OEv94OXPnqZT7PlLFvMkuUiWS2xWWK9xmZj2+2fw+HpcDi5G+oJ0pB+7We72/XYq9vswGTQ7DN3nBYkeoZRKUYuJqWZlGbiplyMXZWzIln1lXVZCksg+7az89ZHHL18/7x8frz9/sRoeL/Y2/vX93gP1LZtW9s2urwFnG3hqBDayuOtzMzslbn1VmZmciKzBk6Za23RKzuT9x8tvXotf9q3iP5PgPb/ZG9XW7SZ6mi0o6evfga7owRv0SfVgx6l+oe/Ll158/79+xdXz+yeQvXnvWHTG4DJR17+I+T/vnkIoHlCmHobgF9e2kKlfXMuEB0Iy6QWYNcHof7tGqAzHH2fwJwPoravZkDTQAh04JqouX0UIhNq1gozPoowvp4Ceo1aYZ0twmn9CHpNWmGnLcJq7wS9BjrstEV47Z3Qp6wXdtoizPYcIoOKJkVYZotwWz/RpKgFLBH2N9CpZDzcEOE/CwMKJjWwR9ShPZeogk4o1oN4A72BJkW4KFRa1+PxePy2VQOxg2igHhhVYMXxjRfVvYHeIA2cE8GtZRAbNozhGHDby7p9OX76tiUjdtAaoB/eBbOXsjpteqZicFkI8WYH3r9aEs9hklw7a0Xwy5A1ffMJuGwdBmIJIxED3vjZoMs1cD2YvQTDlB2CZVDImNWp1VD0EadpkRqEYrB3kJMyD8KitOmbX802v+dEpHQQwe9w0JTPrV6VNSUz8J+PBf0y7RxTcIpEADOZNaULPPYRoMtEuS5XvBxnx2KMIEFT4BenU+ZTbstYcbxrlAHb5zJRGShKvFsCseF0cvhgjXJQ9LmtzFrE6pSpOpcaLlQnjHQuA7bPc2aqsbezOmuqzScPElT4FkHiK5lnkDGV5o3VAIVhwzCMxEGPZZeLCjSZbQyZSpOrgaG0KWngueP6qLpRSKvIFYChnCmbX82B8oP1AIef32KmkiKY3tlMtUdyNRRypnT+IPzrOM7Yo3lUL5eJ8DxAOrEa71gimYDVaVM+G4Onjnfl/DxokIlyXSodI3DSlM4NAU8c2b18JtNG3MuCTAI4mMyapmnmMwc9oGCkM6Zp5jLGQWCr60jPo0emB7zEDoCDGdM7PwQLKo82E3DhvZIjPQZ9Mv1Q9LDjgGH6ZmKwr+w4Tvnuhf0+W06OlJyAd0GTns71quIOgIOpfFW6ADx0JMuu67qOyhO0yLWyQ4jROPDoBNWFAsAm1wlhCXrkJsC1OLDXdRz3BN57R5xQjsAkOW0GwIYRx7Pk3r9/v1J2QrqRFi3gF/DbiFOXLkwIMinCeac+j9OgBe6Ecl1UQA826WuO10NpI1M1hX/C3Tp4BL0qtPnMGwtdBf7QlA7MYG8pZOV5zJqkRhsHJ8JV2svP/Zrq7+F8mEp7QdfUfwfnw1PaCyu0WrbC8VJIynvhd622rbB3LBTuPFip1bod5t0NwX1A12o/LgLHx2rkboTZ/VoYB6PA+XIN3OPAt5O0kPZEgPOuopHjwDe9WngndUaAjY/cIKXK+XnANF0L96SuBqqPP7rvelbun99LdZOu1eHEtgaCN7UPaPU6qHdEG32aop3jv9T+lwQ="
+      }
+    }
+  },
+  {
+    "id": "80756ec2-df71-4770-afc0-a2bd85f9a666",
+    "referenceId": "MEASURE-3",
+    "displayIdentifier": "MEASURE-3",
+    "title": "AI Risk Monitoring and Feedback",
+    "description": null,
+    "subsections": [
+      {
+        "id": "ac16fd05-7a9b-48fb-886f-d96aa18a07e4",
+        "referenceId": "MEASURE-3.1",
+        "name": "",
+        "description": "Approaches, personnel, and documentation are in place to regularly identify and track existing, unanticipated, and emergent AI risks based on factors such as intended and actual performance in deployed contexts",
+        "programControlMapping": [
+          {
+            "id": "d84ad622-8855-42e7-919b-d4e6dd9340a5",
+            "shortName": "CUST-20",
+            "customShortName": null,
+            "name": "Support channel",
+            "description": "External users are provided with a support channel for reporting systems failures, incidents, concerns, and other complaints to appropriate personnel."
+          },
+          {
+            "id": "f6c54e2f-d5ab-4e99-906a-c6386e6c41f2",
+            "shortName": "PDP-17",
+            "customShortName": null,
+            "name": "Internal Support Channel",
+            "description": "Employees have access to an internal support channel that can be used to report incidents, concerns, and complaints."
+          },
+          {
+            "id": "3cc56816-35f0-4899-862a-ccadac6de33a",
+            "shortName": "AI-13",
+            "customShortName": null,
+            "name": "AI Risk Management",
+            "description": "As part of its Risk Assessment process, the company considers risks associated with its use of AI, and the impact of the company's AI to users, groups, systems, and society."
+          },
+          {
+            "id": "78acdfad-f9dc-4100-9ae3-b2bcb619fe8e",
+            "shortName": "BIZOPS-40",
+            "customShortName": null,
+            "name": "Customer Feedback Program",
+            "description": "A customer feedback program is in place to collect and monitor customer satisfaction and complaints."
+          }
+        ]
+      },
+      {
+        "id": "55ae77f4-aa1b-49a1-ad04-f837ba8df913",
+        "referenceId": "MEASURE-3.2",
+        "name": "",
+        "description": "Risk tracking approaches are considered for settings where AI risks are difficult to assess using currently available measurement techniques or where metrics are not yet available.",
+        "programControlMapping": [
+          {
+            "id": "682fd777-aed5-412b-a9f4-864ef1e13aa4",
+            "shortName": "AI-17",
+            "customShortName": null,
+            "name": "AI risk tracking",
+            "description": "AI risks are measured by approaches and metrics defined as part of the company's standard risk assessment process, are planned for implementation and documented in the company's risk register.  Risks that cannot be measured are noted as such in the register, along with potential alternative risk tracking techniques."
+          }
+        ]
+      },
+      {
+        "id": "ff8e1647-a3fd-4183-b990-ae0b19d7d9e1",
+        "referenceId": "MEASURE-3.3",
+        "name": "",
+        "description": "Feedback processes for end users and impacted communities to report problems and appeal system outcomes are established and integrated into AI system evaluation metrics.",
+        "programControlMapping": [
+          {
+            "id": "78acdfad-f9dc-4100-9ae3-b2bcb619fe8e",
+            "shortName": "BIZOPS-40",
+            "customShortName": null,
+            "name": "Customer Feedback Program",
+            "description": "A customer feedback program is in place to collect and monitor customer satisfaction and complaints."
+          },
+          {
+            "id": "6fdd7d8a-b69d-401d-b86c-e7c764616ddb",
+            "shortName": "AI-12",
+            "customShortName": null,
+            "name": "AI system impact scope",
+            "description": "The impacts of implemented AI systems, both beneficial and harmful, are regularly assessed according to the company's standard risk management practices."
+          }
+        ]
+      }
+    ],
+    "programPolicyMapping": [
+      {
+        "id": "c9dd05b4-1977-402e-8454-66df039b25a7",
+        "shortName": "POL-63",
+        "title": "AI Governance Policy",
+        "description": "Establish the objectives, practices, and governance around the use of Artificial Intelligence."
+      },
+      {
+        "id": "6a9928c0-2270-4e62-894b-bc451c6abf9f",
+        "shortName": "POL-64",
+        "title": "AI Risk Management Policy",
+        "description": "A framework for managing AI risk at the company."
+      }
+    ],
+    "_metadata": {
+      "createdDate": "2024-05-13T13:04:56.966Z",
+      "createdBy": {
+        "id": "0ef2f025-46df-47d0-8bcd-11f62aa10612",
+        "name": "System User",
+        "email": "system@trustcloud.ai",
+        "pictureUrl": "data:image/png;base64,UklGRr4FAABXRUJQVlA4TLIFAAAvSoASEIcFIZIkxVbOzGPmJ+d9/1qYcW9tOIgkSZGqe+GZycD718b8PwM5kiRFUmTjMr1WiJV69WM+6CxHkSSpVj68Phdfw5fwbX8ncMfdxzQBTGsPECBAgAAnOMABdjCDA5zgBDtYwQIWMIMZTGACIxjBAAYwgAA9yCCDBBJIIEiPAGAmGlCAEiHgBO+e6sFKuoAiAQJpDygDUCpDSSqAlaMlQCASECkpzUncW7rr1VeECTOBhKSMEFJCoNAdCJRQUAaPSYRUhAQEVKRlVkUJjN5NteE8Vc7K+RiXUpGkEsXq/6fFsOhdbxZ1xrsKoYUNMay7KaHFEthGpTSlpJylsnI2dlUqQpKSPvw1/9x9xg8/aYnv+OEv94OXPnqZT7PlLFvMkuUiWS2xWWK9xmZj2+2fw+HpcDi5G+oJ0pB+7We72/XYq9vswGTQ7DN3nBYkeoZRKUYuJqWZlGbiplyMXZWzIln1lXVZCksg+7az89ZHHL18/7x8frz9/sRoeL/Y2/vX93gP1LZtW9s2urwFnG3hqBDayuOtzMzslbn1VmZmciKzBk6Za23RKzuT9x8tvXotf9q3iP5PgPb/ZG9XW7SZ6mi0o6evfga7owRv0SfVgx6l+oe/Ll158/79+xdXz+yeQvXnvWHTG4DJR17+I+T/vnkIoHlCmHobgF9e2kKlfXMuEB0Iy6QWYNcHof7tGqAzHH2fwJwPoravZkDTQAh04JqouX0UIhNq1gozPoowvp4Ceo1aYZ0twmn9CHpNWmGnLcJq7wS9BjrstEV47Z3Qp6wXdtoizPYcIoOKJkVYZotwWz/RpKgFLBH2N9CpZDzcEOE/CwMKJjWwR9ShPZeogk4o1oN4A72BJkW4KFRa1+PxePy2VQOxg2igHhhVYMXxjRfVvYHeIA2cE8GtZRAbNozhGHDby7p9OX76tiUjdtAaoB/eBbOXsjpteqZicFkI8WYH3r9aEs9hklw7a0Xwy5A1ffMJuGwdBmIJIxED3vjZoMs1cD2YvQTDlB2CZVDImNWp1VD0EadpkRqEYrB3kJMyD8KitOmbX802v+dEpHQQwe9w0JTPrV6VNSUz8J+PBf0y7RxTcIpEADOZNaULPPYRoMtEuS5XvBxnx2KMIEFT4BenU+ZTbstYcbxrlAHb5zJRGShKvFsCseF0cvhgjXJQ9LmtzFrE6pSpOpcaLlQnjHQuA7bPc2aqsbezOmuqzScPElT4FkHiK5lnkDGV5o3VAIVhwzCMxEGPZZeLCjSZbQyZSpOrgaG0KWngueP6qLpRSKvIFYChnCmbX82B8oP1AIef32KmkiKY3tlMtUdyNRRypnT+IPzrOM7Yo3lUL5eJ8DxAOrEa71gimYDVaVM+G4Onjnfl/DxokIlyXSodI3DSlM4NAU8c2b18JtNG3MuCTAI4mMyapmnmMwc9oGCkM6Zp5jLGQWCr60jPo0emB7zEDoCDGdM7PwQLKo82E3DhvZIjPQZ9Mv1Q9LDjgGH6ZmKwr+w4Tvnuhf0+W06OlJyAd0GTns71quIOgIOpfFW6ADx0JMuu67qOyhO0yLWyQ4jROPDoBNWFAsAm1wlhCXrkJsC1OLDXdRz3BN57R5xQjsAkOW0GwIYRx7Pk3r9/v1J2QrqRFi3gF/DbiFOXLkwIMinCeac+j9OgBe6Ecl1UQA826WuO10NpI1M1hX/C3Tp4BL0qtPnMGwtdBf7QlA7MYG8pZOV5zJqkRhsHJ8JV2svP/Zrq7+F8mEp7QdfUfwfnw1PaCyu0WrbC8VJIynvhd622rbB3LBTuPFip1bod5t0NwX1A12o/LgLHx2rkboTZ/VoYB6PA+XIN3OPAt5O0kPZEgPOuopHjwDe9WngndUaAjY/cIKXK+XnANF0L96SuBqqPP7rvelbun99LdZOu1eHEtgaCN7UPaPU6qHdEG32aop3jv9T+lwQ="
+      },
+      "lastModifiedDate": "2024-05-13T13:04:56.966Z",
+      "lastModifiedBy": {
+        "id": "0ef2f025-46df-47d0-8bcd-11f62aa10612",
+        "name": "System User",
+        "email": "system@trustcloud.ai",
+        "pictureUrl": "data:image/png;base64,UklGRr4FAABXRUJQVlA4TLIFAAAvSoASEIcFIZIkxVbOzGPmJ+d9/1qYcW9tOIgkSZGqe+GZycD718b8PwM5kiRFUmTjMr1WiJV69WM+6CxHkSSpVj68Phdfw5fwbX8ncMfdxzQBTGsPECBAgAAnOMABdjCDA5zgBDtYwQIWMIMZTGACIxjBAAYwgAA9yCCDBBJIIEiPAGAmGlCAEiHgBO+e6sFKuoAiAQJpDygDUCpDSSqAlaMlQCASECkpzUncW7rr1VeECTOBhKSMEFJCoNAdCJRQUAaPSYRUhAQEVKRlVkUJjN5NteE8Vc7K+RiXUpGkEsXq/6fFsOhdbxZ1xrsKoYUNMay7KaHFEthGpTSlpJylsnI2dlUqQpKSPvw1/9x9xg8/aYnv+OEv94OXPnqZT7PlLFvMkuUiWS2xWWK9xmZj2+2fw+HpcDi5G+oJ0pB+7We72/XYq9vswGTQ7DN3nBYkeoZRKUYuJqWZlGbiplyMXZWzIln1lXVZCksg+7az89ZHHL18/7x8frz9/sRoeL/Y2/vX93gP1LZtW9s2urwFnG3hqBDayuOtzMzslbn1VmZmciKzBk6Za23RKzuT9x8tvXotf9q3iP5PgPb/ZG9XW7SZ6mi0o6evfga7owRv0SfVgx6l+oe/Ll158/79+xdXz+yeQvXnvWHTG4DJR17+I+T/vnkIoHlCmHobgF9e2kKlfXMuEB0Iy6QWYNcHof7tGqAzHH2fwJwPoravZkDTQAh04JqouX0UIhNq1gozPoowvp4Ceo1aYZ0twmn9CHpNWmGnLcJq7wS9BjrstEV47Z3Qp6wXdtoizPYcIoOKJkVYZotwWz/RpKgFLBH2N9CpZDzcEOE/CwMKJjWwR9ShPZeogk4o1oN4A72BJkW4KFRa1+PxePy2VQOxg2igHhhVYMXxjRfVvYHeIA2cE8GtZRAbNozhGHDby7p9OX76tiUjdtAaoB/eBbOXsjpteqZicFkI8WYH3r9aEs9hklw7a0Xwy5A1ffMJuGwdBmIJIxED3vjZoMs1cD2YvQTDlB2CZVDImNWp1VD0EadpkRqEYrB3kJMyD8KitOmbX802v+dEpHQQwe9w0JTPrV6VNSUz8J+PBf0y7RxTcIpEADOZNaULPPYRoMtEuS5XvBxnx2KMIEFT4BenU+ZTbstYcbxrlAHb5zJRGShKvFsCseF0cvhgjXJQ9LmtzFrE6pSpOpcaLlQnjHQuA7bPc2aqsbezOmuqzScPElT4FkHiK5lnkDGV5o3VAIVhwzCMxEGPZZeLCjSZbQyZSpOrgaG0KWngueP6qLpRSKvIFYChnCmbX82B8oP1AIef32KmkiKY3tlMtUdyNRRypnT+IPzrOM7Yo3lUL5eJ8DxAOrEa71gimYDVaVM+G4Onjnfl/DxokIlyXSodI3DSlM4NAU8c2b18JtNG3MuCTAI4mMyapmnmMwc9oGCkM6Zp5jLGQWCr60jPo0emB7zEDoCDGdM7PwQLKo82E3DhvZIjPQZ9Mv1Q9LDjgGH6ZmKwr+w4Tvnuhf0+W06OlJyAd0GTns71quIOgIOpfFW6ADx0JMuu67qOyhO0yLWyQ4jROPDoBNWFAsAm1wlhCXrkJsC1OLDXdRz3BN57R5xQjsAkOW0GwIYRx7Pk3r9/v1J2QrqRFi3gF/DbiFOXLkwIMinCeac+j9OgBe6Ecl1UQA826WuO10NpI1M1hX/C3Tp4BL0qtPnMGwtdBf7QlA7MYG8pZOV5zJqkRhsHJ8JV2svP/Zrq7+F8mEp7QdfUfwfnw1PaCyu0WrbC8VJIynvhd622rbB3LBTuPFip1bod5t0NwX1A12o/LgLHx2rkboTZ/VoYB6PA+XIN3OPAt5O0kPZEgPOuopHjwDe9WngndUaAjY/cIKXK+XnANF0L96SuBqqPP7rvelbun99LdZOu1eHEtgaCN7UPaPU6qHdEG32aop3jv9T+lwQ="
+      }
+    }
+  },
+  {
+    "id": "cc3af6cb-8064-4c51-a341-6243fd7cbac6",
+    "referenceId": "MEASURE-4",
+    "displayIdentifier": "MEASURE-4",
+    "title": "AI Measurement Efficacy",
+    "description": null,
+    "subsections": [
+      {
+        "id": "b1d0fec4-04dc-4fcb-8886-95f9272a4888",
+        "referenceId": "MEASURE-4.1",
+        "name": "",
+        "description": "Measurement approaches for identifying AI risks are connected to deployment context(s) and informed through consultation with domain experts and other end users. Approaches are documented.",
+        "programControlMapping": [
+          {
+            "id": "682fd777-aed5-412b-a9f4-864ef1e13aa4",
+            "shortName": "AI-17",
+            "customShortName": null,
+            "name": "AI risk tracking",
+            "description": "AI risks are measured by approaches and metrics defined as part of the company's standard risk assessment process, are planned for implementation and documented in the company's risk register.  Risks that cannot be measured are noted as such in the register, along with potential alternative risk tracking techniques."
+          }
+        ]
+      },
+      {
+        "id": "d863fe58-4885-445a-b6d2-e50bbf08e4f4",
+        "referenceId": "MEASURE-4.2",
+        "name": "",
+        "description": "Measurement results regarding AI system trustworthiness in deployment context(s) and across the AI lifecycle are informed by input from domain experts and relevant AI actors to validate whether the system is performing consistently as intended. Results are documented.",
+        "programControlMapping": [
+          {
+            "id": "2d1c6565-3c81-4f1a-bda6-3d96d038e4df",
+            "shortName": "AI-45",
+            "customShortName": null,
+            "name": "AI system trustworthiness and reliability metrics",
+            "description": "Metrics are defined for the AI system to validate system trustworthiness and reliability, based on inputs from domain experts and relevant AI actors."
+          }
+        ]
+      },
+      {
+        "id": "de7cf3f5-83a2-46b7-bdcd-ba71ef2b1542",
+        "referenceId": "MEASURE-4.3",
+        "name": "",
+        "description": "Measurable performance improvements or declines based on consultations with relevant AI actors, including affected communities, and field data about contextrelevant risks and trustworthiness characteristics are identified and documented.",
+        "programControlMapping": [
+          {
+            "id": "2eca311a-bef2-441c-a761-44e977adf60e",
+            "shortName": "AI-46",
+            "customShortName": null,
+            "name": "Measuring AI system performance",
+            "description": "AI system performance and reliability criteria are measured qualitatively or quantitatively as part of the ongoing system usage in production, and performance improvements are identified and implemented according to the company's product development lifecycle."
+          }
+        ]
+      }
+    ],
+    "programPolicyMapping": [
+      {
+        "id": "c9dd05b4-1977-402e-8454-66df039b25a7",
+        "shortName": "POL-63",
+        "title": "AI Governance Policy",
+        "description": "Establish the objectives, practices, and governance around the use of Artificial Intelligence."
+      },
+      {
+        "id": "6a9928c0-2270-4e62-894b-bc451c6abf9f",
+        "shortName": "POL-64",
+        "title": "AI Risk Management Policy",
+        "description": "A framework for managing AI risk at the company."
+      }
+    ],
+    "_metadata": {
+      "createdDate": "2024-05-13T13:04:56.966Z",
+      "createdBy": {
+        "id": "0ef2f025-46df-47d0-8bcd-11f62aa10612",
+        "name": "System User",
+        "email": "system@trustcloud.ai",
+        "pictureUrl": "data:image/png;base64,UklGRr4FAABXRUJQVlA4TLIFAAAvSoASEIcFIZIkxVbOzGPmJ+d9/1qYcW9tOIgkSZGqe+GZycD718b8PwM5kiRFUmTjMr1WiJV69WM+6CxHkSSpVj68Phdfw5fwbX8ncMfdxzQBTGsPECBAgAAnOMABdjCDA5zgBDtYwQIWMIMZTGACIxjBAAYwgAA9yCCDBBJIIEiPAGAmGlCAEiHgBO+e6sFKuoAiAQJpDygDUCpDSSqAlaMlQCASECkpzUncW7rr1VeECTOBhKSMEFJCoNAdCJRQUAaPSYRUhAQEVKRlVkUJjN5NteE8Vc7K+RiXUpGkEsXq/6fFsOhdbxZ1xrsKoYUNMay7KaHFEthGpTSlpJylsnI2dlUqQpKSPvw1/9x9xg8/aYnv+OEv94OXPnqZT7PlLFvMkuUiWS2xWWK9xmZj2+2fw+HpcDi5G+oJ0pB+7We72/XYq9vswGTQ7DN3nBYkeoZRKUYuJqWZlGbiplyMXZWzIln1lXVZCksg+7az89ZHHL18/7x8frz9/sRoeL/Y2/vX93gP1LZtW9s2urwFnG3hqBDayuOtzMzslbn1VmZmciKzBk6Za23RKzuT9x8tvXotf9q3iP5PgPb/ZG9XW7SZ6mi0o6evfga7owRv0SfVgx6l+oe/Ll158/79+xdXz+yeQvXnvWHTG4DJR17+I+T/vnkIoHlCmHobgF9e2kKlfXMuEB0Iy6QWYNcHof7tGqAzHH2fwJwPoravZkDTQAh04JqouX0UIhNq1gozPoowvp4Ceo1aYZ0twmn9CHpNWmGnLcJq7wS9BjrstEV47Z3Qp6wXdtoizPYcIoOKJkVYZotwWz/RpKgFLBH2N9CpZDzcEOE/CwMKJjWwR9ShPZeogk4o1oN4A72BJkW4KFRa1+PxePy2VQOxg2igHhhVYMXxjRfVvYHeIA2cE8GtZRAbNozhGHDby7p9OX76tiUjdtAaoB/eBbOXsjpteqZicFkI8WYH3r9aEs9hklw7a0Xwy5A1ffMJuGwdBmIJIxED3vjZoMs1cD2YvQTDlB2CZVDImNWp1VD0EadpkRqEYrB3kJMyD8KitOmbX802v+dEpHQQwe9w0JTPrV6VNSUz8J+PBf0y7RxTcIpEADOZNaULPPYRoMtEuS5XvBxnx2KMIEFT4BenU+ZTbstYcbxrlAHb5zJRGShKvFsCseF0cvhgjXJQ9LmtzFrE6pSpOpcaLlQnjHQuA7bPc2aqsbezOmuqzScPElT4FkHiK5lnkDGV5o3VAIVhwzCMxEGPZZeLCjSZbQyZSpOrgaG0KWngueP6qLpRSKvIFYChnCmbX82B8oP1AIef32KmkiKY3tlMtUdyNRRypnT+IPzrOM7Yo3lUL5eJ8DxAOrEa71gimYDVaVM+G4Onjnfl/DxokIlyXSodI3DSlM4NAU8c2b18JtNG3MuCTAI4mMyapmnmMwc9oGCkM6Zp5jLGQWCr60jPo0emB7zEDoCDGdM7PwQLKo82E3DhvZIjPQZ9Mv1Q9LDjgGH6ZmKwr+w4Tvnuhf0+W06OlJyAd0GTns71quIOgIOpfFW6ADx0JMuu67qOyhO0yLWyQ4jROPDoBNWFAsAm1wlhCXrkJsC1OLDXdRz3BN57R5xQjsAkOW0GwIYRx7Pk3r9/v1J2QrqRFi3gF/DbiFOXLkwIMinCeac+j9OgBe6Ecl1UQA826WuO10NpI1M1hX/C3Tp4BL0qtPnMGwtdBf7QlA7MYG8pZOV5zJqkRhsHJ8JV2svP/Zrq7+F8mEp7QdfUfwfnw1PaCyu0WrbC8VJIynvhd622rbB3LBTuPFip1bod5t0NwX1A12o/LgLHx2rkboTZ/VoYB6PA+XIN3OPAt5O0kPZEgPOuopHjwDe9WngndUaAjY/cIKXK+XnANF0L96SuBqqPP7rvelbun99LdZOu1eHEtgaCN7UPaPU6qHdEG32aop3jv9T+lwQ="
+      },
+      "lastModifiedDate": "2024-05-13T13:04:56.966Z",
+      "lastModifiedBy": {
+        "id": "0ef2f025-46df-47d0-8bcd-11f62aa10612",
+        "name": "System User",
+        "email": "system@trustcloud.ai",
+        "pictureUrl": "data:image/png;base64,UklGRr4FAABXRUJQVlA4TLIFAAAvSoASEIcFIZIkxVbOzGPmJ+d9/1qYcW9tOIgkSZGqe+GZycD718b8PwM5kiRFUmTjMr1WiJV69WM+6CxHkSSpVj68Phdfw5fwbX8ncMfdxzQBTGsPECBAgAAnOMABdjCDA5zgBDtYwQIWMIMZTGACIxjBAAYwgAA9yCCDBBJIIEiPAGAmGlCAEiHgBO+e6sFKuoAiAQJpDygDUCpDSSqAlaMlQCASECkpzUncW7rr1VeECTOBhKSMEFJCoNAdCJRQUAaPSYRUhAQEVKRlVkUJjN5NteE8Vc7K+RiXUpGkEsXq/6fFsOhdbxZ1xrsKoYUNMay7KaHFEthGpTSlpJylsnI2dlUqQpKSPvw1/9x9xg8/aYnv+OEv94OXPnqZT7PlLFvMkuUiWS2xWWK9xmZj2+2fw+HpcDi5G+oJ0pB+7We72/XYq9vswGTQ7DN3nBYkeoZRKUYuJqWZlGbiplyMXZWzIln1lXVZCksg+7az89ZHHL18/7x8frz9/sRoeL/Y2/vX93gP1LZtW9s2urwFnG3hqBDayuOtzMzslbn1VmZmciKzBk6Za23RKzuT9x8tvXotf9q3iP5PgPb/ZG9XW7SZ6mi0o6evfga7owRv0SfVgx6l+oe/Ll158/79+xdXz+yeQvXnvWHTG4DJR17+I+T/vnkIoHlCmHobgF9e2kKlfXMuEB0Iy6QWYNcHof7tGqAzHH2fwJwPoravZkDTQAh04JqouX0UIhNq1gozPoowvp4Ceo1aYZ0twmn9CHpNWmGnLcJq7wS9BjrstEV47Z3Qp6wXdtoizPYcIoOKJkVYZotwWz/RpKgFLBH2N9CpZDzcEOE/CwMKJjWwR9ShPZeogk4o1oN4A72BJkW4KFRa1+PxePy2VQOxg2igHhhVYMXxjRfVvYHeIA2cE8GtZRAbNozhGHDby7p9OX76tiUjdtAaoB/eBbOXsjpteqZicFkI8WYH3r9aEs9hklw7a0Xwy5A1ffMJuGwdBmIJIxED3vjZoMs1cD2YvQTDlB2CZVDImNWp1VD0EadpkRqEYrB3kJMyD8KitOmbX802v+dEpHQQwe9w0JTPrV6VNSUz8J+PBf0y7RxTcIpEADOZNaULPPYRoMtEuS5XvBxnx2KMIEFT4BenU+ZTbstYcbxrlAHb5zJRGShKvFsCseF0cvhgjXJQ9LmtzFrE6pSpOpcaLlQnjHQuA7bPc2aqsbezOmuqzScPElT4FkHiK5lnkDGV5o3VAIVhwzCMxEGPZZeLCjSZbQyZSpOrgaG0KWngueP6qLpRSKvIFYChnCmbX82B8oP1AIef32KmkiKY3tlMtUdyNRRypnT+IPzrOM7Yo3lUL5eJ8DxAOrEa71gimYDVaVM+G4Onjnfl/DxokIlyXSodI3DSlM4NAU8c2b18JtNG3MuCTAI4mMyapmnmMwc9oGCkM6Zp5jLGQWCr60jPo0emB7zEDoCDGdM7PwQLKo82E3DhvZIjPQZ9Mv1Q9LDjgGH6ZmKwr+w4Tvnuhf0+W06OlJyAd0GTns71quIOgIOpfFW6ADx0JMuu67qOyhO0yLWyQ4jROPDoBNWFAsAm1wlhCXrkJsC1OLDXdRz3BN57R5xQjsAkOW0GwIYRx7Pk3r9/v1J2QrqRFi3gF/DbiFOXLkwIMinCeac+j9OgBe6Ecl1UQA826WuO10NpI1M1hX/C3Tp4BL0qtPnMGwtdBf7QlA7MYG8pZOV5zJqkRhsHJ8JV2svP/Zrq7+F8mEp7QdfUfwfnw1PaCyu0WrbC8VJIynvhd622rbB3LBTuPFip1bod5t0NwX1A12o/LgLHx2rkboTZ/VoYB6PA+XIN3OPAt5O0kPZEgPOuopHjwDe9WngndUaAjY/cIKXK+XnANF0L96SuBqqPP7rvelbun99LdZOu1eHEtgaCN7UPaPU6qHdEG32aop3jv9T+lwQ="
+      }
+    }
+  }
+]
