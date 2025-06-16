@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-
 {% block title %}Policies Management{% endblock %}
 
 {% block content %}
@@ -11,7 +10,8 @@
         <label for="security-group-filter" class="block text-sm font-medium text-gray-700 mb-2">
             Filter by Security Group:
         </label>
-        <select id="security-group-filter" class="w-full md:w-1/3 p-2 border rounded-md focus:ring-2 focus:ring-blue-500" onchange="filterPolicies()">
+        <select id="security-group-filter"
+            class="w-full md:w-1/3 p-2 border rounded-md focus:ring-2 focus:ring-blue-500" onchange="filterPolicies()">
             <option value="">All Security Groups</option>
             {% for group in security_groups %}
             <option value="{{ group }}">{{ group }}</option>
@@ -24,62 +24,86 @@
         <table class="min-w-full divide-y divide-gray-200">
             <thead class="bg-gray-50">
                 <tr>
-                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Policy Title</th>
-                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Policy ID</th>
-                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Reference</th>
-                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Clauses</th>
-                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Controls</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Policy
+                        Title</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Policy ID
+                    </th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Reference
+                    </th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Clauses
+                    </th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Controls
+                    </th>
                 </tr>
             </thead>
             <tbody class="bg-white divide-y divide-gray-200">
                 {% for group, policies_by_title in grouped_policies.items %}
-                    {% for title, policies in policies_by_title.items %}
-                        {% for policy in policies %}
-                        <tr class="security-group hover:bg-gray-50 cursor-pointer" data-group="{{ group|default:'None' }}"
-                            onclick="openPolicyInNewTab('/api/policy/{{ policy.id }}/')"
-                            onmouseenter="showTooltip(event, '/api/policy/{{ policy.id }}/')"
-                            onmouseleave="hideTooltip()">
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <div class="text-sm font-medium text-gray-900">{{ title|default:"No Title" }}</div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap font-mono">
-                                <div class="text-sm text-gray-900">{{ policy.policy_id }}</div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <div class="text-sm text-gray-500">{{ policy.policy_reference }}</div>
-                            </td>
-                            <td class="px-6 py-4">
-                                <div class="flex flex-wrap gap-1">
-                                    {% for clause in policy.clauses.all %}
-                                    <span class="px-2 py-1 text-xs rounded-full cursor-pointer clause-tooltip"
-                                        data-id="{{ clause.id }}"
-                                        {% cycle 'style=background-color:#FEF3C7;color:#92400E' 'style=background-color:#E0E7FF;color:#3730A3' 'style=background-color:#FCE7F3;color:#9D174D' as tagcolors %}>
-                                        {{ clause.display_identifier }}
-                                    </span>
-                                    {% empty %}
-                                    <span class="text-gray-400 text-xs">-</span>
-                                    {% endfor %}
-                                </div>
-                            </td>
-                            <td class="px-6 py-4">
-                                <div class="flex flex-wrap gap-1">
-                                    {% for control in policy.controls.all %}
-                                    <span class="px-2 py-1 text-xs rounded-full cursor-pointer control-tooltip"
-                                        data-id="{{ control.id }}"
-                                        {% cycle 'style=background-color:#FECACA;color:#991B1B' 'style=background-color:#CCFBF1;color:#134E4A' 'style=background-color:#FED7AA;color:#9A3412' as controlcolors %}>
-                                        {{ control.short_name }}
-                                    </span>
-                                    {% empty %}
-                                    <span class="text-gray-400 text-xs">-</span>
-                                    {% endfor %}
-                                </div>
-                            </td>
-                        </tr>
-                        {% endfor %}
-                    {% endfor %}
+                {% for title, policies in policies_by_title.items %}
+                {% for policy in policies %}
+                <tr class="security-group hover:bg-gray-50" data-group="{{ group|default:'None' }}">
+
+                    <!-- Title -->
+                    <td class="px-6 py-4 whitespace-nowrap">
+                        <div class="text-sm font-medium text-gray-900">{{ title|default:"No Title" }}</div>
+                    </td>
+
+                    <!-- Policy ID (hover & click) -->
+                    <td class="px-6 py-4 whitespace-nowrap font-mono relative cursor-pointer"
+                        onmouseenter="showTooltip(event, '/api/policy/{{ policy.id }}/')" onmouseleave="hideTooltip()"
+                        onclick="openPolicyInNewTab('/api/policy/{{ policy.id }}/')">
+                        <div>
+                            {{ policy.policy_id }}
+                        </div>
+
+                    </td>
+
+                    <!-- Reference -->
+                    <td class="px-6 py-4 whitespace-nowrap">
+                        <div class="text-sm text-gray-500">{{ policy.policy_reference }}</div>
+                    </td>
+
+                    <!-- Clauses -->
+                    <td class="px-6 py-4">
+                        <div class="flex flex-wrap gap-1">
+                            {% for clause in policy.clauses.all %}
+                            <span class="px-2 py-1 text-xs rounded-full cursor-pointer"
+                                onclick="openClauseInNewTab(event, '{{ clause.id }}')"
+                                onmouseenter="showTooltip(event, '/api/clause/{{ clause.id }}/')"
+                                onmouseleave="hideTooltip()" {%
+                                cycle 'style=background-color:#FEF3C7;color:#92400E' 'style=background-color:#E0E7FF;color:#3730A3' 'style=background-color:#FCE7F3;color:#9D174D'
+                                as tagcolors %}>
+                                {{ clause.display_identifier }}
+                            </span>
+                            {% empty %}
+                            <span class="text-gray-400 text-xs">-</span>
+                            {% endfor %}
+                        </div>
+                    </td>
+
+                    <!-- Controls (fix click here) -->
+                    <td class="px-6 py-4">
+                        <div class="flex flex-wrap gap-1">
+                            {% for control in policy.controls.all %}
+                            <span class="px-2 py-1 text-xs rounded-full cursor-pointer"
+                                onclick="openControlInNewTab(event, '{{ control.id }}')"
+
+                                onmouseenter="showTooltip(event, '/api/control/{{ control.id }}/')"
+                                onmouseleave="hideTooltip()" {%
+                                cycle 'style=background-color:#FECACA;color:#991B1B' 'style=background-color:#CCFBF1;color:#134E4A' 'style=background-color:#FED7AA;color:#9A3412'
+                                as controlcolors %}>
+                                {{ control.short_name }}
+                            </span>
+                            {% empty %}
+                            <span class="text-gray-400 text-xs">-</span>
+                            {% endfor %}
+                        </div>
+                    </td>
+                </tr>
+                {% endfor %}
+                {% endfor %}
                 {% empty %}
                 <tr>
-                    <td colspan="6" class="px-6 py-4 text-center text-gray-500">No policies found</td>
+                    <td colspan="5" class="px-6 py-4 text-center text-gray-500">No policies found</td>
                 </tr>
                 {% endfor %}
             </tbody>
@@ -87,130 +111,129 @@
     </div>
 </div>
 
-<!-- Tooltip Container -->
-<div id="tooltip-popup" class="hidden absolute bg-white border border-gray-300 shadow-lg rounded-lg p-3 text-sm z-50 max-w-xs">
+<!-- Tooltip -->
+<div id="tooltip-popup"
+    class="hidden absolute bg-white border border-gray-300 shadow-lg rounded-lg p-3 text-sm z-50 max-w-xs">
     <div id="tooltip-loader" class="text-gray-400 italic">Loading...</div>
     <div id="tooltip-content" class="hidden"></div>
 </div>
 
-<!-- JS -->
 <script>
-function filterPolicies() {
-    const filter = document.getElementById('security-group-filter').value;
-    const rows = document.querySelectorAll('.security-group');
-    rows.forEach(row => {
-        row.style.display = !filter || row.dataset.group === filter ? '' : 'none';
-    });
-}
-
-const tooltip = document.getElementById('tooltip-popup');
-const loader = document.getElementById('tooltip-loader');
-const content = document.getElementById('tooltip-content');
-
-function showTooltip(evt, url) {
-    tooltip.classList.remove('hidden');
-    tooltip.style.top = (evt.pageY + 12) + 'px';
-    tooltip.style.left = (evt.pageX + 12) + 'px';
-    loader.classList.remove('hidden');
-    content.classList.add('hidden');
-    loader.innerText = "Loading...";
-
-    fetch(url)
-        .then(res => {
-            if (!res.ok) throw new Error("Failed to fetch data");
-            return res.json();
-        })
-        .then(data => {
-            loader.classList.add('hidden');
-            content.classList.remove('hidden');
-            content.innerHTML = `
-                <div class="font-semibold text-gray-700 mb-1">${data["Title"] || "No Title"}</div>
-                <div class="text-xs text-gray-600 mb-1"><strong>Policy ID:</strong> ${data["Policy ID"]}</div>
-                <div class="text-xs text-gray-600 mb-1"><strong>Reference:</strong> ${data["Reference"]}</div>
-                <div class="text-xs text-gray-600 mb-1"><strong>Version:</strong> ${data["Version"] || "N/A"}</div>
-                <div class="text-xs text-gray-600 mb-1"><strong>Security Group:</strong> ${data["Security Group"] || "N/A"}</div>
-                <div class="text-xs text-gray-600 mb-2"><strong>Description:</strong> ${data["Description"] || "N/A"}</div>
-                <div class="text-xs text-gray-600"><strong>Clauses:</strong> ${data["Clauses"]?.join(", ") || "-"}</div>
-                <div class="text-xs text-gray-600"><strong>Controls:</strong> ${data["Controls"]?.join(", ") || "-"}</div>
-            `;
-        })
-        .catch(() => {
-            loader.innerText = "Error loading data";
+    function filterPolicies() {
+        const filter = document.getElementById('security-group-filter').value;
+        document.querySelectorAll('.security-group').forEach(row => {
+            row.style.display = !filter || row.dataset.group === filter ? '' : 'none';
         });
-}
+    }
 
-function hideTooltip() {
-    tooltip.classList.add('hidden');
-    content.innerHTML = '';
-}
+    const tooltip = document.getElementById('tooltip-popup');
+    const loader = document.getElementById('tooltip-loader');
+    const content = document.getElementById('tooltip-content');
 
-function openPolicyInNewTab(url) {
-    fetch(url)
-        .then(res => {
-            if (!res.ok) throw new Error("Failed to fetch");
-            return res.json();
-        })
-        .then(data => {
-            const newWindow = window.open("", "_blank");
-            const html = `
-                <!DOCTYPE html>
-                <html lang="en">
-                <head>
-                    <meta charset="UTF-8">
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <title>${data["Title"] || "Policy Details"}</title>
-                    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-                </head>
-                <body class="bg-gray-100 font-sans leading-relaxed tracking-wide text-gray-800">
-                    <div class="min-h-screen flex items-center justify-center p-6">
-                        <div class="max-w-4xl w-full bg-white rounded-xl shadow-lg p-8">
-                            <h1 class="text-2xl font-bold text-blue-700 mb-2">${data["Title"] || "Untitled Policy"}</h1>
-                            <p class="text-gray-600 mb-4 italic">${data["Description"] || "No description provided."}</p>
+    function showTooltip(evt, url) {
+        tooltip.classList.remove('hidden');
+        tooltip.style.top = (evt.pageY + 10) + 'px';
+        tooltip.style.left = (evt.pageX + 10) + 'px';
+        loader.classList.remove('hidden');
+        content.classList.add('hidden');
+        loader.innerText = "Loading...";
 
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                                <div>
-                                    <p><span class="font-semibold">Policy ID:</span> ${data["Policy ID"]}</p>
-                                    <p><span class="font-semibold">Reference:</span> ${data["Reference"]}</p>
-                                    <p><span class="font-semibold">Version:</span> ${data["Version"] || "N/A"}</p>
-                                </div>
-                                <div>
-                                    <p><span class="font-semibold">Security Group:</span> ${data["Security Group"] || "N/A"}</p>
-                                    <p><span class="font-semibold">Total Clauses:</span> ${(data["Clauses"] || []).length}</p>
-                                    <p><span class="font-semibold">Total Controls:</span> ${(data["Controls"] || []).length}</p>
-                                </div>
-                            </div>
+        fetch(url)
+            .then(res => {
+                if (!res.ok) throw new Error("Fetch failed");
+                return res.json();
+            })
+            .then(data => {
+                loader.classList.add('hidden');
+                content.classList.remove('hidden');
+                content.innerHTML = generateTooltipHTML(data);
+            })
+            .catch(() => {
+                loader.innerText = "Failed to load";
+            });
+    }
 
-                            <div class="mb-6">
-                                <h2 class="text-xl font-semibold mb-2 text-gray-700">Clauses</h2>
-                                <ul class="list-disc list-inside bg-gray-50 rounded-md p-4">
-                                    ${(data["Clauses"] || []).map(clause => `<li>${clause}</li>`).join('') || '<li class="text-gray-400">No clauses</li>'}
-                                </ul>
-                            </div>
+    function hideTooltip() {
+        tooltip.classList.add('hidden');
+        content.innerHTML = '';
+    }
 
-                            <div>
-                                <h2 class="text-xl font-semibold mb-2 text-gray-700">Controls</h2>
-                                <ul class="list-disc list-inside bg-gray-50 rounded-md p-4">
-                                    ${(data["Controls"] || []).map(control => `<li>${control}</li>`).join('') || '<li class="text-gray-400">No controls</li>'}
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </body>
-                </html>`;
-            newWindow.document.write(html);
-            newWindow.document.close();
-        })
-        .catch(() => alert("Unable to load policy details."));
-}
+    function generateTooltipHTML(data) {
+        return `
+    <div class="font-semibold text-gray-700 mb-1">${data.title || data.Title || data.short_name || "Details"}</div>
+    ${data.reference_id ? `<div class="text-xs text-gray-600"><strong>Reference ID:</strong> ${data.reference_id}</div>` : ''}
+    ${data.display_identifier ? `<div class="text-xs text-gray-600"><strong>Identifier:</strong> ${data.display_identifier}</div>` : ''}
+    ${data.description ? `<div class="text-xs text-gray-600"><strong>Description:</strong> ${data.description}</div>` : ''}
+    ${data.original_id ? `<div class="text-xs text-gray-600"><strong>Original ID:</strong> ${data.original_id}</div>` : ''}
+    ${data.created_at ? `<div class="text-xs text-gray-600"><strong>Created:</strong> ${new Date(data.created_at).toLocaleString()}</div>` : ''}
+    ${data.updated_at ? `<div class="text-xs text-gray-600"><strong>Updated:</strong> ${new Date(data.updated_at).toLocaleString()}</div>` : ''}
+  `;
+    }
 
+    function openPolicyInNewTab(url) {
+        fetch(url)
+            .then(res => res.json())
+            .then(data => {
+                const newWindow = window.open("", "_blank");
+                const html = `
+        <html>
+          <head>
+            <title>${data["Title"] || "Policy Detail"}</title>
+            <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+          </head>
+          <body class="bg-gray-100 font-sans">
+            <div class="max-w-4xl mx-auto my-10 bg-white p-8 rounded shadow">
+              <h1 class="text-2xl font-bold mb-2 text-blue-700">${data["Title"] || "Untitled"}</h1>
+              <p class="text-gray-600 mb-4">${data["Description"] || "No description"}</p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <p><strong>Policy ID:</strong> ${data["Policy ID"]}</p>
+                  <p><strong>Reference:</strong> ${data["Reference"]}</p>
+                  <p><strong>Version:</strong> ${data["Version"]}</p>
+                </div>
+                <div>
+                  <p><strong>Security Group:</strong> ${data["Security Group"]}</p>
+                  <p><strong>Clauses:</strong> ${(data["Clauses"] || []).length}</p>
+                  <p><strong>Controls:</strong> ${(data["Controls"] || []).length}</p>
+                </div>
+              </div>
+              <div class="mt-6">
+                <h2 class="text-xl font-semibold mb-2">Clauses</h2>
+                <ul class="list-disc pl-6 bg-gray-50 p-4 rounded">
+                  ${(data["Clauses"] || []).map(c => `<li>${c}</li>`).join('') || "<li>No clauses</li>"}
+                </ul>
+              </div>
+              <div class="mt-6">
+                <h2 class="text-xl font-semibold mb-2">Controls</h2>
+                <ul class="list-disc pl-6 bg-gray-50 p-4 rounded">
+                  ${(data["Controls"] || []).map(c => `<li>${c}</li>`).join('') || "<li>No controls</li>"}
+                </ul>
+              </div>
+            </div>
+          </body>
+        </html>`;
+                newWindow.document.write(html);
+                newWindow.document.close();
+            });
+    }
+
+    function openClauseInNewTab(event, id) {
+        event.stopPropagation();
+        window.open(`/clause/${id}/`, '_blank');
+    }
+
+    function openControlInNewTab(event, id) {
+        event.stopPropagation();
+        window.open(`/control/${id}/`, '_blank');
+    }
 </script>
 
 <style>
-#tooltip-popup {
-    pointer-events: none;
-    position: absolute;
-    transition: opacity 0.2s ease;
-    background-color: #fff;
-}
+    #tooltip-popup {
+        pointer-events: none;
+        position: absolute;
+        transition: opacity 0.2s ease;
+        background-color: #fff;
+    }
 </style>
 {% endblock %}

@@ -368,6 +368,7 @@ def control_detail_api(request, control_id):
         "short_name": control.short_name,
         "name": control.name,
         "description": control.description,
+        "original_id": control.original_id,
     })
     
 
