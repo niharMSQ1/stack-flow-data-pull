@@ -389,3 +389,7 @@ def policy_detail_api(request, policy_id):
         "Controls": [control.short_name for control in policy.controls.all()],
     }
     return JsonResponse(data)
+
+def control_detail(request, id):
+    control = get_object_or_404(Control, id=id)
+    return render(request, 'control_detail.html', {'control': control})
