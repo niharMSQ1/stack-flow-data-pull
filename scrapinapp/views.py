@@ -370,3 +370,21 @@ def control_detail_api(request, control_id):
         "description": control.description,
     })
     
+
+def policy_detail_api(request, policy_id):
+    try:
+        policy = Policy.objects.select_related().prefetch_related('clauses', 'controls').get(pk=policy_id)
+    except Policy.DoesNotExist:
+        raise Http404("Policy not found")
+
+    data = {
+        "Policy ID": policy.policy_id,
+        "Title": policy.title,
+        "Reference": policy.policy_reference,
+        "Version": policy.policy_version,
+        "Description": policy.policy_doc,
+        "Security Group": policy.security_group,
+        "Clauses": [clause.display_identifier for clause in policy.clauses.all()],
+        "Controls": [control.short_name for control in policy.controls.all()],
+    }
+    return JsonResponse(data)

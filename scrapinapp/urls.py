@@ -10,5 +10,5 @@ urlpatterns = [
     path('policies/', policies_view, name='policies'),
     path('api/clause/<int:clause_id>/', clause_detail_api, name='clause-detail-api'),
     path('api/control/<int:control_id>/', control_detail_api, name='control-detail-api'),
-    
+    path('api/policy/<int:policy_id>/', policy_detail_api, name='policy_detail_api'),
 ]
