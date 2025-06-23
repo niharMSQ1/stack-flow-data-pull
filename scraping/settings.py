@@ -82,14 +82,29 @@ WSGI_APPLICATION = 'scraping.wsgi.application'
 # }
 
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'scrap',
+#         'USER': 'your_user',
+#         'PASSWORD': 'your_pass',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'scrap',
-        'USER': 'your_user',
-        'PASSWORD': 'your_pass',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'USER': 'sq1cloud',
+        'PASSWORD': '$q1Cloud@123',
+        'HOST': '192.168.6.13',
+        'PORT': '3306',  # Default MySQL port
+        'OPTIONS': {
+            'charset': 'utf8mb4',  # For full Unicode support
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",  # Enable strict mode
+        },
     }
 }
 

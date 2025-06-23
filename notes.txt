@@ -1,0 +1,4 @@
+eramba-controls = https://www.eramba.org/api/proxy?endpoint=security-services
+eramba-frameworks = https://www.eramba.org/api/proxy?endpoint=compliance-package-regulators
+eramba frameworks = print(json.loads(req._content).get("data"))
+print(json.dumps(req._content))

@@ -1,15 +1,15 @@
-import asyncio
+import asyncio, requests
 from django.http import JsonResponse, Http404
 from django.views.decorators.http import require_http_methods
 from pathlib import Path
 from django.conf import settings
-from .utils import capture_sections_for_all_links
+from .utils import capture_sections_for_all_links, fetch_policies_parallel
 from .models import Certification, Clause, Policy, Control
 from django.db import transaction
 import json
 from playwright.sync_api import sync_playwright
 from playwright.async_api import async_playwright
-
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from django.views.decorators.csrf import csrf_exempt
 
@@ -393,3 +393,72 @@ def policy_detail_api(request, policy_id):
 def control_detail(request, id):
     control = get_object_or_404(Control, id=id)
     return render(request, 'control_detail.html', {'control': control})
+
+
+@csrf_exempt
+def pulling_policies_from_eramba(request):
+    """API endpoint to fetch policies from eramba"""
+    policies = fetch_policies_parallel()
+    return JsonResponse({
+        "message": f"Successfully pulled {len(policies)} policies",
+        "policies": policies,
+        "policies_count": len(policies)
+    }, status=200)
+
+@csrf_exempt
+def pulling_eramba_frameworkds(request):
+    url = "https://www.eramba.org/api/proxy?endpoint=compliance-package-regulators"
+    new_certifications = []
+    updated_certifications = []
+
+    try:
+        response = requests.get(url, timeout=10)
+        response.raise_for_status()
+    except requests.exceptions.Timeout:
+        return JsonResponse({"error": "Request to Eramba timed out."}, status=504)
+    except requests.exceptions.RequestException as e:
+        return JsonResponse({"error": f"Request failed: {str(e)}"}, status=500)
+
+    try:
+        content = response.json()
+        data = content.get("data", [])
+    except (ValueError, json.JSONDecodeError):
+        return JsonResponse({"error": "Invalid JSON response from Eramba."}, status=502)
+
+    for item in data:
+        name = item.get("name")
+        description = item.get("description")
+        created_at = item.get("created")
+        version = item.get("version")
+        frameworkUrl = item.get("url")
+        regulation_name = item.get("regulation_name")
+
+        try:
+            existing = Certification.objects.filter(name=name).first()
+            if not existing:
+                Certification.objects.create(
+                    name=name,
+                    slug=name.lower().replace(" ", "-"),
+                    description=description,
+                    url=frameworkUrl,
+                    version=version,
+                    regulation_name=regulation_name,
+                    created_at=created_at,
+                    updated_at=None
+                )
+                new_certifications.append(name)
+            else:
+                existing.version = version
+                existing.description = description
+                existing.url = frameworkUrl
+                existing.regulation_name = regulation_name
+                existing.save()
+                updated_certifications.append(name)
+        except Exception as db_error:
+            print(f"Error processing certification '{name}': {str(db_error)}")
+
+    return JsonResponse({
+        "message": "Successfully pulled Eramba frameworks.",
+        "new_certifications": new_certifications,
+        "updated_certifications": updated_certifications
+    })
