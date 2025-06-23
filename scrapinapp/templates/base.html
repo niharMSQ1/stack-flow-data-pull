@@ -1,139 +1,154 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>{% block title %}SQ1{% endblock %}</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-</head>
-<body class="bg-gray-100 font-sans">
-
-<!-- Loader -->
-<div id="preloader" style="position:fixed; top:0; left:0; width:100vw; height:100vh; background:#87CEEB; z-index:9999; display:none;">
-  <!-- Loading Text -->
-  <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-               font-size: 24px; font-weight: bold; color: white; text-shadow: 0 0 5px black; z-index: 10;">
-    Loading...
-  </div>
-
-  <!-- Sun -->
-  <div style="position:absolute; top:40px; right:100px; width:80px; height:80px; background:#FFD700; border-radius:50%; box-shadow:0 0 40px #FFD700; z-index:0;"></div>
-
-  <!-- Birds -->
-  <div style="position:absolute; top:90px; left:60px; font-size:22px; animation: fly 10s linear infinite; z-index:2;">🕊️ 🕊️ 🕊️</div>
-
-  <!-- Mountains -->
-  <div style="position:absolute; bottom:150px; width:100%; height:180px; background:linear-gradient(to top, #6B8E23, #556B2F); clip-path: polygon(0 100%, 10% 50%, 20% 100%, 30% 40%, 40% 100%, 50% 30%, 60% 100%, 70% 60%, 80% 100%, 90% 50%, 100% 100%); z-index:1;"></div>
-
-  <!-- Houses -->
-  <div style="position:absolute; bottom:150px; left:40px; width:40px; height:30px; background:#8B4513; z-index:2;"></div>
-  <div style="position:absolute; bottom:180px; left:35px; width:0; height:0; border-left:25px solid transparent; border-right:25px solid transparent; border-bottom:20px solid #A0522D; z-index:2;"></div>
-  <div style="position:absolute; bottom:160px; left:150px; width:50px; height:35px; background:#D2691E; z-index:2;"></div>
-  <div style="position:absolute; bottom:195px; left:145px; width:0; height:0; border-left:30px solid transparent; border-right:30px solid transparent; border-bottom:20px solid #CD853F; z-index:2;"></div>
-  <div style="position:absolute; bottom:150px; right:100px; width:45px; height:32px; background:#BC8F8F; z-index:2;"></div>
-  <div style="position:absolute; bottom:182px; right:95px; width:0; height:0; border-left:25px solid transparent; border-right:25px solid transparent; border-bottom:20px solid #A0522D; z-index:2;"></div>
-
-  <!-- River -->
-  <div style="position:absolute; bottom:90px; width:100%; height:50px; overflow:hidden; z-index:3;">
-    <div style="width:200%; height:100%; background:repeating-linear-gradient(135deg, #1E90FF 0 20px, #00BFFF 20px 40px); animation: wave 4s linear infinite;"></div>
-  </div>
-
-  <!-- Road -->
-  <div style="position:absolute; bottom:30px; width:100%; height:60px; background:#2F4F4F; z-index:4;"></div>
-
-  <!-- Car -->
-  <div style="position:absolute; bottom:30px; left:-140px; width:120px; height:50px; animation: drive 8s linear infinite; z-index:5;">
-    <div style="position:relative; width:120px; height:30px; background:#ff3333; border-radius:10px 10px 4px 4px;">
-      <div style="position:absolute; top:-20px; left:25px; width:70px; height:20px; background:#ff3333; border-radius:5px 5px 0 0;"></div>
-      <div style="position:absolute; top:-18px; left:30px; width:25px; height:15px; background:#d0f0ff; border-radius:3px;"></div>
-      <div style="position:absolute; top:-18px; right:30px; width:25px; height:15px; background:#d0f0ff; border-radius:3px;"></div>
-      <div style="width:25px; height:25px; background:#000; border-radius:50%; position:absolute; bottom:-12px; left:10px;"></div>
-      <div style="width:25px; height:25px; background:#000; border-radius:50%; position:absolute; bottom:-12px; right:10px;"></div>
-    </div>
-  </div>
-
-  <!-- People Walking -->
-  <div style="position:absolute; bottom:95px; left:-60px; font-size:24px; animation: walk 12s linear infinite; z-index:6;">
-    <span style="animation: legwalk 1s infinite;">🚶</span>
-    <span style="animation: legwalk 1.2s infinite;">🚶‍♀️</span>
-    <span style="animation: legwalk 1.4s infinite;">🚶‍♂️</span>
-  </div>
-  <div style="position:absolute; bottom:95px; right:-60px; font-size:24px; animation: walk-reverse 14s linear infinite; z-index:6;">
-    <span style="animation: legwalk 1s infinite;">🚶‍♂️</span>
-    <span style="animation: legwalk 1.3s infinite;">🚶‍♀️</span>
-    <span style="animation: legwalk 1.6s infinite;">🚶</span>
-  </div>
-</div>
-
-<!-- Animations -->
-<style>
-@keyframes drive { 0% { left: -140px; } 100% { left: 110%; } }
-@keyframes fly { 0% { left: -100px; } 100% { left: 110%; } }
-@keyframes walk { 0% { left: -60px; } 100% { left: 110%; } }
-@keyframes walk-reverse { 0% { right: -60px; } 100% { right: 110%; } }
-@keyframes wave { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-@keyframes legwalk { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(2px); } }
-</style>
-
-<!-- Header -->
-<header class="bg-white text-gray-800 p-4 flex items-center justify-between fixed top-0 left-0 w-full z-50 shadow">
-  <div class="flex items-center gap-4">
-    <img src="{% static 'images/1731000892786.svg' %}" alt="Logo" class="h-10 w-auto object-contain" />
-    <div>
-      <div class="text-xl font-semibold leading-none">
-        <span class="text-purple-500">SQ</span><span class="text-pink-400">1</span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}SQ1{% endblock %}</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100 font-sans">
+    <!-- Simplified Loader -->
+    <div
+      id="preloader"
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.8);
+        z-index: 9999;
+        display: none;
+      "
+    >
+      <div
+        style="
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          text-align: center;
+        "
+      >
+        <div
+          class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500 mx-auto"
+        ></div>
+        <p class="mt-4 text-gray-700 font-medium">Loading...</p>
       </div>
-      <div class="text-sm text-gray-600">nxtgen cybersecurity</div>
     </div>
-  </div>
-  <div class="flex gap-3">
-    <button onclick="syncData()" class="bg-blue-100 text-blue-800 font-semibold px-4 py-2 rounded hover:bg-blue-200 transition">SYNC DATA</button>
-    <a href="#" onclick="showLoaderAndGo('{% url 'certifications' %}')" class="bg-purple-100 text-purple-800 font-semibold px-4 py-2 rounded hover:bg-purple-200 transition">CERTIFICATIONS</a>
-    <a href="#" onclick="showLoaderAndGo('{% url 'policies' %}')" class="bg-green-100 text-green-800 font-semibold px-4 py-2 rounded hover:bg-green-200 transition">POLICIES</a>
-    <button onclick="showSection('controls-section')" class="bg-pink-100 text-pink-800 font-semibold px-4 py-2 rounded hover:bg-pink-200 transition">CONTROLS</button>
-  </div>
-</header>
 
-<!-- Main -->
-<main class="container mx-auto px-4 pt-24 pb-24">
-  {% block content %}{% endblock %}
-</main>
+    <!-- Header -->
+    <header
+      class="bg-white text-gray-800 p-4 flex items-center justify-between fixed top-0 left-0 w-full z-50 shadow"
+    >
+      <div class="flex items-center gap-4">
+        <img
+          src="{% static 'images/1731000892786.svg' %}"
+          alt="Logo"
+          class="h-10 w-auto object-contain"
+        />
+        <div>
+          <div class="text-xl font-semibold leading-none">
+            <span class="text-purple-500">SQ</span
+            ><span class="text-pink-400">1</span>
+          </div>
+          <div class="text-sm text-gray-600">nxtgen cybersecurity</div>
+        </div>
+      </div>
+      <div class="flex gap-3">
+        <button
+          onclick="syncData()"
+          class="bg-blue-100 text-blue-800 font-semibold px-4 py-2 rounded hover:bg-blue-200 transition"
+        >
+          SYNC DATA
+        </button>
+        <a
+          href="#"
+          onclick="handleNavigation('{% url 'certifications' %}')"
+          class="bg-purple-100 text-purple-800 font-semibold px-4 py-2 rounded hover:bg-purple-200 transition"
+          >CERTIFICATIONS</a
+        >
+        <a
+          href="#"
+          onclick="handleNavigation('{% url 'policies' %}')"
+          class="bg-green-100 text-green-800 font-semibold px-4 py-2 rounded hover:bg-green-200 transition"
+          >POLICIES</a
+        >
+        <button
+          onclick="showSection('controls-section')"
+          class="bg-pink-100 text-pink-800 font-semibold px-4 py-2 rounded hover:bg-pink-200 transition"
+        >
+          CONTROLS
+        </button>
+      </div>
+    </header>
 
-<!-- Footer -->
-<footer class="bg-gray-800 text-white p-4 text-center fixed bottom-0 left-0 w-full z-50 shadow">
-  <p>&copy; 2025 SQ1 Security</p>
-</footer>
+    <!-- Main -->
+    <main class="container mx-auto px-4 pt-24 pb-24">
+      {% block content %}{% endblock %}
+    </main>
 
-<!-- JavaScript -->
-<script>
-function showSection(sectionId) {
-  ['certifications-section', 'policies-section', 'controls-section'].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) el.classList.add('hidden');
-  });
-  const active = document.getElementById(sectionId);
-  if (active) active.classList.remove('hidden');
-}
+    <!-- Footer -->
+    <footer
+      class="bg-gray-800 text-white p-4 text-center fixed bottom-0 left-0 w-full z-50 shadow"
+    >
+      <p>&copy; 2025 SQ1 Security</p>
+    </footer>
 
-function syncData() {
-  fetch('/get-certfications')
-    .then(res => res.json())
-    .then(data => alert(data.message || "Sync complete"))
-    .catch(() => alert("Sync failed"));
-}
+    <!-- JavaScript -->
+    <script>
+      function showSection(sectionId) {
+        [
+          "certifications-section",
+          "policies-section",
+          "controls-section",
+        ].forEach((id) => {
+          const el = document.getElementById(id);
+          if (el) el.classList.add("hidden");
+        });
+        const active = document.getElementById(sectionId);
+        if (active) active.classList.remove("hidden");
+      }
 
-function showLoaderAndGo(url) {
-  document.getElementById('preloader').style.display = 'block';
-  setTimeout(() => {
-    window.location.href = url;
-  }, 1000);
-}
+      function syncData() {
+        const loader = document.getElementById("preloader");
+        loader.style.display = "block";
 
-document.addEventListener('DOMContentLoaded', () => {
-  showSection('certifications-section');
-});
-</script>
+        setTimeout(() => {
+          loader.style.display = "none";
+          alert("Sync button clicked - no operation performed");
+        }, 5000);
+      }
 
-</body>
+      function handleNavigation(url) {
+        const loader = document.getElementById("preloader");
+        loader.style.display = "block";
+
+        const timeout = setTimeout(() => {
+          loader.style.display = "none";
+          window.location.href = "/certifications";
+        }, 5000);
+
+        fetch(url)
+          .then((response) => {
+            clearTimeout(timeout);
+            loader.style.display = "none";
+            window.location.href = url;
+          })
+          .catch(() => {
+            clearTimeout(timeout);
+            loader.style.display = "none";
+            window.location.href = "/certifications";
+          });
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        showSection("certifications-section");
+      });
+    </script>
+  </body>
 </html>
