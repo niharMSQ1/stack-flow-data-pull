@@ -15,4 +15,6 @@ urlpatterns = [
     path('api/policy/<int:policy_id>/', policy_detail_api, name='policy_detail_api'),
     path('control/<int:id>/', control_detail, name='control_detail'),
     path("api/policy/<int:policy_id>/template/", policy_template_view, name="policy_template_view"),
+    path("get-eramaba-clauses/",get_eramba_clauses),
+    path("get-eramaba-controls/",get_eramba_controls),
 ]
