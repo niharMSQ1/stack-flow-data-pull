@@ -6,11 +6,15 @@ urlpatterns = [
     path("populate-database", populate_database),
     path("map-controls-with-policy", map_controls_with_policy),
     path('certifications/', certifications_view, name='certifications'),
+    path('pulling_eramba_certifications/', pulling_eramba_frameworkds),
     path('clause/<int:clause_id>/', clause_detail_view, name='clause_detail'),
+    path("ingest-eramba-policies/", ingest_eramba_policies_view),
     path('policies/', policies_view, name='policies'),
     path('api/clause/<int:clause_id>/', clause_detail_api, name='clause-detail-api'),
     path('api/control/<int:control_id>/', control_detail_api, name='control-detail-api'),
     path('api/policy/<int:policy_id>/', policy_detail_api, name='policy_detail_api'),
-    path('control/<int:id>/', control_detail, name='control_detail')
-
+    path('control/<int:id>/', control_detail, name='control_detail'),
+    path("api/policy/<int:policy_id>/template/", policy_template_view, name="policy_template_view"),
+    path("get-eramaba-clauses/",get_eramba_clauses),
+    path("get-eramaba-controls/",get_eramba_controls),
 ]
