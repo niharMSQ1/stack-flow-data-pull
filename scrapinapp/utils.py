@@ -4,6 +4,11 @@ from pathlib import Path
 from urllib.parse import urlparse
 from .models import *
 from playwright.async_api import async_playwright
+import requests
+import json
+from django.utils.timezone import now
+from bs4 import BeautifulSoup
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 RAW_JSON_PATH = "raw_cert_links.json"
 OUTPUT_DIR = Path("sections_output")
@@ -100,3 +105,129 @@ async def capture_sections_for_all_links():
         await browser.close()
 
     return results
+
+
+MAX_POLICIES = 26
+BASE_URL = "https://www.eramba.org/api/proxy?endpoint=security-policies&action=show&id={}"
+
+def html_to_json(html_content):
+    """Convert HTML policy content to structured JSON"""
+    soup = BeautifulSoup(html_content, 'html.parser')
+    result = {}
+    current_section = None
+    
+    # Remove all <br> tags and replace with newlines
+    for br in soup.find_all('br'):
+        br.replace_with('\n')
+    
+    for element in soup.find_all(['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'ul', 'li']):
+        if element.name.startswith('h'):
+            # New section found
+            current_section = element.get_text().strip()
+            result[current_section] = []
+        elif current_section:
+            if element.name == 'ul':
+                # Handle unordered lists
+                list_items = [li.get_text().strip() for li in element.find_all('li')]
+                result[current_section].extend(list_items)
+            elif element.name == 'li':
+                # Handle standalone list items
+                result[current_section].append(element.get_text().strip())
+            elif element.name == 'p':
+                # Handle paragraphs
+                text = element.get_text().strip()
+                if text:
+                    result[current_section].append(text)
+    
+    # Convert lists to strings with bullet points
+    for section, content in result.items():
+        if all(isinstance(item, str) for item in content):
+            result[section] = '\n'.join(f"• {item}" if i > 0 and not item.startswith('•') else item 
+                                      for i, item in enumerate(content))
+    
+    return result
+
+def fetch_policy(policy_id):
+    """Fetch and process a single policy"""
+    try:
+        url = BASE_URL.format(policy_id)
+        response = requests.get(url, timeout=10)
+        if response.status_code == 200:
+            try:
+                # Try to parse as JSON first
+                data = response.json()
+                if isinstance(data, dict):
+                    return data
+                # If not JSON, treat as HTML
+                return {
+                    "title": "IT Security Policy",  # Default title
+                    "description": html_to_json(response.text)
+                }
+            except ValueError:
+                return {
+                    "title": "IT Security Policy",
+                    "description": html_to_json(response.text)
+                }
+    except Exception:
+        return None
+    return None
+
+def fetch_policies_parallel():
+    """Fetch policies in parallel"""
+    with ThreadPoolExecutor(max_workers=10) as executor:
+        futures = {executor.submit(fetch_policy, i): i for i in range(10, 101)}
+        
+        policies = []
+        for future in as_completed(futures):
+            policy_data = future.result()
+            if policy_data:
+                policies.append(policy_data)
+                if len(policies) >= MAX_POLICIES:
+                    for f in futures:
+                        f.cancel()
+                    break
+    return policies
+
+
+def ingest_policies_from_eramba(api_url):
+    response = requests.get(api_url)
+    if response.status_code != 200:
+        return {"success": False, "message": f"Failed to fetch data. Status code: {response.status_code}"}
+
+    data = response.json().get("data", [])
+    created, updated = 0, 0
+
+    for item in data:
+        title = item.get("index", "").strip()
+        description = item.get("description", "").strip()
+        policy_id = f"ER-{item.get('id')}"
+        version = item.get("version", "")
+        reference = f"{policy_id}-{version}"
+
+        if not title or not reference:
+            continue
+
+        try:
+            policy = Policy.objects.get(title=title)
+            policy.policy_template = description  # update only the policy_template
+            policy.updated_at = now()
+            policy.save()
+            updated += 1
+        except Policy.DoesNotExist:
+            Policy.objects.create(
+                policy_id=policy_id,
+                title=title,
+                policy_version=version,
+                policy_reference=reference,
+                policy_template=description,
+                policy_gathered_from="ER"
+            )
+            created += 1
+
+    return {
+        "success": True,
+        "message": f"✅ Ingestion completed.",
+        "created": created,
+        "updated": updated,
+        "total": len(data)
+    }

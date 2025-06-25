@@ -1,0 +1,46 @@
+<tr class="security-group hover:bg-gray-50" data-group="{{ group|default:'None' }}">
+  <td class="px-6 py-4 whitespace-nowrap">
+    <div class="text-sm font-medium text-gray-900">{{ policy.title|default:"No Title" }}</div>
+  </td>
+  <td class="px-6 py-4 whitespace-nowrap font-mono relative cursor-pointer"
+      onmouseenter="showTooltip(event, '/api/policy/{{ policy.id }}/')"
+      onmouseleave="hideTooltip()"
+      onclick="openPolicyInNewTab('/api/policy/{{ policy.id }}/')">
+    <div class="text-sm text-blue-700 hover:text-blue-900">
+      {{ policy.policy_id }}
+    </div>
+  </td>
+  <td class="px-6 py-4 whitespace-nowrap">
+    <div class="text-sm text-gray-500">{{ policy.policy_reference }}</div>
+  </td>
+  <td class="px-6 py-4">
+    <div class="flex flex-wrap gap-1">
+      {% for clause in policy.clauses.all %}
+        <span class="px-2 py-1 text-xs rounded-full cursor-pointer"
+              onclick="openClauseInNewTab(event, '{{ clause.id }}')"
+              onmouseenter="showTooltip(event, '/api/clause/{{ clause.id }}/')"
+              onmouseleave="hideTooltip()"
+              {% cycle 'style=background-color:#FEF3C7;color:#92400E' 'style=background-color:#E0E7FF;color:#3730A3' 'style=background-color:#FCE7F3;color:#9D174D' as tagcolors %}>
+          {{ clause.display_identifier }}
+        </span>
+      {% empty %}
+        <span class="text-gray-400 text-xs">-</span>
+      {% endfor %}
+    </div>
+  </td>
+  <td class="px-6 py-4">
+    <div class="flex flex-wrap gap-1">
+      {% for control in policy.controls.all %}
+        <span class="px-2 py-1 text-xs rounded-full cursor-pointer"
+              onclick="openControlInNewTab(event, '{{ control.id }}')"
+              onmouseenter="showTooltip(event, '/api/control/{{ control.id }}/')"
+              onmouseleave="hideTooltip()"
+              {% cycle 'style=background-color:#FECACA;color:#991B1B' 'style=background-color:#CCFBF1;color:#134E4A' 'style=background-color:#FED7AA;color:#9A3412' as controlcolors %}>
+          {{ control.short_name }}
+        </span>
+      {% empty %}
+        <span class="text-gray-400 text-xs">-</span>
+      {% endfor %}
+    </div>
+  </td>
+</tr>
