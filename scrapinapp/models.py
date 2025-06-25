@@ -41,17 +41,29 @@ class Clause(models.Model):
         return f"{self.certification.name} - {self.reference_id}: {self.title}"
 
 class Policy(models.Model):
+    # Define choices for policy_gathered_from
+    POLICY_SOURCE_CHOICES = (
+        ('TC', 'TrustCloud'),
+        ('ER', 'Eramba'),
+    )
+
     policy_id = models.CharField(max_length=50, unique=True)
-    security_group =models.CharField(max_length=50, null=True, blank=True)
+    security_group = models.CharField(max_length=50, null=True, blank=True)
     policy_reference = models.CharField(max_length=150, unique=True)
     policy_doc = models.TextField(null=True)
     policy_version = models.TextField(null=True, blank=True)
     title = models.CharField(max_length=255, null=True, blank=True)
+    policy_template = models.TextField(null=True, blank=True)
     clauses = models.ManyToManyField(Clause, related_name='policies')
     controls = models.ManyToManyField('Control', related_name='policies', blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-
+    policy_gathered_from = models.CharField(
+        max_length=2,
+        choices=POLICY_SOURCE_CHOICES,
+        null=True,
+        blank=True
+    )
 
     class Meta:
         verbose_name_plural = "policies"

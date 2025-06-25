@@ -3,7 +3,7 @@ from django.http import JsonResponse, Http404
 from django.views.decorators.http import require_http_methods
 from pathlib import Path
 from django.conf import settings
-from .utils import capture_sections_for_all_links, fetch_policies_parallel
+from .utils import capture_sections_for_all_links, fetch_policies_parallel, ingest_policies_from_eramba
 from .models import Certification, Clause, Policy, Control
 from django.db import transaction
 import json
@@ -89,7 +89,8 @@ def populate_database(request):
                                     defaults={
                                         'policy_reference': policy_data.get("id", ""),
                                         'policy_doc': policy_data.get("description", ""),
-                                        'title': policy_data.get("title", "")
+                                        'title': policy_data.get("title", ""),
+                                        'policy_gathered_from':'TC'
                                     }
                                 )
                                 if created:
@@ -315,31 +316,45 @@ def clause_detail_view(request, clause_id):
         'clause': clause
     })
 
+from collections import defaultdict
+from .models import Policy
+
 def policies_view(request):
-    policies = Policy.objects.all().prefetch_related('clauses', 'controls')
-    
-    # Get unique security groups
-    security_groups = sorted(set(
-        policy.security_group for policy in policies 
-        if policy.security_group
-    ))
-    
-    # Group policies by security group and title
-    grouped_policies = {}
+    policies = Policy.objects.prefetch_related('clauses', 'controls')
+    group = request.GET.get("group", "ALL")
+
+    all_groups = set()
+    trustcloud_grouped = defaultdict(lambda: defaultdict(list))
+    eramba_list = []
+
     for policy in policies:
-        group = policy.security_group or 'None'
-        title = policy.title or 'No Title'
-        
-        if group not in grouped_policies:
-            grouped_policies[group] = {}
-        if title not in grouped_policies[group]:
-            grouped_policies[group][title] = []
-        grouped_policies[group][title].append(policy)
-    
-    return render(request, 'policies.html', {
-        'security_groups': security_groups,
-        'grouped_policies': grouped_policies
-    })
+        if policy.policy_gathered_from == 'TC':
+            group_name = policy.security_group or "Uncategorized"
+            trustcloud_grouped[group_name][policy.title or "Untitled"].append(policy)
+            all_groups.add(group_name)
+        elif policy.policy_gathered_from == 'ER':
+            eramba_list.append(policy)
+
+    # Choose what to render
+    if group == "ALL":
+        filtered_policies = policies
+    elif group == "ER":
+        filtered_policies = eramba_list
+    elif group.startswith("TC__"):
+        group_name = group.replace("TC__", "")
+        filtered_policies = []
+        if group_name in trustcloud_grouped:
+            for title_group in trustcloud_grouped[group_name].values():
+                filtered_policies.extend(title_group)
+    else:
+        filtered_policies = []
+
+    context = {
+        "filtered_policies": filtered_policies,
+        "security_groups": sorted(all_groups),
+        "selected_group": group,
+    }
+    return render(request, "policies.html", context)
 
 def clause_detail_api(request, clause_id):
     try:
@@ -462,3 +477,34 @@ def pulling_eramba_frameworkds(request):
         "new_certifications": new_certifications,
         "updated_certifications": updated_certifications
     })
+
+def ingest_eramba_policies_view(request):
+    if request.method != "GET":
+        return JsonResponse({"success": False, "error": "Only GET method allowed"}, status=405)
+
+    API_URL = "https://www.eramba.org/api/proxy?endpoint=security-policies"
+    result = ingest_policies_from_eramba(API_URL)
+    return JsonResponse(result)
+
+@csrf_exempt
+def policy_template_view(request, policy_id):
+    try:
+        policy = Policy.objects.get(pk=policy_id)
+    except Policy.DoesNotExist:
+        return JsonResponse({"error": "Policy not found"}, status=404)
+
+    if request.method == "GET":
+        if not policy.policy_template:
+            return JsonResponse({"error": "Template not found."}, status=404)
+        return JsonResponse({"template": policy.policy_template})
+
+    elif request.method == "POST":
+        try:
+            data = json.loads(request.body)
+            new_template = data.get("template", "")
+            policy.policy_template = new_template
+            policy.save()
+            return JsonResponse({"success": True})
+        except Exception as e:
+            return JsonResponse({"error": str(e)}, status=400)
+        

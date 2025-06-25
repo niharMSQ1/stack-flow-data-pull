@@ -6,6 +6,7 @@ from .models import *
 from playwright.async_api import async_playwright
 import requests
 import json
+from django.utils.timezone import now
 from bs4 import BeautifulSoup
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
@@ -186,3 +187,47 @@ def fetch_policies_parallel():
                         f.cancel()
                     break
     return policies
+
+
+def ingest_policies_from_eramba(api_url):
+    response = requests.get(api_url)
+    if response.status_code != 200:
+        return {"success": False, "message": f"Failed to fetch data. Status code: {response.status_code}"}
+
+    data = response.json().get("data", [])
+    created, updated = 0, 0
+
+    for item in data:
+        title = item.get("index", "").strip()
+        description = item.get("description", "").strip()
+        policy_id = f"ER-{item.get('id')}"
+        version = item.get("version", "")
+        reference = f"{policy_id}-{version}"
+
+        if not title or not reference:
+            continue
+
+        try:
+            policy = Policy.objects.get(title=title)
+            policy.policy_template = description  # update only the policy_template
+            policy.updated_at = now()
+            policy.save()
+            updated += 1
+        except Policy.DoesNotExist:
+            Policy.objects.create(
+                policy_id=policy_id,
+                title=title,
+                policy_version=version,
+                policy_reference=reference,
+                policy_template=description,
+                policy_gathered_from="ER"
+            )
+            created += 1
+
+    return {
+        "success": True,
+        "message": f"✅ Ingestion completed.",
+        "created": created,
+        "updated": updated,
+        "total": len(data)
+    }

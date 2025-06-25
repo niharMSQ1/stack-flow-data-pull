@@ -5,20 +5,23 @@
 <div class="container mx-auto p-4">
   <h1 class="text-2xl font-bold mb-6">Policies Management</h1>
 
-  <!-- Filter -->
+  <!-- Filter Dropdown -->
   <div class="mb-6 bg-white p-4 rounded-lg shadow">
     <label for="security-group-filter" class="block text-sm font-medium text-gray-700 mb-2">
-      Filter by Security Group:
+      Filter by Source or Security Group:
     </label>
     <select id="security-group-filter" class="w-full md:w-1/3 p-2 border rounded-md focus:ring-2 focus:ring-blue-500" onchange="filterPolicies()">
-      <option value="">All Security Groups</option>
-      {% for group in security_groups %}
-      <option value="{{ group }}">{{ group }}</option>
-      {% endfor %}
+      <option value="ALL" {% if selected_group == 'ALL' %}selected{% endif %}>All Policies</option>
+      <option value="ER" {% if selected_group == 'ER' %}selected{% endif %}>Eramba (Ungrouped)</option>
+      <optgroup label="TrustCloud">
+        {% for group in security_groups %}
+          <option value="TC__{{ group }}" {% if selected_group == 'TC__'|add:group %}selected{% endif %}>{{ group }}</option>
+        {% endfor %}
+      </optgroup>
     </select>
   </div>
 
-  <!-- Table -->
+  <!-- Policies Table -->
   <div class="overflow-x-auto bg-white rounded-lg shadow">
     <table class="min-w-full divide-y divide-gray-200">
       <thead class="bg-gray-50">
@@ -31,75 +34,96 @@
         </tr>
       </thead>
       <tbody class="bg-white divide-y divide-gray-200">
-        {% for group, policies_by_title in grouped_policies.items %}
-          {% for title, policies in policies_by_title.items %}
-            {% for policy in policies %}
-            <tr class="security-group hover:bg-gray-50" data-group="{{ group|default:'None' }}">
-
-              <!-- Title -->
-              <td class="px-6 py-4 whitespace-nowrap">
-                <div class="text-sm font-medium text-gray-900">{{ title|default:"No Title" }}</div>
-              </td>
-
-              <!-- Policy ID (hover & click) -->
-              <td class="px-6 py-4 whitespace-nowrap font-mono relative cursor-pointer"
-                  onmouseenter="showTooltip(event, '/api/policy/{{ policy.id }}/')"
-                  onmouseleave="hideTooltip()"
-                  onclick="openPolicyInNewTab('/api/policy/{{ policy.id }}/')">
-                <div class="text-sm text-blue-700 hover:text-blue-900">
-                  {{ policy.policy_id }}
-                </div>
-              </td>
-
-              <!-- Reference -->
-              <td class="px-6 py-4 whitespace-nowrap">
-                <div class="text-sm text-gray-500">{{ policy.policy_reference }}</div>
-              </td>
-
-              <!-- Clauses -->
-              <td class="px-6 py-4">
-                <div class="flex flex-wrap gap-1">
-                  {% for clause in policy.clauses.all %}
-                  <span class="px-2 py-1 text-xs rounded-full cursor-pointer"
-                        onclick="openClauseInNewTab(event, '{{ clause.id }}')"
-                        onmouseenter="showTooltip(event, '/api/clause/{{ clause.id }}/')"
-                        onmouseleave="hideTooltip()"
-                        {% cycle 'style=background-color:#FEF3C7;color:#92400E' 'style=background-color:#E0E7FF;color:#3730A3' 'style=background-color:#FCE7F3;color:#9D174D' as tagcolors %}>
-                    {{ clause.display_identifier }}
-                  </span>
-                  {% empty %}
-                  <span class="text-gray-400 text-xs">-</span>
-                  {% endfor %}
-                </div>
-              </td>
-
-              <!-- Controls -->
-              <td class="px-6 py-4">
-                <div class="flex flex-wrap gap-1">
-                  {% for control in policy.controls.all %}
-                  <span class="px-2 py-1 text-xs rounded-full cursor-pointer"
-                        onclick="openControlInNewTab(event, '{{ control.id }}')"
-                        onmouseenter="showTooltip(event, '/api/control/{{ control.id }}/')"
-                        onmouseleave="hideTooltip()"
-                        {% cycle 'style=background-color:#FECACA;color:#991B1B' 'style=background-color:#CCFBF1;color:#134E4A' 'style=background-color:#FED7AA;color:#9A3412' as controlcolors %}>
-                    {{ control.short_name }}
-                  </span>
-                  {% empty %}
-                  <span class="text-gray-400 text-xs">-</span>
-                  {% endfor %}
-                </div>
-              </td>
-            </tr>
-            {% endfor %}
+        {% if filtered_policies %}
+          {% for policy in filtered_policies %}
+          <tr class="security-group hover:bg-gray-50" data-group="{{ policy.security_group|default:'None' }}">
+            <td class="px-6 py-4 whitespace-nowrap">
+              <div class="text-sm font-medium text-blue-700 hover:underline cursor-pointer"
+                   onclick="showPolicyTemplate({{ policy.id }})">
+                {{ policy.title|default:"No Title" }}
+              </div>
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap font-mono relative cursor-pointer"
+                onmouseenter="showTooltip(event, '/api/policy/{{ policy.id }}/')"
+                onmouseleave="hideTooltip()"
+                onclick="openPolicyInNewTab('/api/policy/{{ policy.id }}/')">
+              <div class="text-sm text-blue-700 hover:text-blue-900">{{ policy.policy_id }}</div>
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap">
+              <div class="text-sm text-gray-500">{{ policy.policy_reference }}</div>
+            </td>
+            <td class="px-6 py-4">
+              <div class="flex flex-wrap gap-1">
+                {% for clause in policy.clauses.all %}
+                <span class="px-2 py-1 text-xs rounded-full cursor-pointer"
+                      onclick="openClauseInNewTab(event, '{{ clause.id }}')"
+                      onmouseenter="showTooltip(event, '/api/clause/{{ clause.id }}/')"
+                      onmouseleave="hideTooltip()"
+                      {% cycle 'style=background-color:#FEF3C7;color:#92400E' 'style=background-color:#E0E7FF;color:#3730A3' 'style=background-color:#FCE7F3;color:#9D174D' as tagcolors %}>
+                  {{ clause.display_identifier }}
+                </span>
+                {% empty %}
+                <span class="text-gray-400 text-xs">-</span>
+                {% endfor %}
+              </div>
+            </td>
+            <td class="px-6 py-4">
+              <div class="flex flex-wrap gap-1">
+                {% for control in policy.controls.all %}
+                <span class="px-2 py-1 text-xs rounded-full cursor-pointer"
+                      onclick="openControlInNewTab(event, '{{ control.id }}')"
+                      onmouseenter="showTooltip(event, '/api/control/{{ control.id }}/')"
+                      onmouseleave="hideTooltip()"
+                      {% cycle 'style=background-color:#FECACA;color:#991B1B' 'style=background-color:#CCFBF1;color:#134E4A' 'style=background-color:#FED7AA;color:#9A3412' as controlcolors %}>
+                  {{ control.short_name }}
+                </span>
+                {% empty %}
+                <span class="text-gray-400 text-xs">-</span>
+                {% endfor %}
+              </div>
+            </td>
+          </tr>
           {% endfor %}
-        {% empty %}
-        <tr>
-          <td colspan="5" class="px-6 py-4 text-center text-gray-500">No policies found</td>
-        </tr>
-        {% endfor %}
+        {% else %}
+          <tr>
+            <td colspan="5" class="px-6 py-4 text-center text-gray-500">No policies found</td>
+          </tr>
+        {% endif %}
       </tbody>
     </table>
   </div>
+</div>
+
+<!-- Modal with Tabs -->
+<div id="policyTemplateModal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50" onclick="closePolicyModal()">
+  <div class="bg-white rounded-lg shadow-xl w-full max-w-3xl max-h-[85vh] relative p-4 flex flex-col" onclick="event.stopPropagation()">
+    <button onclick="closePolicyModal()" class="absolute top-2 right-4 text-gray-500 hover:text-gray-700 text-xl">&times;</button>
+
+    <div class="flex space-x-4 mb-2 mt-2">
+      <button id="viewTabBtn" onclick="switchTab('view')" class="px-4 py-2 rounded bg-blue-600 text-white">View</button>
+      <button id="editTabBtn" onclick="switchTab('edit')" class="px-4 py-2 rounded bg-gray-200 hover:bg-gray-300 text-gray-800">Edit</button>
+    </div>
+
+    <!-- View Tab -->
+    <div id="viewTab" class="overflow-y-auto prose pr-2 mb-2" style="max-height: 60vh;"></div>
+
+    <!-- Edit Tab -->
+    <div id="editTab" class="hidden flex flex-col w-full mt-2">
+      <textarea id="policyTemplateEditor"
+                class="border rounded p-3 w-full h-[50vh] resize-none font-mono text-sm leading-relaxed"
+                placeholder="Enter HTML template here..."></textarea>
+      <div class="flex justify-end mt-3">
+        <button onclick="savePolicyTemplate()" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">
+          Save
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Snackbar -->
+<div id="snackbar" class="hidden fixed top-4 left-1/2 transform -translate-x-1/2 bg-red-600 text-white px-6 py-3 rounded shadow-md z-50 transition-opacity duration-300">
+  <span id="snackbarText">Template not available</span>
 </div>
 
 <!-- Tooltip -->
@@ -109,102 +133,47 @@
 </div>
 
 <script>
+let currentEditingPolicyId = null;
+
 function filterPolicies() {
   const filter = document.getElementById('security-group-filter').value;
-  document.querySelectorAll('.security-group').forEach(row => {
-    row.style.display = !filter || row.dataset.group === filter ? '' : 'none';
-  });
+  const url = new URL(window.location.href);
+  url.searchParams.set('group', filter);
+  window.location.href = url.toString();
 }
 
-const tooltip = document.getElementById('tooltip-popup');
-const loader = document.getElementById('tooltip-loader');
-const content = document.getElementById('tooltip-content');
-
 function showTooltip(evt, url) {
+  const tooltip = document.getElementById('tooltip-popup');
+  const loader = document.getElementById('tooltip-loader');
+  const content = document.getElementById('tooltip-content');
+
   tooltip.classList.remove('hidden');
   tooltip.style.top = (evt.pageY + 10) + 'px';
   tooltip.style.left = (evt.pageX + 10) + 'px';
   loader.classList.remove('hidden');
   content.classList.add('hidden');
-  loader.innerText = "Loading...";
 
   fetch(url)
-    .then(res => {
-      if (!res.ok) throw new Error("Fetch failed");
-      return res.json();
-    })
+    .then(res => res.ok ? res.json() : Promise.reject())
     .then(data => {
       loader.classList.add('hidden');
       content.classList.remove('hidden');
-      content.innerHTML = generateTooltipHTML(data);
+      content.innerHTML = `
+        <div class="font-semibold text-gray-700 mb-1">${data.title || data.Title || data.short_name || "Details"}</div>
+        ${data.reference_id ? `<div class="text-xs text-gray-600"><strong>Reference ID:</strong> ${data.reference_id}</div>` : ''}
+        ${data.description ? `<div class="text-xs text-gray-600"><strong>Description:</strong> ${data.description}</div>` : ''}
+      `;
     })
-    .catch(() => {
-      loader.innerText = "Failed to load";
-    });
+    .catch(() => loader.innerText = "Failed to load");
 }
 
 function hideTooltip() {
-  tooltip.classList.add('hidden');
-  content.innerHTML = '';
-}
-
-function generateTooltipHTML(data) {
-  return `
-    <div class="font-semibold text-gray-700 mb-1">${data.title || data.Title || data.short_name || "Details"}</div>
-    ${data.reference_id ? `<div class="text-xs text-gray-600"><strong>Reference ID:</strong> ${data.reference_id}</div>` : ''}
-    ${data.display_identifier ? `<div class="text-xs text-gray-600"><strong>Identifier:</strong> ${data.display_identifier}</div>` : ''}
-    ${data.description ? `<div class="text-xs text-gray-600"><strong>Description:</strong> ${data.description}</div>` : ''}
-    ${data.original_id ? `<div class="text-xs text-gray-600"><strong>Original ID:</strong> ${data.original_id}</div>` : ''}
-    ${data.created_at ? `<div class="text-xs text-gray-600"><strong>Created:</strong> ${new Date(data.created_at).toLocaleString()}</div>` : ''}
-    ${data.updated_at ? `<div class="text-xs text-gray-600"><strong>Updated:</strong> ${new Date(data.updated_at).toLocaleString()}</div>` : ''}
-  `;
+  document.getElementById('tooltip-popup').classList.add('hidden');
+  document.getElementById('tooltip-content').innerHTML = '';
 }
 
 function openPolicyInNewTab(url) {
-  fetch(url)
-    .then(res => res.json())
-    .then(data => {
-      const newWindow = window.open("", "_blank");
-      const html = `
-        <html>
-          <head>
-            <title>${data["Title"] || "Policy Detail"}</title>
-            <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-          </head>
-          <body class="bg-gray-100 font-sans">
-            <div class="max-w-4xl mx-auto my-10 bg-white p-8 rounded shadow">
-              <h1 class="text-2xl font-bold mb-2 text-blue-700">${data["Title"] || "Untitled"}</h1>
-              <p class="text-gray-600 mb-4">${data["Description"] || "No description"}</p>
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <p><strong>Policy ID:</strong> ${data["Policy ID"]}</p>
-                  <p><strong>Reference:</strong> ${data["Reference"]}</p>
-                  <p><strong>Version:</strong> ${data["Version"]}</p>
-                </div>
-                <div>
-                  <p><strong>Security Group:</strong> ${data["Security Group"]}</p>
-                  <p><strong>Clauses:</strong> ${(data["Clauses"] || []).length}</p>
-                  <p><strong>Controls:</strong> ${(data["Controls"] || []).length}</p>
-                </div>
-              </div>
-              <div class="mt-6">
-                <h2 class="text-xl font-semibold mb-2">Clauses</h2>
-                <ul class="list-disc pl-6 bg-gray-50 p-4 rounded">
-                  ${(data["Clauses"] || []).map(c => `<li>${c}</li>`).join('') || "<li>No clauses</li>"}
-                </ul>
-              </div>
-              <div class="mt-6">
-                <h2 class="text-xl font-semibold mb-2">Controls</h2>
-                <ul class="list-disc pl-6 bg-gray-50 p-4 rounded">
-                  ${(data["Controls"] || []).map(c => `<li>${c}</li>`).join('') || "<li>No controls</li>"}
-                </ul>
-              </div>
-            </div>
-          </body>
-        </html>`;
-      newWindow.document.write(html);
-      newWindow.document.close();
-    });
+  window.open(url, '_blank');
 }
 
 function openClauseInNewTab(event, id) {
@@ -216,6 +185,85 @@ function openControlInNewTab(event, id) {
   event.stopPropagation();
   window.open(`/control/${id}/`, '_blank');
 }
+
+function showPolicyTemplate(policyId) {
+  currentEditingPolicyId = policyId;
+  fetch(`/api/policy/${policyId}/template/`)
+    .then(res => res.ok ? res.json() : Promise.reject())
+    .then(data => {
+      const html = data.template || "";
+      document.getElementById("viewTab").innerHTML = html;
+      document.getElementById("policyTemplateEditor").value = html;
+      switchTab('view');
+      document.getElementById("policyTemplateModal").classList.remove("hidden");
+    })
+    .catch(() => showSnackbar("Template not available"));
+}
+
+function savePolicyTemplate() {
+  const newContent = document.getElementById("policyTemplateEditor").value;
+  fetch(`/api/policy/${currentEditingPolicyId}/template/`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "X-CSRFToken": getCSRFToken()
+    },
+    body: JSON.stringify({ template: newContent })
+  })
+    .then(res => res.ok ? res.json() : Promise.reject())
+    .then(() => {
+      showSnackbar("Template saved successfully");
+      closePolicyModal();
+    })
+    .catch(() => showSnackbar("Error saving template"));
+}
+
+function switchTab(tab) {
+  const viewTab = document.getElementById("viewTab");
+  const editTab = document.getElementById("editTab");
+  const viewBtn = document.getElementById("viewTabBtn");
+  const editBtn = document.getElementById("editTabBtn");
+
+  if (tab === 'view') {
+    viewTab.classList.remove("hidden");
+    editTab.classList.add("hidden");
+    viewBtn.classList.add("bg-blue-600", "text-white");
+    editBtn.classList.remove("bg-blue-600", "text-white");
+    editBtn.classList.add("bg-gray-200", "text-gray-800");
+  } else {
+    editTab.classList.remove("hidden");
+    viewTab.classList.add("hidden");
+    editBtn.classList.add("bg-blue-600", "text-white");
+    viewBtn.classList.remove("bg-blue-600", "text-white");
+    viewBtn.classList.add("bg-gray-200", "text-gray-800");
+  }
+}
+
+function closePolicyModal() {
+  document.getElementById("policyTemplateModal").classList.add("hidden");
+  currentEditingPolicyId = null;
+}
+
+function showSnackbar(message) {
+  const snackbar = document.getElementById("snackbar");
+  document.getElementById("snackbarText").innerText = message;
+  snackbar.classList.remove("hidden");
+  setTimeout(() => snackbar.classList.add("hidden"), 3000);
+}
+
+function getCSRFToken() {
+  const name = 'csrftoken';
+  const cookies = document.cookie.split(';');
+  for (const cookie of cookies) {
+    const trimmed = cookie.trim();
+    if (trimmed.startsWith(name + '=')) {
+      return decodeURIComponent(trimmed.substring(name.length + 1));
+    }
+  }
+  return '';
+}
+
+document.getElementById("policyTemplateModal").addEventListener("click", closePolicyModal);
 </script>
 
 <style>
