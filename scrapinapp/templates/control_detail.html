@@ -45,7 +45,7 @@
 
     {% if control.clauses.all %}
     <div class="mt-8">
-      <h2 class="text-xl font-semibold text-gray-800 mb-2">Linked Clauses</h2>
+      <h2 class="text-xl font-semibold text-gray-800 mb-2">Linked Clauses/Controls</h2>
       <ul class="list-disc pl-6 text-gray-700">
         {% for clause in control.clauses.all %}
         <li>{{ clause.display_identifier }} – {{ clause.title|default:"No title" }}</li>
