@@ -1,154 +1,243 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{% block title %}SQ1{% endblock %}</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-  </head>
-  <body class="bg-gray-100 font-sans">
-    <!-- Simplified Loader -->
-    <div
-      id="preloader"
-      style="
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background: rgba(255, 255, 255, 0.8);
-        z-index: 9999;
-        display: none;
-      "
-    >
-      <div
-        style="
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          text-align: center;
-        "
-      >
-        <div
-          class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500 mx-auto"
-        ></div>
-        <p class="mt-4 text-gray-700 font-medium">Loading...</p>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}SQ1{% endblock %}</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <style>
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 0.8;
+      }
+      50% {
+        transform: scale(1.2);
+        opacity: 1;
+      }
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    @keyframes flicker {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.5;
+      }
+    }
+
+    .loader-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: linear-gradient(145deg, #0a0f10, #0d2b20);
+      overflow: hidden;
+      z-index: 9999;
+      display: none;
+    }
+
+    .loader-core {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: #a7f3d0;
+      font-family: monospace;
+    }
+
+    .loader-vine {
+      position: absolute;
+      width: 3px;
+      height: 100%;
+      background: linear-gradient(to bottom, #6ee7b7, transparent);
+      animation: pulse 3s ease-in-out infinite;
+      opacity: 0.5;
+    }
+
+    .particle {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background: radial-gradient(circle, #34d399 0%, transparent 70%);
+      border-radius: 50%;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .core-seed {
+      width: 50px;
+      height: 50px;
+      background: radial-gradient(circle, #34d399, #059669);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+      margin: 0 auto 20px;
+    }
+
+    .loader-progress {
+      width: 200px;
+      height: 6px;
+      background: #1f2937;
+      border-radius: 3px;
+      overflow: hidden;
+      margin: 20px auto;
+    }
+
+    .loader-bar {
+      height: 100%;
+      background: linear-gradient(to right, #6ee7b7, #3b82f6);
+      animation: grow 5s linear forwards;
+      width: 0;
+    }
+
+    @keyframes grow {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+
+    .firefly {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: #fbbf24;
+      border-radius: 50%;
+      animation: flicker 1s infinite alternate;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100 font-sans">
+  <div id="preloader" class="loader-background">
+    <div class="loader-core">
+      <div class="core-seed"></div>
+<div class="text-green-300 animate-pulse mb-2">🌿 *Loading GTA VI: Jungle Update* 🌿</div>
+<div class="loader-progress">
+  <div class="loader-bar" id="loader-bar"></div>
+</div>
+<div class="text-sm text-green-200">
+  <span class="block">🌴 Rendering Florida Man NPCs... (47% buffoonery achieved)</span>
+  <span class="block">🐊 Scanning for hidden gators in Vice City sewers...</span>
+  <span class="block">🚗 Optimizing "stealable" electric hover-airboats...</span>
+  <span class="block">💸 Calculating microtransactions... (Just $9.99 to skip this screen!)</span>
+  <span class="block">⚠️ WARNING: 99% chance Jason & Lucia are already betraying each other</span>
+</div>
+    </div>
+    <!-- Vines -->
+    <div class="loader-vine" style="left: 10%"></div>
+    <div class="loader-vine" style="left: 25%"></div>
+    <div class="loader-vine" style="left: 75%"></div>
+
+    <!-- Fireflies / Bioluminescent particles -->
+    <div class="firefly" style="top:20%; left:30%; animation-delay:0s"></div>
+    <div class="firefly" style="top:50%; left:70%; animation-delay:0.5s"></div>
+    <div class="firefly" style="top:80%; left:40%; animation-delay:1s"></div>
+
+    <!-- Additional animated particles -->
+    <div class="particle" style="top:10%; left:20%"></div>
+    <div class="particle" style="top:30%; left:60%"></div>
+    <div class="particle" style="top:70%; left:80%"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="bg-white text-gray-800 p-4 flex items-center justify-between fixed top-0 left-0 w-full z-50 shadow">
+    <div class="flex items-center gap-4">
+      <img src="{% static 'images/1731000892786.svg' %}" alt="Logo" class="h-10 w-auto object-contain" />
+      <div>
+        <div class="text-xl font-semibold leading-none">
+          <span class="text-purple-500">SQ</span><span class="text-pink-400">1</span>
+        </div>
+        <div class="text-sm text-gray-600">nxtgen cybersecurity</div>
       </div>
     </div>
+    <div class="flex gap-3">
+      <button onclick="syncData()"
+        class="bg-blue-100 text-blue-800 font-semibold px-4 py-2 rounded hover:bg-blue-200 transition">
+        SYNC DATA
+      </button>
+      <a href="#" onclick="handleNavigation('{% url 'certifications' %}')"
+        class="bg-purple-100 text-purple-800 font-semibold px-4 py-2 rounded hover:bg-purple-200 transition">CERTIFICATIONS</a>
+      <a href="#" onclick="handleNavigation('{% url 'policies' %}')"
+        class="bg-green-100 text-green-800 font-semibold px-4 py-2 rounded hover:bg-green-200 transition">POLICIES</a>
+      <a href="#" onclick="handleNavigation('{% url 'controls-section' %}')"
+        class="bg-orange-200 text-orange-900 font-semibold px-4 py-2 rounded hover:bg-orange-500 transition">
+        CONTROLS
+      </a>
+    </div>
+  </header>
 
-    <!-- Header -->
-    <header
-      class="bg-white text-gray-800 p-4 flex items-center justify-between fixed top-0 left-0 w-full z-50 shadow"
-    >
-      <div class="flex items-center gap-4">
-        <img
-          src="{% static 'images/1731000892786.svg' %}"
-          alt="Logo"
-          class="h-10 w-auto object-contain"
-        />
-        <div>
-          <div class="text-xl font-semibold leading-none">
-            <span class="text-purple-500">SQ</span
-            ><span class="text-pink-400">1</span>
-          </div>
-          <div class="text-sm text-gray-600">nxtgen cybersecurity</div>
-        </div>
-      </div>
-      <div class="flex gap-3">
-        <button
-          onclick="syncData()"
-          class="bg-blue-100 text-blue-800 font-semibold px-4 py-2 rounded hover:bg-blue-200 transition"
-        >
-          SYNC DATA
-        </button>
-        <a
-          href="#"
-          onclick="handleNavigation('{% url 'certifications' %}')"
-          class="bg-purple-100 text-purple-800 font-semibold px-4 py-2 rounded hover:bg-purple-200 transition"
-          >CERTIFICATIONS</a
-        >
-        <a
-          href="#"
-          onclick="handleNavigation('{% url 'policies' %}')"
-          class="bg-green-100 text-green-800 font-semibold px-4 py-2 rounded hover:bg-green-200 transition"
-          >POLICIES</a
-        >
-        <button
-          onclick="showSection('controls-section')"
-          class="bg-pink-100 text-pink-800 font-semibold px-4 py-2 rounded hover:bg-pink-200 transition"
-        >
-          CONTROLS
-        </button>
-      </div>
-    </header>
+  <!-- Main -->
+  <main class="container mx-auto px-4 pt-24 pb-24">
+    {% block content %}{% endblock %}
+  </main>
 
-    <!-- Main -->
-    <main class="container mx-auto px-4 pt-24 pb-24">
-      {% block content %}{% endblock %}
-    </main>
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white p-4 text-center fixed bottom-0 left-0 w-full z-50 shadow">
+    <p>&copy; 2025 SQ1 Security</p>
+  </footer>
 
-    <!-- Footer -->
-    <footer
-      class="bg-gray-800 text-white p-4 text-center fixed bottom-0 left-0 w-full z-50 shadow"
-    >
-      <p>&copy; 2025 SQ1 Security</p>
-    </footer>
+  <!-- JavaScript -->
+  <script>
+    function syncData() {
+      const loader = document.getElementById("preloader");
+      const bar = document.getElementById("loader-bar");
+      bar.style.animation = "grow 5s linear forwards";
+      loader.style.display = "block";
 
-    <!-- JavaScript -->
-    <script>
-      function showSection(sectionId) {
-        [
-          "certifications-section",
-          "policies-section",
-          "controls-section",
-        ].forEach((id) => {
-          const el = document.getElementById(id);
-          if (el) el.classList.add("hidden");
-        });
-        const active = document.getElementById(sectionId);
-        if (active) active.classList.remove("hidden");
-      }
+      setTimeout(() => {
+        loader.style.display = "none";
+        alert("Sync button clicked - no operation performed");
+      }, 5000);
+    }
 
-      function syncData() {
-        const loader = document.getElementById("preloader");
-        loader.style.display = "block";
+    function handleNavigation(url) {
+      const loader = document.getElementById("preloader");
+      const bar = document.getElementById("loader-bar");
+      bar.style.animation = "grow 3s linear forwards";
+      loader.style.display = "block";
 
-        setTimeout(() => {
+      const timeout = setTimeout(() => {
+        loader.style.display = "none";
+        window.location.href = "/certifications";
+      }, 5000);
+
+      fetch(url)
+        .then((response) => {
+          clearTimeout(timeout);
           loader.style.display = "none";
-          alert("Sync button clicked - no operation performed");
-        }, 5000);
-      }
-
-      function handleNavigation(url) {
-        const loader = document.getElementById("preloader");
-        loader.style.display = "block";
-
-        const timeout = setTimeout(() => {
+          window.location.href = url;
+        })
+        .catch(() => {
+          clearTimeout(timeout);
           loader.style.display = "none";
           window.location.href = "/certifications";
-        }, 5000);
+        });
+    }
+  </script>
+</body>
 
-        fetch(url)
-          .then((response) => {
-            clearTimeout(timeout);
-            loader.style.display = "none";
-            window.location.href = url;
-          })
-          .catch(() => {
-            clearTimeout(timeout);
-            loader.style.display = "none";
-            window.location.href = "/certifications";
-          });
-      }
-
-      document.addEventListener("DOMContentLoaded", () => {
-        showSection("certifications-section");
-      });
-    </script>
-  </body>
 </html>

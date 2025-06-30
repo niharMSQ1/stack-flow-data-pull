@@ -320,7 +320,7 @@ def clause_detail_view(request, clause_id):
     })
 
 from collections import defaultdict
-from .models import Policy
+from .models import Policy, Control
 
 def policies_view(request):
     policies = Policy.objects.prefetch_related('clauses', 'controls')
@@ -813,3 +813,12 @@ def get_eramba_controls(request):
     except Exception as e:
         # Catch any other unexpected errors
         return JsonResponse({"status": "error", "message": f"An unexpected error occurred: {e}"}, status=500)
+    
+@csrf_exempt
+def controlsSection(request):
+    controls = Control.objects.prefetch_related(
+        'clauses',
+        'policies__clauses'
+    ).all()
+
+    return render(request, 'controls.html', {'controls': controls})

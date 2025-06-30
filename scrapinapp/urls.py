@@ -1,6 +1,7 @@
 from django.urls import path
 from .views import *
 
+
 urlpatterns = [
     path("get-certfications", get_certifications),
     path("populate-database", populate_database),
@@ -9,6 +10,7 @@ urlpatterns = [
     path('pulling_eramba_certifications/', pulling_eramba_frameworkds),
     path('clause/<int:clause_id>/', clause_detail_view, name='clause_detail'),
     path("ingest-eramba-policies/", ingest_eramba_policies_view),
+    path("controls-section", controlsSection, name = "controls-section"),
     path('policies/', policies_view, name='policies'),
     path('api/clause/<int:clause_id>/', clause_detail_api, name='clause-detail-api'),
     path('api/control/<int:control_id>/', control_detail_api, name='control-detail-api'),
