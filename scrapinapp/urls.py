@@ -7,6 +7,7 @@ urlpatterns = [
     path("populate-database", populate_database),
     path("map-controls-with-policy", map_controls_with_policy),
     path('certifications/', certifications_view, name='certifications'),
+    path("assembling-trustcloud-controls/",assembling_trustCloud_controls),
     path('pulling_eramba_certifications/', pulling_eramba_frameworkds),
     path('clause/<int:clause_id>/', clause_detail_view, name='clause_detail'),
     path("ingest-eramba-policies/", ingest_eramba_policies_view),
@@ -19,4 +20,18 @@ urlpatterns = [
     path("api/policy/<int:policy_id>/template/", policy_template_view, name="policy_template_view"),
     path("get-eramaba-clauses/",get_eramba_clauses),
     path("get-eramaba-controls/",get_eramba_controls),
+    path("map-eramba-clauses-controls/", mapping_eramaba_clauses_controls),
 ]
+
+
+
+'''
+path("populate-database", populate_database),
+path("populate-database", populate_database),
+path("map-controls-with-policy", map_controls_with_policy),
+path('pulling_eramba_certifications/', pulling_eramba_frameworkds),
+path("ingest-eramba-policies/", ingest_eramba_policies_view),
+path("ingest-eramba-policies/", ingest_eramba_policies_view),
+path("get-eramaba-clauses/",get_eramba_clauses),
+path("get-eramaba-controls/",get_eramba_controls),
+'''

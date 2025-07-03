@@ -5,56 +5,102 @@
 <div class="container mx-auto p-4">
   <h1 class="text-2xl font-bold mb-6">Controls</h1>
 
-  <!-- Filter Dropdown -->
-  <div class="mb-4 bg-white p-4 rounded-lg shadow">
-    <label for="source-filter" class="block text-sm font-medium text-gray-700 mb-2">
-      Filter by Control Source:
-    </label>
-    <select id="source-filter" class="w-full md:w-1/3 p-2 border rounded-md focus:ring-2 focus:ring-blue-500">
-      <option value="">All Sources</option>
-      <option value="TC">TrustCloud</option>
-      <option value="ER">Eramba</option>
-    </select>
+  <!-- Filter and Search Section -->
+  <div class="mb-6 flex flex-col md:flex-row gap-4">
+    <!-- Grouped Filter Dropdown -->
+    <div class="flex-1 bg-white p-4 rounded-lg shadow">
+      <label for="source-filter" class="block text-sm font-medium text-gray-700 mb-2">
+        Filter by Source:
+      </label>
+      <select id="source-filter" class="w-full p-2 border rounded-md focus:ring-2 focus:ring-indigo-500">
+        <option value="all">All Controls</option>
+        <option value="TC">TrustCloud</option>
+        <option value="ER">Eramba</option>
+      </select>
+    </div>
+
+    <!-- Category Filter (only visible when TrustCloud is selected) -->
+    <div id="category-filter-container" class="flex-1 bg-white p-4 rounded-lg shadow hidden">
+      <label for="category-filter" class="block text-sm font-medium text-gray-700 mb-2">
+        Filter by Category:
+      </label>
+      <select id="category-filter" class="w-full p-2 border rounded-md focus:ring-2 focus:ring-indigo-500">
+        <option value="all">All Categories</option>
+        {% for category in tc_categories %}
+          <option value="{{ category }}">{{ category }}</option>
+        {% endfor %}
+      </select>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="flex-1 bg-white p-4 rounded-lg shadow">
+      <label for="control-search" class="block text-sm font-medium text-gray-700 mb-2">
+        Search Controls:
+      </label>
+      <input type="text" id="control-search" placeholder="Search by name or description..." 
+             class="w-full p-2 border rounded-md focus:ring-2 focus:ring-indigo-500">
+    </div>
   </div>
 
   <!-- Controls Table -->
   <div class="overflow-x-auto bg-white rounded-lg shadow">
-    <table class="min-w-full divide-y divide-gray-200">
+    <table class="min-w-full divide-y divide-gray-200 border border-black">
       <thead class="bg-gray-50">
         <tr>
-          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Control</th>
-          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Description</th>
-          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Clauses</th>
-          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Policies</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border border-black">Control</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border border-black">Description</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border border-black">Clauses</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border border-black">Policies</th>
         </tr>
       </thead>
-      <tbody class="bg-white divide-y divide-gray-200">
+      <tbody class="bg-white divide-y divide-gray-200" id="controls-table-body">
         {% for control in controls %}
-        <tr class="control-row" data-sources="{{ control.policies.all|join:","|lower }}">
-          <td class="px-6 py-4 whitespace-nowrap">
+        <tr class="control-row"
+            data-source="{{ control.control_gathered_from }}"
+            data-category="{{ control.category|default_if_none:'' }}"
+            data-name="{{ control.name|default_if_none:''|lower }}"
+            data-description="{{ control.description|default_if_none:''|lower }}">
+          <td class="px-6 py-4 whitespace-nowrap border border-black">
             <div class="text-sm font-medium text-blue-700">{{ control.short_name }}</div>
             <div class="text-sm text-gray-500">{{ control.name }}</div>
           </td>
-          <td class="px-6 py-4 text-sm text-gray-600">{{ control.description }}</td>
-          <td class="px-6 py-4">
-            <div class="flex flex-wrap gap-1">
-              {% for clause in control.clauses.all %}
-              <span class="px-2 py-1 text-xs rounded-full cursor-pointer"
-                    onclick="window.open('/clause/{{ clause.id }}/', '_blank')"
-                    style="background-color:#E0E7FF;color:#3730A3">
-                {{ clause.display_identifier }}
-              </span>
-              {% empty %}
-              <span class="text-gray-400 text-xs">-</span>
-              {% endfor %}
-            </div>
+          <td class="px-6 py-4 text-sm text-gray-600 border border-black">{{ control.description }}</td>
+          <td class="px-6 py-4 border border-black">
+            {% with clauses=control.clauses.all %}
+              {% if clauses %}
+                {% regroup clauses by certification as clause_groups %}
+                <div class="flex flex-col gap-1 max-h-40 overflow-y-auto thin-scrollbar">
+                  {% for group in clause_groups %}
+                    <div class="mb-1">
+                      <div class="text-xs font-medium text-gray-500 truncate" title="{{ group.grouper.name }}">
+                        {{ group.grouper.name|truncatechars:20 }}
+                      </div>
+                      <div class="flex flex-wrap gap-1">
+                        {% for clause in group.list %}
+                          <span class="px-2 py-0.5 text-xs rounded-full cursor-pointer flex-shrink-0"
+                                onclick="openClauseInNewTab(event, '{{ clause.id }}')"
+                                onmouseenter="showTooltip(event, '/api/clause/{{ clause.id }}/')"
+                                onmouseleave="hideTooltip()"
+                                {% cycle 'style=background-color:#FEF3C7;color:#92400E' 'style=background-color:#E0E7FF;color:#3730A3' 'style=background-color:#FCE7F3;color:#9D174D' as tagcolors %}>
+                            {{ clause.display_identifier }}
+                          </span>
+                        {% endfor %}
+                      </div>
+                    </div>
+                  {% endfor %}
+                </div>
+              {% else %}
+                <span class="text-gray-400 text-xs">-</span>
+              {% endif %}
+            {% endwith %}
           </td>
-          <td class="px-6 py-4">
+          <td class="px-6 py-4 border border-black">
             <div class="flex flex-wrap gap-1">
               {% for policy in control.policies.all %}
               <span class="px-2 py-1 text-xs rounded-full cursor-pointer"
-                    onclick="window.open('/api/policy/{{ policy.id }}/', '_blank')"
-                    data-source="{{ policy.policy_gathered_from }}"
+                    onclick="openPolicyInNewTab(event, '{{ policy.id }}')"
+                    onmouseenter="showTooltip(event, '/api/policy/{{ policy.id }}/')"
+                    onmouseleave="hideTooltip()"
                     {% cycle 'style=background-color:#FECACA;color:#991B1B' 'style=background-color:#CCFBF1;color:#134E4A' 'style=background-color:#FED7AA;color:#9A3412' as tagcolors %}>
                 {{ policy.policy_id }}
               </span>
@@ -66,7 +112,7 @@
         </tr>
         {% empty %}
         <tr>
-          <td colspan="4" class="px-6 py-4 text-center text-gray-500">No controls found.</td>
+          <td colspan="4" class="px-6 py-4 text-center text-gray-500 border border-black">No controls found.</td>
         </tr>
         {% endfor %}
       </tbody>
@@ -74,16 +120,132 @@
   </div>
 </div>
 
+<!-- Filtering Script -->
 <script>
-  document.getElementById('source-filter').addEventListener('change', function () {
-    const selected = this.value;
+  document.addEventListener("DOMContentLoaded", () => {
+    const sourceFilter = document.getElementById('source-filter');
+    const categoryFilter = document.getElementById('category-filter');
+    const categoryFilterContainer = document.getElementById('category-filter-container');
+    const searchInput = document.getElementById('control-search');
     const rows = document.querySelectorAll('.control-row');
 
-    rows.forEach(row => {
-      const sourceTags = Array.from(row.querySelectorAll('[data-source]')).map(el => el.dataset.source);
-      const matches = selected === '' || sourceTags.includes(selected);
-      row.style.display = matches ? '' : 'none';
+    // Toggle category filter visibility based on source selection
+    sourceFilter.addEventListener('change', function() {
+      if (this.value === 'TC') {
+        categoryFilterContainer.classList.remove('hidden');
+      } else {
+        categoryFilterContainer.classList.add('hidden');
+      }
+      filterControls();
     });
+
+    // Handle category filter changes
+    categoryFilter.addEventListener('change', filterControls);
+
+    // Handle search input
+    searchInput.addEventListener('input', filterControls);
+
+    function filterControls() {
+      const sourceValue = sourceFilter.value;
+      const categoryValue = categoryFilter.value;
+      const searchValue = searchInput.value.trim().toLowerCase();
+
+      rows.forEach(row => {
+        const rowSource = row.dataset.source;
+        const rowCategory = row.dataset.category;
+        const rowName = row.dataset.name;
+        const rowDescription = row.dataset.description;
+
+        // Source filter
+        let showSource = true;
+        if (sourceValue !== 'all') {
+          showSource = rowSource === sourceValue;
+        }
+
+        // Category filter (only applies to TrustCloud)
+        let showCategory = true;
+        if (sourceValue === 'TC' && categoryValue !== 'all') {
+          showCategory = rowCategory === categoryValue;
+        }
+
+        // Search filter
+        let showSearch = true;
+        if (searchValue) {
+          showSearch = rowName.includes(searchValue) || 
+                     rowDescription.includes(searchValue);
+        }
+
+        // Combine all filters
+        row.style.display = (showSource && showCategory && showSearch) ? '' : 'none';
+      });
+    }
   });
+
+  function showTooltip(evt, url) {
+    const tooltip = document.getElementById('tooltip-popup');
+    const loader = document.getElementById('tooltip-loader');
+    const content = document.getElementById('tooltip-content');
+
+    tooltip.classList.remove('hidden');
+    tooltip.style.top = (evt.pageY + 10) + 'px';
+    tooltip.style.left = (evt.pageX + 10) + 'px';
+    loader.classList.remove('hidden');
+    content.classList.add('hidden');
+
+    fetch(url)
+      .then(res => res.ok ? res.json() : Promise.reject())
+      .then(data => {
+        loader.classList.add('hidden');
+        content.classList.remove('hidden');
+        content.innerHTML = `
+          <div class="font-semibold text-gray-700 mb-1">${data.title || data.short_name || "Details"}</div>
+          ${data.reference_id ? `<div class="text-xs text-gray-600"><strong>Reference ID:</strong> ${data.reference_id}</div>` : ''}
+          ${data.description ? `<div class="text-xs text-gray-600"><strong>Description:</strong> ${data.description}</div>` : ''}
+        `;
+      })
+      .catch(() => loader.innerText = "Failed to load");
+  }
+
+  function hideTooltip() {
+    document.getElementById('tooltip-popup').classList.add('hidden');
+    document.getElementById('tooltip-content').innerHTML = '';
+  }
+
+  function openClauseInNewTab(event, id) {
+    event.stopPropagation();
+    window.open(`/clause/${id}/`, '_blank');
+  }
+
+  function openPolicyInNewTab(event, id) {
+    event.stopPropagation();
+    window.open(`/api/policy/${id}/`, '_blank');
+  }
 </script>
+
+<style>
+#tooltip-popup {
+  pointer-events: none;
+  position: absolute;
+  transition: opacity 0.2s ease;
+  background-color: #fff;
+}
+
+.thin-scrollbar::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+.thin-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.thin-scrollbar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 2px;
+}
+
+.thin-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+</style>
 {% endblock %}

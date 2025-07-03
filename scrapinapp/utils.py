@@ -9,7 +9,7 @@ import json
 from django.utils.timezone import now
 from bs4 import BeautifulSoup
 from concurrent.futures import ThreadPoolExecutor, as_completed
-
+from playwright.sync_api import sync_playwright
 RAW_JSON_PATH = "raw_cert_links.json"
 OUTPUT_DIR = Path("sections_output")
 OUTPUT_DIR.mkdir(exist_ok=True)
@@ -231,3 +231,26 @@ def ingest_policies_from_eramba(api_url):
         "updated": updated,
         "total": len(data)
     }
+
+
+def get_token_from_playwright():
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True)
+        context = browser.new_context()
+        page = context.new_page()
+
+        token_container = {}
+
+        def handle_request(route, request):
+            if "controls?includeComplianceMapping=true" in request.url:
+                auth_header = request.headers.get("x-kintent-auth")
+                if auth_header:
+                    token_container["token"] = auth_header
+            route.continue_()
+
+        context.route("**/*", handle_request)
+        page.goto("https://trust.trustcloud.ai/controls")
+        page.wait_for_timeout(15000)  # wait for API call to be triggered
+        browser.close()
+
+        return token_container.get("token")

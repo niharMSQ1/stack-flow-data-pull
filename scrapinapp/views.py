@@ -1,20 +1,34 @@
-import asyncio, requests
-from django.http import JsonResponse, Http404
-from django.views.decorators.http import require_http_methods
-from pathlib import Path
-from django.conf import settings
-from .utils import capture_sections_for_all_links, fetch_policies_parallel, ingest_policies_from_eramba
-from .models import Certification, Clause, Policy, Control
-from django.db import transaction
+import asyncio
 import json
-from playwright.sync_api import sync_playwright
-import uuid 
-from django.db import IntegrityError
-from django.utils.text import slugify
-from playwright.async_api import async_playwright
-from concurrent.futures import ThreadPoolExecutor, as_completed
 import logging
+import uuid
+from collections import defaultdict
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from pathlib import Path
+
+# Third-party imports
+import requests
+from playwright.async_api import async_playwright
+from playwright.sync_api import sync_playwright
+
+# Django core imports
+from django.conf import settings
+from django.core.cache import cache
+from django.db import IntegrityError, transaction
+from django.db.models import Prefetch
+from django.http import Http404, JsonResponse
+from django.utils.text import slugify
 from django.views.decorators.csrf import csrf_exempt
+from django.views.decorators.http import require_http_methods
+
+# Local application imports
+from .models import Certification, Clause, Control, Policy
+from .utils import (
+    capture_sections_for_all_links,
+    fetch_policies_parallel,
+    ingest_policies_from_eramba,
+    get_token_from_playwright
+)
 
 logger = logging.getLogger(__name__)
 
@@ -113,7 +127,8 @@ def populate_database(request):
                                             'custom_short_name': control_data.get("customShortName", None),
                                             'name': control_data.get("name", ""),
                                             'description': control_data.get("description", ""),
-                                            'original_id': control_data.get("id", "")
+                                            'original_id': control_data.get("id", ""),
+                                            'control_gathered_from':"TC"
                                         }
                                     )
                                     if created:
@@ -244,6 +259,57 @@ async def capture_policies_data():
 
 
 @csrf_exempt
+def assembling_trustCloud_controls(request):
+    token = get_token_from_playwright()
+    # token = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRydXN0Q2xvdWQiLCJ0eXBlIjoicHVibGljIiwiaXNzIjoiaHR0cHM6Ly9iYWNrZW5kLnRydXN0Y2xvdWQuYWkiLCJpYXQiOjE3NTE0NTczNTEsImV4cCI6MTc1MTQ4NjE1MSwic3ViIjoiM2IwNmUxY2YtYmUwZi00ZTc5LWI1ZGQtOWFiZjY2NzFkMzA4In0.1j3AMc4oZCxadNFFEuBS5034x9vU4mbfyyXiA2-v3n8'
+
+    if not token:
+        return JsonResponse({"error": "Failed to extract token"}, status=401)
+
+    url = "https://backend.trustcloud.ai/controls?includeComplianceMapping=true"
+    headers = {
+        "x-kintent-auth": token.replace("Bearer ", ""),  # API requires raw token
+        "Accept": "application/json",
+    }
+
+    # Fetch data from TrustCloud backend
+    response = requests.get(url, headers=headers)
+
+    if response.status_code != 200:
+        return JsonResponse({
+            "error": "Failed to fetch data from API",
+            "status_code": response.status_code,
+            "details": response.text
+        }, status=response.status_code)
+
+    data = response.json()
+    updated_controls = []
+
+    for item in data:
+        categorization = item.get("categorization", {})
+        category = categorization.get("category")
+        subcategory = categorization.get("subcategory")
+
+        if not category or not subcategory:
+            continue  # Skip invalid entries
+
+        try:
+            control_obj = Control.objects.get(name__iexact=subcategory)  # case-insensitive match
+            if control_obj.category != category:
+                control_obj.category = category
+                control_obj.save()
+                updated_controls.append(control_obj.name)
+        except Control.DoesNotExist:
+            continue  # Skip if no match
+
+    return JsonResponse({
+        "message": "Successfully fetched and updated controls",
+        "updated_controls": updated_controls,
+        "fetched_count": len(data)
+    }, status=200)
+
+
+@csrf_exempt
 def map_controls_with_policy(request):
     try:
         data = asyncio.run(capture_policies_data())
@@ -319,14 +385,37 @@ def clause_detail_view(request, clause_id):
         'clause': clause
     })
 
-from collections import defaultdict
-from .models import Policy, Control
+
+
 
 def policies_view(request):
-    policies = Policy.objects.prefetch_related('clauses', 'controls')
+    # Cache key based on the request parameters
+    cache_key = f"policies_view_{request.GET.get('group', 'ALL')}"
+    
+    # Try to get cached data first
+    cached_data = cache.get(cache_key)
+    if cached_data:
+        return cached_data
+
+    # Optimized database queries
+    policies = Policy.objects.prefetch_related(
+        Prefetch('clauses', 
+                queryset=Clause.objects.select_related('certification')
+                      .only('id', 'display_identifier', 'certification__name', 'reference_id')
+                      .order_by('certification__name', 'reference_id')),
+        Prefetch('controls',
+                queryset=Control.objects.only('id', 'short_name'))
+    ).only('id', 'title', 'policy_id', 'policy_reference', 'security_group', 'policy_gathered_from')
+
     group = request.GET.get("group", "ALL")
 
-    all_groups = set()
+    # Process data in Python rather than in templates
+    processed_data = {
+        "filtered_policies": [],
+        "security_groups": set(),
+        "selected_group": group,
+    }
+
     trustcloud_grouped = defaultdict(lambda: defaultdict(list))
     eramba_list = []
 
@@ -334,29 +423,35 @@ def policies_view(request):
         if policy.policy_gathered_from == 'TC':
             group_name = policy.security_group or "Uncategorized"
             trustcloud_grouped[group_name][policy.title or "Untitled"].append(policy)
-            all_groups.add(group_name)
+            processed_data["security_groups"].add(group_name)
         elif policy.policy_gathered_from == 'ER':
             eramba_list.append(policy)
 
-    # Choose what to render
+    # Filter policies based on group selection
     if group == "ALL":
-        filtered_policies = policies
+        processed_data["filtered_policies"] = list(policies)
     elif group == "ER":
-        filtered_policies = eramba_list
+        processed_data["filtered_policies"] = eramba_list
     elif group.startswith("TC__"):
         group_name = group.replace("TC__", "")
-        filtered_policies = []
+        processed_data["filtered_policies"] = []
         if group_name in trustcloud_grouped:
             for title_group in trustcloud_grouped[group_name].values():
-                filtered_policies.extend(title_group)
-    else:
-        filtered_policies = []
+                processed_data["filtered_policies"].extend(title_group)
 
+    # Sort security groups
+    processed_data["security_groups"] = sorted(processed_data["security_groups"])
+
+    # Prepare the template context
     context = {
-        "filtered_policies": filtered_policies,
-        "security_groups": sorted(all_groups),
-        "selected_group": group,
+        "filtered_policies": processed_data["filtered_policies"],
+        "security_groups": processed_data["security_groups"],
+        "selected_group": processed_data["selected_group"],
     }
+
+    # Cache for 5 minutes (adjust as needed)
+    cache.set(cache_key, render(request, "policies.html", context), 300)
+    
     return render(request, "policies.html", context)
 
 def clause_detail_api(request, clause_id):
@@ -740,6 +835,7 @@ def get_eramba_controls(request):
                         description=description,
                         original_id=original_id,
                         created_at=created_at,
+                        control_gathered_from = "ER",
                         # updated_at will be set automatically by auto_now=True
                     )
                     controls_processed_count += 1
@@ -821,4 +917,118 @@ def controlsSection(request):
         'policies__clauses'
     ).all()
 
-    return render(request, 'controls.html', {'controls': controls})
+    tc_categories = (
+        Control.objects.filter(control_gathered_from="TC")
+        .exclude(category__isnull=True)
+        .exclude(category__exact="")
+        .values_list('category', flat=True)
+        .distinct()
+    )
+
+    return render(request, 'controls.html', {
+        'controls': controls,
+        'tc_categories': tc_categories,
+    })
+
+
+
+# @csrf_exempt
+# def check_sync_in_action(request):
+#     check = CheckSync.objects.filter
+
+
+@csrf_exempt
+def mapping_eramaba_clauses_controls(request):
+    results = {
+        'total_processed': 0,
+        'success_count': 0,
+        'certifications_created': 0,
+        'clauses_created': 0,
+        'controls_created': 0,
+        'mappings_created': 0,
+        'failed_ids': []
+    }
+
+    def process_regulator(regulator_id):
+        url = f"https://www.eramba.org/api/proxy?endpoint=compliance-package-regulators&action=show&id={regulator_id}"
+        try:
+            response = requests.get(url, timeout=10)
+            if response.status_code == 200:
+                data = response.json().get("data")
+                if data:
+                    return process_compliance_data(data, regulator_id)
+        except Exception as e:
+            results['failed_ids'].append({'id': regulator_id, 'error': str(e)})
+        return False
+
+    def process_compliance_data(data, regulator_id):
+        # Create or update Certification
+        cert, created = Certification.objects.update_or_create(
+            name=data['name'],
+            defaults={
+                'description': data['description'],
+                'url': data['url'],
+                'version': data['version'],
+                'regulation_name': data['regulation_name']
+            }
+        )
+        if created:
+            results['certifications_created'] += 1
+
+        # Process all compliance packages
+        for package in data.get("compliance_packages", []):
+            for item in package.get("compliance_package_items", []):
+                # Create or update Clause
+                clause, clause_created = Clause.objects.update_or_create(
+                    certification=cert,
+                    reference_id=item['item_id'],
+                    defaults={
+                        'display_identifier': item['item_id'],
+                        'title': item['name'],
+                        'description': item['description'],
+                        'original_id': str(item['id'])
+                    }
+                )
+                if clause_created:
+                    results['clauses_created'] += 1
+
+                # Process controls (security_services)
+                for service in item.get('compliance_management', {}).get('security_services', []):
+                    control, control_created = Control.objects.get_or_create(
+                        name=service['name'],
+                        defaults={
+                            'short_name': service['name'][:50],  # Truncate if needed
+                            'description': f"Auto-imported control for {service['name']}",
+                            'control_gathered_from': 'ER'  # Eramba
+                        }
+                    )
+                    if control_created:
+                        results['controls_created'] += 1
+
+                    # Create M2M relationship if not exists
+                    if not clause.controls.filter(id=control.id).exists():
+                        clause.controls.add(control)
+                        results['mappings_created'] += 1
+
+        results['success_count'] += 1
+        return True
+
+    # Process regulators in parallel (adjust workers as needed)
+    with ThreadPoolExecutor(max_workers=10) as executor:
+        list(executor.map(process_regulator, range(10, 100)))
+        results['total_processed'] = 90  # Fixed range 10-99
+
+    # Prepare final response
+    response_data = {
+        'status': 'completed',
+        'statistics': results,
+        'summary': (
+            f"Processed {results['total_processed']} regulators. "
+            f"Created: {results['certifications_created']} certifications, "
+            f"{results['clauses_created']} clauses, "
+            f"{results['controls_created']} controls, "
+            f"{results['mappings_created']} mappings."
+        )
+    }
+
+    return JsonResponse(response_data, status=200)

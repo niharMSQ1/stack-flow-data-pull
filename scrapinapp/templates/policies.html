@@ -37,14 +37,14 @@
 
   <!-- Policies Table -->
   <div class="overflow-x-auto bg-white rounded-lg shadow">
-    <table class="min-w-full divide-y divide-gray-200">
+    <table class="min-w-full divide-y divide-gray-200 border border-black">
       <thead class="bg-gray-50">
         <tr>
-          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Policy Title</th>
-          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Policy ID</th>
-          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Reference</th>
-          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Clauses</th>
-          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Controls</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border border-black">Policy Title</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border border-black">Policy ID</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border border-black">Reference</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border border-black">Clauses</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border border-black">Controls</th>
         </tr>
       </thead>
       <tbody class="bg-white divide-y divide-gray-200">
@@ -55,37 +55,52 @@
               data-title="{{ policy.title|default:'No Title'|lower }}"
               data-id="{{ policy.policy_id|default:''|lower }}"
               data-reference="{{ policy.policy_reference|default:''|lower }}">
-            <td class="px-6 py-4 whitespace-nowrap">
+            <td class="px-6 py-4 whitespace-nowrap border border-black">
               <div class="text-sm font-medium text-blue-700 hover:underline cursor-pointer"
                    onclick="showPolicyTemplate({{ policy.id }}, '{{ policy.title|escapejs }}')">
                 {{ policy.title|default:"No Title" }}
               </div>
             </td>
-            <td class="px-6 py-4 whitespace-nowrap font-mono relative cursor-pointer"
+            <td class="px-6 py-4 whitespace-nowrap font-mono relative cursor-pointer border border-black"
                 onmouseenter="showTooltip(event, '/api/policy/{{ policy.id }}/')"
                 onmouseleave="hideTooltip()"
                 onclick="openPolicyInNewTab('/api/policy/{{ policy.id }}/')">
               <div class="text-sm text-blue-700 hover:text-blue-900">{{ policy.policy_id }}</div>
             </td>
-            <td class="px-6 py-4 whitespace-nowrap">
+            <td class="px-6 py-4 whitespace-nowrap border border-black">
               <div class="text-sm text-gray-500">{{ policy.policy_reference }}</div>
             </td>
-            <td class="px-6 py-4">
-              <div class="flex flex-wrap gap-1">
-                {% for clause in policy.clauses.all %}
-                <span class="px-2 py-1 text-xs rounded-full cursor-pointer"
-                      onclick="openClauseInNewTab(event, '{{ clause.id }}')"
-                      onmouseenter="showTooltip(event, '/api/clause/{{ clause.id }}/')"
-                      onmouseleave="hideTooltip()"
-                      {% cycle 'style=background-color:#FEF3C7;color:#92400E' 'style=background-color:#E0E7FF;color:#3730A3' 'style=background-color:#FCE7F3;color:#9D174D' as tagcolors %}>
-                  {{ clause.display_identifier }}
-                </span>
-                {% empty %}
-                <span class="text-gray-400 text-xs">-</span>
-                {% endfor %}
-              </div>
+            <td class="px-6 py-4 border border-black">
+              {% with clauses=policy.clauses.all %}
+                {% if clauses %}
+                  {% regroup clauses by certification as clause_groups %}
+                  <div class="flex flex-col gap-1 max-h-40 overflow-y-auto thin-scrollbar">
+                    {% for group in clause_groups %}
+                      <div class="mb-1">
+                        <div class="text-xs font-medium text-gray-500 truncate" title="{{ group.grouper.name }}">
+                          {{ group.grouper.name|truncatechars:20 }}
+                        </div>
+                        <div class="flex flex-wrap gap-1">
+                          {% for clause in group.list %}
+                            <span class="px-2 py-0.5 text-xs rounded-full cursor-pointer flex-shrink-0"
+                                  onclick="openClauseInNewTab(event, '{{ clause.id }}')"
+                                  onmouseenter="showTooltip(event, '/api/clause/{{ clause.id }}/')"
+                                  onmouseleave="hideTooltip()"
+                                  {% cycle 'style=background-color:#FEF3C7;color:#92400E' 'style=background-color:#E0E7FF;color:#3730A3' 'style=background-color:#FCE7F3;color:#9D174D' as tagcolors %}>
+                              {{ clause.display_identifier }}
+                            </span>
+                          {% endfor %}
+                        </div>
+                      </div>
+                    {% endfor %}
+                    <br>
+                  </div>
+                {% else %}
+                  <span class="text-gray-400 text-xs">-</span>
+                {% endif %}
+              {% endwith %}
             </td>
-            <td class="px-6 py-4">
+            <td class="px-6 py-4 border border-black">
               <div class="flex flex-wrap gap-1">
                 {% for control in policy.controls.all %}
                 <span class="px-2 py-1 text-xs rounded-full cursor-pointer"
@@ -103,11 +118,11 @@
           </tr>
           {% endfor %}
           <tr id="noResultsRow" class="hidden">
-            <td colspan="5" class="px-6 py-4 text-center text-gray-400 italic">No matching policies found.</td>
+            <td colspan="5" class="px-6 py-4 text-center text-gray-400 italic border border-black">No matching policies found.</td>
           </tr>
         {% else %}
           <tr>
-            <td colspan="5" class="px-6 py-4 text-center text-gray-500">No policies found</td>
+            <td colspan="5" class="px-6 py-4 text-center text-gray-500 border border-black">No policies found</td>
           </tr>
         {% endif %}
       </tbody>

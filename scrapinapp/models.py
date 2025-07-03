@@ -72,14 +72,29 @@ class Policy(models.Model):
         return f"{self.policy_id}: {self.title}"
 
 class Control(models.Model):
+    CONTROL_SOURCE_CHOICES = (
+        ('TC', 'TrustCloud'),
+        ('ER', 'Eramba'),
+    )
     short_name = models.CharField(max_length=50, unique=True)
     custom_short_name = models.CharField(max_length=50, null=True, blank=True, unique=True)
     name = models.CharField(max_length=255)
     description = models.TextField()
     original_id = models.CharField(max_length=36, null=True, blank=True)
+    category = models.CharField(max_length=255, null = True, blank=True)
     clauses = models.ManyToManyField(Clause, related_name='controls')
+    control_gathered_from = models.CharField(
+        max_length=2,
+        choices=CONTROL_SOURCE_CHOICES,
+        null=True,
+        blank=True
+    )
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return f"{self.short_name}: {self.name}"
+    
+
+# class CheckSync(models.Model):
+#     isSyncingInProgress = models.BooleanField(default=False)

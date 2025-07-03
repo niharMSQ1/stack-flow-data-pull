@@ -9,155 +9,118 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <style>
     @keyframes pulse {
-      0%, 100% {
-        transform: scale(1);
-        opacity: 0.8;
-      }
-      50% {
-        transform: scale(1.2);
-        opacity: 1;
-      }
-    }
-
-    @keyframes rotate {
-      0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
+      0%, 100% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.2); opacity: 1; }
     }
 
     @keyframes float {
-      0%, 100% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-10px);
-      }
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
     }
 
     @keyframes flicker {
-      0%, 100% {
-        opacity: 1;
-      }
-      50% {
-        opacity: 0.5;
-      }
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    @keyframes grow {
+      from { width: 0; }
+      to { width: 100%; }
     }
 
     .loader-background {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: linear-gradient(145deg, #0a0f10, #0d2b20);
-      overflow: hidden;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: linear-gradient(135deg, #0f172a, #1e3a8a, #3b0764);
+      background-size: 600% 600%;
+      animation: gradientMove 10s ease infinite;
       z-index: 9999;
-      display: none;
+      transition: opacity 1s ease;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     .loader-core {
       position: absolute;
-      top: 50%;
-      left: 50%;
+      top: 50%; left: 50%;
       transform: translate(-50%, -50%);
       text-align: center;
-      color: #a7f3d0;
-      font-family: monospace;
-    }
-
-    .loader-vine {
-      position: absolute;
-      width: 3px;
-      height: 100%;
-      background: linear-gradient(to bottom, #6ee7b7, transparent);
-      animation: pulse 3s ease-in-out infinite;
-      opacity: 0.5;
-    }
-
-    .particle {
-      position: absolute;
-      width: 8px;
-      height: 8px;
-      background: radial-gradient(circle, #34d399 0%, transparent 70%);
-      border-radius: 50%;
-      animation: float 4s ease-in-out infinite;
+      color: #e0f2fe;
+      font-family: 'Courier New', monospace;
     }
 
     .core-seed {
-      width: 50px;
-      height: 50px;
-      background: radial-gradient(circle, #34d399, #059669);
+      width: 60px; height: 60px;
+      background: conic-gradient(from 0deg, #7c3aed, #ec4899, #06b6d4, #7c3aed);
       border-radius: 50%;
-      animation: pulse 2s infinite;
+      animation: pulse 1.5s infinite;
       margin: 0 auto 20px;
     }
 
     .loader-progress {
-      width: 200px;
-      height: 6px;
-      background: #1f2937;
-      border-radius: 3px;
+      width: 250px; height: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
       overflow: hidden;
-      margin: 20px auto;
+      margin: 16px auto;
     }
 
     .loader-bar {
       height: 100%;
-      background: linear-gradient(to right, #6ee7b7, #3b82f6);
-      animation: grow 5s linear forwards;
+      background: linear-gradient(to right, #ec4899, #a78bfa, #22d3ee);
+      animation: grow 4s linear forwards;
       width: 0;
     }
 
-    @keyframes grow {
-      from {
-        width: 0;
-      }
-      to {
-        width: 100%;
-      }
+    .firefly, .particle {
+      position: absolute;
+      border-radius: 50%;
+      animation: float 6s ease-in-out infinite;
     }
 
     .firefly {
-      position: absolute;
-      width: 4px;
-      height: 4px;
-      background: #fbbf24;
-      border-radius: 50%;
+      width: 6px; height: 6px;
+      background: #fde68a;
       animation: flicker 1s infinite alternate;
+    }
+
+    .particle {
+      width: 10px; height: 10px;
+      background: radial-gradient(circle, #22d3ee 0%, transparent 60%);
+    }
+
+    .hidden-loader {
+      opacity: 0;
+      pointer-events: none;
     }
   </style>
 </head>
 
 <body class="bg-gray-100 font-sans">
+  <!-- Loader -->
   <div id="preloader" class="loader-background">
     <div class="loader-core">
       <div class="core-seed"></div>
-<div class="text-green-300 animate-pulse mb-2">🌿 *Loading GTA VI: Jungle Update* 🌿</div>
-<div class="loader-progress">
-  <div class="loader-bar" id="loader-bar"></div>
-</div>
-<div class="text-sm text-green-200">
-  <span class="block">🌴 Rendering Florida Man NPCs... (47% buffoonery achieved)</span>
-  <span class="block">🐊 Scanning for hidden gators in Vice City sewers...</span>
-  <span class="block">🚗 Optimizing "stealable" electric hover-airboats...</span>
-  <span class="block">💸 Calculating microtransactions... (Just $9.99 to skip this screen!)</span>
-  <span class="block">⚠️ WARNING: 99% chance Jason & Lucia are already betraying each other</span>
-</div>
+      <div class="text-blue-200 text-xl animate-pulse font-bold">🔐 Booting SQ1 Security Suite...</div>
+      <div class="loader-progress">
+        <div class="loader-bar" id="loader-bar"></div>
+      </div>
+      <div class="text-sm text-blue-100 mt-4 space-y-1">
+        <div>🚨 Scanning ports with sonar 🐳</div>
+        <div>🛡️ Activating threat barriers...</div>
+        <div>🔍 Hunting for suspicious coffee activity...</div>
+        <div>👾 Decoding firewall logs from aliens...</div>
+        <div>🌐 Compiling DNS in 32-bit Morse code...</div>
+      </div>
     </div>
-    <!-- Vines -->
-    <div class="loader-vine" style="left: 10%"></div>
-    <div class="loader-vine" style="left: 25%"></div>
-    <div class="loader-vine" style="left: 75%"></div>
-
-    <!-- Fireflies / Bioluminescent particles -->
     <div class="firefly" style="top:20%; left:30%; animation-delay:0s"></div>
-    <div class="firefly" style="top:50%; left:70%; animation-delay:0.5s"></div>
-    <div class="firefly" style="top:80%; left:40%; animation-delay:1s"></div>
-
-    <!-- Additional animated particles -->
+    <div class="firefly" style="top:50%; left:70%; animation-delay:1s"></div>
+    <div class="firefly" style="top:80%; left:40%; animation-delay:2s"></div>
     <div class="particle" style="top:10%; left:20%"></div>
     <div class="particle" style="top:30%; left:60%"></div>
     <div class="particle" style="top:70%; left:80%"></div>
@@ -175,18 +138,12 @@
       </div>
     </div>
     <div class="flex gap-3">
-      <button onclick="syncData()"
-        class="bg-blue-100 text-blue-800 font-semibold px-4 py-2 rounded hover:bg-blue-200 transition">
+      <button onclick="syncData()" class="bg-blue-100 text-blue-800 font-semibold px-4 py-2 rounded hover:bg-blue-200 transition">
         SYNC DATA
       </button>
-      <a href="#" onclick="handleNavigation('{% url 'certifications' %}')"
-        class="bg-purple-100 text-purple-800 font-semibold px-4 py-2 rounded hover:bg-purple-200 transition">CERTIFICATIONS</a>
-      <a href="#" onclick="handleNavigation('{% url 'policies' %}')"
-        class="bg-green-100 text-green-800 font-semibold px-4 py-2 rounded hover:bg-green-200 transition">POLICIES</a>
-      <a href="#" onclick="handleNavigation('{% url 'controls-section' %}')"
-        class="bg-orange-200 text-orange-900 font-semibold px-4 py-2 rounded hover:bg-orange-500 transition">
-        CONTROLS
-      </a>
+      <a href="{% url 'certifications' %}" class="bg-purple-100 text-purple-800 font-semibold px-4 py-2 rounded hover:bg-purple-200 transition">CERTIFICATIONS</a>
+      <a href="{% url 'policies' %}" class="bg-green-100 text-green-800 font-semibold px-4 py-2 rounded hover:bg-green-200 transition">POLICIES</a>
+      <a href="{% url 'controls-section' %}" class="bg-orange-200 text-orange-900 font-semibold px-4 py-2 rounded hover:bg-orange-500 transition">CONTROLS</a>
     </div>
   </header>
 
@@ -202,41 +159,58 @@
 
   <!-- JavaScript -->
   <script>
-    function syncData() {
+    // Show loader before navigation
+    window.onbeforeunload = function () {
       const loader = document.getElementById("preloader");
       const bar = document.getElementById("loader-bar");
-      bar.style.animation = "grow 5s linear forwards";
       loader.style.display = "block";
+      loader.classList.remove("hidden-loader");
+      bar.style.animation = "grow 2s linear forwards";
+    };
 
-      setTimeout(() => {
-        loader.style.display = "none";
-        alert("Sync button clicked - no operation performed");
-      }, 5000);
-    }
-
-    function handleNavigation(url) {
+    // Hide loader when page fully loads
+    window.onload = function () {
       const loader = document.getElementById("preloader");
-      const bar = document.getElementById("loader-bar");
-      bar.style.animation = "grow 3s linear forwards";
-      loader.style.display = "block";
+      loader.classList.add("hidden-loader");
+      setTimeout(() => loader.style.display = "none", 1000);
+    };
 
-      const timeout = setTimeout(() => {
-        loader.style.display = "none";
-        window.location.href = "/certifications";
-      }, 5000);
+      async function syncData() {
+    const loader = document.getElementById("preloader");
+    const bar = document.getElementById("loader-bar");
+    loader.style.display = "block";
+    loader.classList.remove("hidden-loader");
+    bar.style.animation = "grow 8s linear forwards";
 
-      fetch(url)
-        .then((response) => {
-          clearTimeout(timeout);
-          loader.style.display = "none";
-          window.location.href = url;
-        })
-        .catch(() => {
-          clearTimeout(timeout);
-          loader.style.display = "none";
-          window.location.href = "/certifications";
-        });
+    const endpoints = [
+      // "/get-certfications",
+      "/populate-database",
+      "/map-controls-with-policy",
+      "/pulling_eramba_certifications/",
+      "/ingest-eramba-policies/",
+      "/get-eramaba-clauses/",
+      "/get-eramaba-controls/",
+      "/map-eramba-clauses-controls/",
+      "/assembling-trustcloud-controls/"
+    ];
+
+    for (let url of endpoints) {
+      try {
+        const response = await fetch(url);
+        if (!response.ok) {
+          console.error(`Failed on ${url}:`, response.statusText);
+        } else {
+          console.log(`Success: ${url}`);
+        }
+      } catch (err) {
+        console.error(`Error during ${url}:`, err);
+      }
     }
+
+    loader.classList.add("hidden-loader");
+    setTimeout(() => loader.style.display = "none", 1000);
+    alert("✅ Data sync completed!");
+  }
   </script>
 </body>
 
