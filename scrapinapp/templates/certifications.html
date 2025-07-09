@@ -31,18 +31,20 @@
         <div id="cert-{{ certification.id }}" class="certification-content {% if not forloop.first %}hidden{% endif %}">
             <h2 class="text-2xl font-bold mb-4">{{ certification.name }}</h2>
             
-            <!-- Clause Select Dropdown -->
+            <!-- Clause Select Dropdown (Only top-level clauses) -->
             <div class="bg-white rounded-lg shadow p-4 mb-6">
                 <h3 class="text-lg font-semibold mb-3">Select Clause</h3>
                 <select class="w-full p-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
                         onchange="openClauseInNewTab(this)">
                     <option value="">Select a Clause</option>
                     {% for clause in certification.clauses.all %}
-                    <option value="{% url 'clause_detail' clause.id %}">
-                        {{ clause.display_identifier }}: {{ clause.title }}
-                    </option>
+                        {% if not clause.parent %}
+                            <option value="{% url 'clause_detail' clause.id %}">
+                                {{ clause.display_identifier }}: {{ clause.title }}
+                            </option>
+                        {% endif %}
                     {% empty %}
-                    <option value="" disabled>No clauses available</option>
+                        <option value="" disabled>No clauses available</option>
                     {% endfor %}
                 </select>
             </div>

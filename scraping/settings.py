@@ -96,7 +96,7 @@ WSGI_APPLICATION = 'scraping.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'stackflow_base2',
+        'NAME': 'scrapingg',
         'USER': 'sq1cloud',
         'PASSWORD': '$q1Cloud@123',
         'HOST': '192.168.6.13',
