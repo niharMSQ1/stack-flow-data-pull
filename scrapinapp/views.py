@@ -452,12 +452,10 @@ def clause_detail_view(request, clause_id):
     reference_id_prefix = clause.reference_id.strip()
     certification_name = clause.certification.name.strip().lower()
 
-    # ER or unknown source controls
     er_controls = clause.controls.filter(
         control_gathered_from__in=[None, 'ER']
     ).distinct().prefetch_related('framework_standards', 'policies')
 
-    # TC controls grouped by framework + standard_id
     tc_controls_raw = clause.controls.filter(
         control_gathered_from='TC'
     ).distinct().prefetch_related('framework_standards')
