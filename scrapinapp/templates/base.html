@@ -98,33 +98,59 @@
       opacity: 0;
       pointer-events: none;
     }
+
+    /* Snackbar styles */
+    .snackbar {
+      visibility: hidden;
+      min-width: 250px;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      border-radius: 4px;
+      padding: 16px;
+      position: fixed;
+      z-index: 10000;
+      right: 30px;
+      bottom: 100px;
+      font-size: 14px;
+    }
+
+    .snackbar.show {
+      visibility: visible;
+      animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    }
+
+    @keyframes fadein {
+      from {bottom: 0; opacity: 0;}
+      to {bottom: 100px; opacity: 1;}
+    }
+
+    @keyframes fadeout {
+      from {bottom: 100px; opacity: 1;}
+      to {bottom: 0; opacity: 0;}
+    }
   </style>
 </head>
 
 <body class="bg-gray-100 font-sans">
-  <!-- Loader -->
-  <div id="preloader" class="loader-background">
+  <!-- Loader (only shown during actual sync) -->
+  <div id="preloader" class="loader-background hidden-loader">
     <div class="loader-core">
       <div class="core-seed"></div>
-      <div class="text-blue-200 text-xl animate-pulse font-bold">🔐 Booting SQ1 Security Suite...</div>
+      <div class="text-blue-200 text-xl animate-pulse font-bold">🔐 Syncing SQ1 Data...</div>
       <div class="loader-progress">
         <div class="loader-bar" id="loader-bar"></div>
       </div>
       <div class="text-sm text-blue-100 mt-4 space-y-1">
-        <div>🚨 Scanning ports with sonar 🐳</div>
-        <div>🛡️ Activating threat barriers...</div>
-        <div>🔍 Hunting for suspicious coffee activity...</div>
-        <div>👾 Decoding firewall logs from aliens...</div>
-        <div>🌐 Compiling DNS in 32-bit Morse code...</div>
+        <div>🔄 Updating database records...</div>
+        <div>📊 Processing certifications...</div>
+        <div>📑 Mapping policies to controls...</div>
       </div>
     </div>
-    <div class="firefly" style="top:20%; left:30%; animation-delay:0s"></div>
-    <div class="firefly" style="top:50%; left:70%; animation-delay:1s"></div>
-    <div class="firefly" style="top:80%; left:40%; animation-delay:2s"></div>
-    <div class="particle" style="top:10%; left:20%"></div>
-    <div class="particle" style="top:30%; left:60%"></div>
-    <div class="particle" style="top:70%; left:80%"></div>
   </div>
+
+  <!-- Snackbar Notification -->
+  <div id="snackbar" class="snackbar"></div>
 
   <!-- Header -->
   <header class="bg-white text-gray-800 p-4 flex items-center justify-between fixed top-0 left-0 w-full z-50 shadow">
@@ -138,7 +164,7 @@
       </div>
     </div>
     <div class="flex gap-3">
-      <button onclick="syncData()" class="bg-blue-100 text-blue-800 font-semibold px-4 py-2 rounded hover:bg-blue-200 transition">
+      <button id="sync-button" onclick="syncData()" class="bg-blue-100 text-blue-800 font-semibold px-4 py-2 rounded hover:bg-blue-200 transition">
         SYNC DATA
       </button>
       <a href="{% url 'certifications' %}" class="bg-purple-100 text-purple-800 font-semibold px-4 py-2 rounded hover:bg-purple-200 transition">CERTIFICATIONS</a>
@@ -175,42 +201,72 @@
       setTimeout(() => loader.style.display = "none", 1000);
     };
 
-      async function syncData() {
-    const loader = document.getElementById("preloader");
-    const bar = document.getElementById("loader-bar");
-    loader.style.display = "block";
-    loader.classList.remove("hidden-loader");
-    bar.style.animation = "grow 8s linear forwards";
-
-    const endpoints = [
-      // "/get-certfications",
-      "/populate-database",
-      "/map-controls-with-policy",
-      "/pulling_eramba_certifications/",
-      "/ingest-eramba-policies/",
-      "/get-eramaba-clauses/",
-      "/get-eramaba-controls/",
-      "/map-eramba-clauses-controls/",
-      "/assembling-trustcloud-controls/"
-    ];
-
-    for (let url of endpoints) {
-      try {
-        const response = await fetch(url);
-        if (!response.ok) {
-          console.error(`Failed on ${url}:`, response.statusText);
-        } else {
-          console.log(`Success: ${url}`);
-        }
-      } catch (err) {
-        console.error(`Error during ${url}:`, err);
-      }
+    // Snackbar notification function
+    function showSnackbar(message) {
+      const snackbar = document.getElementById("snackbar");
+      snackbar.textContent = message;
+      snackbar.classList.add("show");
+      setTimeout(() => snackbar.classList.remove("show"), 3000);
     }
 
-    loader.classList.add("hidden-loader");
-    setTimeout(() => loader.style.display = "none", 1000);
-    alert("✅ Data sync completed!");
-  }
+    async function syncData() {
+      const syncButton = document.getElementById('sync-button');
+      
+      // Check if sync is already in progress
+      const lockCheck = await fetch('/check-sync-lock/');
+      const lockData = await lockCheck.json();
+      
+      if (lockData.is_locked) {
+        showSnackbar('⚠️ Sync is already in progress');
+        return;
+      }
+
+      const loader = document.getElementById("preloader");
+      const bar = document.getElementById("loader-bar");
+      loader.style.display = "block";
+      loader.classList.remove("hidden-loader");
+      bar.style.animation = "grow 8s linear forwards";
+
+      try {
+        // Acquire lock
+        await fetch('/acquire-sync-lock/');
+        
+        const endpoints = [
+          "/populate-database",
+          "/map-controls-with-policy",
+          "/pulling_eramba_certifications/",
+          "/ingest-eramba-policies/",
+          "/get-eramaba-clauses/",
+          "/get-eramaba-controls/",
+          "/map-eramba-clauses-controls/",
+          "/assembling-trustcloud-controls/",
+          "/assign-clause-parents/",
+          "/trust_cloud_templates/"
+        ];
+
+        for (let url of endpoints) {
+          try {
+            const response = await fetch(url);
+            if (!response.ok) {
+              console.error(`Failed on ${url}:`, response.statusText);
+            }
+          } catch (err) {
+            console.error(`Error during ${url}:`, err);
+          }
+        }
+
+        showSnackbar('✅ Data sync completed!');
+      } catch (error) {
+        console.error('Sync error:', error);
+        showSnackbar('❌ Sync failed - check console');
+      } finally {
+        // Release lock
+        await fetch('/release-sync-lock/');
+        
+        loader.classList.add("hidden-loader");
+        setTimeout(() => loader.style.display = "none", 1000);
+      }
+    }
   </script>
 </body>
 

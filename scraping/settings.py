@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-teag*%zr-qn@_-un4lp)s6d)=+_z^)n5rn&!a3v8-#lc1ta4$(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["520b-14-195-33-10.ngrok-free.app","localhost"]
+ALLOWED_HOSTS = ["f5b6db11ce7f.ngrok-free.app"]
 
 
 # Application definition
@@ -96,21 +96,18 @@ WSGI_APPLICATION = 'scraping.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'scrap',
+        'NAME': 'stackflow_base2',
         'USER': 'sq1cloud',
         'PASSWORD': '$q1Cloud@123',
         'HOST': '192.168.6.13',
-        'PORT': '3306',  # Default MySQL port
+        'PORT': '3306',
         'OPTIONS': {
-            'charset': 'utf8mb4',  # For full Unicode support
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",  # Enable strict mode
+            'charset': 'utf8mb4',
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
         },
     }
 }
 
-
-# Password validation
-# https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {

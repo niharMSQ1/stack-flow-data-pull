@@ -21,16 +21,80 @@ from django.utils.text import slugify
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_http_methods
 
+from datetime import datetime, timedelta
 # Local application imports
 from .models import Certification, Clause, Control, Policy
 from .utils import (
     capture_sections_for_all_links,
     fetch_policies_parallel,
     ingest_policies_from_eramba,
-    get_token_from_playwright
+    get_token_from_playwright,
+    map_controls_to_standards
 )
 
 logger = logging.getLogger(__name__)
+
+# @csrf_exempt
+# def sync_all(request):
+#     base_url = request.build_absolute_uri('/')[:-1]  # base URL of your server
+
+#     endpoints = [
+#         "populate-database",
+#         "map-controls-with-policy",
+#         "pulling_eramba_certifications/",
+#         "ingest-eramba-policies/",
+#         "get-eramaba-clauses/",
+#         "get-eramaba-controls/",
+#         "map-eramba-clauses-controls/",
+#         "assembling-trustcloud-controls/",
+#     ]
+
+#     result_log = []
+
+#     # Step 1: Acquire lock
+#     lock_resp = requests.get(f"{base_url}/acquire-sync-lock/")
+#     if lock_resp.status_code != 200 or lock_resp.json().get("status") != "acquired":
+#         return JsonResponse({"status": "failed", "reason": "sync lock not acquired"}, status=409)
+
+#     try:
+#         for ep in endpoints:
+#             url = f"{base_url}/{ep}"
+#             try:
+#                 resp = requests.get(url)
+#                 result_log.append({
+#                     "endpoint": ep,
+#                     "status": resp.status_code,
+#                     "response": resp.json() if resp.headers.get("Content-Type", "").startswith("application/json") else resp.text,
+#                 })
+#                 if resp.status_code != 200:
+#                     break  # Stop on failure
+#             except Exception as e:
+#                 result_log.append({
+#                     "endpoint": ep,
+#                     "status": "error",
+#                     "response": str(e)
+#                 })
+#                 break
+#     finally:
+#         # Step 2: Release lock
+#         requests.get(f"{base_url}/release-sync-lock/")
+
+#     return JsonResponse({"status": "completed", "log": result_log})
+
+def check_sync_lock(request):
+    lock = cache.get('sync_lock')
+    is_locked = lock is not None and datetime.now() < lock['expires']
+    return JsonResponse({'is_locked': is_locked})
+
+def acquire_sync_lock(request):
+    # Lock expires after 15 minutes (adjust as needed)
+    expires = datetime.now() + timedelta(minutes=15)
+    cache.set('sync_lock', {'expires': expires}, timeout=60*15)
+    return JsonResponse({'status': 'success'})
+
+def release_sync_lock(request):
+    cache.delete('sync_lock')
+    return JsonResponse({'status': 'success'})
 
 def get_certifications(request):
     if request.method != "GET":
@@ -80,6 +144,8 @@ def populate_database(request):
                         
                         # Process certification
                         cert_name = ' '.join([part.upper() for part in json_file.stem.split('_')])
+                        if cert_name == "ISO27001 2022":
+                            cert_name = "ISO 27001:2022"
                         cert, created = Certification.objects.get_or_create(name=cert_name)
                         if created:
                             stats['certifications'] += 1
@@ -261,14 +327,14 @@ async def capture_policies_data():
 @csrf_exempt
 def assembling_trustCloud_controls(request):
     token = get_token_from_playwright()
-    # token = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRydXN0Q2xvdWQiLCJ0eXBlIjoicHVibGljIiwiaXNzIjoiaHR0cHM6Ly9iYWNrZW5kLnRydXN0Y2xvdWQuYWkiLCJpYXQiOjE3NTE0NTczNTEsImV4cCI6MTc1MTQ4NjE1MSwic3ViIjoiM2IwNmUxY2YtYmUwZi00ZTc5LWI1ZGQtOWFiZjY2NzFkMzA4In0.1j3AMc4oZCxadNFFEuBS5034x9vU4mbfyyXiA2-v3n8'
+    # token = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRydXN0Q2xvdWQiLCJ0eXBlIjoicHVibGljIiwiaXNzIjoiaHR0cHM6Ly9iYWNrZW5kLnRydXN0Y2xvdWQuYWkiLCJpYXQiOjE3NTE2Mjg5ODIsImV4cCI6MTc1MTY1Nzc4Miwic3ViIjoiM2IwNmUxY2YtYmUwZi00ZTc5LWI1ZGQtOWFiZjY2NzFkMzA4In0.1JKHfjaq5ubanQHu8wUJMQ1VMwqcpDwgETYSqptqYs4'
 
     if not token:
         return JsonResponse({"error": "Failed to extract token"}, status=401)
 
     url = "https://backend.trustcloud.ai/controls?includeComplianceMapping=true"
     headers = {
-        "x-kintent-auth": token.replace("Bearer ", ""),  # API requires raw token
+        "x-kintent-auth": token.replace("Bearer ", ""),
         "Accept": "application/json",
     }
 
@@ -285,22 +351,24 @@ def assembling_trustCloud_controls(request):
     data = response.json()
     updated_controls = []
 
+    map_controls_to_standards(data)
+
     for item in data:
         categorization = item.get("categorization", {})
         category = categorization.get("category")
         subcategory = categorization.get("subcategory")
 
         if not category or not subcategory:
-            continue  # Skip invalid entries
+            continue
 
         try:
-            control_obj = Control.objects.get(name__iexact=subcategory)  # case-insensitive match
+            control_obj = Control.objects.get(name__iexact=subcategory)
             if control_obj.category != category:
                 control_obj.category = category
                 control_obj.save()
                 updated_controls.append(control_obj.name)
         except Control.DoesNotExist:
-            continue  # Skip if no match
+            continue
 
     return JsonResponse({
         "message": "Successfully fetched and updated controls",
@@ -381,12 +449,47 @@ def certifications_view(request):
 
 def clause_detail_view(request, clause_id):
     clause = get_object_or_404(Clause, id=clause_id)
-    return render(request, 'clause_detail.html', {
-        'clause': clause
+    reference_id_prefix = clause.reference_id.strip()
+    certification_name = clause.certification.name.strip().lower()
+
+    # ER or unknown source controls
+    er_controls = clause.controls.filter(
+        control_gathered_from__in=[None, 'ER']
+    ).distinct().prefetch_related('framework_standards', 'policies')
+
+    # TC controls grouped by framework + standard_id
+    tc_controls_raw = clause.controls.filter(
+        control_gathered_from='TC'
+    ).distinct().prefetch_related('framework_standards')
+
+    grouped_tc_controls = defaultdict(lambda: {
+        "framework": "",
+        "standard_id": "",
+        "controls": []
     })
 
+    for control in tc_controls_raw:
+        for fs in control.framework_standards.all():
+            if fs.framework.strip().lower() != certification_name:
+                continue
+            if not fs.standard_id or not fs.standard_id.strip().startswith(reference_id_prefix):
+                continue
 
+            key = (fs.framework, fs.standard_id)
+            grouped_tc_controls[key]["framework"] = fs.framework
+            grouped_tc_controls[key]["standard_id"] = fs.standard_id
+            grouped_tc_controls[key]["controls"].append({
+                "short_name": control.short_name,
+                "name": control.name,
+                "description": control.description,
+                "original_id": control.original_id
+            })
 
+    return render(request, 'clause_detail.html', {
+        'clause': clause,
+        'er_controls': er_controls,
+        'grouped_tc_controls': grouped_tc_controls.values()
+    })
 
 def policies_view(request):
     # Cache key based on the request parameters
@@ -1032,3 +1135,99 @@ def mapping_eramaba_clauses_controls(request):
     }
 
     return JsonResponse(response_data, status=200)
+
+
+
+# csrf_exempt
+# def mapping_trustCloud_controls_and_compliances(request):
+#     url = "https://backend.trustcloud.ai/controls?includeComplianceMapping=true"
+
+@csrf_exempt
+def assign_clause_parents(request):
+    clauses = Clause.objects.all()
+    ref_map = {}
+
+    for clause in clauses:
+        ref_map[(clause.certification_id, clause.reference_id)] = clause
+
+    updated = 0
+    for clause in clauses:
+        parts = clause.reference_id.split('.')
+        if len(parts) == 1:
+            clause.parent = None
+        else:
+            parent_ref = '.'.join(parts[:-1])
+            parent_clause = ref_map.get((clause.certification_id, parent_ref))
+            if parent_clause:
+                clause.parent = parent_clause
+        clause.save(update_fields=['parent'])
+        updated += 1
+
+    return JsonResponse({'status': 'success', 'updated_clauses': updated})
+
+
+@csrf_exempt
+def trust_cloud_policy_templates(request):
+    if request.method != 'GET':
+        return JsonResponse({
+            "status": "error",
+            "message": "Only GET method is allowed."
+        }, status=405)
+
+    try:
+        token = get_token_from_playwright()
+        if not token:
+            return JsonResponse({
+                "status": "error",
+                "message": "Failed to retrieve auth token."
+            }, status=500)
+
+        url = "https://backend.trustcloud.ai/policies"
+        headers = {
+            "x-kintent-auth": token.replace("Bearer ", ""),
+            "Accept": "application/json",
+        }
+
+        response = requests.get(url, headers=headers)
+
+        if response.status_code != 200:
+            return JsonResponse({
+                "status": "error",
+                "message": f"Failed to fetch policies from TrustCloud: {response.status_code}"
+            }, status=response.status_code)
+
+        policies_data = response.json()
+
+        not_found = []
+        updated_policies = []
+
+        with transaction.atomic():
+            for item in policies_data:
+                shortname = item.get("shortName")
+                template = item.get("template")
+
+                if not shortname:
+                    continue  # Skip if shortName is missing
+
+                try:
+                    policy_obj = Policy.objects.get(policy_id=shortname)
+                    policy_obj.policy_template = template
+                    updated_policies.append(policy_obj)
+                except Policy.DoesNotExist:
+                    not_found.append(shortname)
+
+            if updated_policies:
+                Policy.objects.bulk_update(updated_policies, ['policy_template'])
+
+        return JsonResponse({
+            "status": "success",
+            "message": f"Updated {len(updated_policies)} policy templates.",
+            "not_found": not_found
+        })
+
+    except Exception as e:
+        logger.exception("Unexpected error occurred while syncing policy templates.")
+        return JsonResponse({
+            "status": "error",
+            "message": f"An unexpected error occurred: {str(e)}"
+        }, status=500)

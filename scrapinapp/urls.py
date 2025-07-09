@@ -21,6 +21,13 @@ urlpatterns = [
     path("get-eramaba-clauses/",get_eramba_clauses),
     path("get-eramaba-controls/",get_eramba_controls),
     path("map-eramba-clauses-controls/", mapping_eramaba_clauses_controls),
+    path('check-sync-lock/', check_sync_lock, name='check-sync-lock'),
+    path('acquire-sync-lock/', acquire_sync_lock, name='acquire-sync-lock'),
+    path('release-sync-lock/', release_sync_lock, name='release-sync-lock'),
+    # path("mapping-trustCloud-controls-and-complainaces", mapping_trustCloud_controls_and_compliances, name="mapping-trustCloud-controls-and-complainaces"),
+    # path("sync-now/", sync_all, name="sync-all"),
+    path('assign-clause-parents/', assign_clause_parents),
+    path("trust_cloud_templates/",trust_cloud_policy_templates)
 ]
 
 

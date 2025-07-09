@@ -7,6 +7,10 @@ from playwright.async_api import async_playwright
 import requests
 import json
 from django.utils.timezone import now
+from django.db import transaction
+from django.utils.functional import cached_property
+from django.db.models import Q  # Add this import
+from collections import defaultdict
 from bs4 import BeautifulSoup
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from playwright.sync_api import sync_playwright
@@ -250,7 +254,111 @@ def get_token_from_playwright():
 
         context.route("**/*", handle_request)
         page.goto("https://trust.trustcloud.ai/controls")
-        page.wait_for_timeout(15000)  # wait for API call to be triggered
+        page.wait_for_timeout(15000)
         browser.close()
 
         return token_container.get("token")
+    
+STANDARD_MAPPING = {
+    "soc2": "SOC2 (TSC 2017)",
+    "soc2type2": "SOC2TYPE 2",
+    "cmmc_l1": "",
+    "cmmc_l2": "",
+    "hipaa": "",
+    "iso27001": "",
+    "iso27001_2022": "ISO 27001:2022",
+    "nist_csf": "NIST CSF 1.1",
+    "nist_sp_800_171": "",
+    "cis_v8": "CIS v8",
+    "pci_dss_4": "PCI DSS 4.0",
+    "iso27701": "ISO27701 PROCESSOR",
+    "iso22301": "ISO 22301:2019",
+    "iso27002_2022": "ISO 27002:2022",
+    "dora": "EU Digital Operational Resilience Act (DORA)",
+    "nis2": "NIS2 Directive",
+    "nist_ai_rmf": "NIST AI RMF",
+    "iso42001": "ISO42001",
+    "nca_ecc_1_2018": "NCA ECC 1 : 2018",
+    "iso27701_controller":"",
+    "pci_dss":"",
+    "gdpr":"",
+    "gdpr_privacy":""
+}
+
+
+def map_controls_to_standards(data):
+    short_names = [item.get("shortName") for item in data if item.get("shortName")]
+    controls_map = {c.short_name: c for c in Control.objects.filter(short_name__in=short_names)}
+
+    with transaction.atomic():
+        all_standards = []
+
+        for item in data:
+            short_name = item.get("shortName")
+            if not short_name or short_name not in controls_map:
+                continue
+
+            control = controls_map[short_name]
+            mapping_standards = item.get("complianceMapping", {}).get("mappedStandards", [])
+            mappings = item.get("complianceMapping", {}).get("mappings", {})
+
+            for framework_key in mapping_standards:
+                display_name = STANDARD_MAPPING.get(framework_key.lower(), "")
+                if not display_name:
+                    continue  # skip if not mapped to any valid DB standard
+
+                controls = mappings.get(framework_key, {}).get("controls", [])
+                for control_data in controls:
+                    all_standards.append((
+                        control,
+                        display_name,  # store mapped DB name here
+                        control_data.get("controlId"),
+                        {
+                            'name': control_data.get("name") or None,
+                            'description': control_data.get("description"),
+                            'section': control_data.get("section"),
+                        }
+                    ))
+
+        # Batch insert/update
+        batch_size = 500
+        for i in range(0, len(all_standards), batch_size):
+            batch = all_standards[i:i + batch_size]
+
+            existing = FrameworkStandard.objects.filter(
+                Q(*[
+                    Q(control=c, framework=f, standard_id=sid)
+                    for c, f, sid, _ in batch
+                ], _connector=Q.OR)
+            )
+
+            existing_map = {
+                (e.control_id, e.framework, e.standard_id): e for e in existing
+            }
+
+            to_create = []
+            to_update = []
+
+            for control, framework, standard_id, defaults in batch:
+                key = (control.id, framework, standard_id)
+                if key in existing_map:
+                    obj = existing_map[key]
+                    needs_update = False
+                    for field, value in defaults.items():
+                        if getattr(obj, field) != value:
+                            setattr(obj, field, value)
+                            needs_update = True
+                    if needs_update:
+                        to_update.append(obj)
+                else:
+                    to_create.append(FrameworkStandard(
+                        control=control,
+                        framework=framework,  # <- this is now the DB name
+                        standard_id=standard_id,
+                        **defaults
+                    ))
+
+            if to_create:
+                FrameworkStandard.objects.bulk_create(to_create, batch_size=batch_size)
+            if to_update:
+                FrameworkStandard.objects.bulk_update(to_update, ['name', 'description', 'section'], batch_size=batch_size)
